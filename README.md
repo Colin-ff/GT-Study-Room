@@ -1,4 +1,4 @@
-# GT Study Room
+# G Study Room
 
 A browser-based simulator for computer-delivered IELTS General Training Reading and Writing.
 
@@ -8,7 +8,7 @@ A browser-based simulator for computer-delivered IELTS General Training Reading 
 
 When I started preparing for IELTS General Training, I found fewer practice resources for GT than for Academic. It was especially hard to find a single place that combined past-paper practice with an interface that felt like the computer-delivered test.
 
-Listening and Speaking are shared across the two IELTS formats, while Reading and Writing differ. I built GT Study Room around those two modules so GT candidates can work through practice sets, get used to the interface and review their attempts in one place.
+Listening and Speaking are shared across the two IELTS formats, while Reading and Writing differ. I built G Study Room around those two modules so GT candidates can work through practice sets, get used to the interface and review their attempts in one place.
 
 ## Features
 

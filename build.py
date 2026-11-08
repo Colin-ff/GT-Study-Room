@@ -44,7 +44,7 @@ for book in sorted((ROOT / "bank").iterdir()):
         output = DEST / path
         output.parent.mkdir(parents=True, exist_ok=True)
         data = json.dumps(test, ensure_ascii=False).replace("<", "\\u003c")
-        output.write_text(EXAM.replace("__PAGE_TITLE__", f"{title} · GT · Test {test_number}")
+        output.write_text(EXAM.replace("__PAGE_TITLE__", f"G Study Room · {title} · Test {test_number}")
                           .replace("__BOOK_LABEL__", f"{title} · General Training")
                           .replace("__TEST_LABEL__", f"Test {test_number} Practice")
                           .replace("__BOOK_URL__", "../../" + book_url)
