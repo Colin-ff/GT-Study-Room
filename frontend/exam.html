@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__PAGE_TITLE__</title>
+<style>
+:root{color-scheme:light;--ink:#18253a;--muted:#526278;--navy:#142640;--blue:#1758b0;--line:#dce4ed;--bg:#f0f4f9;--green:#166746;--red:#a42839}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #578ae3;outline-offset:2px}
+button{background:#fff;border:1px solid #bccbdd;border-radius:7px;padding:6px 12px}button:hover{background:#e7eff9}button[aria-pressed=true],button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button:disabled{cursor:default;opacity:.6}
+header{background:var(--navy);color:white;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 24px;flex-wrap:wrap}
+header button{background:#263c59;color:white;border-color:#49617d}header button:hover{background:#344e70}
+.home-link{color:white;text-decoration:none;padding:6px 8px}.home-link:hover{text-decoration:underline}.brand{display:flex;flex-direction:column;line-height:1.3}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.16em;text-transform:uppercase}.brand .eyebrow{color:#b6c9e1}
+.tabs,.actions,.section-nav,.numbers,.panel-tools,.dialog-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#clock{font-variant-numeric:tabular-nums;font-weight:750;min-width:65px;text-align:center}
+.shell{max-width:1700px;margin:auto;padding:14px 22px 20px}
+.section-nav,.numbers{margin-bottom:10px}.section-nav button,.numbers button{font-size:13px}.numbers{gap:5px}.numbers button{min-width:33px;padding:3px 5px}
+.numbers .answered{background:#dceafb}.numbers .flagged{border-bottom:3px solid #b06e00}.numbers .right{background:#dbf4e7}.numbers .wrong{background:#fce4e7}.numbers button[aria-current=true]{outline:2px solid var(--blue);outline-offset:1px}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.panel{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0;display:flex;flex-direction:column;height:calc(100dvh - 190px);min-height:420px}
+.panel-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line)}.panel-bar .eyebrow{color:var(--muted)}.panel-tools button{font-size:13px}
+.scroll{overflow:auto;padding:18px clamp(16px,3vw,38px) 30px;flex:1}.passage{background:#fffefa;font-family:Georgia,serif;font-size:18px;line-height:1.66}
+h1,h2,h3,p{margin:0 0 12px}h1{font-size:clamp(22px,2.7vw,34px);line-height:1.18}h2{font-size:22px;line-height:1.3}h3{font-size:16px}
+mark{background:#ffdf7a;color:inherit}.muted{color:var(--muted)}.q{padding:12px 0;border-bottom:1px solid var(--line)}.qtop{display:flex;gap:8px;align-items:baseline}.qtext{flex:1;margin:0}.qnum{color:#164f99;font-weight:750}.flag{font-size:12px;padding:2px 6px;flex-shrink:0}.flag[aria-pressed=true]{background:#ffefce;color:#6b4503;border-color:#d8a951}.options{margin:8px 0 0 24px;display:flex;flex-wrap:wrap;gap:8px}.options label{display:inline-flex;align-items:center;gap:5px;background:#f5f8fc;border:1px solid var(--line);border-radius:5px;padding:4px 8px;font-size:13px}.options input{margin:0;accent-color:var(--blue)}
+.worksheet{line-height:2}.worksheet h3{line-height:1.4}.worksheet p{margin-bottom:8px}.worksheet-blank{white-space:nowrap}.worksheet-blank .blank{width:8em;margin:0 4px}.worksheet.flow p{padding:8px 12px;background:#f3f7fc;border-radius:8px}.options.long{flex-direction:column;align-items:flex-start}.choice-list{background:#f3f7fc;padding:12px;border-radius:8px;margin:0 0 10px}.source-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,30%);gap:12px;align-items:start}.source-sheet{margin:0}.source-sheet img{display:block;width:100%;border:1px solid var(--line);border-radius:6px}.source-answers{position:sticky;top:0;max-height:62vh;overflow:auto;padding:0 4px}.source-answers .options{margin-left:0;gap:4px}.source-answers .blank{width:100%;min-width:0}.source-answers .key{margin-left:0}.source-answers h3{margin-bottom:0}@media(max-width:1060px){.source-layout{display:block}.source-answers{position:static;max-height:none}}.choice-list div{display:grid;grid-template-columns:2.2em 1fr}.blank{width:clamp(85px,26%,160px);padding:1px 6px;border:1px solid #9fb3ce;border-radius:4px;background:#f7faff}.key{font-size:14px;margin:6px 0 0 24px}.right-text{color:var(--green)}.wrong-text{color:var(--red)}.notes-lead{margin:14px 0 0;font-weight:700}.summary{background:#e3edf9;padding:8px 12px;border-radius:8px;margin:0 0 10px;font-weight:650}.summary[hidden]{display:none}
+.writing-prompt{white-space:pre-wrap}.editor{flex:1;min-height:0;resize:none;border:0;padding:20px;line-height:1.65;outline-offset:-4px}#word-count{font-variant-numeric:tabular-nums}
+details{border-top:1px solid var(--line);padding:10px 14px;max-height:34%;overflow:auto}summary{cursor:pointer;font-weight:650}details img{display:block;max-width:100%;margin-top:10px}
+dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100% - 32px));padding:20px;box-shadow:0 12px 48px #0a183c33}dialog::backdrop{background:#10233c80}.dialog-head{justify-content:space-between}.history-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.history-row button{flex-shrink:0}
+@media(max-width:760px){header{padding:10px 12px}.shell{padding:10px}.workspace{grid-template-columns:1fr}.panel{height:55vh;min-height:300px}.passage{font-size:17px}.scroll{padding:14px}.options{margin-left:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="tabs"><a class="home-link" href="__BOOK_URL__">‹ Book tests</a><div class="brand"><span class="eyebrow">__BOOK_LABEL__</span><strong>__TEST_LABEL__</strong></div></div>
+  <nav class="tabs" aria-label="Module"><button id="reading-tab">Reading</button><button id="writing-tab">Writing</button></nav>
+  <div class="actions"><span id="clock" aria-label="Time remaining"></span><button id="start-timer">Start timer</button><button id="history-button">History</button><button id="submit" class="primary">Submit</button></div>
+</header>
+<main class="shell">
+  <nav class="section-nav" id="sections" aria-label="Question groups"></nav>
+  <nav class="numbers" id="numbers" aria-label="Question numbers"></nav>
+  <div id="summary" class="summary" role="status" hidden></div>
+  <div id="storage-warning" class="summary" hidden>This browser is blocking local storage. Answers and history are available during this visit.</div>
+  <div id="workspace" class="workspace"></div>
+</main>
+<dialog id="history">
+  <div class="dialog-head"><h2>Attempt history</h2><form method="dialog"><button>Close</button></form></div>
+  <div id="history-list"></div>
+</dialog>
+<dialog id="submit-dialog">
+  <h2>Submit this attempt?</h2>
+  <p>Your work will be saved to History and locked for review.</p>
+  <form method="dialog" class="actions">
+    <button value="cancel" autofocus>Keep working</button>
+    <button value="submit" class="primary">Submit attempt</button>
+  </form>
+</dialog>
+<script type="application/json" id="test-data">__EXAM_DATA__</script>
+<script>
+"use strict";
+const data = JSON.parse(document.querySelector("#test-data").textContent);
+const questions = data.groups.flatMap(group => group.questions);
+const storageKey = data.storageKey;
+const $ = selector => document.querySelector(selector);
+const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, character => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+})[character]);
+const normalize = value => String(value ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+const countWords = value => (value.trim().match(/\S+/g) || []).length;
+const isCorrect = (question, answers) =>
+  (question.accepted || [question.answer]).some(answer => normalize(answers[question.id]) === normalize(answer));
+const grade = answers => questions.filter(question => isCorrect(question, answers)).length;
+const newAttempt = () => ({
+  deadline: null, answers: {}, flags: {}, highlights: {},
+  drafts: ["", ""], submittedAt: null
+});
+const state = {attempts: {}, history: []};
+try {
+  const saved = JSON.parse(localStorage.getItem(storageKey));
+  if (saved) Object.assign(state, saved);
+} catch {
+  $("#storage-warning").hidden = false;
+}
+function save() {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  } catch {
+    $("#storage-warning").hidden = false;
+  }
+}
+let mode = "reading";
+let groupIndex = 0;
+let writingIndex = 0;
+let currentQuestion = null;
+let review = null;
+let selection = [];
+const attempt = () => review || state.attempts[mode];
+
+function openModule(next) {
+  mode = next;
+  review = null;
+  if (!state.attempts[mode]) state.attempts[mode] = newAttempt();
+  save();
+  render();
+  tick();
+}
+
+function renderNumbers() {
+  $("#numbers").innerHTML = mode === "reading" ? questions.map(question => {
+    const active = attempt();
+    const answered = Boolean(normalize(active.answers[question.id]));
+    const result = active.submittedAt ? (isCorrect(question, active.answers) ? "right" : "wrong") : "";
+    const flag = active.flags[question.id];
+    return `<button data-jump="${question.id}" class="${answered ? "answered" : ""} ${flag ? "flagged" : ""} ${result}" aria-label="Question ${question.id}${flag ? ", flagged" : ""}" aria-current="${question.id === currentQuestion}">${question.id}</button>`;
+  }).join("") : "";
+}
+function renderSummary() {
+  const active = attempt();
+  const summary = $("#summary");
+  summary.hidden = !active.submittedAt;
+  summary.textContent = mode === "reading"
+    ? `Reading score · ${grade(active.answers)} / ${questions.length}`
+    : `Writing saved · Task 1: ${countWords(active.drafts[0])} words · Task 2: ${countWords(active.drafts[1])} words`;
+  if (review) summary.textContent = "Past attempt · " + summary.textContent;
+}
+
+function renderPassage() {
+  const group = data.groups[groupIndex];
+  const passage = data.passages[group.passage];
+  const target = $("#passage");
+  target.innerHTML = `<h1>${escapeHtml(passage.title)}</h1>` + passage.blocks.map((block, i) => {
+    const ranges = attempt().highlights[`${group.passage}:${i}`] || [];
+    let end = 0;
+    let html = "";
+    for (const [start, stop] of ranges) {
+      html += escapeHtml(block.slice(end, start)) + "<mark>" + escapeHtml(block.slice(start, stop)) + "</mark>";
+      end = stop;
+    }
+    return `<p data-block="${i}">${html + escapeHtml(block.slice(end))}</p>`;
+  }).join("");
+}
+
+function answerBox(number, active) {
+  return `<input class="blank" data-answer="${number}" aria-label="Answer ${number}" autocomplete="off"
+    spellcheck="false" value="${escapeHtml(active.answers[number] || "")}" ${active.submittedAt ? "disabled" : ""}>`;
+}
+function flagButton(number, active) {
+  return active.submittedAt ? "" : `<button class="flag" data-flag="${number}" aria-label="Flag question ${number}"
+    aria-pressed="${Boolean(active.flags[number])}">Flag</button>`;
+}
+function resultMarkup(question, active) {
+  const correct = isCorrect(question, active.answers);
+  return `<p class="key ${correct ? "right-text" : "wrong-text"}">${correct ? "Correct" : "Incorrect"} · Your answer:
+    ${escapeHtml(active.answers[question.id] || "—")} · Answer key: <strong>${escapeHtml(question.answer)}</strong></p>`;
+}
+function worksheetMarkup(group, active) {
+  const [title, ...blocks] = group.worksheet;
+  const contents = blocks.map(block => `<p>${escapeHtml(block).replace(/\[\[(\d+)\]\]/g, (_, id) =>
+    `<span class="worksheet-blank" id="q${id}" tabindex="-1"><strong class="qnum">${id}</strong>${answerBox(id, active)}${flagButton(id, active)}</span>`
+  )}</p>`).join("");
+  const results = active.submittedAt ? group.questions.map(question =>
+    `<div class="q"><strong class="qnum">${question.id}.</strong>${resultMarkup(question, active)}</div>`
+  ).join("") : "";
+  return `<div class="worksheet ${group.kind === "Flow-chart completion" ? "flow" : ""}"><h3>${escapeHtml(title)}</h3>${contents}</div>${results}`;
+}
+function questionMarkup(question, group, active) {
+  const number = question.id;
+  const answer = active.answers[number] || "";
+  const disabled = active.submittedAt ? "disabled" : "";
+  const box = answerBox(number, active);
+  const prompt = escapeHtml(question.text);
+  const text = prompt.includes("[[blank]]") ? prompt.replace("[[blank]]", box) : prompt;
+  const options = group.choices.map(choice => {
+    const description = question.options?.[choice];
+    return `<label><input type="radio" name="q${number}" data-answer="${number}" value="${escapeHtml(choice)}"
+      ${answer === choice ? "checked" : ""} ${disabled}> ${escapeHtml(choice)}${description ? " · " + escapeHtml(description) : ""}</label>`;
+  }).join("");
+  const result = active.submittedAt ? resultMarkup(question, active) : "";
+  return question.leads.map(lead => `<p class="notes-lead">${escapeHtml(lead)}</p>`).join("") +
+    `<div class="q" id="q${number}" tabindex="-1"><div class="qtop">
+      <span class="qnum">${number}.</span><p class="qtext">${text}</p>${flagButton(number, active)}
+      </div>${options ? `<div class="options ${question.options?.A ? "long" : ""}" role="group" aria-label="Answer ${number}">${options}</div>`
+        : prompt.includes("[[blank]]") ? "" : `<div class="options">${box}</div>`}${result}</div>`;
+}
+function groupQuestions(group, active) {
+  if (group.sourceImage) {
+    const answers = group.questions.map(question => questionMarkup(question, group, active)).join("");
+    return `<div class="source-layout"><figure class="source-sheet">
+      <img src="data:image/jpeg;base64,${group.sourceImage}" alt="Original layout for questions ${group.first}–${group.last}">
+      </figure><section class="source-answers" aria-label="Answer fields"><h3>Your answers</h3>${answers}</section></div>`;
+  }
+  if (group.worksheet?.length) return worksheetMarkup(group, active);
+  const labels = Object.entries(group.choiceLabels || {});
+  const choiceList = labels.length ? `<div class="choice-list">${labels.map(([key, label]) =>
+    `<div><strong>${escapeHtml(key)}</strong><span>${escapeHtml(label)}</span></div>`).join("")}</div>` : "";
+  const legacyNotes = group.kind === "Note completion" ? "<h3>Achieving a better work-life balance</h3>" : "";
+  return choiceList + legacyNotes + group.questions.map(question => questionMarkup(question, group, active)).join("");
+}
+function renderReading() {
+  selection = [];
+  const active = attempt();
+  const group = data.groups[groupIndex];
+  $("#sections").innerHTML = data.groups.map((item, index) =>
+    `<button data-group="${index}" aria-pressed="${index === groupIndex}">Q${item.first}–${item.last}</button>`
+  ).join("");
+  renderNumbers();
+  $("#workspace").innerHTML = `
+    <section class="panel"><div class="panel-bar"><span class="eyebrow">Reading passage</span>
+      ${active.submittedAt ? "" : '<div class="panel-tools"><button id="highlight">Highlight selection</button><button id="clear-highlights">Clear highlights</button></div>'}
+    </div><article class="scroll passage" id="passage"></article></section>
+    <section class="panel"><div class="panel-bar"><span class="eyebrow">Questions ${group.first}–${group.last}</span><span class="muted" id="reading-progress"></span></div>
+      <div class="scroll" id="questions"><h2>${group.kind}</h2><p class="muted">${escapeHtml(group.instruction)}</p>
+      ${group.kind === "True / False / Not Given" ? '<p class="muted"><strong>TRUE</strong> if the statement agrees with the information<br><strong>FALSE</strong> if it contradicts the information<br><strong>NOT GIVEN</strong> if there is no information on this</p>' : ""}
+      ${groupQuestions(group, active)}</div></section>`;
+  renderPassage();
+  updateProgress();
+  $("#passage").addEventListener("mouseup", captureSelection);
+  $("#highlight")?.addEventListener("pointerdown", event => event.preventDefault());
+}
+function updateProgress() {
+  $("#reading-progress").textContent =
+    questions.filter(question => normalize(attempt().answers[question.id])).length + ` / ${questions.length} answered`;
+}
+function renderWriting() {
+  const active = attempt();
+  const task = data.writing[writingIndex];
+  $("#sections").innerHTML = data.writing.map((_, index) =>
+    `<button data-task="${index}" aria-pressed="${index === writingIndex}">Task ${index + 1}</button>`
+  ).join("");
+  renderNumbers();
+  $("#workspace").innerHTML = `
+    <section class="panel"><div class="panel-bar"><span class="eyebrow">Writing prompt</span></div>
+      <div class="scroll passage writing-prompt">${escapeHtml(task.prompt)}</div></section>
+    <section class="panel"><div class="panel-bar"><span class="eyebrow">Your response</span><span id="word-count"></span></div>
+      <textarea class="editor" id="draft" aria-label="Writing response" spellcheck="false" ${active.submittedAt ? "readonly" : ""} placeholder="Type your response here…"></textarea>
+      ${active.submittedAt && task.reference ? `<details><summary>${task.model ? "Book model answer" : "Book sample and examiner comments"}</summary><img src="data:image/jpeg;base64,${task.reference}" alt="Writing Task ${writingIndex + 1} reference response from the book">${(task.extraReferences || []).map((image, index) => `<img src="data:image/jpeg;base64,${image}" alt="Reference continuation, page ${index + 2}">`).join("")}</details>` : ""}</section>`;
+  $("#draft").value = active.drafts[writingIndex];
+  updateWordCount();
+}
+function updateWordCount() {
+  $("#word-count").textContent = countWords($("#draft").value) + " words · minimum " + data.writing[writingIndex].minimum;
+}
+function render() {
+  $("#reading-tab").setAttribute("aria-pressed", mode === "reading");
+  $("#writing-tab").setAttribute("aria-pressed", mode === "writing");
+  $("#submit").textContent = review ? "Back to current" : attempt().submittedAt ? "New attempt" : "Submit";
+  selection = [];
+  renderSummary();
+  if (mode === "reading") renderReading();
+  else renderWriting();
+  showTime();
+}
+function captureSelection() {
+  selection = [];
+  const selected = window.getSelection();
+  if (!selected.rangeCount || selected.isCollapsed) return;
+  const range = selected.getRangeAt(0);
+  const passage = $("#passage");
+  if (!passage.contains(range.startContainer) || !passage.contains(range.endContainer)) return;
+  for (const block of passage.querySelectorAll("[data-block]")) {
+    if (!range.intersectsNode(block)) continue;
+    const prefix = document.createRange();
+    prefix.selectNodeContents(block);
+    let start = 0;
+    let end = block.textContent.length;
+    if (block.contains(range.startContainer)) {
+      prefix.setEnd(range.startContainer, range.startOffset);
+      start = prefix.toString().length;
+    }
+    if (block.contains(range.endContainer)) {
+      prefix.setEnd(range.endContainer, range.endOffset);
+      end = prefix.toString().length;
+    }
+    if (end > start) selection.push([block.dataset.block, start, end]);
+  }
+}
+function highlight() {
+  const highlights = attempt().highlights;
+  for (const [block, start, end] of selection) {
+    const key = `${data.groups[groupIndex].passage}:${block}`;
+    const sorted = [...(highlights[key] || []), [start, end]].sort((a, b) => a[0] - b[0]);
+    highlights[key] = sorted.reduce((ranges, range) => {
+      const previous = ranges.at(-1);
+      if (previous && range[0] <= previous[1]) previous[1] = Math.max(previous[1], range[1]);
+      else ranges.push(range);
+      return ranges;
+    }, []);
+  }
+  if (!selection.length) return;
+  selection = [];
+  window.getSelection().removeAllRanges();
+  save();
+  renderPassage();
+}
+function clearHighlights() {
+  const highlights = attempt().highlights;
+  const prefix = data.groups[groupIndex].passage + ":";
+  for (const key of Object.keys(highlights)) {
+    if (key.startsWith(prefix)) delete highlights[key];
+  }
+  selection = [];
+  save();
+  renderPassage();
+}
+
+function finish(module) {
+  const active = state.attempts[module];
+  if (active.submittedAt) return;
+  active.submittedAt = Date.now();
+  state.history.unshift({module, ...JSON.parse(JSON.stringify(active))});
+  save();
+}
+function showTime() {
+  const active = attempt();
+  $("#start-timer").hidden = Boolean(active.deadline || active.submittedAt);
+  const remaining = active.deadline ? Math.max(0, Math.ceil((active.deadline - Date.now()) / 1000)) : 3600;
+  $("#clock").textContent = active.submittedAt ? "Finished"
+    : [Math.floor(remaining / 60), remaining % 60].map(number => String(number).padStart(2, "0")).join(":");
+}
+function tick() {
+  let rerender = false;
+  for (const [module, active] of Object.entries(state.attempts)) {
+    if (!active.submittedAt && active.deadline && Date.now() >= active.deadline) {
+      finish(module);
+      if (module === mode && !review) rerender = true;
+    }
+  }
+  if (rerender) render();
+  else showTime();
+}
+function showHistory() {
+  $("#history-list").innerHTML = state.history.length ? state.history.map((entry, index) => {
+    const detail = entry.module === "reading" ? `${grade(entry.answers)} / ${questions.length}`
+      : `${countWords(entry.drafts[0])} + ${countWords(entry.drafts[1])} words`;
+    return `<div class="history-row"><div><strong>${entry.module === "reading" ? "Reading" : "Writing"}</strong> · ${detail}<br>
+      <small class="muted">${escapeHtml(new Date(entry.submittedAt).toLocaleString())}</small></div>
+      <button data-review="${index}">Review</button></div>`;
+  }).join("") : "<p class='muted'>Submitted attempts will appear here.</p>";
+  $("#history").showModal();
+}
+$("#reading-tab").onclick = () => openModule("reading");
+$("#writing-tab").onclick = () => openModule("writing");
+$("#history-button").onclick = showHistory;
+function startTimer() {
+  const active = attempt();
+  if (!active.deadline && !active.submittedAt) {
+    active.deadline = Date.now() + 60 * 60 * 1000;
+    save();
+    showTime();
+  }
+}
+$("#start-timer").onclick = startTimer;
+$("#submit").onclick = () => {
+  if (review) {
+    openModule(mode);
+    return;
+  }
+  if (attempt().submittedAt) {
+    state.attempts[mode] = newAttempt();
+    currentQuestion = null;
+    groupIndex = writingIndex = 0;
+    save();
+    render();
+    return;
+  }
+  $("#submit-dialog").returnValue = "";
+  $("#submit-dialog").showModal();
+};
+$("#submit-dialog").onclose = event => {
+  if (event.target.returnValue === "submit") {
+    finish(mode);
+    render();
+  }
+};
+$("#sections").onclick = event => {
+  const button = event.target.closest("button");
+  if (!button) return;
+  if (mode === "reading") {
+    groupIndex = Number(button.dataset.group);
+    currentQuestion = null;
+    renderReading();
+  } else {
+    writingIndex = Number(button.dataset.task);
+    renderWriting();
+  }
+};
+$("#numbers").onclick = event => {
+  const button = event.target.closest("[data-jump]");
+  if (!button) return;
+  currentQuestion = Number(button.dataset.jump);
+  const next = data.groups.findIndex(group => currentQuestion >= group.first && currentQuestion <= group.last);
+  if (next !== groupIndex) {
+    groupIndex = next;
+    renderReading();
+  } else {
+    renderNumbers();
+  }
+  const target = $("#q" + currentQuestion);
+  target.focus({preventScroll: true});
+  target.scrollIntoView({block: "center"});
+};
+$("#workspace").onclick = event => {
+  const button = event.target.closest("button");
+  if (!button) return;
+  if (button.id === "highlight") highlight();
+  if (button.id === "clear-highlights") clearHighlights();
+  if (button.dataset.flag) {
+    const number = button.dataset.flag;
+    const flags = attempt().flags;
+    flags[number] = !flags[number];
+    button.setAttribute("aria-pressed", flags[number]);
+    save();
+    renderNumbers();
+  }
+};
+$("#workspace").oninput = event => {
+  const input = event.target;
+  if (attempt().submittedAt) return;
+  if (input.dataset.answer) {
+    startTimer();
+    attempt().answers[input.dataset.answer] = input.value;
+    currentQuestion = Number(input.dataset.answer);
+    save();
+    renderNumbers();
+    updateProgress();
+  }
+  if (input.id === "draft") {
+    startTimer();
+    attempt().drafts[writingIndex] = input.value;
+    save();
+    updateWordCount();
+  }
+};
+$("#history-list").onclick = event => {
+  const button = event.target.closest("[data-review]");
+  if (!button) return;
+  review = state.history[Number(button.dataset.review)];
+  mode = review.module;
+  groupIndex = writingIndex = 0;
+  currentQuestion = null;
+  $("#history").close();
+  render();
+};
+openModule(new URLSearchParams(location.search).get("mode") === "writing" ? "writing" : "reading");
+setInterval(tick, 500);
+</script>
+</body>
+</html>

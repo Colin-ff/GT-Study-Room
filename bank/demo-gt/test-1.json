@@ -1,0 +1,102 @@
+{
+  "passages": [
+    {
+      "title": "Borrow a repair kit",
+      "blocks": [
+        "Riverside Community Library lends basic repair kits to adult members for up to seven days. Each kit contains a screwdriver, a small spanner and a printed safety guide. Reserve a kit online, then bring your library card to the information desk to collect it.",
+        "Collection is available from Tuesday to Saturday. Please return the kit to the information desk during opening hours, as the book return slot is too small. There is no borrowing fee. The library can explain how the loan works but does not repair items for borrowers."
+      ]
+    },
+    {
+      "title": "Joining the garden team",
+      "blocks": [
+        "The volunteer garden team meets on Sunday mornings. New volunteers start with a short induction led by the coordinator, Priya. The induction covers safe lifting and explains how the garden separates compost from general waste.",
+        "Volunteers should bring a water bottle. Gloves and tools are supplied. If you cannot attend a session, tell the coordinator by Saturday afternoon so she has time to adjust the task list."
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "passage": 0,
+      "first": 1,
+      "last": 4,
+      "kind": "True / False / Not Given",
+      "instruction": "Decide whether each statement agrees with the passage.",
+      "choices": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "A kit may be borrowed for a week.",
+          "answer": "TRUE",
+          "leads": []
+        },
+        {
+          "id": 2,
+          "text": "The information desk repairs items for members.",
+          "answer": "FALSE",
+          "leads": []
+        },
+        {
+          "id": 3,
+          "text": "The kits are more popular in summer than in winter.",
+          "answer": "NOT GIVEN",
+          "leads": []
+        },
+        {
+          "id": 4,
+          "text": "Borrowers need a library card to collect a kit.",
+          "answer": "TRUE",
+          "leads": []
+        }
+      ]
+    },
+    {
+      "passage": 1,
+      "first": 5,
+      "last": 8,
+      "kind": "Sentence completion",
+      "instruction": "Use one word from the passage for each answer.",
+      "choices": [],
+      "questions": [
+        {
+          "id": 5,
+          "text": "The [[blank]] leads the induction.",
+          "answer": "coordinator",
+          "leads": []
+        },
+        {
+          "id": 6,
+          "text": "One topic covered in the induction is safe [[blank]].",
+          "answer": "lifting",
+          "leads": []
+        },
+        {
+          "id": 7,
+          "text": "Volunteers should bring a water [[blank]].",
+          "answer": "bottle",
+          "leads": []
+        },
+        {
+          "id": 8,
+          "text": "If you cannot attend, contact Priya by [[blank]] afternoon.",
+          "answer": "Saturday",
+          "leads": []
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "minimum": 150,
+      "prompt": "WRITING TASK 1\n\nA community centre near your home has asked residents to suggest a new weekend activity. Write a letter to the centre manager.\n\n• Describe the activity you would like the centre to offer.\n• Explain who would benefit from it.\n• Say how you could help organise it.\n\nWrite at least 150 words."
+    },
+    {
+      "minimum": 250,
+      "prompt": "WRITING TASK 2\n\nSome people prefer to repair broken household items, while others prefer to replace them. Discuss both views and give your own opinion.\n\nGive reasons and examples from your experience or knowledge. Write at least 250 words."
+    }
+  ]
+}
