@@ -1,6 +1,6 @@
 /dist/
-/bank/cambridge-*-gt/
 /sources/
+*.pdf
 /.openai/
 __pycache__/
 .venv/

@@ -6,8 +6,8 @@ import re
 
 ROOT = Path(__file__).resolve().parent
 DEST = ROOT / "dist"
-EXAM = (ROOT / "frontend" / "exam.html").read_text()
-CATALOG = (ROOT / "frontend" / "catalog.html").read_text()
+EXAM = (ROOT / "frontend" / "exam.html").read_text(encoding="utf-8")
+CATALOG = (ROOT / "frontend" / "catalog.html").read_text(encoding="utf-8")
 
 
 def catalog(path, title, intro, cards, back=""):
@@ -31,7 +31,7 @@ for book in sorted((ROOT / "bank").iterdir()):
     cards = []
     for source in sorted(book.glob("test-*.json")):
         test_number = int(source.stem.removeprefix("test-"))
-        test = json.loads(source.read_text())
+        test = json.loads(source.read_text(encoding="utf-8"))
         questions = [q for group in test["groups"] for q in group["questions"]]
         question_count = len(questions)
         assert question_count and (book.name == "demo-gt" or question_count == 40), source
