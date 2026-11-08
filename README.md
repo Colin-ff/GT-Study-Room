@@ -2,7 +2,14 @@
 
 A browser-based simulator for computer-delivered IELTS General Training Reading and Writing.
 
-[Open the live simulator](https://ielts-gt-practice-chen.colinff716.chatgpt.site)
+## Use G Study Room
+
+- **Online.** Start practising in your browser with the Cambridge IELTS 14–17 General Training question bank. The site is public and requires no sign-in or installation. [Open the live simulator](https://ielts-gt-practice-chen.colinff716.chatgpt.site)
+- **Local.** Download the repository, build the site with Python, and open it on `localhost`. The included question bank works offline after setup. To get later updates, pull the latest changes and rebuild. [Local setup instructions](#run-locally)
+
+Both versions offer the same Reading and Writing practice features. Each browser stores drafts and progress separately for the live site and `localhost`, so records do not sync between them.
+
+**Access from mainland China.** On 9 November 2026, all 11 mainland China network probes in our sample returned HTTP 403 for the hosted site. If the link does not open on your network, use the local version. [Initial test results](https://api.globalping.io/v1/measurements/2GRNhwHVA718ZHjWP00021T04) · [Residential network test results](https://api.globalping.io/v1/measurements/2Ae87lwx2AgEEiOYG00021T05)
 
 ## Why I built it
 
