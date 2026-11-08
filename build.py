@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parent
 DEST = ROOT / "dist"
 EXAM = (ROOT / "frontend" / "exam.html").read_text(encoding="utf-8")
 CATALOG = (ROOT / "frontend" / "catalog.html").read_text(encoding="utf-8")
+READING_HEADINGS = json.loads((ROOT / "bank" / "reading-headings.json").read_text(encoding="utf-8"))
 
 
 def catalog(path, title, intro, cards, back=""):
@@ -38,6 +39,15 @@ for book in sorted((ROOT / "bank").iterdir()):
         assert [q["id"] for q in questions] == list(range(1, question_count + 1)), source
         assert all(q["answer"] for q in questions), source
         assert test["passages"] and len(test["writing"]) == 2, source
+        book_headings = READING_HEADINGS.get(book.name, {})
+        for passage in test["passages"]:
+            pages = passage.get("pages")
+            headings = book_headings.get(str(pages[0]), {}) if pages else {}
+            for index, heading in headings.items():
+                block = passage["blocks"][int(index)]
+                assert block == heading or block.startswith(heading + " "), (source, heading)
+            if headings:
+                passage["headings"] = headings
         key = f"{book.name}-{source.stem}-v2"
         test["storageKey"] = key
         path = f"tests/{book.name}/{source.stem}.html"
