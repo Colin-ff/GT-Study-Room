@@ -11,7 +11,8 @@
     "contrast": "后面说护理可以在家中进行，讲的是护理地点，和从哪里转入是两件事。",
     "terms": {
       "directly": "直接地。这里修饰从医院转入。"
-    }
+    },
+    "passageSummary": "这篇讲过渡护理（transition care）。年长患者可以从医院转入，在家里或需要入住的场所接受短期护理。服务可能包括物理治疗、足病治疗、社工支持、护理和个人照护。政府补贴费用，有些人也需要分担。"
   },
   "2": {
     "anchors": [
@@ -24,8 +25,18 @@
     "reason": "原文的 “for a limited time only”（只提供有限时间）排除了题干说的 “long term or short term”（可长期或短期提供），所以是 FALSE。",
     "contrast": "limited time only 明确限制了时间范围，因此是 FALSE。",
     "terms": {
-      "limited time only": "只在有限的一段时间内。"
-    }
+      "limited time only": "只在有限的一段时间内。",
+      "goal": "目标。原文用复数 “goals”，指接受护理的人想达到的康复目标，例如改善行动能力。",
+      "goals": "目标。原文 “individual goals” 指每个人自己的康复目标，例如恢复独立走路的能力。",
+      "individual goals": "个人目标。每个人的康复目标可能不同。",
+      "focused on": "以……为重点。原文 “focused on individual goals and therapies” 指护理围绕个人目标和治疗来安排。",
+      "therapies": "治疗或康复干预。原文的例子包括物理治疗等。",
+      "long term or short term": "长期或短期。这是题干用词。原文 “for a limited time only” 说护理只提供一段有限的时间。",
+      "podiatry": "足病治疗或足部护理。原文举它作为低强度康复治疗的一个例子。",
+      "physiotherapy": "物理治疗。原文举的例子包括运动，以及对活动能力、力量和平衡的训练。",
+      "wound care": "伤口护理。它是原文举的临床护理例子。"
+    },
+    "translation": "过渡护理以个人康复目标和治疗为重点，并且只在有限的一段时间内提供。这里的 “individual goals” 是每个人自己的康复目标，“for a limited time only” 强调只提供有限时间，也是判断第 2 题的依据。"
   },
   "3": {
     "anchors": [
@@ -116,7 +127,8 @@
     "contrast": "D 的拉链容易握而且滑动顺畅。B 的内袋没拉链，和「已有的拉链不好用」是两回事。",
     "terms": {
       "give them a good tug": "用力拉一下拉链。"
-    }
+    },
+    "passageSummary": "这篇对比五款登机箱（cabin bags）。主要看拉链、提手、拉杆、防水、移动和耐用程度。每个选项都有不同的优缺点。"
   },
   "8": {
     "anchors": [
@@ -229,7 +241,8 @@
     "contrast": "College website 是下载申请表的地方。下载表格和购买许可是两件事。",
     "terms": {
       "purchased from": "从某处购买。"
-    }
+    },
+    "passageSummary": "这篇是学院员工停车规定（car parking policy），涵盖停车许可证、违规罚单、无障碍停车、访客停车和托儿所接送点。"
   },
   "16": {
     "anchors": [
@@ -316,7 +329,8 @@
     "terms": {
       "at least": "至少。",
       "eligible": "符合领取条件的。"
-    }
+    },
+    "passageSummary": "这篇介绍生育福利（maternity benefits）。它分别说明法定产假工资、产妇津贴、儿童税收抵免和生育补助的资格、金额或领取方式。"
   },
   "22": {
     "anchors": [
@@ -417,7 +431,8 @@
     "contrast": "制造纸莎草的工序属于 B 段。选标题时要覆盖整段，不能只看到 papyrus 就选生产流程。",
     "terms": {
       "written records": "用文字保存下来的记录。"
-    }
+    },
+    "passageSummary": "这篇介绍纸莎草（papyrus）。它讲古人用什么记录文字、纸莎草纸怎样制作、文献如何保存或毁坏、纸莎草的其他用途，以及它怎样被现代纸张取代。"
   },
   "29": {
     "anchors": [
