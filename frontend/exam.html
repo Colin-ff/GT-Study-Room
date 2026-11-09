@@ -204,7 +204,10 @@ function reviewReply(message, number) {
     .trim().replace(/^[：:,，\s]+|[？?。.!！\s]+$/g, "").replace(/\s+/g, " ");
   const sourceQuestion = prompt.replace(/^(?:这(?:一)?道题|这题|本题|当前题)\s*的?\s*(?=原文|这句|证据)/, "");
   const evidence = entry.evidence.map(([, excerpt]) => excerpt);
-  const cue = entry.reason.match(/“([^”]+)”/)?.[1];
+  const cue = [...entry.reason.matchAll(/“([^”]+)”/g)]
+    .map(match => match[1])
+    .find(quote => evidence.some(excerpt =>
+      ` ${reviewPhrase(excerpt)} `.includes(` ${reviewPhrase(quote)} `)));
   const answer = `答案是 ${question.answer}。 ${entry.reason}`;
   const articleSummary = articleNotes.find(item => item.passageSummary)?.passageSummary;
   if (/^(?:这篇(?:文章)?|整篇(?:文章)?|文章|全文)(?:的)?(?:大意(?:是什么)?|主旨(?:是什么)?|讲(?:的是|了)?什么|(?:是)?什么意思|怎么理解)$/.test(prompt) && articleSummary) return articleSummary;
