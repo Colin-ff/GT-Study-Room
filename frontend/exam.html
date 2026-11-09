@@ -28,6 +28,9 @@ mark{background:#ffdf7a;color:inherit}.muted{color:var(--muted)}.q{padding:12px 
 details{border-top:1px solid var(--line);padding:10px 14px;max-height:34%;overflow:auto}summary{cursor:pointer;font-weight:650}details img{display:block;max-width:100%;margin-top:10px}
 dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100% - 32px));padding:20px;box-shadow:0 12px 48px #0a183c33}dialog::backdrop{background:#10233c80}.dialog-head{justify-content:space-between}.history-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.history-row button{flex-shrink:0}
 @media(max-width:760px){header{padding:10px 12px}.shell{padding:10px}.workspace{grid-template-columns:1fr}.panel{height:55vh;min-height:300px}.passage{font-size:17px}.scroll{padding:14px}.options{margin-left:16px}}
+
+.evidence{background:#cfe8ff;color:inherit;border-bottom:2px solid #4688bf}.review-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.review-filters button,.review-actions button,.review-chat button{font-size:13px}.review-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0 24px}.review-chat{border-top:1px solid var(--line);padding:12px 16px;background:#f4f8fd}.review-chat[hidden],.review-filters[hidden]{display:none}.review-chat h3{margin:0}.review-chat form{display:flex;gap:8px}.review-chat input{flex:1;min-width:0;padding:5px 8px;border:1px solid #9fb3ce;border-radius:5px}.review-messages{max-height:18vh;overflow:auto;margin:8px 0;overflow-wrap:anywhere}.review-messages p{margin:5px 0}.review-chat .actions{margin-bottom:8px}.review-chat .muted{font-size:13px}.review-label{font-size:13px;color:#174d80}
+
 </style>
 </head>
 <body>
@@ -39,6 +42,7 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 <main class="shell">
   <nav class="section-nav" id="sections" aria-label="Question groups"></nav>
   <nav class="numbers" id="numbers" aria-label="Question numbers"></nav>
+  <nav id="review-filters" class="review-filters" aria-label="Review filters" hidden></nav>
   <div id="summary" class="summary" role="status" hidden></div>
   <div id="storage-warning" class="summary" hidden>This browser is blocking local storage. Answers and history are available during this visit.</div>
   <div id="workspace" class="workspace"></div>
@@ -97,6 +101,7 @@ let selection = [];
 const attempt = () => review || state.attempts[mode];
 
 function openModule(next) {
+  if (mode !== next || review) resetReview();
   mode = next;
   review = null;
   if (!state.attempts[mode]) state.attempts[mode] = newAttempt();
@@ -105,8 +110,129 @@ function openModule(next) {
   tick();
 }
 
+
+let reviewFilter = "all";
+let chatQuestion = null;
+const chatThreads = new Map();
+
+function hasReview() {
+  return mode === "reading" && Boolean(data.explanations && attempt().submittedAt);
+}
+function matchesFilter(question) {
+  if (!hasReview() || reviewFilter === "all") return true;
+  const answers = attempt().answers;
+  if (!normalize(answers[question.id])) return reviewFilter === "unanswered";
+  return reviewFilter === "wrong" && !isCorrect(question, answers);
+}
+function resetReview() {
+  reviewFilter = "all";
+  chatQuestion = null;
+  chatThreads.clear();
+}
+function renderReviewFilters() {
+  const filters = $("#review-filters");
+  filters.hidden = !hasReview();
+  filters.innerHTML = filters.hidden ? "" : [
+    ["all", "All questions"], ["wrong", "Wrong answers"], ["unanswered", "Unanswered"]
+  ].map(([value, label]) => `<button data-filter="${value}" aria-pressed="${value === reviewFilter}">${label}</button>`).join("");
+}
+function renderEvidenceText(block, ranges, from, to, excerpts) {
+  let position = from;
+  let html = "";
+  for (const excerpt of excerpts) {
+    const offset = block.indexOf(excerpt);
+    const start = Math.max(position, offset);
+    const end = Math.min(to, offset + excerpt.length);
+    if (offset < 0 || end <= start) continue;
+    html += highlightedText(block, ranges, position, start);
+    html += `<span class="evidence">${highlightedText(block, ranges, start, end)}</span>`;
+    position = end;
+  }
+  return html + highlightedText(block, ranges, position, to);
+}
+function jumpToEvidence() {
+  const passage = $("#passage");
+  const mark = passage.querySelector(".evidence");
+  if (!mark) return;
+  passage.scrollTop += mark.getBoundingClientRect().top - passage.getBoundingClientRect().top - 24;
+}
+function selectQuestion(number) {
+  if (chatQuestion !== number) chatQuestion = null;
+  currentQuestion = number;
+  const next = data.groups.findIndex(group => number >= group.first && number <= group.last);
+  if (next !== groupIndex) {
+    groupIndex = next;
+    renderReading();
+  } else {
+    renderNumbers();
+    if (hasReview()) {
+      renderPassage();
+      renderChat();
+    }
+  }
+  const target = $("#review-q" + number) || $("#q" + number);
+  target?.focus({preventScroll: true});
+  target?.scrollIntoView({block: hasReview() ? "nearest" : "center"});
+  if (hasReview()) jumpToEvidence();
+}
+function reviewReply(message, number) {
+  const entry = data.explanations[number];
+  const question = questions.find(item => item.id === number);
+  const group = data.groups.find(item => number >= item.first && number <= item.last);
+  const rejected = "这里仅支持当前题的解析。你可以问为什么选这个、为什么不选某个选项，或询问本题列出的词。";
+  let prompt = message.normalize("NFKC").trim().toLowerCase().replace(/[？?。.!！]+$/, "");
+  const references = [...prompt.matchAll(/(?:(?:q(?:uestion)?\s*|#)\s*|第\s*)(\d+)/g)];
+  if (references.some(match => Number(match[1]) !== number)) return rejected;
+  prompt = prompt.replace(new RegExp(`^(?:q\\s*${number}|第\\s*${number}\\s*题)\\s*[:：,，]?\\s*`), "");
+  if (/^(?:为什么(?:选这个|选这个答案|是这个答案|选它|这个答案对)?|正确答案|why|why is this correct|explain)$/.test(prompt)) {
+    return `答案是 ${question.answer}。 ${entry.reason}`;
+  }
+  if (/^(?:为什么我错了|为什么我的答案不对|为什么不选其他|易错点|选项对比|why not the others|compare|why is my answer wrong)$/.test(prompt)) return entry.contrast;
+  if (/^(?:原文在哪|原文证据|定位|where is the evidence|evidence)$/.test(prompt)) return entry.evidence.map(([, excerpt]) => excerpt).join("\n\n");
+  if (/^(?:关键词|词汇|vocabulary)$/.test(prompt)) return Object.entries(entry.terms).map(([word, meaning]) => `${word} · ${meaning}`).join("\n");
+  const word = prompt.match(/^(?:什么是\s*|what does\s+)?[“"'‘’`]?([a-z][a-z -]*?)[”"'‘’`]?(?:\s*是什么意思|\s*什么意思|\s+mean)?$/)?.[1]?.trim();
+  if (word && Object.hasOwn(entry.terms, word)) return entry.terms[word];
+  const comparison = prompt.match(/^(?:为什么不(?:选|填)|why not)\s*[“"'‘’`]?([a-z0-9][a-z0-9 ’'()£.-]*)[”"'‘’`]?$/)?.[1]?.trim();
+  const correct = prompt.match(/^(?:为什么(?:选|填|是)|why is it)\s*[“"'‘’`]?([a-z0-9][a-z0-9 ’'()£.-]*)[”"'‘’`]?$/)?.[1]?.trim();
+  if (correct && isCorrect(question, {[number]: correct})) return entry.reason;
+  if (comparison) {
+    if (isCorrect(question, {[number]: comparison})) return entry.reason;
+    const alternative = (group.choices || []).some(choice => normalize(choice) === comparison);
+    const userAnswer = normalize(attempt().answers[number]);
+    const known = Object.hasOwn(entry.terms, comparison) || normalize(entry.contrast).includes(comparison);
+    if (alternative || known || (userAnswer && userAnswer === comparison)) return entry.contrast;
+  }
+  return rejected;
+}
+function appendChat(messages, type, value) {
+  const row = document.createElement("p");
+  const label = document.createElement("strong");
+  label.textContent = type + " · ";
+  row.append(label, document.createTextNode(value));
+  row.style.whiteSpace = "pre-wrap";
+  messages.append(row);
+  messages.scrollTop = messages.scrollHeight;
+}
+function renderChat() {
+  const panel = $("#review-chat");
+  if (!panel) return;
+  panel.hidden = !hasReview() || chatQuestion !== currentQuestion || !data.explanations[chatQuestion];
+  if (panel.hidden) return;
+  panel.querySelector("h3").textContent = `题目解析 · Q${chatQuestion}`;
+  const messages = panel.querySelector(".review-messages");
+  messages.replaceChildren();
+  for (const [type, value] of chatThreads.get(chatQuestion) || []) appendChat(messages, type, value);
+}
+function askReview(message) {
+  if (!message || !hasReview() || chatQuestion !== currentQuestion || !data.explanations[chatQuestion]) return;
+  const thread = chatThreads.get(chatQuestion) || [];
+  thread.push(["你", message], ["解析", reviewReply(message, chatQuestion)]);
+  chatThreads.set(chatQuestion, thread.slice(-20));
+  renderChat();
+}
+
 function renderNumbers() {
-  $("#numbers").innerHTML = mode === "reading" ? questions.map(question => {
+  $("#numbers").innerHTML = mode === "reading" ? questions.filter(matchesFilter).map(question => {
     const active = attempt();
     const answered = Boolean(normalize(active.answers[question.id]));
     const result = active.submittedAt ? (isCorrect(question, active.answers) ? "right" : "wrong") : "";
@@ -141,14 +267,18 @@ function renderPassage() {
   const group = data.groups[groupIndex];
   const passage = data.passages[group.passage];
   const target = $("#passage");
-  target.innerHTML = `<h1>${escapeHtml(passage.title)}</h1>` + passage.blocks.map((block, i) => {
+  const explanation = hasReview() ? data.explanations[currentQuestion] : null;
+  const notGiven = questions.find(question => question.id === currentQuestion)?.answer === "NOT GIVEN";
+  const label = explanation ? `<p class="review-label">Q${currentQuestion} · ${notGiven ? "Relevant text · the passage does not confirm the claim" : "Answer evidence"}</p>` : "";
+  target.innerHTML = label + `<h1>${escapeHtml(passage.title)}</h1>` + passage.blocks.map((block, i) => {
     const ranges = attempt().highlights[`${group.passage}:${i}`] || [];
     const heading = passage.headings?.[i] || "";
     const boundary = heading.length;
-    const body = highlightedText(block, ranges, boundary, block.length);
+    const excerpts = (explanation?.evidence || []).filter(([index]) => index === i).map(([, text]) => text);
+    const body = renderEvidenceText(block, ranges, boundary, block.length, excerpts);
     if (!heading) return `<p data-block="${i}">${body}</p>`;
 
-    const title = highlightedText(block, ranges, 0, boundary);
+    const title = renderEvidenceText(block, ranges, 0, boundary, excerpts);
     const className = boundary === block.length ? ' class="passage-heading-only"' : "";
     return `<p data-block="${i}"${className}><strong class="passage-subheading" role="heading" aria-level="2">${title}</strong>${body}</p>`;
   }).join("");
@@ -165,15 +295,16 @@ function flagButton(number, active) {
 function resultMarkup(question, active) {
   const correct = isCorrect(question, active.answers);
   return `<p class="key ${correct ? "right-text" : "wrong-text"}">${correct ? "Correct" : "Incorrect"} · Your answer:
-    ${escapeHtml(active.answers[question.id] || "—")} · Answer key: <strong>${escapeHtml(question.answer)}</strong></p>`;
+    ${escapeHtml(active.answers[question.id] || "—")} · Answer key: <strong>${escapeHtml(question.answer)}</strong></p>` +
+    (hasReview() ? `<div class="review-actions"><button data-evidence="${question.id}">Locate evidence</button><button data-explain="${question.id}" lang="zh">题目解析</button></div>` : "");
 }
 function worksheetMarkup(group, active) {
   const [title, ...blocks] = group.worksheet;
   const contents = blocks.map(block => `<p>${escapeHtml(block).replace(/\[\[(\d+)\]\]/g, (_, id) =>
     `<span class="worksheet-blank" id="q${id}" tabindex="-1"><strong class="qnum">${id}</strong>${answerBox(id, active)}${flagButton(id, active)}</span>`
   )}</p>`).join("");
-  const results = active.submittedAt ? group.questions.map(question =>
-    `<div class="q"><strong class="qnum">${question.id}.</strong>${resultMarkup(question, active)}</div>`
+  const results = active.submittedAt ? group.questions.filter(matchesFilter).map(question =>
+    `<div class="q" id="review-q${question.id}" tabindex="-1"><strong class="qnum">${question.id}.</strong>${resultMarkup(question, active)}</div>`
   ).join("") : "";
   return `<div class="worksheet ${group.kind === "Flow-chart completion" ? "flow" : ""}"><h3>${escapeHtml(title)}</h3>${contents}</div>${results}`;
 }
@@ -197,8 +328,10 @@ function questionMarkup(question, group, active) {
         : prompt.includes("[[blank]]") ? "" : `<div class="options">${box}</div>`}${result}</div>`;
 }
 function groupQuestions(group, active) {
+  const visibleQuestions = group.questions.filter(matchesFilter);
+  if (!visibleQuestions.length) return '<p class="muted">No matching questions in this group.</p>';
   if (group.sourceImage) {
-    const answers = group.questions.map(question => questionMarkup(question, group, active)).join("");
+    const answers = visibleQuestions.map(question => questionMarkup(question, group, active)).join("");
     return `<div class="source-layout"><figure class="source-sheet">
       <img src="data:image/jpeg;base64,${group.sourceImage}" alt="Original layout for questions ${group.first}–${group.last}">
       </figure><section class="source-answers" aria-label="Answer fields"><h3>Your answers</h3>${answers}</section></div>`;
@@ -208,12 +341,13 @@ function groupQuestions(group, active) {
   const choiceList = labels.length ? `<div class="choice-list">${labels.map(([key, label]) =>
     `<div><strong>${escapeHtml(key)}</strong><span>${escapeHtml(label)}</span></div>`).join("")}</div>` : "";
   const legacyNotes = group.kind === "Note completion" ? "<h3>Achieving a better work-life balance</h3>" : "";
-  return choiceList + legacyNotes + group.questions.map(question => questionMarkup(question, group, active)).join("");
+  return choiceList + legacyNotes + visibleQuestions.map(question => questionMarkup(question, group, active)).join("");
 }
 function renderReading() {
   selection = [];
   const active = attempt();
   const group = data.groups[groupIndex];
+  renderReviewFilters();
   $("#sections").innerHTML = data.groups.map((item, index) =>
     `<button data-group="${index}" aria-pressed="${index === groupIndex}">Q${item.first}–${item.last}</button>`
   ).join("");
@@ -225,8 +359,16 @@ function renderReading() {
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Questions ${group.first}–${group.last}</span><span class="muted" id="reading-progress"></span></div>
       <div class="scroll" id="questions"><h2>${group.kind}</h2><p class="muted">${escapeHtml(group.instruction)}</p>
       ${group.kind === "True / False / Not Given" ? '<p class="muted"><strong>TRUE</strong> if the statement agrees with the information<br><strong>FALSE</strong> if it contradicts the information<br><strong>NOT GIVEN</strong> if there is no information on this</p>' : ""}
-      ${groupQuestions(group, active)}</div></section>`;
+      ${groupQuestions(group, active)}</div>
+      ${hasReview() ? `<aside id="review-chat" class="review-chat" lang="zh" aria-labelledby="review-chat-title" hidden>
+        <div class="dialog-head"><h3 id="review-chat-title">题目解析</h3><button type="button" data-close-chat>关闭</button></div>
+        <p class="muted">仅回答当前题。解析来自已核对的题目资料。</p>
+        <div class="review-messages" role="log" aria-live="polite" aria-label="解析对话"></div>
+        <div class="actions"><button type="button" data-ask="为什么选这个">为什么选这个</button><button type="button" data-ask="为什么不选其他">为什么不选其他</button><button type="button" data-ask="关键词">关键词</button></div>
+        <form id="review-chat-form"><input aria-label="追问本题" maxlength="180" placeholder="例如：issue 是什么意思？" required><button type="submit">发送</button></form>
+      </aside>` : ""}</section>`;
   renderPassage();
+  renderChat();
   updateProgress();
   $("#passage").addEventListener("mouseup", captureSelection);
   $("#highlight")?.addEventListener("pointerdown", event => event.preventDefault());
@@ -236,6 +378,7 @@ function updateProgress() {
     questions.filter(question => normalize(attempt().answers[question.id])).length + ` / ${questions.length} answered`;
 }
 function renderWriting() {
+  renderReviewFilters();
   const active = attempt();
   const task = data.writing[writingIndex];
   $("#sections").innerHTML = data.writing.map((_, index) =>
@@ -371,6 +514,7 @@ $("#submit").onclick = () => {
   }
   if (attempt().submittedAt) {
     state.attempts[mode] = newAttempt();
+    resetReview();
     currentQuestion = null;
     groupIndex = writingIndex = 0;
     save();
@@ -392,30 +536,47 @@ $("#sections").onclick = event => {
   if (mode === "reading") {
     groupIndex = Number(button.dataset.group);
     currentQuestion = null;
+    chatQuestion = null;
     renderReading();
   } else {
     writingIndex = Number(button.dataset.task);
     renderWriting();
   }
 };
+$("#review-filters").onclick = event => {
+  const filter = event.target.closest("[data-filter]")?.dataset.filter;
+  if (!hasReview() || !filter) return;
+  reviewFilter = filter;
+  chatQuestion = null;
+  currentQuestion = null;
+  const group = data.groups.findIndex(item => item.questions.some(matchesFilter));
+  if (group >= 0) groupIndex = group;
+  renderReading();
+  $("#review-filters").querySelector('[aria-pressed="true"]').focus();
+};
 $("#numbers").onclick = event => {
   const button = event.target.closest("[data-jump]");
-  if (!button) return;
-  currentQuestion = Number(button.dataset.jump);
-  const next = data.groups.findIndex(group => currentQuestion >= group.first && currentQuestion <= group.last);
-  if (next !== groupIndex) {
-    groupIndex = next;
-    renderReading();
-  } else {
-    renderNumbers();
-  }
-  const target = $("#q" + currentQuestion);
-  target.focus({preventScroll: true});
-  target.scrollIntoView({block: "center"});
+  if (button) selectQuestion(Number(button.dataset.jump));
 };
 $("#workspace").onclick = event => {
   const button = event.target.closest("button");
   if (!button) return;
+  if (button.dataset.evidence) selectQuestion(Number(button.dataset.evidence));
+  if (button.dataset.explain && hasReview()) {
+    const number = Number(button.dataset.explain);
+    selectQuestion(number);
+    chatQuestion = number;
+    if (!chatThreads.has(number)) askReview("为什么选这个");
+    else renderChat();
+    $("#review-chat input").focus();
+  }
+  if (button.hasAttribute("data-close-chat")) {
+    const number = chatQuestion;
+    chatQuestion = null;
+    renderChat();
+    $(`[data-explain="${number}"]`)?.focus();
+  }
+  if (button.dataset.ask) askReview(button.dataset.ask);
   if (button.id === "highlight") highlight();
   if (button.id === "clear-highlights") clearHighlights();
   if (button.dataset.flag) {
@@ -427,6 +588,15 @@ $("#workspace").onclick = event => {
     renderNumbers();
   }
 };
+$("#workspace").addEventListener("submit", event => {
+  if (event.target.id !== "review-chat-form") return;
+  event.preventDefault();
+  const input = event.target.querySelector("input");
+  const value = input.value.trim();
+  if (!value) return;
+  input.value = "";
+  askReview(value);
+});
 $("#workspace").oninput = event => {
   const input = event.target;
   if (attempt().submittedAt) return;
@@ -448,6 +618,7 @@ $("#workspace").oninput = event => {
 $("#history-list").onclick = event => {
   const button = event.target.closest("[data-review]");
   if (!button) return;
+  resetReview();
   review = state.history[Number(button.dataset.review)];
   mode = review.module;
   groupIndex = writingIndex = 0;

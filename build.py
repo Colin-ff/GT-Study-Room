@@ -48,6 +48,28 @@ for book in sorted((ROOT / "bank").iterdir()):
                 assert block == heading or block.startswith(heading + " "), (source, heading)
             if headings:
                 passage["headings"] = headings
+
+        if book.name == "cambridge-14-gt" and test_number == 1:
+            explanations = json.loads((ROOT / "bank" / "cambridge-14-test-1-review.json").read_text(encoding="utf-8"))
+            assert set(explanations) == {str(q["id"]) for q in questions}, source
+            for group in test["groups"]:
+                blocks = test["passages"][group["passage"]]["blocks"]
+                for question in group["questions"]:
+                    entry = explanations[str(question["id"])]
+                    evidence = []
+                    for block, first, *last in entry.pop("anchors"):
+                        text = blocks[block]
+                        if first is None:
+                            begin = 0
+                            excerpt = text
+                        else:
+                            begin = text.index(first)
+                            end = text.index(last[0], begin) + len(last[0])
+                            excerpt = text[begin:end]
+                            assert end >= begin + len(first) and text.count(excerpt) == 1, (source, question["id"])
+                        evidence.append((block, begin, excerpt))
+                    entry["evidence"] = [[block, excerpt] for block, _, excerpt in sorted(evidence)]
+            test["explanations"] = explanations
         key = f"{book.name}-{source.stem}-v2"
         test["storageKey"] = key
         path = f"tests/{book.name}/{source.stem}.html"

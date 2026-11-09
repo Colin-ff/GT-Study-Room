@@ -1,0 +1,594 @@
+{
+  "1": {
+    "anchors": [
+      [
+        1,
+        "You can only",
+        "from hospital."
+      ]
+    ],
+    "reason": "直接进入过渡护理的唯一途径是从医院转入，所以题干的 only hospital patients 成立。",
+    "contrast": "后面说护理可以在家中进行，讲的是护理地点，和从哪里转入是两件事。",
+    "terms": {
+      "directly": "直接地。这里修饰从医院转入。"
+    }
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "Transition care is focused",
+        "time only."
+      ]
+    ],
+    "reason": "原文说过渡护理只提供有限时间，因此「可以是长期的」与原文矛盾。",
+    "contrast": "limited time only 明确限制了时间范围，因此是 FALSE。",
+    "terms": {
+      "limited time only": "只在有限的一段时间内。"
+    }
+  },
+  "3": {
+    "anchors": [
+      [
+        8,
+        "If your circumstances allow",
+        "your care."
+      ]
+    ],
+    "reason": "原文把分担费用限定在经济或个人情况允许时。题干把这一条件改成了 everyone。",
+    "contrast": "有条件的预期付费不等于所有人必须付费，所以选 FALSE。",
+    "terms": {
+      "contribute": "分担一部分费用。",
+      "if your circumstances allow": "如果你的情况允许。"
+    }
+  },
+  "4": {
+    "anchors": [
+      [
+        11,
+        "Transition care is provided",
+        "of a hospital."
+      ]
+    ],
+    "reason": "原文说明护理可以在自己家中进行，但没有说居家护理只给独居者，也没有说明和别人同住的人能否获得护理。",
+    "contrast": "FALSE 需要原文明确给出反例或相反条件。这里缺的是独居这一条件，所以选 NOT GIVEN。",
+    "terms": {
+      "live-in": "这里指需要入住的护理环境。"
+    }
+  },
+  "5": {
+    "anchors": [
+      [
+        11,
+        "This setting",
+        "of a hospital."
+      ]
+    ],
+    "reason": "住院式护理地点可以是医疗机构的一部分，例子就是医院的独立翼楼，因此题干的 may 成立。",
+    "contrast": "题干说的是「可能在医院场地内」，并未说所有护理都必须在那里。",
+    "terms": {
+      "wing": "建筑的一翼，或附属的一部分。"
+    }
+  },
+  "6": {
+    "anchors": [
+      [
+        13,
+        "If you",
+        "until you return."
+      ]
+    ],
+    "reason": "原文说暂时离开去做过渡护理时，养老院的名额会保留到你回来。",
+    "contrast": "will be held 与题干的 may lose 指向相反结果，所以是 FALSE。",
+    "terms": {
+      "be held": "这里是「被保留」。"
+    }
+  },
+  "7": {
+    "anchors": [
+      [
+        3,
+        "However, the zips",
+        "very full."
+      ]
+    ],
+    "reason": "C 的拉链转角处不顺，有时还要用力拉。may be difficult to use 对应这些具体困难。",
+    "contrast": "D 的拉链容易握而且滑动顺畅。B 的内袋没拉链，和「已有的拉链不好用」是两回事。",
+    "terms": {
+      "give them a good tug": "用力拉一下拉链。"
+    }
+  },
+  "8": {
+    "anchors": [
+      [
+        5,
+        "We test each",
+        "it was unusable."
+      ]
+    ],
+    "reason": "E 在跌落测试后角落布料严重撕裂，甚至无法继续使用。",
+    "contrast": "A 也提到跌落，但它的侧面即使被摔也不易破裂，结论相反。",
+    "terms": {
+      "tore": "tear 的过去式，表示布料撕裂。"
+    }
+  },
+  "9": {
+    "anchors": [
+      [
+        1,
+        "However, the trolley",
+        "easy to grip."
+      ]
+    ],
+    "reason": "A 分别提到拉杆薄软、顶部提手硬且扁、侧边提手难握，符合题干的多种问题。",
+    "contrast": "E 的主要问题是拉杆高度不可调。题干要求的是几个不同的提手问题。",
+    "terms": {
+      "flimsy": "单薄、不结实。"
+    }
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "In tests",
+        "the zips."
+      ]
+    ],
+    "reason": "B 即使被水浸透般地淋湿，里面的东西仍然干燥，连拉链周围也一样。",
+    "contrast": "C 恰恰容易进水。题干问的是防水性强。",
+    "terms": {
+      "a good soaking": "被大量的水淋湿。"
+    }
+  },
+  "11": {
+    "anchors": [
+      [
+        5,
+        "E The Travelsure",
+        "lipstick kisses."
+      ]
+    ],
+    "reason": "E 有大量面料图案可选，豹纹和唇印是两个例子。",
+    "contrast": "其他选项提到的口袋、拉杆或材料都不等同于图案选择丰富。",
+    "terms": {
+      "fabric designs": "面料上的设计或图案。"
+    }
+  },
+  "12": {
+    "anchors": [
+      [
+        4,
+        "However, this cabin",
+        "other suitcases."
+      ]
+    ],
+    "reason": "D 在不够平滑的地面上拉起来有点重，而且比其他箱子更难控制方向。",
+    "contrast": "C 在大多数路面上容易控制，方向相反。",
+    "terms": {
+      "steer": "控制移动方向。"
+    }
+  },
+  "13": {
+    "anchors": [
+      [
+        4,
+        "D The Skybag",
+        "inside the lid."
+      ]
+    ],
+    "reason": "D 有一个外部拉链袋，箱盖内还有一个。题干只数内部拉链袋，因此数量是一个。",
+    "contrast": "B 有两个外部拉链袋，但内袋没有拉链。不能把外部口袋计入。",
+    "terms": {
+      "internal": "内部的。",
+      "zipped pocket": "有拉链的口袋。"
+    }
+  },
+  "14": {
+    "anchors": [
+      [
+        2,
+        "The trolley handle",
+        "hands sore."
+      ]
+    ],
+    "reason": "B 的拉杆有两种高度可选，说明它可以调节。",
+    "contrast": "E 的拉杆虽然握着舒服，却不能按身高调节。",
+    "terms": {
+      "adjustable": "可以调节的。"
+    }
+  },
+  "15": {
+    "anchors": [
+      [
+        0,
+        "Annual permits can",
+        "Hospitality Department."
+      ]
+    ],
+    "reason": "题目问在哪里买。原文的 can be purchased from 直接指向 Hospitality Department。",
+    "contrast": "College website 是下载申请表的地方。下载表格和购买许可是两件事。",
+    "terms": {
+      "purchased from": "从某处购买。"
+    }
+  },
+  "16": {
+    "anchors": [
+      [
+        0,
+        "All permits/tickets",
+        "academic calendar."
+      ]
+    ],
+    "reason": "原文说学期日期发布在 academic calendar 上，正好回答「哪一份文件」。",
+    "contrast": "Application form 上有停车费用，不是学期日期。",
+    "terms": {
+      "as published in": "正如某份文件上所公布的。"
+    }
+  },
+  "17": {
+    "anchors": [
+      [
+        0,
+        "Annual car parking permits",
+        "30th June."
+      ]
+    ],
+    "reason": "许可从 9 月 20 日起可以买，但有效期是 10 月 1 日到次年 6 月 30 日。题干问有效期的起始日期。",
+    "contrast": "20 September 是开售日，30 June 是有效期结束日。",
+    "terms": {
+      "valid for": "在某段时间内有效。"
+    }
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "The nominated contractor",
+        "blue disabled-parking permit."
+      ]
+    ],
+    "reason": "句子主语是 the nominated contractor，谓语是 will issue，宾语是 Penalty Charge Notices，所以开罚单的是指定承包商。",
+    "contrast": "College 负责停车政策和安排，证据句把开罚单的动作明确交给 nominated contractor。",
+    "terms": {
+      "issue": "这里是开出或发出罚单。",
+      "nominated contractor": "被指定负责此事的承包商。",
+      "penalty charge notice": "停车罚款通知，文中简称 PCN。"
+    }
+  },
+  "19": {
+    "anchors": [
+      [
+        7,
+        "The College welcomes",
+        "the vehicle."
+      ]
+    ],
+    "reason": "访客需展示提前安排好的 permits。displayed 对应题干里的 show。",
+    "contrast": "Hospitality Department 是咨询地点，题目要填展示的物品。",
+    "terms": {
+      "displayed": "展示在能被看到的位置。"
+    }
+  },
+  "20": {
+    "anchors": [
+      [
+        9,
+        "There will be two",
+        "outside Concorde Building."
+      ]
+    ],
+    "reason": "第二句的 These 指上一句的两个接送车位。它们在 Concorde Building 外面。",
+    "contrast": "ten minutes 是最长等待时间，题干问地点。",
+    "terms": {
+      "these": "指前一句提到的两个短时接送车位。"
+    }
+  },
+  "21": {
+    "anchors": [
+      [
+        3,
+        "You are entitled",
+        "baby is due."
+      ]
+    ],
+    "reason": "原文把至少为同一家公司工作 26 周列为领取 SMP 的条件。",
+    "contrast": "15th week 是计算资格的时间节点，不是要求工作的周数。",
+    "terms": {
+      "at least": "至少。",
+      "eligible": "符合领取条件的。"
+    }
+  },
+  "22": {
+    "anchors": [
+      [
+        3,
+        "For 6 weeks",
+        "average weekly earnings."
+      ]
+    ],
+    "reason": "按平均周收入的 90% 发放的阶段持续 6 周。",
+    "contrast": "后面的 33 周按固定金额发放。39 周是可领取总时长。",
+    "terms": {
+      "average weekly earnings": "平均每周收入。"
+    }
+  },
+  "23": {
+    "anchors": [
+      [
+        3,
+        "Then you will receive",
+        "remaining 33 weeks."
+      ]
+    ],
+    "reason": "Then 和 remaining 33 weeks 指第二阶段。该阶段每周为 £112.75。",
+    "contrast": "90% 是第一阶段的计算比例。33 weeks 是时长，不是金额。",
+    "terms": {
+      "remaining": "剩余的。"
+    }
+  },
+  "24": {
+    "anchors": [
+      [
+        5,
+        "Maternity Allowance can",
+        "amount is the lower."
+      ]
+    ],
+    "reason": "题目问 MA 最长能领多久，原文 up to 39 weeks 给出上限。",
+    "contrast": "26 周和 66 周都属于工作资格的计算条件，不是发放时长。",
+    "terms": {
+      "up to": "最多，最高可达。"
+    }
+  },
+  "25": {
+    "anchors": [
+      [
+        5,
+        "You can find",
+        "throughout the country."
+      ]
+    ],
+    "reason": "原文直接说明可以在 antenatal clinics 找到 MA 申请表。",
+    "contrast": "题干问领取表格的地点，不是申请资格或金额。",
+    "terms": {
+      "antenatal clinics": "产前门诊。"
+    }
+  },
+  "26": {
+    "anchors": [
+      [
+        7,
+        "The amount you get will depend",
+        "and income."
+      ]
+    ],
+    "reason": "原文先说明金额取决于 personal circumstances 和 income。题目已排除收入，所以保留 personal circumstances。",
+    "contrast": "下一句列的是计算收入时不计入的款项，不是题干所问的另一项条件。",
+    "terms": {
+      "apart from": "这里是「除了……之外」。"
+    }
+  },
+  "27": {
+    "anchors": [
+      [
+        9,
+        "If you get benefits",
+        "towards the cost of a new baby."
+      ]
+    ],
+    "reason": "第二句的 These 指 Sure Start Maternity Payments，原文直接将它们定义为 individual grants。",
+    "contrast": "benefits 和 Child Tax Credit 出现在资格条件里，并不是这项付款的定义。",
+    "terms": {
+      "grants": "这里指补助金。"
+    }
+  },
+  "28": {
+    "anchors": [
+      [
+        1,
+        null
+      ],
+      [
+        2,
+        null
+      ]
+    ],
+    "reason": "A 段先讲书面记录为什么重要，再讲泥板、兽皮、木条和纸莎草等不同记录方式。标题 ii 同时覆盖这两部分。",
+    "contrast": "制造纸莎草的工序属于 B 段。选标题时要覆盖整段，不能只看到 papyrus 就选生产流程。",
+    "terms": {
+      "written records": "用文字保存下来的记录。"
+    }
+  },
+  "29": {
+    "anchors": [
+      [
+        3,
+        "Manufacturing sheets",
+        "high-quality writing surface."
+      ]
+    ],
+    "reason": "B 段重点依次描述切条、叠放、浸水、捶打、压干和抛光，所以标题 viii 最贴合。",
+    "contrast": "v 提到不同制造方法，而本段重点是一套制作流程。开头的生长地点只是背景。",
+    "terms": {
+      "pith": "植物茎内部的髓。"
+    }
+  },
+  "30": {
+    "anchors": [
+      [
+        4,
+        "C In moist climates",
+        "rot-resistant writing surface."
+      ],
+      [
+        5,
+        "But the documents",
+        "hundreds of years."
+      ],
+      [
+        6,
+        "Collections of documents",
+        "cultural knowledge."
+      ]
+    ],
+    "reason": "C 段一方面讲潮湿、虫蛀和焚烧如何毁掉文献，另一方面讲干燥和沙层如何保存文献。标题 vii 同时包含保存和破坏。",
+    "contrast": "标题 i 说的是破解一份文献的谜团，范围太窄，也没有涵盖毁坏。",
+    "terms": {
+      "preservation": "保存、保护。"
+    }
+  },
+  "31": {
+    "anchors": [
+      [
+        7,
+        null
+      ]
+    ],
+    "reason": "D 段从书面记录转到船只、绳索、帆、篮子和食物，还提到水净化等可能用途。标题 iii 能概括这些用途。",
+    "contrast": "iv 只强调未来可能性，而本段主体包含多种历史用途。",
+    "terms": {
+      "a range of purposes": "多种用途。"
+    }
+  },
+  "32": {
+    "anchors": [
+      [
+        8,
+        "The adoption",
+        "papyrus obsolete."
+      ],
+      [
+        9,
+        "As a paper substitute",
+        "tourist market."
+      ]
+    ],
+    "reason": "E 段讲其他纸张逐步取代 papyrus，以及它作为书写材料退居小众市场。标题 vi 概括了这种衰落。",
+    "contrast": "今天仍有小众用途是衰落后的状态，主旨是 papyrus 被取代。",
+    "terms": {
+      "obsolete": "因被替代而不再通用。"
+    }
+  },
+  "33": {
+    "anchors": [
+      [
+        2,
+        "Other cultures",
+        "wood strips."
+      ]
+    ],
+    "reason": "原文称兽皮和木条更灵活但不够耐久。less permanent 对应 A 的 did not last for a long time。",
+    "contrast": "B 难储存说的是泥板。C 和 more flexible 相反。D 的火相关描述对应泥板的 fireproof，原文并未用它说明兽皮和木条的问题。",
+    "terms": {
+      "less permanent": "保存时间更短、不够耐久。"
+    }
+  },
+  "34": {
+    "anchors": [
+      [
+        3,
+        "These were then covered",
+        "hammered together."
+      ],
+      [
+        3,
+        "The sheet was then",
+        "high-quality writing surface."
+      ]
+    ],
+    "reason": "hammered together 表示把叠好的两层捶合，所以选 B。",
+    "contrast": "A 去除水分对应后面的 pressed / crushed 步骤。C 切条、D 调整铺放角度都发生在捶打之前。",
+    "terms": {
+      "hammered together": "捶打使两层结合。"
+    }
+  },
+  "35": {
+    "anchors": [
+      [
+        6,
+        "For thousands of years",
+        "morally or religiously unacceptable."
+      ]
+    ],
+    "reason": "作者写掌权者焚烧记录是为了消除不利证据或压制不接受的思想。这支持 D，掌权者可能希望他人不知道这些信息。",
+    "contrast": "A 泛谈信息的两面性，B 提出新保存方法，C 讨论文化知识的其他来源。这些都没有回答文中掌权者焚书的目的。",
+    "terms": {
+      "in ignorance": "处于不知情的状态。"
+    }
+  },
+  "36": {
+    "anchors": [
+      [
+        7,
+        "In 1969",
+        "ancient Egyptian craft."
+      ]
+    ],
+    "reason": "Heyerdahl 用纸莎草制成的船尝试横跨大西洋，说明这种材料可以用来造远航的船。",
+    "contrast": "A 的食物和 D 的环保用途出现在本段其他地方。B 的航海技术也不是作者用这艘船要证明的重点。",
+    "terms": {
+      "craft": "这里指船只。"
+    }
+  },
+  "37": {
+    "anchors": [
+      [
+        9,
+        "As a paper substitute",
+        "depends’."
+      ]
+    ],
+    "reason": "原文说今天 papyrus 已是小众商品，它值得注意的地方在于曾保存古人的生活和文化。B 概括了这种历史意义。",
+    "contrast": "A 比较环保性，C 说现在最好用，D 呼吁继续使用。结尾没有提出这些结论。",
+    "terms": {
+      "niche product": "面向小众市场的产品。"
+    }
+  },
+  "38": {
+    "anchors": [
+      [
+        4,
+        "C In moist climates",
+        "attacks by insects."
+      ]
+    ],
+    "reason": "潮湿条件下，纸莎草纸会发霉或被 insects 攻击而出现孔洞。此空问造成孔洞的生物。",
+    "contrast": "mould 是同句提到的另一种损坏表现，和孔洞对应的是 insects。",
+    "terms": {
+      "attacks by insects": "虫蛀、昆虫侵害。"
+    }
+  },
+  "39": {
+    "anchors": [
+      [
+        4,
+        "The earliest known roll",
+        "five thousand years old."
+      ]
+    ],
+    "reason": "最早已知的纸莎草卷是在名为 Hemeka 的官员的 tomb 里发现的。空格需要具体的发现地点类型。",
+    "contrast": "Hemeka 是人名，Memphis 是附近的城市，都没有填出发现地点的类型。",
+    "terms": {
+      "tomb": "坟墓、墓室。"
+    }
+  },
+  "40": {
+    "anchors": [
+      [
+        4,
+        "In 79CE",
+        "the catastrophic"
+      ],
+      [
+        5,
+        "eruption of Mount Vesuvius.",
+        "eruption of Mount Vesuvius."
+      ]
+    ],
+    "reason": "原文描述维苏威火山 eruption 产生的灰烬保护了纸莎草卷。此空填事件名称 eruption。",
+    "contrast": "ash 指保护文献的灰烬。题目要求从原文取词时，保留原文用的 eruption。",
+    "terms": {
+      "eruption": "火山喷发。"
+    }
+  }
+}
