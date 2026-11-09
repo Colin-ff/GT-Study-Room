@@ -84,10 +84,33 @@ const newAttempt = () => ({
   deadline: null, answers: {}, flags: {}, highlights: {},
   drafts: ["", ""], submittedAt: null
 });
+function migrateHighlights(state) {
+  const moves = data.highlightMoves;
+  if (!moves || state.highlightRevision === 1) return;
+  const attempts = [state.attempts.reading, ...state.history.filter(entry => entry.module === "reading")];
+  for (const attempt of attempts) {
+    if (!attempt?.highlights) continue;
+    const updated = {};
+    for (const [key, ranges] of Object.entries(attempt.highlights)) {
+      const move = moves[key];
+      if (move === null) continue;
+      const [target, minimum, offset] = move || [key, 0, 0];
+      for (const [start, end] of ranges) {
+        if (end <= minimum) continue;
+        (updated[target] ||= []).push([Math.max(start, minimum) + offset, end + offset]);
+      }
+    }
+    for (const ranges of Object.values(updated)) ranges.sort((a, b) => a[0] - b[0]);
+    attempt.highlights = updated;
+  }
+  state.highlightRevision = 1;
+}
+
 const state = {attempts: {}, history: []};
 try {
   const saved = JSON.parse(localStorage.getItem(storageKey));
   if (saved) Object.assign(state, saved);
+  migrateHighlights(state);
 } catch {
   $("#storage-warning").hidden = false;
 }

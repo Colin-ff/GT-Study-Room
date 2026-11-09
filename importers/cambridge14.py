@@ -97,6 +97,14 @@ PARAGRAPH_STARTS = {
 }
 
 def clean(page):
+    # This running source credit repeats at the bottom of both Papyrus pages.
+    page = re.sub(
+        r"(?m)^ *From Stephen Harris, What have Plants Ever Done for Us\?, "
+        r"Bodleian Library Publishing 2015\. Reprinted by kind permission of Bodleian"
+        r"\s+Library Publishing\. *$",
+        "",
+        page,
+    )
     return [line.rstrip() for line in page.splitlines()
             if not re.fullmatch(r"\s*(?:Reading|Writing|READING|WRITING|Test\s*[1-4lI]|\d+|\.)\s*", line)]
 

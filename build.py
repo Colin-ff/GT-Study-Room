@@ -94,6 +94,13 @@ for book in sorted((ROOT / "bank").iterdir()):
                         evidence.append((block, begin, excerpt))
                     entry["evidence"] = [[block, excerpt] for block, _, excerpt in sorted(evidence)]
             test["explanations"] = explanations
+            # Move saved highlights from the old Papyrus blocks onto the corrected text.
+            # Each entry maps an old block to its new key, removed prefix, and offset.
+            test["highlightMoves"] = {
+                "4:5": ["4:4", 152, 426],
+                **{f"4:{i}": [f"4:{i - 1}", 0, 0] for i in range(6, 10)},
+                "4:10": None,
+            }
         key = f"{book.name}-{source.stem}-v2"
         test["storageKey"] = key
         path = f"tests/{book.name}/{source.stem}.html"
