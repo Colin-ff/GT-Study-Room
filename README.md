@@ -4,7 +4,7 @@ A browser-based simulator for computer-delivered IELTS General Training Reading 
 
 ## Use G Study Room
 
-- **Online.** Start practising in your browser with the Cambridge IELTS 14–17 General Training question bank. The site is public and requires no sign-in or installation. [Open the live simulator](https://gstudyroom.space)
+- **Online.** Start practising in your browser with the Cambridge IELTS 14–20 General Training question bank. The site is public and requires no sign-in or installation. [Open the live simulator](https://gstudyroom.space)
 - **Local.** Download the repository, build the site with Python, and open it on `localhost`. The included question bank works offline after setup. To get later updates, pull the latest changes and rebuild. [Local setup instructions](#run-locally)
 
 Both versions offer the same Reading and Writing practice features. Each browser stores drafts and progress separately for the live site and `localhost`, so records do not sync between them.
@@ -46,7 +46,7 @@ Open [localhost:8000](http://localhost:8000/). On Windows, use `py -3` in place 
 3. Start the timer when ready. Use the question or task navigation to move through the module.
 4. Select **Submit** to finish the attempt. Open **History** to review past submissions.
 
-The question bank contains Cambridge IELTS 14–17 General Training, with four tests per book, 640 Reading questions and 32 Writing tasks. The repository also includes a short original demo.
+The question bank contains Cambridge IELTS 14–20 General Training, with four tests per book, 1,120 Reading questions and 56 Writing tasks. The repository also includes a short original demo.
 
 ## Project structure
 

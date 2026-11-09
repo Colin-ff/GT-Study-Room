@@ -11,6 +11,26 @@ CATALOG = (ROOT / "frontend" / "catalog.html").read_text(encoding="utf-8")
 READING_HEADINGS = json.loads((ROOT / "bank" / "reading-headings.json").read_text(encoding="utf-8"))
 
 
+# In these legacy passages the letter is already part of the stored text.
+LEGACY_LABELLED_PAGES = {
+    "cambridge-14-gt": {19, 27, 40, 48, 61, 85},
+    "cambridge-15-gt": {18, 24, 40, 47, 62, 66, 82},
+    "cambridge-16-gt": {19, 28, 43, 63, 72, 85},
+    "cambridge-17-gt": {28, 41, 49, 63, 72, 85},
+}
+
+
+def label_legacy_passage(passage):
+    labels = {}
+    expected = "A"
+    for index, block in enumerate(passage["blocks"]):
+        if block.startswith(expected + " "):
+            labels[str(index)] = expected
+            expected = chr(ord(expected) + 1)
+    assert len(labels) >= 2, passage["title"]
+    return labels
+
+
 def catalog(path, title, intro, cards, back=""):
     path.parent.mkdir(parents=True, exist_ok=True)
     html = (CATALOG.replace("__TITLE__", escape(title)).replace("__INTRO__", escape(intro))
@@ -48,6 +68,10 @@ for book in sorted((ROOT / "bank").iterdir()):
                 assert block == heading or block.startswith(heading + " "), (source, heading)
             if headings:
                 passage["headings"] = headings
+            if pages and pages[0] in LEGACY_LABELLED_PAGES.get(book.name, ()):
+                passage["labels"] = label_legacy_passage(passage)
+            for index, letter in passage.get("labels", {}).items():
+                assert passage["blocks"][int(index)].startswith(letter + " "), (source, letter)
 
         if book.name == "cambridge-14-gt" and test_number == 1:
             explanations = json.loads((ROOT / "bank" / "cambridge-14-test-1-review.json").read_text(encoding="utf-8"))
