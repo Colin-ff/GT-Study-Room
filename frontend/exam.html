@@ -175,34 +175,68 @@ function selectQuestion(number) {
   target?.scrollIntoView({block: hasReview() ? "nearest" : "center"});
   if (hasReview()) jumpToEvidence();
 }
+function reviewPhrase(value) {
+  return normalize(value.normalize("NFKC").replace(/[‘’]/g, "'"))
+    .replace(/[^a-z0-9'-]+/g, " ").trim().replace(/^'+|'+$/g, "");
+}
+
 function reviewReply(message, number) {
   const entry = data.explanations[number];
   const question = questions.find(item => item.id === number);
   const group = data.groups.find(item => number >= item.first && number <= item.last);
-  const rejected = "这里仅支持当前题的解析。你可以问为什么选这个、为什么不选某个选项，或询问本题列出的词。";
-  let prompt = message.normalize("NFKC").trim().toLowerCase().replace(/[？?。.!！]+$/, "");
-  const references = [...prompt.matchAll(/(?:(?:q(?:uestion)?\s*|#)\s*|第\s*)(\d+)/g)];
-  if (references.some(match => Number(match[1]) !== number)) return rejected;
-  prompt = prompt.replace(new RegExp(`^(?:q\\s*${number}|第\\s*${number}\\s*题)\\s*[:：,，]?\\s*`), "");
-  if (/^(?:为什么(?:选这个|选这个答案|是这个答案|选它|这个答案对)?|正确答案|why|why is this correct|explain)$/.test(prompt)) {
-    return `答案是 ${question.answer}。 ${entry.reason}`;
-  }
-  if (/^(?:为什么我错了|为什么我的答案不对|为什么不选其他|易错点|选项对比|why not the others|compare|why is my answer wrong)$/.test(prompt)) return entry.contrast;
-  if (/^(?:原文在哪|原文证据|定位|where is the evidence|evidence)$/.test(prompt)) return entry.evidence.map(([, excerpt]) => excerpt).join("\n\n");
+  const rejected = "可以问当前题的原文、词义、指代或选项。要解析其他题，请先切换题号。";
+  const references = /\b(?:q(?:uestion)?|#)\s*(\d+)\b|第\s*(\d+)\s*题/gi;
+  if ([...message.normalize("NFKC").matchAll(references)].some(match => Number(match[1] || match[2]) !== number)) return rejected;
+  const prompt = message.normalize("NFKC").toLowerCase().replace(references, "")
+    .trim().replace(/^[：:,，\s]+|[？?。.!！\s]+$/g, "").replace(/\s+/g, " ");
+  const evidence = entry.evidence.map(([, excerpt]) => excerpt);
+  const cue = entry.reason.match(/“([^”]+)”/)?.[1];
+  const answer = `答案是 ${question.answer}。 ${entry.reason}`;
+  const contrast = entry.contrast + (cue && !entry.contrast.includes(cue) ? `\n原文定位 · “${cue}”` : "");
+
+  if (/^(?:(?:请|能不能|可以|能)?(?:帮我)?)?(?:为什么(?:选这个(?:答案)?|是这个答案|选它|这个答案对|这题(?:对|选这个))?|正确答案|解释(?:一下)?(?:这道题|这题|本题)?(?:吗)?|why|why is this correct|explain(?: this question)?)$/.test(prompt)) return answer;
+  if (/^(?:为什么(?:我错了|我的答案不对|不选其他(?:选项)?)|易错点|选项对比|why not the others|compare|why is my answer wrong)$/.test(prompt)) return contrast;
+  if (/^(?:原文在哪(?:里)?|原文证据|定位|答案在哪(?:里)?|where is the evidence|evidence)$/.test(prompt)) return evidence.join("\n\n");
   if (/^(?:关键词|词汇|vocabulary)$/.test(prompt)) return Object.entries(entry.terms).map(([word, meaning]) => `${word} · ${meaning}`).join("\n");
-  const word = prompt.match(/^(?:什么是\s*|what does\s+)?[“"'‘’`]?([a-z][a-z -]*?)[”"'‘’`]?(?:\s*是什么意思|\s*什么意思|\s+mean)?$/)?.[1]?.trim();
-  if (word && Object.hasOwn(entry.terms, word)) return entry.terms[word];
-  const comparison = prompt.match(/^(?:为什么不(?:选|填)|why not)\s*[“"'‘’`]?([a-z0-9][a-z0-9 ’'()£.-]*)[”"'‘’`]?$/)?.[1]?.trim();
-  const correct = prompt.match(/^(?:为什么(?:选|填|是)|why is it)\s*[“"'‘’`]?([a-z0-9][a-z0-9 ’'()£.-]*)[”"'‘’`]?$/)?.[1]?.trim();
-  if (correct && isCorrect(question, {[number]: correct})) return entry.reason;
-  if (comparison) {
-    if (isCorrect(question, {[number]: comparison})) return entry.reason;
-    const alternative = (group.choices || []).some(choice => normalize(choice) === comparison);
+  if (/^(?:原文|题干|这题|这道题)?(?:哪里|哪部分|怎么)?(?:对应|同义替换)(?:的|是什么|在哪里)?$/.test(prompt)) return entry.reason;
+
+  const candidate = prompt.match(/^(?:为什么(?:不(?:是|选|填)|(?:没|不能)(?:选|填)|是|选|填)?|why (?:not|is it))\s*(.+)$/)?.[1];
+  if (candidate && /^[a-z0-9\s’'()£.‘“”"-]+$/.test(candidate)) {
+    const option = candidate.replace(/^[“”‘’"'\s]+|[“”‘’"'\s]+$/g, "");
+    if (isCorrect(question, {[number]: option})) return answer;
+    const validChoice = group.choices?.some(choice => normalize(choice) === option);
     const userAnswer = normalize(attempt().answers[number]);
-    const known = Object.hasOwn(entry.terms, comparison) || normalize(entry.contrast).includes(comparison);
-    if (alternative || known || (userAnswer && userAnswer === comparison)) return entry.contrast;
+    const known = Object.hasOwn(entry.terms, option) || (" " + reviewPhrase(entry.contrast) + " ").includes(" " + reviewPhrase(option) + " ");
+    if (option && (validChoice || known || userAnswer === option)) return contrast;
   }
-  return rejected;
+
+  if (/^(?:请|帮我|能不能|可以)?\s*(?:翻译(?:一下)?(?:这句(?:话)?|原文|证据句)|(?:这句(?:话)?|原文|证据句)(?:怎么理解|是什么意思|怎么翻译)|translate (?:this sentence|the passage|the evidence))$/.test(prompt)) {
+    return `原文 · ${evidence.join("\n\n")}\n\n${entry.translation ? "译文 · " + entry.translation : "本题相关句意 · " + entry.reason}`;
+  }
+
+  // Read the English phrase within a Chinese question or a common English vocabulary question.
+  const english = prompt.match(/\bwhat (?:does|do) (.+?) (?:mean|refer to|stand for)\b/)?.[1]
+    || prompt.match(/^(?:what (?:is|are)|define|meaning of)\s+(.+)$/)?.[1];
+  const meaningQuestion = /意思|指代|指什么|指的是|怎么理解|怎么翻译|是什么|什么是|区别|差别|对应|是.{0,25}吗$/.test(prompt);
+  const barePhrase = /^[“”‘’"'a-z][a-z\s'’“-]*[a-z’”"']$/.test(prompt);
+  if (!english && !meaningQuestion && !barePhrase) return rejected;
+  const targets = english ? [english] : (prompt.match(/[a-z][a-z0-9'-]*(?: +[a-z0-9][a-z0-9'-]*)*/g) || []);
+  const explanations = [];
+  for (const phrase of new Set(targets.map(reviewPhrase))) {
+    const short = phrase.replace(/^(?:the|a|an) /, "");
+    const target = Object.hasOwn(entry.terms, short) ? short : phrase;
+    if (Object.hasOwn(entry.terms, target)) {
+      explanations.push(`${target} · ${entry.terms[target]}`);
+      continue;
+    }
+    if (target.length < 3) continue;
+    const source = [...evidence, question.text, ...Object.values(question.options || {})]
+      .find(text => (" " + reviewPhrase(text) + " ").includes(" " + target + " "));
+    if (source) {
+      explanations.push(`“${target}” 在本题这里出现 · ${source}\n结合本题 · ${entry.reason}`);
+    }
+  }
+  return explanations.length ? explanations.join("\n\n") : rejected;
 }
 function appendChat(messages, type, value) {
   const row = document.createElement("p");
@@ -362,10 +396,10 @@ function renderReading() {
       ${groupQuestions(group, active)}</div>
       ${hasReview() ? `<aside id="review-chat" class="review-chat" lang="zh" aria-labelledby="review-chat-title" hidden>
         <div class="dialog-head"><h3 id="review-chat-title">题目解析</h3><button type="button" data-close-chat>关闭</button></div>
-        <p class="muted">仅回答当前题。解析来自已核对的题目资料。</p>
+        <p class="muted">可以问本题原文里的词、短语、指代和选项。</p>
         <div class="review-messages" role="log" aria-live="polite" aria-label="解析对话"></div>
         <div class="actions"><button type="button" data-ask="为什么选这个">为什么选这个</button><button type="button" data-ask="为什么不选其他">为什么不选其他</button><button type="button" data-ask="关键词">关键词</button></div>
-        <form id="review-chat-form"><input aria-label="追问本题" maxlength="180" placeholder="例如：issue 是什么意思？" required><button type="submit">发送</button></form>
+        <form id="review-chat-form"><input aria-label="追问本题" maxlength="180" placeholder="例如：这句话怎么理解？" required><button type="submit">发送</button></form>
       </aside>` : ""}</section>`;
   renderPassage();
   renderChat();
