@@ -12,6 +12,7 @@ header{background:var(--navy);color:#fff;padding:14px max(24px,calc((100vw - 109
 main{max-width:1140px;margin:auto;padding:46px 24px}.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:750;color:var(--blue)}h1{font-size:clamp(32px,6vw,54px);line-height:1.1;margin:8px 0 12px}h2{margin:0;font-size:21px}h3{margin:0 0 5px;font-size:22px}p{margin:0 0 10px}.intro,.description,.status{color:var(--muted)}
 .tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(216px,1fr));gap:12px}.test{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.description,.status{font-size:13px}.description{margin-bottom:16px}.modules{display:grid;gap:8px}.modules a{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--ink);padding:8px 9px;border:1px solid var(--line);border-radius:6px;text-decoration:none;font-size:14px;font-weight:650}.modules a:hover{background:#e7eff9}.modules a:focus-visible{outline:3px solid #578ae3;outline-offset:2px}.status{font-weight:400;text-align:right}.privacy{margin-top:26px;font-size:13px;color:var(--muted)}
 .tests{margin-top:26px}.test-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.progress{background:#e7eff9;border-radius:100px;padding:4px 9px;font-size:13px;white-space:nowrap}.book-link{display:block;color:inherit;text-decoration:none}.book-link:hover{border-color:var(--blue);background:#f7fbff}.book-link .description{margin-top:7px}.open-book,.back{color:var(--blue);font-size:14px;font-weight:650}.back{display:inline-block;margin-bottom:20px}
+__VOCAB_CSS__
 </style>
 </head>
 <body>
@@ -21,11 +22,13 @@ __BACK__
   <p class="eyebrow">General Training</p>
   <h1>__TITLE__</h1>
   <p class="intro">__INTRO__</p>
+__VOCAB_BUTTON__
   <div class="tests">__CARDS__</div>
   <p class="privacy">Your progress, drafts and submitted attempts are saved in this browser.</p>
 </main>
 <script>
 "use strict";
+__VOCAB_JS__
 const wordCount = text => (String(text ?? "").trim().match(/\S+/g) || []).length;
 function moduleProgress(record, mode, readingTotal) {
   const attempt = record?.attempts?.[mode];
@@ -60,6 +63,14 @@ function showProgress() {
     card.querySelector("[data-total]").textContent = formatProgress(total);
   }
 }
+document.querySelector("#book-vocabulary")?.addEventListener("click", () => {
+  const tests = [...document.querySelectorAll("[data-vocabulary-key]")].map(card => ({
+    key: card.dataset.vocabularyKey,
+    label: card.querySelector("h2").textContent,
+    url: card.querySelector('[href$="?mode=reading"]').href
+  }));
+  vocabulary.open({title: document.querySelector("h1").textContent + " vocabulary", tests});
+});
 window.addEventListener("pageshow", showProgress);
 window.addEventListener("storage", showProgress);
 </script>

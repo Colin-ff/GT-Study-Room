@@ -37,6 +37,7 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 
 .evidence{background:#cfe8ff;color:inherit;border-bottom:2px solid #4688bf}.review-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.review-filters button,.review-actions button,.review-chat button{font-size:13px}.review-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0 24px}.review-chat{border-top:1px solid var(--line);padding:12px 16px;background:#f4f8fd}.review-chat[hidden],.review-filters[hidden]{display:none}.review-chat h3{margin:0}.review-chat form{display:flex;gap:8px}.review-chat input{flex:1;min-width:0;padding:5px 8px;border:1px solid #9fb3ce;border-radius:5px}.review-messages{max-height:18vh;overflow:auto;margin:8px 0;overflow-wrap:anywhere}.review-messages p{margin:5px 0}.review-chat .actions{margin-bottom:8px}.review-chat .muted{font-size:13px}.review-label{font-size:13px;color:#174d80}
 
+__VOCAB_CSS__
 </style>
 </head>
 <body>
@@ -68,6 +69,7 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 <script type="application/json" id="test-data">__EXAM_DATA__</script>
 <script>
 "use strict";
+__VOCAB_JS__
 const data = JSON.parse(document.querySelector("#test-data").textContent);
 const questions = data.groups.flatMap(group => group.questions);
 const storageKey = data.storageKey;
@@ -349,6 +351,7 @@ function highlightedText(block, ranges, from, to) {
 }
 
 function renderPassage() {
+  selection = [];
   const group = data.groups[groupIndex];
   const passage = data.passages[group.passage];
   const target = $("#passage");
@@ -369,6 +372,7 @@ function renderPassage() {
     const className = boundary === block.length ? ' class="passage-heading-only"' : "";
     return `<p data-block="${i}"${className}><strong class="passage-subheading" role="heading" aria-level="2">${badge}${title}</strong>${body}</p>`;
   }).join("");
+  updateSelectionTools();
 }
 
 function answerBox(number, active) {
@@ -441,7 +445,11 @@ function renderReading() {
   renderNumbers();
   $("#workspace").innerHTML = `
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Reading passage</span>
-      ${active.submittedAt ? "" : '<div class="panel-tools"><button id="highlight">Highlight selection</button><button id="clear-highlights">Clear highlights</button></div>'}
+      <div class="panel-tools">
+        ${active.submittedAt ? "" : '<button id="highlight" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage" disabled>Clear all</button>'}
+        <button id="save-vocabulary" title="Select a word or phrase of up to 180 characters" disabled>Add to vocabulary</button>
+        <button id="open-vocabulary">Passage vocabulary</button>
+      </div><span id="vocab-selection-status" role="status"></span>
     </div><article class="scroll passage" id="passage"></article></section>
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Questions ${group.first}–${group.last}</span><span class="muted" id="reading-progress"></span></div>
       <div class="scroll" id="questions"><h2>${group.kind}</h2><p class="muted">${escapeHtml(group.instruction)}</p>
@@ -457,8 +465,6 @@ function renderReading() {
   renderPassage();
   renderChat();
   updateProgress();
-  $("#passage").addEventListener("mouseup", captureSelection);
-  $("#highlight")?.addEventListener("pointerdown", event => event.preventDefault());
 }
 function updateProgress() {
   $("#reading-progress").textContent =
@@ -524,30 +530,63 @@ function render() {
   showTime();
 }
 function captureSelection() {
+  const passage = $("#passage");
+  if (!passage || mode !== "reading") return;
   selection = [];
   const selected = window.getSelection();
-  if (!selected.rangeCount || selected.isCollapsed) return;
-  const range = selected.getRangeAt(0);
-  const passage = $("#passage");
-  if (!passage.contains(range.startContainer) || !passage.contains(range.endContainer)) return;
-  for (const block of passage.querySelectorAll("[data-block]")) {
-    if (!range.intersectsNode(block)) continue;
-    const prefix = document.createRange();
-    prefix.selectNodeContents(block);
-    let start = 0;
-    let end = block.textContent.length;
-    if (block.contains(range.startContainer)) {
-      prefix.setEnd(range.startContainer, range.startOffset);
-      start = prefix.toString().length;
+  if (selected.rangeCount && !selected.isCollapsed) {
+    const range = selected.getRangeAt(0);
+    if (passage.contains(range.startContainer) && passage.contains(range.endContainer)) {
+      for (const block of passage.querySelectorAll("[data-block]")) {
+        if (!range.intersectsNode(block)) continue;
+        const prefix = document.createRange();
+        prefix.selectNodeContents(block);
+        let start = 0;
+        let end = block.textContent.length;
+        if (block.contains(range.startContainer)) {
+          prefix.setEnd(range.startContainer, range.startOffset);
+          start = prefix.toString().length;
+        }
+        if (block.contains(range.endContainer)) {
+          prefix.setEnd(range.endContainer, range.endOffset);
+          end = prefix.toString().length;
+        }
+        if (end > start) selection.push([block.dataset.block, start, end]);
+      }
     }
-    if (block.contains(range.endContainer)) {
-      prefix.setEnd(range.endContainer, range.endOffset);
-      end = prefix.toString().length;
-    }
-    if (end > start) selection.push([block.dataset.block, start, end]);
   }
+  updateSelectionTools();
 }
+
+function selectedPassageText() {
+  const passage = data.passages[data.groups[groupIndex].passage];
+  return selection.map(([block, start, end]) => passage.blocks[block].slice(start, end)).join(" ")
+    .replace(/\s+/g, " ").trim();
+}
+
+function updateSelectionTools() {
+  const add = $("#save-vocabulary");
+  if (!add) return;
+  const text = selectedPassageText();
+  add.disabled = !/[\p{L}\p{N}]/u.test(text) || text.length > vocabulary.maxSelectionLength;
+  const highlightButton = $("#highlight");
+  if (!highlightButton) return;
+  const highlights = attempt().highlights;
+  const prefix = data.groups[groupIndex].passage + ":";
+  highlightButton.disabled = !text;
+  $("#clear-selection").disabled = !selection.some(([block, start, end]) =>
+    (highlights[prefix + block] || []).some(([left, right]) => start < right && end > left));
+  $("#clear-all").disabled = !Object.keys(highlights).some(key => key.startsWith(prefix));
+}
+
+function refreshHighlights() {
+  window.getSelection().removeAllRanges();
+  save();
+  renderPassage();
+}
+
 function highlight() {
+  if (!selection.length || attempt().submittedAt) return;
   const highlights = attempt().highlights;
   for (const [block, start, end] of selection) {
     const key = `${data.groups[groupIndex].passage}:${block}`;
@@ -559,21 +598,68 @@ function highlight() {
       return ranges;
     }, []);
   }
-  if (!selection.length) return;
-  selection = [];
-  window.getSelection().removeAllRanges();
-  save();
-  renderPassage();
+  refreshHighlights();
 }
-function clearHighlights() {
+
+function clearSelectedHighlights() {
+  if (!selection.length || attempt().submittedAt) return;
+  const highlights = attempt().highlights;
+  for (const [block, start, end] of selection) {
+    const key = `${data.groups[groupIndex].passage}:${block}`;
+    if (!highlights[key]) continue;
+    const remaining = highlights[key].flatMap(([left, right]) => {
+      if (right <= start || left >= end) return [[left, right]];
+      const pieces = [];
+      if (left < start) pieces.push([left, start]);
+      if (right > end) pieces.push([end, right]);
+      return pieces;
+    });
+    if (remaining.length) highlights[key] = remaining;
+    else delete highlights[key];
+  }
+  refreshHighlights();
+}
+
+function clearAllHighlights() {
+  if (attempt().submittedAt) return;
   const highlights = attempt().highlights;
   const prefix = data.groups[groupIndex].passage + ":";
   for (const key of Object.keys(highlights)) {
     if (key.startsWith(prefix)) delete highlights[key];
   }
-  selection = [];
-  save();
-  renderPassage();
+  refreshHighlights();
+}
+
+function openPassageVocabulary(focusKey) {
+  const passage = data.groups[groupIndex].passage;
+  vocabulary.open({
+    title: "Vocabulary · " + data.passages[passage].title,
+    tests: [{key: data.vocabularyKey}],
+    passage,
+    focusKey
+  });
+}
+
+function saveSelectedVocabulary() {
+  const text = selectedPassageText();
+  if (!text || $("#save-vocabulary").disabled) return;
+  const passage = data.groups[groupIndex].passage;
+  const {title, blocks} = data.passages[passage];
+  const [block, start, end] = selection[0];
+  const contextBlock = blocks[block];
+  const context = typeof Intl.Segmenter === "function"
+    ? [...new Intl.Segmenter("en", {granularity: "sentence"}).segment(contextBlock)]
+      .filter(({segment, index}) => index < end && index + segment.length > start)
+      .map(({segment}) => segment).join("")
+    : contextBlock;
+  try {
+    const key = vocabulary.add(data.vocabularyKey, passage, title, text, context);
+    $("#vocab-selection-status").textContent = "";
+    window.getSelection().removeAllRanges();
+    openPassageVocabulary(key);
+  } catch {
+    $("#vocab-selection-status").textContent = "Could not save vocabulary in this browser.";
+  }
 }
 
 function finish(module) {
@@ -694,7 +780,10 @@ $("#workspace").onclick = event => {
   }
   if (button.dataset.ask) askReview(button.dataset.ask);
   if (button.id === "highlight") highlight();
-  if (button.id === "clear-highlights") clearHighlights();
+  if (button.id === "clear-selection") clearSelectedHighlights();
+  if (button.id === "clear-all") clearAllHighlights();
+  if (button.id === "save-vocabulary") saveSelectedVocabulary();
+  if (button.id === "open-vocabulary") openPassageVocabulary();
   if (button.dataset.flag) {
     const number = button.dataset.flag;
     const flags = attempt().flags;
@@ -742,7 +831,16 @@ $("#history-list").onclick = event => {
   $("#history").close();
   render();
 };
-openModule(new URLSearchParams(location.search).get("mode") === "writing" ? "writing" : "reading");
+document.addEventListener("selectionchange", captureSelection);
+$("#workspace").addEventListener("pointerdown", event => {
+  if (event.target.closest("#highlight, #clear-selection, #save-vocabulary")) event.preventDefault();
+});
+const parameters = new URLSearchParams(location.search);
+if (parameters.has("passage")) {
+  const index = data.groups.findIndex(group => String(group.passage) === parameters.get("passage"));
+  if (index >= 0) groupIndex = index;
+}
+openModule(parameters.get("mode") === "writing" ? "writing" : "reading");
 setInterval(tick, 500);
 </script>
 </body>
