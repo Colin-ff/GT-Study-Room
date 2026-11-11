@@ -16,10 +16,10 @@ const vocabulary = (() => {
     localStorage.setItem(storageKey(testKey), JSON.stringify(entries));
   }
 
-  function add(testKey, passage, title, selection, context) {
+  function add(testKey, passage, title, selection) {
     const text = clean(selection);
     const key = wordKey(text);
-    const entry = {passage, title, key, text, context: clean(context), note: ""};
+    const entry = {passage, title, key, text, note: ""};
     const existing = read(testKey).find(item => item.passage === passage && item.key === key);
     if (!existing) update(testKey, entries => entries.unshift(entry));
     return key;
@@ -32,20 +32,34 @@ const vocabulary = (() => {
     return node;
   }
 
-  function open({title, tests, passage, focusKey}) {
-    const dialog = element("dialog", "vocab-dialog");
+  function closeReading() {
+    document.querySelector("#vocab-sidebar")?.remove();
+  }
+
+  function isOpen() {
+    return Boolean(document.querySelector("#vocab-sidebar"));
+  }
+
+  function open({title, tests, passage, focusKey, focus = true}) {
+    closeReading();
+    const dialog = element("aside", "vocab-sidebar");
+    dialog.id = "vocab-sidebar";
     dialog.setAttribute("aria-labelledby", "vocab-title");
     const bar = element("div", "vocab-dialog-bar");
-    const heading = element("h2", "", title);
+    const heading = element("h2", "", passage === undefined ? "Book vocabulary" : "Vocabulary");
+    const subtitle = element("p", "vocab-subtitle", title);
     heading.id = "vocab-title";
     const close = element("button", "vocab-button", "Close");
     close.type = "button";
-    close.onclick = () => dialog.close();
+    close.onclick = () => {
+      closeReading();
+      document.querySelector("#open-vocabulary, #book-vocabulary")?.focus();
+    };
     bar.append(heading, close);
     const list = element("div", "vocab-list");
     const notice = element("p", "vocab-notice");
     notice.setAttribute("role", "status");
-    dialog.append(bar);
+    dialog.append(bar, subtitle);
     let search;
     if (passage === undefined) {
       search = element("input", "vocab-search");
@@ -85,18 +99,18 @@ const vocabulary = (() => {
               group.append(groupBar);
             }
             for (const entry of words) {
-              const card = element("article", "vocab-entry");
+              const card = element("article", "vocab-row");
               const word = element("div", "vocab-word", entry.text);
-              const context = element("p", "vocab-context", entry.context);
-              const label = element("label", "vocab-note", "Meaning or notes");
+              const label = element("div", "vocab-cell");
               const note = element("textarea", "");
               note.value = entry.note;
-              note.rows = 2;
+              note.rows = 1;
+              note.setAttribute("aria-label", "Notes for " + entry.text);
               note.maxLength = 2000;
-              note.placeholder = "Add your own explanation";
+              note.placeholder = "Meaning or notes";
               const feedback = element("span", "vocab-feedback");
               feedback.setAttribute("role", "status");
-              const remove = element("button", "vocab-button vocab-remove", "Remove");
+              const remove = element("button", "vocab-button vocab-delete", "×");
               remove.type = "button";
               remove.setAttribute("aria-label", "Remove " + entry.text);
               const matches = item => item.passage === entry.passage && item.key === entry.key;
@@ -125,9 +139,8 @@ const vocabulary = (() => {
                 }
               };
               label.append(note);
-              const actions = element("div", "vocab-entry-actions");
-              actions.append(remove, feedback);
-              card.append(word, context, label, actions);
+              label.append(feedback);
+              card.append(word, label, remove);
               group.append(card);
               if (entry.key === focusKey) focusedNote = note;
             }
@@ -144,11 +157,15 @@ const vocabulary = (() => {
     }
 
     if (search) search.oninput = () => render();
-    dialog.addEventListener("close", () => dialog.remove(), {once: true});
-    document.body.append(dialog);
+    dialog.addEventListener("keydown", event => {
+      if (event.key === "Escape") close.click();
+    });
+    (document.querySelector("#study-layout") || document.body).append(dialog);
     const note = render();
-    dialog.showModal();
-    (note || search || close).focus();
+    if (focus) {
+      (note || search || close).focus();
+      note?.closest(".vocab-row").scrollIntoView({block: "nearest"});
+    }
   }
 
   function openWritingNotes() {
@@ -250,5 +267,5 @@ const vocabulary = (() => {
     add.focus();
   }
 
-  return {add, open, openWritingNotes, maxSelectionLength};
+  return {add, open, closeReading, isOpen, openWritingNotes, maxSelectionLength};
 })();

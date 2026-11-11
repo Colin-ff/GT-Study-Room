@@ -52,7 +52,7 @@ __VOCAB_CSS__
   <nav id="review-filters" class="review-filters" aria-label="Review filters" hidden></nav>
   <div id="summary" class="summary" role="status" hidden></div>
   <div id="storage-warning" class="summary" hidden>This browser is blocking local storage. Answers and history are available during this visit.</div>
-  <div id="workspace" class="workspace"></div>
+  <div id="study-layout" class="study-layout"><div id="workspace" class="workspace"></div></div>
 </main>
 <dialog id="history">
   <div class="dialog-head"><h2>Attempt history</h2><form method="dialog"><button>Close</button></form></div>
@@ -332,7 +332,7 @@ function renderSummary() {
   const summary = $("#summary");
   summary.hidden = !active.submittedAt;
   summary.textContent = mode === "reading"
-    ? `Reading score · ${grade(active.answers)} / ${questions.length}`
+    ? `Reading score · ${grade(active.answers)} / 40`
     : `Writing saved · Task 1: ${countWords(active.drafts[0])} words · Task 2: ${countWords(active.drafts[1])} words`;
   if (review) summary.textContent = "Past attempt · " + summary.textContent;
 }
@@ -465,10 +465,11 @@ function renderReading() {
   renderPassage();
   renderChat();
   updateProgress();
+  if (vocabulary.isOpen()) openPassageVocabulary(undefined, false);
 }
 function updateProgress() {
   $("#reading-progress").textContent =
-    questions.filter(question => normalize(attempt().answers[question.id])).length + ` / ${questions.length} answered`;
+    questions.filter(question => normalize(attempt().answers[question.id])).length + " / 40 answered";
 }
 function writingPromptMarkup(prompt) {
   const lines = prompt.trim().split(/\r?\n/).map(line => line.trim());
@@ -500,6 +501,7 @@ function writingPromptMarkup(prompt) {
     ${salutation ? `<p class="writing-salutation">${escapeHtml(salutation)}</p>` : ""}</div>`;
 }
 function renderWriting() {
+  vocabulary.closeReading();
   renderReviewFilters();
   const active = attempt();
   const task = data.writing[writingIndex];
@@ -630,13 +632,14 @@ function clearAllHighlights() {
   refreshHighlights();
 }
 
-function openPassageVocabulary(focusKey) {
+function openPassageVocabulary(focusKey, focus = true) {
   const passage = data.groups[groupIndex].passage;
   vocabulary.open({
     title: "Vocabulary · " + data.passages[passage].title,
     tests: [{key: data.vocabularyKey}],
     passage,
-    focusKey
+    focusKey,
+    focus
   });
 }
 
@@ -644,16 +647,9 @@ function saveSelectedVocabulary() {
   const text = selectedPassageText();
   if (!text || $("#save-vocabulary").disabled) return;
   const passage = data.groups[groupIndex].passage;
-  const {title, blocks} = data.passages[passage];
-  const [block, start, end] = selection[0];
-  const contextBlock = blocks[block];
-  const context = typeof Intl.Segmenter === "function"
-    ? [...new Intl.Segmenter("en", {granularity: "sentence"}).segment(contextBlock)]
-      .filter(({segment, index}) => index < end && index + segment.length > start)
-      .map(({segment}) => segment).join("")
-    : contextBlock;
+  const {title} = data.passages[passage];
   try {
-    const key = vocabulary.add(data.vocabularyKey, passage, title, text, context);
+    const key = vocabulary.add(data.vocabularyKey, passage, title, text);
     $("#vocab-selection-status").textContent = "";
     window.getSelection().removeAllRanges();
     openPassageVocabulary(key);
@@ -689,7 +685,7 @@ function tick() {
 }
 function showHistory() {
   $("#history-list").innerHTML = state.history.length ? state.history.map((entry, index) => {
-    const detail = entry.module === "reading" ? `${grade(entry.answers)} / ${questions.length}`
+    const detail = entry.module === "reading" ? `${grade(entry.answers)} / 40`
       : `${countWords(entry.drafts[0])} + ${countWords(entry.drafts[1])} words`;
     return `<div class="history-row"><div><strong>${entry.module === "reading" ? "Reading" : "Writing"}</strong> · ${detail}<br>
       <small class="muted">${escapeHtml(new Date(entry.submittedAt).toLocaleString())}</small></div>
