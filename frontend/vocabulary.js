@@ -151,5 +151,104 @@ const vocabulary = (() => {
     (note || search || close).focus();
   }
 
-  return {add, open, maxSelectionLength};
+  function openWritingNotes() {
+    const storageKey = "g-study-room:writing-notes:v1";
+    const dialog = element("dialog", "vocab-dialog writing-notes-dialog");
+    const bar = element("div", "vocab-dialog-bar");
+    const title = element("h2", "", "词语积累");
+    title.id = "writing-notes-title";
+    dialog.setAttribute("aria-labelledby", title.id);
+    const close = element("button", "vocab-button", "关闭");
+    close.type = "button";
+    close.onclick = () => dialog.close();
+    bar.append(title, close);
+    const hint = element("p", "vocab-notice", "所有写作练习共用这个积累本。左右两栏都可编辑，内容自动保存在当前浏览器。");
+    const toolbar = element("div", "vocab-entry-actions");
+    const add = element("button", "vocab-button", "添加一条");
+    add.type = "button";
+    const status = element("span", "vocab-feedback");
+    status.setAttribute("role", "status");
+    toolbar.append(add, status);
+    const list = element("div", "writing-notes-list");
+    const empty = element("p", "vocab-notice", "还没有记录。可以先添加一句想记下的表达。");
+    dialog.append(bar, hint, toolbar, list, empty);
+
+    function readNotes() {
+      return JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+    }
+
+    function saveNotes(notes) {
+      localStorage.setItem(storageKey, JSON.stringify(notes));
+      status.textContent = "已保存";
+    }
+
+    function showEntry(entry) {
+      const card = element("article", "vocab-entry");
+      const fields = element("div", "writing-notes-fields");
+      const editors = [];
+      let saved = entry.saved;
+      for (const [key, labelText, placeholder] of [
+        ["left", "好句 / 表达", "写下一个单词、短语或好句"],
+        ["right", "改写 / 备注", "写下词义、用法、改写或自己的例句"],
+      ]) {
+        const label = element("label", "vocab-note", labelText);
+        const editor = element("textarea");
+        editor.rows = 3;
+        editor.placeholder = placeholder;
+        editor.value = entry[key];
+        editor.oninput = () => {
+          entry[key] = editor.value;
+          try {
+            const notes = readNotes();
+            const existing = notes.find(note => note.id === entry.id);
+            if (existing) existing[key] = editor.value;
+            else if (saved) throw new Error("Entry removed");
+            else if (entry.left.trim() || entry.right.trim()) {
+              notes.unshift({id: entry.id, left: entry.left, right: entry.right});
+            } else return;
+            saveNotes(notes);
+            saved = true;
+          } catch {
+            status.textContent = "保存失败。请复制当前内容后再试。";
+          }
+        };
+        label.append(editor);
+        fields.append(label);
+        editors.push(editor);
+      }
+      const remove = element("button", "vocab-button vocab-remove", "删除");
+      remove.type = "button";
+      remove.onclick = () => {
+        try {
+          if (saved) saveNotes(readNotes().filter(note => note.id !== entry.id));
+          card.remove();
+          empty.hidden = list.childElementCount > 0;
+          add.focus();
+        } catch {
+          status.textContent = "删除失败，请重试。";
+        }
+      };
+      card.append(fields, remove);
+      list.append(card);
+      empty.hidden = true;
+      return editors[0];
+    }
+
+    try {
+      for (const note of readNotes()) showEntry({...note, saved: true});
+    } catch {
+      status.textContent = "当前浏览器无法读取积累本。";
+    }
+    add.onclick = () => {
+      const editor = showEntry({id: crypto.randomUUID(), left: "", right: "", saved: false});
+      list.prepend(editor.closest("article"));
+      editor.focus();
+    };
+    dialog.addEventListener("close", () => dialog.remove(), {once: true});
+    document.body.append(dialog);
+    dialog.showModal();
+    add.focus();
+  }
+
+  return {add, open, openWritingNotes, maxSelectionLength};
 })();

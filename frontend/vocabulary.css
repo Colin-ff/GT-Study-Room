@@ -20,3 +20,8 @@
 .vocab-note textarea{margin:3px 0 8px;font-weight:400;resize:vertical}
 .vocab-remove{font-size:12px}
 .vocab-catalog-button{margin-top:4px}
+
+.writing-notes-dialog{width:min(860px,calc(100% - 28px))}
+.writing-notes-list{margin-top:12px}
+.writing-notes-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:560px){.writing-notes-fields{grid-template-columns:minmax(0,1fr);gap:0}}

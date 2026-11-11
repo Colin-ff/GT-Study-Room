@@ -508,7 +508,7 @@ function renderWriting() {
   ).join("");
   renderNumbers();
   $("#workspace").innerHTML = `
-    <section class="panel"><div class="panel-bar"><span class="eyebrow">Writing prompt</span></div>
+    <section class="panel"><div class="panel-bar"><span class="eyebrow">Writing prompt</span><button id="open-writing-notes">词语积累</button></div>
       <div class="scroll passage writing-prompt">${writingPromptMarkup(task.prompt)}</div></section>
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Your response</span><span id="word-count"></span></div>
       <textarea class="editor" id="draft" aria-label="Writing response" spellcheck="false" ${active.submittedAt ? "readonly" : ""} placeholder="Type your response here…"></textarea>
@@ -784,6 +784,7 @@ $("#workspace").onclick = event => {
   if (button.id === "clear-all") clearAllHighlights();
   if (button.id === "save-vocabulary") saveSelectedVocabulary();
   if (button.id === "open-vocabulary") openPassageVocabulary();
+  if (button.id === "open-writing-notes") vocabulary.openWritingNotes();
   if (button.dataset.flag) {
     const number = button.dataset.flag;
     const flags = attempt().flags;
