@@ -20,10 +20,6 @@
 .vocab-remove{font-size:12px}
 .vocab-catalog-button{margin-top:4px}
 
-.writing-notes-dialog{width:min(860px,calc(100% - 28px))}
-.writing-notes-list{margin-top:12px}
-.writing-notes-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media(max-width:560px){.writing-notes-fields{grid-template-columns:minmax(0,1fr);gap:0}}
 
 .study-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:start}
 .study-layout:has(>.vocab-sidebar){grid-template-columns:minmax(0,1fr) 320px}
@@ -47,3 +43,9 @@ body>.vocab-sidebar{position:fixed;right:20px;top:82px;bottom:20px;width:350px;h
 body:has(>.vocab-sidebar)>main{margin-right:382px}
 @media(max-width:1100px){.study-layout:has(>.vocab-sidebar){grid-template-columns:minmax(0,1fr) 285px}.study-layout:has(>.vocab-sidebar) .scroll{padding:16px}.study-layout:has(>.vocab-sidebar) .passage{font-size:17px}}
 @media(max-width:760px){.study-layout:has(>.vocab-sidebar){grid-template-columns:minmax(0,1fr)}.study-layout>.vocab-sidebar{height:45dvh;min-height:240px}body>.vocab-sidebar{width:min(350px,calc(100% - 24px));right:12px;top:70px;max-height:65dvh}body:has(>.vocab-sidebar)>main{margin-right:auto}}
+
+.writing-notes-sidebar>.vocab-entry-actions{padding:0 12px 10px}
+.writing-notes-sidebar>.writing-notes-list{padding:0 12px 14px;flex:1;min-height:0;overflow:auto}
+.writing-notes-columns,.writing-notes-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 22px;gap:8px}
+.writing-notes-columns{padding:0 12px 8px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700}
+.writing-notes-row textarea{width:100%;min-width:0;min-height:64px;padding:6px;border:1px solid #bccbdd;border-radius:5px;font:13px/1.45 system-ui,sans-serif;resize:vertical;color:inherit}

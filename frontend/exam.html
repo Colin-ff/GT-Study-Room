@@ -45,6 +45,16 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 .highlight-split:hover{background:linear-gradient(to right,#f5d269 50%,#97d791 50%)}
 mark.highlight-green{background:#a9e2a4}mark.highlight-yellow{background:#ffdf7a}
 
+
+.writing-response-body{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden}
+.writing-response-body>.editor{min-height:80px}
+.writing-response-body>.writing-reference{flex:0 0 auto;max-height:none;min-height:0;padding:0;overflow:auto}
+.writing-response-body>.writing-reference[open]{flex-basis:var(--reference-height,34%)}
+.writing-reference>summary{position:sticky;top:0;z-index:1;padding:10px 14px;background:#fff;border-bottom:1px solid var(--line)}
+.writing-reference>img{padding:0 14px 10px}
+.writing-resizer{flex:0 0 12px;display:flex;align-items:center;justify-content:center;cursor:ns-resize;touch-action:none;background:#e7eff9;border-block:1px solid #bccbdd}
+.writing-resizer[hidden]{display:none}.writing-resizer:hover,.writing-resizer:focus-visible{background:#cfe0f7;outline:2px solid var(--blue);outline-offset:-2px}
+.writing-resizer>span{width:40px;height:3px;border-radius:3px;background:#7488a4;pointer-events:none}
 __VOCAB_CSS__
 </style>
 </head>
@@ -134,6 +144,7 @@ function save() {
 let mode = "reading";
 let groupIndex = 0;
 let writingIndex = 0;
+let writingReferenceHeight = 34;
 let currentQuestion = null;
 let review = null;
 let selection = [];
@@ -443,6 +454,7 @@ function groupQuestions(group, active) {
   return choiceList + legacyNotes + visibleQuestions.map(question => questionMarkup(question, group, active)).join("");
 }
 function renderReading() {
+  vocabulary.closeWriting();
   selection = [];
   const active = attempt();
   const group = data.groups[groupIndex];
@@ -522,10 +534,50 @@ function renderWriting() {
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Writing prompt</span><button id="open-writing-notes">词语积累</button></div>
       <div class="scroll passage writing-prompt">${writingPromptMarkup(task.prompt)}</div></section>
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Your response</span><span id="word-count"></span></div>
-      <textarea class="editor" id="draft" aria-label="Writing response" spellcheck="false" ${active.submittedAt ? "readonly" : ""} placeholder="Type your response here…"></textarea>
-      ${active.submittedAt && task.reference ? `<details><summary>${task.model ? "Book model answer" : "Book sample and examiner comments"}</summary><img src="data:image/jpeg;base64,${task.reference}" alt="Writing Task ${writingIndex + 1} reference response from the book">${(task.extraReferences || []).map((image, index) => `<img src="data:image/jpeg;base64,${image}" alt="Reference continuation, page ${index + 2}">`).join("")}</details>` : ""}</section>`;
+      <div class="writing-response-body" id="writing-response-body"><textarea class="editor" id="draft" aria-label="Writing response" spellcheck="false" ${active.submittedAt ? "readonly" : ""} placeholder="Type your response here…"></textarea>
+      ${active.submittedAt && task.reference ? `<div id="writing-resizer" class="writing-resizer" role="separator" aria-orientation="horizontal" aria-label="Resize reference answer" aria-controls="writing-reference" tabindex="0" title="Drag up to expand the reference answer" hidden><span></span></div><details id="writing-reference" class="writing-reference"><summary>${task.model ? "Book model answer" : "Book sample and examiner comments"}</summary><img src="data:image/jpeg;base64,${task.reference}" alt="Writing Task ${writingIndex + 1} reference response from the book">${(task.extraReferences || []).map((image, index) => `<img src="data:image/jpeg;base64,${image}" alt="Reference continuation, page ${index + 2}">`).join("")}</details>` : ""}</div></section>`;
   $("#draft").value = active.drafts[writingIndex];
+  setupWritingResizer();
   updateWordCount();
+}
+function setupWritingResizer() {
+  const handle = $("#writing-resizer");
+  if (!handle) return;
+  const body = $("#writing-response-body");
+  const reference = $("#writing-reference");
+  function resize(percent) {
+    const height = body.clientHeight;
+    const minimum = Math.min(40, 80 / height * 100);
+    const maximum = 100 - minimum - 12 / height * 100;
+    writingReferenceHeight = Math.max(minimum, Math.min(maximum, percent));
+    body.style.setProperty("--reference-height", writingReferenceHeight + "%");
+    handle.setAttribute("aria-valuemin", Math.ceil(minimum));
+    handle.setAttribute("aria-valuemax", Math.floor(maximum));
+    handle.setAttribute("aria-valuenow", Math.round(writingReferenceHeight));
+  }
+  reference.ontoggle = () => {
+    handle.hidden = !reference.open;
+    if (reference.open) resize(writingReferenceHeight);
+  };
+  handle.onpointerdown = event => {
+    if (event.button !== 0) return;
+    event.preventDefault();
+    handle.setPointerCapture(event.pointerId);
+  };
+  handle.onpointermove = event => {
+    if (!handle.hasPointerCapture(event.pointerId)) return;
+    const rect = body.getBoundingClientRect();
+    resize((rect.bottom - event.clientY) / rect.height * 100);
+  };
+  handle.onpointerup = event => {
+    if (handle.hasPointerCapture(event.pointerId)) handle.releasePointerCapture(event.pointerId);
+  };
+  handle.onkeydown = event => {
+    if (!["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const percent = {ArrowUp: writingReferenceHeight + 5, ArrowDown: writingReferenceHeight - 5, Home: 0, End: 100}[event.key];
+    resize(percent);
+  };
 }
 function updateWordCount() {
   $("#word-count").textContent = countWords($("#draft").value) + " words · minimum " + data.writing[writingIndex].minimum;

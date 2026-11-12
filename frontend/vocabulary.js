@@ -168,18 +168,31 @@ const vocabulary = (() => {
     }
   }
 
+  function closeWriting() {
+    document.querySelector("#writing-sidebar")?.remove();
+  }
+
   function openWritingNotes() {
+    const existing = document.querySelector("#writing-sidebar");
+    if (existing) {
+      existing.querySelector("button").focus();
+      return;
+    }
     const storageKey = "g-study-room:writing-notes:v1";
-    const dialog = element("dialog", "vocab-dialog writing-notes-dialog");
+    const dialog = element("aside", "vocab-sidebar writing-notes-sidebar");
+    dialog.id = "writing-sidebar";
     const bar = element("div", "vocab-dialog-bar");
     const title = element("h2", "", "词语积累");
     title.id = "writing-notes-title";
     dialog.setAttribute("aria-labelledby", title.id);
     const close = element("button", "vocab-button", "关闭");
     close.type = "button";
-    close.onclick = () => dialog.close();
+    close.onclick = () => {
+      closeWriting();
+      document.querySelector("#open-writing-notes")?.focus();
+    };
     bar.append(title, close);
-    const hint = element("p", "vocab-notice", "所有写作练习共用这个积累本。左右两栏都可编辑，内容自动保存在当前浏览器。");
+    const hint = element("p", "vocab-notice", "所有写作练习共用 · 自动保存");
     const toolbar = element("div", "vocab-entry-actions");
     const add = element("button", "vocab-button", "添加一条");
     add.type = "button";
@@ -188,7 +201,9 @@ const vocabulary = (() => {
     toolbar.append(add, status);
     const list = element("div", "writing-notes-list");
     const empty = element("p", "vocab-notice", "还没有记录。可以先添加一句想记下的表达。");
-    dialog.append(bar, hint, toolbar, list, empty);
+    const columns = element("div", "writing-notes-columns");
+    columns.append(element("span", "", "好句 / 表达"), element("span", "", "改写 / 备注"));
+    dialog.append(bar, hint, toolbar, columns, list, empty);
 
     function readNotes() {
       return JSON.parse(localStorage.getItem(storageKey) ?? "[]");
@@ -200,18 +215,13 @@ const vocabulary = (() => {
     }
 
     function showEntry(entry) {
-      const card = element("article", "vocab-entry");
-      const fields = element("div", "writing-notes-fields");
+      const card = element("article", "vocab-row writing-notes-row");
       const editors = [];
       let saved = entry.saved;
-      for (const [key, labelText, placeholder] of [
-        ["left", "好句 / 表达", "写下一个单词、短语或好句"],
-        ["right", "改写 / 备注", "写下词义、用法、改写或自己的例句"],
-      ]) {
-        const label = element("label", "vocab-note", labelText);
+      for (const [key, labelText] of [["left", "好句 / 表达"], ["right", "改写 / 备注"]]) {
         const editor = element("textarea");
         editor.rows = 3;
-        editor.placeholder = placeholder;
+        editor.setAttribute("aria-label", labelText);
         editor.value = entry[key];
         editor.oninput = () => {
           entry[key] = editor.value;
@@ -229,11 +239,11 @@ const vocabulary = (() => {
             status.textContent = "保存失败。请复制当前内容后再试。";
           }
         };
-        label.append(editor);
-        fields.append(label);
+        card.append(editor);
         editors.push(editor);
       }
-      const remove = element("button", "vocab-button vocab-remove", "删除");
+      const remove = element("button", "vocab-button vocab-delete", "×");
+      remove.setAttribute("aria-label", "删除这条积累");
       remove.type = "button";
       remove.onclick = () => {
         try {
@@ -245,7 +255,7 @@ const vocabulary = (() => {
           status.textContent = "删除失败，请重试。";
         }
       };
-      card.append(fields, remove);
+      card.append(remove);
       list.append(card);
       empty.hidden = true;
       return editors[0];
@@ -261,11 +271,12 @@ const vocabulary = (() => {
       list.prepend(editor.closest("article"));
       editor.focus();
     };
-    dialog.addEventListener("close", () => dialog.remove(), {once: true});
-    document.body.append(dialog);
-    dialog.showModal();
+    dialog.addEventListener("keydown", event => {
+      if (event.key === "Escape") close.click();
+    });
+    document.querySelector("#study-layout").append(dialog);
     add.focus();
   }
 
-  return {add, open, closeReading, isOpen, openWritingNotes, maxSelectionLength};
+  return {add, open, closeReading, closeWriting, isOpen, openWritingNotes, maxSelectionLength};
 })();
