@@ -30,18 +30,18 @@ __VOCAB_BUTTON__
 "use strict";
 __VOCAB_JS__
 const wordCount = text => (String(text ?? "").trim().match(/\S+/g) || []).length;
-function moduleProgress(record, mode, readingTotal) {
+function moduleProgress(record, mode) {
   const attempt = record?.attempts?.[mode];
   if (attempt?.submittedAt) return 100;
   const history = record?.history;
-  if (!attempt?.deadline && Array.isArray(history) && history.some(entry => entry.module === mode)) return 100;
+  if (!(attempt?.deadline || attempt?.timerPaused) && Array.isArray(history) && history.some(entry => entry.module === mode)) return 100;
   if (mode === "reading") {
     const answered = Object.values(attempt?.answers || {}).filter(value => String(value ?? "").trim()).length;
-    return answered || attempt?.deadline ? Math.min(100, answered * 100 / readingTotal) : null;
+    return answered || (attempt?.deadline || attempt?.timerPaused) ? Math.min(100, answered * 100 / 40) : null;
   }
   const [first, second] = attempt?.drafts || [];
   const words = [wordCount(first), wordCount(second)];
-  return words.some(Boolean) || attempt?.deadline
+  return words.some(Boolean) || (attempt?.deadline || attempt?.timerPaused)
     ? 50 * (Math.min(1, words[0] / 150) + Math.min(1, words[1] / 250)) : null;
 }
 function formatProgress(progress) {
@@ -55,7 +55,7 @@ function showProgress() {
     } catch {
       // Leave the default status when browser storage is unavailable.
     }
-    const reading = moduleProgress(record, "reading", Number(card.dataset.readingTotal));
+    const reading = moduleProgress(record, "reading");
     const writing = moduleProgress(record, "writing");
     card.querySelector('[data-module="reading"]').textContent = formatProgress(reading);
     card.querySelector('[data-module="writing"]').textContent = formatProgress(writing);

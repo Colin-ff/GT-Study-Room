@@ -37,6 +37,14 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 
 .evidence{background:#cfe8ff;color:inherit;border-bottom:2px solid #4688bf}.review-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.review-filters button,.review-actions button,.review-chat button{font-size:13px}.review-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0 24px}.review-chat{border-top:1px solid var(--line);padding:12px 16px;background:#f4f8fd}.review-chat[hidden],.review-filters[hidden]{display:none}.review-chat h3{margin:0}.review-chat form{display:flex;gap:8px}.review-chat input{flex:1;min-width:0;padding:5px 8px;border:1px solid #9fb3ce;border-radius:5px}.review-messages{max-height:18vh;overflow:auto;margin:8px 0;overflow-wrap:anywhere}.review-messages p{margin:5px 0}.review-chat .actions{margin-bottom:8px}.review-chat .muted{font-size:13px}.review-label{font-size:13px;color:#174d80}
 
+
+.timer-controls{display:inline-flex;gap:0;border:1px solid #49617d;border-radius:7px;overflow:hidden}
+.timer-controls .timer-icon{width:38px;height:36px;padding:0;border:0;border-radius:0;font-size:20px;line-height:1}
+.timer-controls .timer-icon+.timer-icon{border-left:1px solid #49617d}
+.highlight-split{background:linear-gradient(to right,#ffdf7a 50%,#a9e2a4 50%);border-color:#b4bd94;color:#253224}
+.highlight-split:hover{background:linear-gradient(to right,#f5d269 50%,#97d791 50%)}
+mark.highlight-green{background:#a9e2a4}mark.highlight-yellow{background:#ffdf7a}
+
 __VOCAB_CSS__
 </style>
 </head>
@@ -44,7 +52,7 @@ __VOCAB_CSS__
 <header>
   <div class="tabs"><a class="home-link" href="__BOOK_URL__">‹ Book tests</a><div class="brand"><span class="eyebrow">G Study Room · __BOOK_LABEL__</span><strong>__TEST_LABEL__</strong></div></div>
   <nav class="tabs" aria-label="Module"><button id="reading-tab">Reading</button><button id="writing-tab">Writing</button></nav>
-  <div class="actions"><span id="clock" aria-label="Time remaining"></span><button id="start-timer">Start timer</button><button id="history-button">History</button><button id="submit" class="primary">Submit</button></div>
+  <div class="actions"><span id="clock" aria-label="Time remaining"></span><span class="timer-controls" role="group" aria-label="Timer controls"><button id="start-timer" class="timer-icon" aria-label="Start timer" title="Start timer">▶</button><button id="reset-timer" class="timer-icon" aria-label="Reset timer" title="Reset timer">↻</button></span><button id="history-button">History</button><button id="submit" class="primary">Submit</button></div>
 </header>
 <main class="shell">
   <nav class="section-nav" id="sections" aria-label="Question groups"></nav>
@@ -83,7 +91,7 @@ const isCorrect = (question, answers) =>
   (question.accepted || [question.answer]).some(answer => normalize(answers[question.id]) === normalize(answer));
 const grade = answers => questions.filter(question => isCorrect(question, answers)).length;
 const newAttempt = () => ({
-  deadline: null, answers: {}, flags: {}, highlights: {},
+  deadline: null, remainingMs: 3600000, timerPaused: false, answers: {}, flags: {}, highlights: {},
   drafts: ["", ""], submittedAt: null
 });
 function migrateHighlights(state) {
@@ -97,9 +105,9 @@ function migrateHighlights(state) {
       const move = moves[key];
       if (move === null) continue;
       const [target, minimum, offset] = move || [key, 0, 0];
-      for (const [start, end] of ranges) {
+      for (const [start, end, color] of ranges) {
         if (end <= minimum) continue;
-        (updated[target] ||= []).push([Math.max(start, minimum) + offset, end + offset]);
+        (updated[target] ||= []).push([Math.max(start, minimum) + offset, end + offset, color || "yellow"]);
       }
     }
     for (const ranges of Object.values(updated)) ranges.sort((a, b) => a[0] - b[0]);
@@ -340,11 +348,11 @@ function renderSummary() {
 function highlightedText(block, ranges, from, to) {
   let position = from;
   let html = "";
-  for (const [start, end] of ranges) {
+  for (const [start, end, color] of ranges) {
     const markStart = Math.max(start, from);
     const markEnd = Math.min(end, to);
     if (markEnd <= markStart) continue;
-    html += escapeHtml(block.slice(position, markStart)) + "<mark>" + escapeHtml(block.slice(markStart, markEnd)) + "</mark>";
+    html += escapeHtml(block.slice(position, markStart)) + `<mark class="highlight-${color === "green" ? "green" : "yellow"}">` + escapeHtml(block.slice(markStart, markEnd)) + "</mark>";
     position = markEnd;
   }
   return html + escapeHtml(block.slice(position, to));
@@ -366,11 +374,11 @@ function renderPassage() {
     const excerpts = (explanation?.evidence || []).filter(([index]) => index === i).map(([, text]) => text);
     const body = renderEvidenceText(block, ranges, boundary, block.length, excerpts);
     const badge = letter ? `<strong class="passage-letter">${renderEvidenceText(block, ranges, 0, 1, excerpts)}</strong>` : "";
-    if (!heading) return `<p data-block="${i}">${badge}${body}</p>`;
+    if (!heading) return `<p data-highlight-key="${group.passage}:${i}" data-block="${i}">${badge}${body}</p>`;
 
     const title = renderEvidenceText(block, ranges, letter ? 1 : 0, boundary, excerpts);
     const className = boundary === block.length ? ' class="passage-heading-only"' : "";
-    return `<p data-block="${i}"${className}><strong class="passage-subheading" role="heading" aria-level="2">${badge}${title}</strong>${body}</p>`;
+    return `<p data-highlight-key="${group.passage}:${i}" data-block="${i}"${className}><strong class="passage-subheading" role="heading" aria-level="2">${badge}${title}</strong>${body}</p>`;
   }).join("");
   updateSelectionTools();
 }
@@ -446,7 +454,7 @@ function renderReading() {
   $("#workspace").innerHTML = `
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Reading passage</span>
       <div class="panel-tools">
-        ${active.submittedAt ? "" : '<button id="highlight" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage" disabled>Clear all</button>'}
+        ${active.submittedAt ? "" : '<button id="highlight" class="highlight-split" title="Left half yellow · Right half green · Arrow keys choose a colour" aria-label="Highlight selection" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage and its questions" disabled>Clear all</button>'}
         <button id="save-vocabulary" title="Select a word or phrase of up to 180 characters" disabled>Add to vocabulary</button>
         <button id="open-vocabulary">Passage vocabulary</button>
       </div><span id="vocab-selection-status" role="status"></span>
@@ -462,6 +470,7 @@ function renderReading() {
         <div class="actions"><button type="button" data-ask="为什么选这个">为什么选这个</button><button type="button" data-ask="为什么不选其他">为什么不选其他</button><button type="button" data-ask="这题原文什么意思">原文怎么理解</button><button type="button" data-ask="关键词">关键词</button></div>
         <form id="review-chat-form"><input aria-label="追问本题" maxlength="180" placeholder="例如：这句话怎么理解？" required><button type="submit">发送</button></form>
       </aside>` : ""}</section>`;
+  renderQuestionHighlights();
   renderPassage();
   renderChat();
   updateProgress();
@@ -531,15 +540,44 @@ function render() {
   else renderWriting();
   showTime();
 }
+function renderQuestionHighlights() {
+  const target = $("#questions");
+  for (const span of target.querySelectorAll("[data-highlight-key]")) {
+    span.replaceWith(document.createTextNode(span.textContent));
+  }
+  target.normalize();
+  const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      return node.textContent.trim() && !node.parentElement.closest(
+        "button, input, select, textarea, .key, .review-actions, .qnum")
+        ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  const counts = new Map();
+  for (const node of nodes) {
+    const owner = node.parentElement.closest(".q")?.id || "instructions";
+    const index = counts.get(owner) || 0;
+    counts.set(owner, index + 1);
+    const key = `q:${groupIndex}:${owner}:${index}`;
+    const span = document.createElement("span");
+    span.dataset.highlightKey = key;
+    span.innerHTML = highlightedText(node.textContent, attempt().highlights[key] || [], 0, node.textContent.length);
+    node.replaceWith(span);
+  }
+}
+
 function captureSelection() {
-  const passage = $("#passage");
-  if (!passage || mode !== "reading") return;
+  if (mode !== "reading") return;
   selection = [];
   const selected = window.getSelection();
   if (selected.rangeCount && !selected.isCollapsed) {
     const range = selected.getRangeAt(0);
-    if (passage.contains(range.startContainer) && passage.contains(range.endContainer)) {
-      for (const block of passage.querySelectorAll("[data-block]")) {
+    const container = [$("#passage"), $("#questions")].find(target =>
+      target?.contains(range.startContainer) && target.contains(range.endContainer));
+    if (container) {
+      for (const block of container.querySelectorAll("[data-highlight-key]")) {
         if (!range.intersectsNode(block)) continue;
         const prefix = document.createRange();
         prefix.selectNodeContents(block);
@@ -553,7 +591,7 @@ function captureSelection() {
           prefix.setEnd(range.endContainer, range.endOffset);
           end = prefix.toString().length;
         }
-        if (end > start) selection.push([block.dataset.block, start, end]);
+        if (end > start) selection.push([block.dataset.highlightKey, start, end]);
       }
     }
   }
@@ -562,8 +600,15 @@ function captureSelection() {
 
 function selectedPassageText() {
   const passage = data.passages[data.groups[groupIndex].passage];
-  return selection.map(([block, start, end]) => passage.blocks[block].slice(start, end)).join(" ")
-    .replace(/\s+/g, " ").trim();
+  return selection.filter(([key]) => !key.startsWith("q:")).map(([key, start, end]) =>
+    passage.blocks[Number(key.split(":")[1])].slice(start, end)).join(" ").replace(/\s+/g, " ").trim();
+}
+
+function currentHighlightKeys() {
+  const passage = data.groups[groupIndex].passage;
+  const questionPrefixes = data.groups.flatMap((group, index) => group.passage === passage ? [`q:${index}:`] : []);
+  return Object.keys(attempt().highlights).filter(key =>
+    key.startsWith(passage + ":") || questionPrefixes.some(prefix => key.startsWith(prefix)));
 }
 
 function updateSelectionTools() {
@@ -571,31 +616,41 @@ function updateSelectionTools() {
   if (!add) return;
   const text = selectedPassageText();
   add.disabled = !/[\p{L}\p{N}]/u.test(text) || text.length > vocabulary.maxSelectionLength;
-  const highlightButton = $("#highlight");
-  if (!highlightButton) return;
+  const buttons = document.querySelectorAll("#highlight");
+  if (!buttons.length) return;
   const highlights = attempt().highlights;
-  const prefix = data.groups[groupIndex].passage + ":";
-  highlightButton.disabled = !text;
-  $("#clear-selection").disabled = !selection.some(([block, start, end]) =>
-    (highlights[prefix + block] || []).some(([left, right]) => start < right && end > left));
-  $("#clear-all").disabled = !Object.keys(highlights).some(key => key.startsWith(prefix));
+  for (const button of buttons) button.disabled = !selection.length;
+  $("#clear-selection").disabled = !selection.some(([key, start, end]) =>
+    (highlights[key] || []).some(([left, right]) => start < right && end > left));
+  $("#clear-all").disabled = !currentHighlightKeys().length;
 }
 
 function refreshHighlights() {
   window.getSelection().removeAllRanges();
   save();
+  renderQuestionHighlights();
   renderPassage();
 }
 
-function highlight() {
+function subtractHighlight(ranges, start, end) {
+  return ranges.flatMap(([left, right, color = "yellow"]) => {
+    if (right <= start || left >= end) return [[left, right, color]];
+    const pieces = [];
+    if (left < start) pieces.push([left, start, color]);
+    if (right > end) pieces.push([end, right, color]);
+    return pieces;
+  });
+}
+
+function highlight(color) {
   if (!selection.length || attempt().submittedAt) return;
   const highlights = attempt().highlights;
-  for (const [block, start, end] of selection) {
-    const key = `${data.groups[groupIndex].passage}:${block}`;
-    const sorted = [...(highlights[key] || []), [start, end]].sort((a, b) => a[0] - b[0]);
+  for (const [key, start, end] of selection) {
+    const sorted = [...subtractHighlight(highlights[key] || [], start, end), [start, end, color]]
+      .sort((a, b) => a[0] - b[0]);
     highlights[key] = sorted.reduce((ranges, range) => {
       const previous = ranges.at(-1);
-      if (previous && range[0] <= previous[1]) previous[1] = Math.max(previous[1], range[1]);
+      if (previous && range[0] === previous[1] && range[2] === previous[2]) previous[1] = range[1];
       else ranges.push(range);
       return ranges;
     }, []);
@@ -606,16 +661,8 @@ function highlight() {
 function clearSelectedHighlights() {
   if (!selection.length || attempt().submittedAt) return;
   const highlights = attempt().highlights;
-  for (const [block, start, end] of selection) {
-    const key = `${data.groups[groupIndex].passage}:${block}`;
-    if (!highlights[key]) continue;
-    const remaining = highlights[key].flatMap(([left, right]) => {
-      if (right <= start || left >= end) return [[left, right]];
-      const pieces = [];
-      if (left < start) pieces.push([left, start]);
-      if (right > end) pieces.push([end, right]);
-      return pieces;
-    });
+  for (const [key, start, end] of selection) {
+    const remaining = subtractHighlight(highlights[key] || [], start, end);
     if (remaining.length) highlights[key] = remaining;
     else delete highlights[key];
   }
@@ -624,11 +671,7 @@ function clearSelectedHighlights() {
 
 function clearAllHighlights() {
   if (attempt().submittedAt) return;
-  const highlights = attempt().highlights;
-  const prefix = data.groups[groupIndex].passage + ":";
-  for (const key of Object.keys(highlights)) {
-    if (key.startsWith(prefix)) delete highlights[key];
-  }
+  for (const key of currentHighlightKeys()) delete attempt().highlights[key];
   refreshHighlights();
 }
 
@@ -665,13 +708,23 @@ function finish(module) {
   state.history.unshift({module, ...JSON.parse(JSON.stringify(active))});
   save();
 }
+function remainingTime(active) {
+  return active.deadline ? Math.max(0, active.deadline - Date.now()) : active.remainingMs ?? 3600000;
+}
 function showTime() {
   const active = attempt();
-  $("#start-timer").hidden = Boolean(active.deadline || active.submittedAt);
-  const remaining = active.deadline ? Math.max(0, Math.ceil((active.deadline - Date.now()) / 1000)) : 3600;
+  const toggle = $("#start-timer");
+  const running = Boolean(active.deadline && !active.submittedAt);
+  const label = running ? "Pause timer" : "Start timer";
+  toggle.textContent = running ? "Ⅱ" : "▶";
+  toggle.setAttribute("aria-label", label);
+  toggle.title = label;
+  toggle.disabled = $("#reset-timer").disabled = Boolean(active.submittedAt);
+  const remaining = Math.ceil(remainingTime(active) / 1000);
   $("#clock").textContent = active.submittedAt ? "Finished"
     : [Math.floor(remaining / 60), remaining % 60].map(number => String(number).padStart(2, "0")).join(":");
 }
+
 function tick() {
   let rerender = false;
   for (const [module, active] of Object.entries(state.attempts)) {
@@ -698,13 +751,38 @@ $("#writing-tab").onclick = () => openModule("writing");
 $("#history-button").onclick = showHistory;
 function startTimer() {
   const active = attempt();
-  if (!active.deadline && !active.submittedAt) {
-    active.deadline = Date.now() + 60 * 60 * 1000;
+  if (!active.deadline && !active.submittedAt && !active.timerPaused) {
+    active.deadline = Date.now() + remainingTime(active);
     save();
     showTime();
   }
 }
-$("#start-timer").onclick = startTimer;
+$("#start-timer").onclick = () => {
+  const active = attempt();
+  if (active.submittedAt) return;
+  tick();
+  if (active.submittedAt) return;
+  if (active.deadline) {
+    active.remainingMs = remainingTime(active);
+    active.deadline = null;
+    active.timerPaused = true;
+    save();
+    showTime();
+  } else {
+    active.timerPaused = false;
+    startTimer();
+  }
+};
+$("#reset-timer").onclick = () => {
+  const active = attempt();
+  if (active.submittedAt) return;
+  active.deadline = null;
+  active.remainingMs = 3600000;
+  active.timerPaused = true;
+  save();
+  showTime();
+};
+
 $("#submit").onclick = () => {
   if (review) {
     openModule(mode);
@@ -775,7 +853,10 @@ $("#workspace").onclick = event => {
     $(`[data-explain="${number}"]`)?.focus();
   }
   if (button.dataset.ask) askReview(button.dataset.ask);
-  if (button.id === "highlight") highlight();
+  if (button.id === "highlight") {
+    const rect = button.getBoundingClientRect();
+    highlight(event.detail && event.clientX >= rect.left + rect.width / 2 ? "green" : "yellow");
+  }
   if (button.id === "clear-selection") clearSelectedHighlights();
   if (button.id === "clear-all") clearAllHighlights();
   if (button.id === "save-vocabulary") saveSelectedVocabulary();
@@ -829,6 +910,12 @@ $("#history-list").onclick = event => {
   render();
 };
 document.addEventListener("selectionchange", captureSelection);
+$("#workspace").addEventListener("keydown", event => {
+  if (event.target.id === "highlight" && ["ArrowLeft", "ArrowRight"].includes(event.key)) {
+    event.preventDefault();
+    highlight(event.key === "ArrowRight" ? "green" : "yellow");
+  }
+});
 $("#workspace").addEventListener("pointerdown", event => {
   if (event.target.closest("#highlight, #clear-selection, #save-vocabulary")) event.preventDefault();
 });
