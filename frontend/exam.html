@@ -55,6 +55,8 @@ mark.highlight-green{background:#a9e2a4}mark.highlight-yellow{background:#ffdf7a
 .writing-resizer{flex:0 0 12px;display:flex;align-items:center;justify-content:center;cursor:ns-resize;touch-action:none;background:#e7eff9;border-block:1px solid #bccbdd}
 .writing-resizer[hidden]{display:none}.writing-resizer:hover,.writing-resizer:focus-visible{background:#cfe0f7;outline:2px solid var(--blue);outline-offset:-2px}
 .writing-resizer>span{width:40px;height:3px;border-radius:3px;background:#7488a4;pointer-events:none}
+.history-select{display:flex;gap:10px;align-items:center;min-width:0;cursor:pointer}.history-select input{width:17px;height:17px;flex-shrink:0;accent-color:var(--blue)}
+.history-hint{font-size:13px;margin-top:12px}.history-merge-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}.history-merge-actions [role=status]{font-size:13px;color:var(--muted)}.merged-badge{color:var(--blue);background:#e3edf9;border-radius:4px;padding:2px 4px;font-size:11px}
 __VOCAB_CSS__
 </style>
 </head>
@@ -74,7 +76,9 @@ __VOCAB_CSS__
 </main>
 <dialog id="history">
   <div class="dialog-head"><h2>Attempt history</h2><form method="dialog"><button>Close</button></form></div>
+  <p class="muted history-hint">Select two Reading or two Writing records to merge. For overlapping answers, the newer response is used.</p>
   <div id="history-list"></div>
+  <div class="history-merge-actions"><button id="merge-history" disabled>Merge selected (0/2)</button><span id="history-merge-status" role="status"></span></div>
 </dialog>
 <dialog id="submit-dialog">
   <h2>Submit this attempt?</h2>
@@ -137,8 +141,10 @@ try {
 function save() {
   try {
     localStorage.setItem(storageKey, JSON.stringify(state));
+    return true;
   } catch {
     $("#storage-warning").hidden = false;
+    return false;
   }
 }
 let mode = "reading";
@@ -788,16 +794,87 @@ function tick() {
   if (rerender) render();
   else showTime();
 }
+let displayedHistory = [];
 function showHistory() {
-  $("#history-list").innerHTML = state.history.length ? state.history.map((entry, index) => {
+  displayedHistory = [...state.history];
+  $("#history-list").innerHTML = displayedHistory.length ? displayedHistory.map((entry, index) => {
+    const moduleLabel = entry.module === "reading" ? "Reading" : "Writing";
     const detail = entry.module === "reading" ? `${grade(entry.answers)} / 40`
       : `${countWords(entry.drafts[0])} + ${countWords(entry.drafts[1])} words`;
-    return `<div class="history-row"><div><strong>${entry.module === "reading" ? "Reading" : "Writing"}</strong> · ${detail}<br>
-      <small class="muted">${escapeHtml(new Date(entry.submittedAt).toLocaleString())}</small></div>
+    const date = escapeHtml(new Date(entry.submittedAt).toLocaleString());
+    return `<div class="history-row"><label class="history-select"><input type="checkbox" data-merge="${index}" aria-label="Select ${moduleLabel} record ${index + 1}"><span><strong>${moduleLabel}</strong> · ${detail}${entry.mergedFrom ? ' <small class="merged-badge">Merged</small>' : ""}<br>
+      <small class="muted">${date}</small></span></label>
       <button data-review="${index}">Review</button></div>`;
   }).join("") : "<p class='muted'>Submitted attempts will appear here.</p>";
-  $("#history").showModal();
+  $("#history-merge-status").textContent = "";
+  updateMergeSelection();
+  if (!$("#history").open) $("#history").showModal();
 }
+function selectedHistoryRecords() {
+  return [...$("#history-list").querySelectorAll("[data-merge]:checked")]
+    .map(input => displayedHistory[Number(input.dataset.merge)]);
+}
+function updateMergeSelection() {
+  const selected = selectedHistoryRecords();
+  for (const input of $("#history-list").querySelectorAll("[data-merge]")) {
+    input.disabled = !input.checked && (selected.length === 2 ||
+      (selected.length > 0 && displayedHistory[Number(input.dataset.merge)].module !== selected[0].module));
+  }
+  $("#merge-history").disabled = selected.length !== 2;
+  $("#merge-history").textContent = `Merge selected (${selected.length}/2)`;
+}
+function mergeHistoryRecords(records, submittedAt) {
+  if (records.length !== 2 || records[0].module !== records[1].module) {
+    throw new Error("Select two records from the same module.");
+  }
+  const merged = {...newAttempt(), module: records[0].module, submittedAt,
+    answerTimestamps: {}, draftTimestamps: {}, mergedFrom: records.map(record => record.submittedAt)};
+  // The history list is newest first. Reverse it to resolve equal timestamps consistently.
+  const ordered = [...records].reverse().sort((a, b) => a.submittedAt - b.submittedAt);
+  for (const record of ordered) {
+    for (const [id, value] of Object.entries(record.answers || {})) {
+      if (!normalize(value)) continue;
+      const timestamp = record.answerTimestamps?.[id] ?? record.submittedAt;
+      if (timestamp >= (merged.answerTimestamps[id] ?? 0)) {
+        merged.answers[id] = value;
+        merged.answerTimestamps[id] = timestamp;
+      }
+    }
+    for (const [index, draft] of (record.drafts || []).entries()) {
+      if (!draft.trim()) continue;
+      const timestamp = record.draftTimestamps?.[index] ?? record.submittedAt;
+      if (timestamp >= (merged.draftTimestamps[index] ?? 0)) {
+        merged.drafts[index] = draft;
+        merged.draftTimestamps[index] = timestamp;
+      }
+    }
+    Object.assign(merged.flags, record.flags || {});
+    for (const [key, ranges] of Object.entries(record.highlights || {})) {
+      let combined = merged.highlights[key] || [];
+      for (const [start, end, color = "yellow"] of ranges) {
+        combined = [...subtractHighlight(combined, start, end), [start, end, color]];
+      }
+      merged.highlights[key] = combined.sort((a, b) => a[0] - b[0]);
+    }
+  }
+  return merged;
+}
+$("#history-list").onchange = updateMergeSelection;
+$("#merge-history").onclick = () => {
+  const selected = selectedHistoryRecords();
+  if (selected.length !== 2 || selected[0].module !== selected[1].module) return;
+  const previousHistory = state.history;
+  const merged = mergeHistoryRecords(selected, Date.now());
+  state.history = [merged, ...previousHistory];
+  if (!save()) {
+    state.history = previousHistory;
+    $("#history-merge-status").textContent = "Could not save the merged record. Please try again.";
+    return;
+  }
+  showHistory();
+  $("#history-merge-status").textContent = "Merged into a new record. Ready to review.";
+};
+
 $("#reading-tab").onclick = () => openModule("reading");
 $("#writing-tab").onclick = () => openModule("writing");
 $("#history-button").onclick = showHistory;
@@ -954,7 +1031,7 @@ $("#history-list").onclick = event => {
   const button = event.target.closest("[data-review]");
   if (!button) return;
   resetReview();
-  review = state.history[Number(button.dataset.review)];
+  review = displayedHistory[Number(button.dataset.review)];
   mode = review.module;
   groupIndex = writingIndex = 0;
   currentQuestion = null;
