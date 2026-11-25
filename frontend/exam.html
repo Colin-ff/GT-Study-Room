@@ -44,6 +44,7 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 .highlight-split{background:linear-gradient(to right,#ffdf7a 50%,#a9e2a4 50%);border-color:#b4bd94;color:#253224}
 .highlight-split:hover{background:linear-gradient(to right,#f5d269 50%,#97d791 50%)}
 mark.highlight-green{background:#a9e2a4}mark.highlight-yellow{background:#ffdf7a}
+.passage-detail{display:block;margin-top:.35em}.passage-detail strong{font-weight:700}
 
 
 .writing-response-body{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden}
@@ -383,13 +384,26 @@ function renderPassage() {
   const explanation = hasReview() ? data.explanations[currentQuestion] : null;
   const notGiven = questions.find(question => question.id === currentQuestion)?.answer === "NOT GIVEN";
   const label = explanation ? `<p class="review-label">Q${currentQuestion} · ${notGiven ? "Relevant text · the passage does not confirm the claim" : "Answer evidence"}</p>` : "";
-  target.innerHTML = label + `<h1>${escapeHtml(passage.title)}</h1>` + passage.blocks.map((block, i) => {
+  const titleKey = `${group.passage}:title`;
+  target.innerHTML = label + `<h1 data-highlight-key="${titleKey}">${highlightedText(passage.title, attempt().highlights[titleKey] || [], 0, passage.title.length)}</h1>` + passage.blocks.map((block, i) => {
     const ranges = attempt().highlights[`${group.passage}:${i}`] || [];
     const heading = passage.headings?.[i] || "";
     const letter = passage.labels?.[i];
     const boundary = Math.max(heading.length, letter ? 1 : 0);
     const excerpts = (explanation?.evidence || []).filter(([index]) => index === i).map(([, text]) => text);
-    const body = renderEvidenceText(block, ranges, boundary, block.length, excerpts);
+    const details = passage.details?.[i] || [];
+    let cursor = boundary;
+    let body = "";
+    for (let n = 0; n < details.length; n++) {
+      const {start, label = ""} = details[n];
+      if (cursor < start) body += renderEvidenceText(block, ranges, cursor, start, excerpts);
+      const end = details[n + 1]?.start ?? block.length;
+      body += '<span class="passage-detail">' +
+        (label ? '<strong>' + renderEvidenceText(block, ranges, start, start + label.length, excerpts) + '</strong>' : "") +
+        renderEvidenceText(block, ranges, start + label.length, end, excerpts) + '</span>';
+      cursor = end;
+    }
+    if (cursor < block.length) body += renderEvidenceText(block, ranges, cursor, block.length, excerpts);
     const badge = letter ? `<strong class="passage-letter">${renderEvidenceText(block, ranges, 0, 1, excerpts)}</strong>` : "";
     if (!heading) return `<p data-highlight-key="${group.passage}:${i}" data-block="${i}">${badge}${body}</p>`;
 
@@ -472,8 +486,9 @@ function renderReading() {
   $("#workspace").innerHTML = `
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Reading passage</span>
       <div class="panel-tools">
-        ${active.submittedAt ? "" : '<button id="highlight" class="highlight-split" title="Left half yellow · Right half green · Arrow keys choose a colour" aria-label="Highlight selection" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage and its questions" disabled>Clear all</button>'}
+        <button id="highlight" class="highlight-split" title="Left half yellow · Right half green · Arrow keys choose a colour" aria-label="Highlight selection" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage and its questions" disabled>Clear all</button>
         <button id="save-vocabulary" title="Select a word or phrase of up to 180 characters" disabled>Add to vocabulary</button>
+        <button id="add-word">Add word</button>
         <button id="open-vocabulary">Passage vocabulary</button>
       </div><span id="vocab-selection-status" role="status"></span>
     </div><article class="scroll passage" id="passage"></article></section>
@@ -658,8 +673,12 @@ function captureSelection() {
 
 function selectedPassageText() {
   const passage = data.passages[data.groups[groupIndex].passage];
-  return selection.filter(([key]) => !key.startsWith("q:")).map(([key, start, end]) =>
-    passage.blocks[Number(key.split(":")[1])].slice(start, end)).join(" ").replace(/\s+/g, " ").trim();
+  return selection.map(([key, start, end]) => {
+    const text = key.startsWith("q:")
+      ? [...$("#questions").querySelectorAll("[data-highlight-key]")].find(node => node.dataset.highlightKey === key)?.textContent || ""
+      : key.endsWith(":title") ? passage.title : passage.blocks[Number(key.split(":")[1])];
+    return text.slice(start, end);
+  }).join(" ").replace(/\s+/g, " ").trim();
 }
 
 function currentHighlightKeys() {
@@ -685,6 +704,13 @@ function updateSelectionTools() {
 
 function refreshHighlights() {
   window.getSelection().removeAllRanges();
+  // Submitted answers stay locked; study annotations remain editable and durable.
+  const active = attempt();
+  if (active.submittedAt) {
+    for (const record of [state.attempts.reading, ...state.history.filter(item => item.module === "reading")]) {
+      if (record?.submittedAt === active.submittedAt) record.highlights = JSON.parse(JSON.stringify(active.highlights));
+    }
+  }
   save();
   renderQuestionHighlights();
   renderPassage();
@@ -701,7 +727,7 @@ function subtractHighlight(ranges, start, end) {
 }
 
 function highlight(color) {
-  if (!selection.length || attempt().submittedAt) return;
+  if (!selection.length) return;
   const highlights = attempt().highlights;
   for (const [key, start, end] of selection) {
     const sorted = [...subtractHighlight(highlights[key] || [], start, end), [start, end, color]]
@@ -717,7 +743,7 @@ function highlight(color) {
 }
 
 function clearSelectedHighlights() {
-  if (!selection.length || attempt().submittedAt) return;
+  if (!selection.length) return;
   const highlights = attempt().highlights;
   for (const [key, start, end] of selection) {
     const remaining = subtractHighlight(highlights[key] || [], start, end);
@@ -728,17 +754,18 @@ function clearSelectedHighlights() {
 }
 
 function clearAllHighlights() {
-  if (attempt().submittedAt) return;
   for (const key of currentHighlightKeys()) delete attempt().highlights[key];
   refreshHighlights();
 }
 
-function openPassageVocabulary(focusKey, focus = true) {
+function openPassageVocabulary(focusKey, focus = true, manual = false) {
   const passage = data.groups[groupIndex].passage;
   vocabulary.open({
     title: "Vocabulary · " + data.passages[passage].title,
     tests: [{key: data.vocabularyKey}],
     passage,
+    passageTitle: data.passages[passage].title,
+    manual,
     focusKey,
     focus
   });
@@ -989,6 +1016,7 @@ $("#workspace").onclick = event => {
   if (button.id === "clear-selection") clearSelectedHighlights();
   if (button.id === "clear-all") clearAllHighlights();
   if (button.id === "save-vocabulary") saveSelectedVocabulary();
+  if (button.id === "add-word") openPassageVocabulary(undefined, true, true);
   if (button.id === "open-vocabulary") openPassageVocabulary();
   if (button.id === "open-writing-notes") vocabulary.openWritingNotes();
   if (button.dataset.flag) {
@@ -1058,3 +1086,4 @@ setInterval(tick, 500);
 </script>
 </body>
 </html>
+

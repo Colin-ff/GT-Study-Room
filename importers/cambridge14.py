@@ -178,7 +178,24 @@ def passage_data(spec):
         blocks[i] = block
     if first == 93 and blocks[-1].startswith("importance."):
         blocks[-2:] = [" ".join(blocks[-2:])]
-    return {"title": title, "blocks": blocks, "pages": [first, last]}
+    result = {"title": title, "blocks": blocks, "pages": [first, last]}
+    if first == 61:
+        # These short lines have no blank-line separators in pdftotext output.
+        # Keep text offsets stable and store their presentation independently.
+        markers = [
+            ["All drivers must", "Open:", "Charges:"],
+            ["Open:", "27th October"],
+            ["Open:", "Charges:"],
+            ["Open:", "Charges:", "other times:", "appropriate footgear", "shoe hire"],
+            ["Open:", "Charges:"],
+        ]
+        result["details"] = {
+            str(i): [{"start": block.index(marker),
+                      "label": marker if marker in ("Open:", "Charges:", "other times:") else ""}
+                     for marker in starts]
+            for i, (block, starts) in enumerate(zip(blocks, markers))
+        }
+    return result
 
 def read_key(test):
     answers = {}
@@ -317,3 +334,4 @@ for test, writing_first in [(1, 31), (2, 52), (3, 75), (4, 97)]:
                 "groups": [make_group(spec, answers) for spec in GROUPS[test]],
                 "writing": writing_data(test, writing_first)}
     output.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+

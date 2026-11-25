@@ -30,6 +30,7 @@
 .vocab-subtitle{font-size:12px;color:var(--muted);margin:0;padding:0 14px;overflow-wrap:anywhere}
 .vocab-sidebar>.vocab-search{margin:10px 14px 0;width:calc(100% - 28px)}
 .vocab-sidebar>.vocab-notice{margin:8px 14px}
+.vocab-sidebar>.vocab-button{align-self:flex-start;margin:10px 14px 0}.vocab-manual{padding:8px 14px;border-bottom:1px solid var(--line)}.vocab-manual[hidden]{display:none}.vocab-manual .vocab-search{margin:0 0 6px}.vocab-manual textarea{resize:vertical;max-height:120px}
 .vocab-sidebar>.vocab-list{flex:1;min-height:0;overflow:auto;padding:0 12px 16px}
 .vocab-sidebar .vocab-group-bar{padding:9px 0;border-bottom:1px solid var(--line)}
 .vocab-sidebar .vocab-group-bar a{font-size:11px;white-space:nowrap}
@@ -49,3 +50,4 @@ body:has(>.vocab-sidebar)>main{margin-right:382px}
 .writing-notes-columns,.writing-notes-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 22px;gap:8px}
 .writing-notes-columns{padding:0 12px 8px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700}
 .writing-notes-row textarea{width:100%;min-width:0;min-height:64px;padding:6px;border:1px solid #bccbdd;border-radius:5px;font:13px/1.45 system-ui,sans-serif;resize:vertical;color:inherit}
+

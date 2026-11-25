@@ -2,6 +2,8 @@
 
 A browser-based simulator for computer-delivered IELTS General Training Reading and Writing.
 
+Recent changes are documented in the [changelog](CHANGELOG.md).
+
 ## Use G Study Room
 
 - **Online.** Start practising in your browser with the Cambridge IELTS 14–20 General Training question bank. The site is public and requires no sign-in or installation. [Open the live simulator](https://gstudyroom.space)
@@ -21,6 +23,8 @@ Listening and Speaking are shared across the two IELTS formats, while Reading an
 
 - Browse practice collections and select a test and module.
 - Read passages and answer questions side by side, highlight text and flag questions to revisit.
+- Use yellow or green highlights in passage titles, body text and questions, including after submission and when reviewing History. Clear a selected highlight or all highlights for the passage.
+- Save words and phrases from passages or questions to a passage vocabulary notebook, or use **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
 - Practise with separate Reading and Writing timers.
 - Score Reading automatically on submission and review your answers against the answer key.
 - Practise Writing Task 1 and Task 2 with live word counts and automatic draft saving. Writing reference answers appear when included in a question pack.
@@ -83,3 +87,4 @@ Review extracted text, blank positions and answer keys before publishing a pack.
 ## Deploy
 
 Run `python3 build.py` and publish the contents of `dist/` with a static web host. Keep the same site address across updates to retain access to existing browser progress.
+

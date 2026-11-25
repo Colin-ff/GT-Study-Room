@@ -40,7 +40,7 @@ const vocabulary = (() => {
     return Boolean(document.querySelector("#vocab-sidebar"));
   }
 
-  function open({title, tests, passage, focusKey, focus = true}) {
+  function open({title, tests, passage, passageTitle, focusKey, focus = true, manual = false}) {
     closeReading();
     const dialog = element("aside", "vocab-sidebar");
     dialog.id = "vocab-sidebar";
@@ -60,6 +60,47 @@ const vocabulary = (() => {
     const notice = element("p", "vocab-notice");
     notice.setAttribute("role", "status");
     dialog.append(bar, subtitle);
+    let wordInput;
+    if (passage !== undefined) {
+      const form = element("form", "vocab-manual");
+      form.hidden = !manual;
+      wordInput = element("input", "vocab-search");
+      wordInput.required = true;
+      wordInput.maxLength = maxSelectionLength;
+      wordInput.placeholder = "Word or phrase";
+      wordInput.setAttribute("aria-label", "Word or phrase");
+      const meaning = element("textarea", "vocab-search");
+      meaning.placeholder = "Meaning or notes";
+      meaning.setAttribute("aria-label", "Meaning or notes for new word");
+      meaning.maxLength = 2000;
+      const actions = element("div", "vocab-entry-actions");
+      const save = element("button", "vocab-button", "Save");
+      save.type = "submit";
+      const addWord = element("button", "vocab-button", "Add word");
+      addWord.type = "button";
+      addWord.onclick = () => { form.hidden = false; wordInput.focus(); };
+      actions.append(save, addWord);
+      const toggle = element("button", "vocab-button", "Add word");
+      toggle.type = "button";
+      toggle.onclick = addWord.onclick;
+      dialog.append(toggle, form);
+      form.append(wordInput, meaning, actions);
+      form.onsubmit = event => {
+        event.preventDefault();
+        const text = clean(wordInput.value);
+        if (!/[\p{L}\p{N}]/u.test(text)) { wordInput.focus(); return; }
+        try {
+          const key = add(tests[0].key, passage, passageTitle || title, text);
+          if (meaning.value.trim()) update(tests[0].key, items => {
+            items.find(item => item.passage === passage && item.key === key).note = meaning.value;
+          });
+          wordInput.value = meaning.value = "";
+          render();
+          notice.textContent = "Saved";
+          wordInput.focus();
+        } catch { notice.textContent = "Could not save this word. Please try again."; }
+      };
+    }
     let search;
     if (passage === undefined) {
       search = element("input", "vocab-search");
@@ -149,7 +190,7 @@ const vocabulary = (() => {
         }
         notice.textContent = total ? total + (total === 1 ? " entry" : " entries") :
           query ? "No matches." : passage === undefined ? "No words saved in this book yet." :
-            "Select a word or phrase in this passage and choose Add to vocabulary.";
+            "Select text in the passage or questions, or choose Add word to type your own.";
       } catch {
         notice.textContent = "This browser could not open the saved vocabulary.";
       }
@@ -163,7 +204,7 @@ const vocabulary = (() => {
     (document.querySelector("#study-layout") || document.body).append(dialog);
     const note = render();
     if (focus) {
-      (note || search || close).focus();
+      (manual ? wordInput : note || search || close).focus();
       note?.closest(".vocab-row").scrollIntoView({block: "nearest"});
     }
   }
@@ -280,3 +321,4 @@ const vocabulary = (() => {
 
   return {add, open, closeReading, closeWriting, isOpen, openWritingNotes, maxSelectionLength};
 })();
+
