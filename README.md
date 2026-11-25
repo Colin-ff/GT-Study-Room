@@ -27,6 +27,7 @@ Listening and Speaking are shared across the two IELTS formats, while Reading an
 - Save words and phrases from passages or questions to a passage vocabulary notebook, or use **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
 - Practise with separate Reading and Writing timers.
 - Score Reading automatically on submission and review your answers against the answer key.
+- Review Cambridge 14 Test 1 and Cambridge 15 Tests 1–4 with question-specific source highlighting, Chinese explanations, English paraphrase comparisons and distractor notes. Related questions and vocabulary use bundled review notes; this is not a live AI chat service.
 - Practise Writing Task 1 and Task 2 with live word counts and automatic draft saving. Writing reference answers appear when included in a question pack.
 - Track completion and review attempt history in the same browser. Progress is saved locally and is specific to the browser and site address.
 
@@ -58,6 +59,7 @@ The question bank contains Cambridge IELTS 14–20 General Training, with four t
 | --- | --- |
 | `frontend/` | Catalog and exam page templates, styling and browser-side logic |
 | `bank/` | One JSON file per test with passages, questions, answer keys and available writing references |
+| `bank/reviews/` | Question-by-question evidence anchors, explanations, passage summaries and vocabulary; loaded automatically when present |
 | `importers/` | PDF extraction and OCR scripts for the matching Cambridge editions |
 | `build.py` | Python builder that turns question-bank JSON into static pages |
 | `dist/` | Generated HTML output, served by any static web host |
@@ -69,6 +71,8 @@ Scoring, timers and progress run in the browser. The Python builder runs offline
 Use [the demo JSON](bank/demo-gt/test-1.json) as a schema example. Put Cambridge-format practice sets you are authorised to use in `bank/cambridge-<number>-gt/test-<number>.json`, then run `python3 build.py` again. Each Cambridge-format set has 40 consecutive Reading question IDs and two Writing tasks. The build adds detected packs to the catalog.
 
 Question packs may contain passages, answers, accepted variants and image assets. Keep existing book and test IDs stable so saved progress remains associated with the right test.
+
+To add review support, create `bank/reviews/<book-id>/test-N.json`, keyed by every Reading question ID in that test. Each entry needs `anchors`, `reason`, `contrast` and `terms`. Anchors identify passage block indices and exact start/end excerpts. The build checks complete question coverage and exact, unambiguous source matches before embedding the reviews. Cambridge 14 Test 1 retains its legacy review file and highlight migration.
 
 ### Import from PDFs
 

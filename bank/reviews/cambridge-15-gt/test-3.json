@@ -1,0 +1,533 @@
+{
+  "1": {
+    "anchors": [
+      [
+        1,
+        "The competition is designed for students to enter the coursework they are currently working on rather than specifically producing different pieces of work.",
+        "The competition is designed for students to enter the coursework they are currently working on rather than specifically producing different pieces of work."
+      ]
+    ],
+    "reason": "题干 required to create a new item 与原文提交 currently working on 的 coursework、而非专门另做新作品矛盾，所以选 FALSE。",
+    "contrast": "可与老师商量补充课程作品，不代表比赛强制另外制作新衣服；required 是关键限制。",
+    "terms": {
+      "coursework": "课程作业或课程作品。",
+      "shortlist": "入围名单，不自带固定人数含义。",
+      "merits": "值得、应得到。",
+      "count towards": "计入、影响最终结果。"
+    },
+    "passageSummary": "设计比赛主要接受现有课程作品。文章介绍提交材料、入围、展位布置、评审与奖项。区分允许的做法、强制要求和是否影响评奖。"
+  },
+  "2": {
+    "anchors": [
+      [
+        3,
+        "You must include: - initial ideas about the clothing — aclose-up photograph of the front and back view of the finished clothing. 2) Please label each sheet clearly with your name and school (on the back). 3) Print off a copy of your registration form and attach it to your work. 4) Post your entry to the Young Fashion Designer Centre.",
+        "You must include: - initial ideas about the clothing — aclose-up photograph of the front and back view of the finished clothing. 2) Please label each sheet clearly with your name and school (on the back). 3) Print off a copy of your registration form and attach it to your work. 4) Post your entry to the Young Fashion Designer Centre."
+      ]
+    ],
+    "reason": "题干 thoughts that led to the item 对应 initial ideas（最初构思）；原文 must include 明确要求提交，因此选 TRUE。",
+    "contrast": "不仅提交成衣照片，还要包括设计初衷；information 不一定要和原文用同一个词。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        4,
+        "Once the entry deadline has passed, the judges will select the shortlist of students who will be invited to the Finals.",
+        "Once the entry deadline has passed, the judges will select the shortlist of students who will be invited to the Finals."
+      ]
+    ],
+    "reason": "原文说会挑选入围决赛的人，但没有说人数是否固定（a fixed number），所以选 NOT GIVEN。",
+    "contrast": "shortlist 只表示筛选后的名单，不自动包含固定人数；不能因未给数字就认定人数不固定。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        5,
+        "to add as much creativity to your stand as possible.",
+        "to add as much creativity to your stand as possible."
+      ]
+    ],
+    "reason": "题干 choose how to present 对应自由为展位增添创意；虽然桌子和展示板统一提供，布置方式可以自选，因此选 TRUE。",
+    "contrast": "统一的展位设备不等于统一的展示内容；别把 stand 的规格与展示方式混淆。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        5,
+        "Some students bring tablets/ laptops with slideshows or further images of work but it should be emphasised that these may not necessarily improve your chances of success.",
+        "Some students bring tablets/ laptops with slideshows or further images of work but it should be emphasised that these may not necessarily improve your chances of success."
+      ]
+    ],
+    "reason": "题干 strongly recommended 要求强烈推荐额外照片；原文仅说有人带更多图片，而且不一定提高获奖机会，并强调这一点，所以选 FALSE。",
+    "contrast": "some students bring 是部分人的做法，不是主办方推荐；may not necessarily improve 与把它当成强烈建议的制胜办法不符。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        6,
+        "You are welcome to ask the judges questions.",
+        "You are welcome to ask the judges questions."
+      ]
+    ],
+    "reason": "原文欢迎参赛者向评委提问，但没有说明这些问题是否计入最后评判（count towards final decisions），所以选 NOT GIVEN。",
+    "contrast": "评委向学生提问用于考察作品，和学生向评委提问能否加分，是两个方向。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        7,
+        "The judges can also decide to award special prizes if the work merits this.",
+        "The judges can also decide to award special prizes if the work merits this."
+      ]
+    ],
+    "reason": "题干 Extra prizes 对应 special prizes；depending on the standard 对应 if the work merits this（作品水平值得获奖），所以选 TRUE。",
+    "contrast": "特殊奖项可由评委决定，不等于所有人都会得到额外奖品；题干 may 与原文 can 一致。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        2,
+        "It’s also rather loud though, which can take some getting used to.",
+        "It’s also rather loud though, which can take some getting used to."
+      ]
+    ],
+    "reason": "题干不适合偏好 almost silent 的人，对应 B 的 rather loud（相当吵），所以选 B。",
+    "contrast": "C、F 明确安静，不能仅因其他特点好就忽略噪声条件。",
+    "terms": {
+      "spill-resistant": "防泼溅的。",
+      "portable": "方便携带的。",
+      "integrated stand": "内置支架。",
+      "ergonomic": "符合人体工学的。",
+      "familiarise yourself with": "使自己熟悉。"
+    },
+    "passageSummary": "六款键盘各有侧重，包括防泼溅、噪声、设备支架、人体工学、折叠携带及游戏用途。注意主要用途和额外适用场景的区别。"
+  },
+  "9": {
+    "anchors": [
+      [
+        5,
+        "E Microsoft Universal Bluetooth Keyboard Microsoft's Bluetooth keyboard has one very handy feature — you can fold it in half and carry it around in your jacket pocket or bag, and it feels rather like a large wallet.",
+        "E Microsoft Universal Bluetooth Keyboard Microsoft's Bluetooth keyboard has one very handy feature — you can fold it in half and carry it around in your jacket pocket or bag, and it feels rather like a large wallet."
+      ]
+    ],
+    "reason": "题干 portable 和 fit into a small space 对应可折成一半放进口袋或包里，所以选 E。",
+    "contrast": "compact 只是尺寸紧凑；本题还要求可通过折叠缩小携带体积。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        3,
+        "There's an integrated stand for smartphones and tablets too.",
+        "There's an integrated stand for smartphones and tablets too."
+      ]
+    ],
+    "reason": "题干 special place to put small devices 对应 integrated stand（内置支架）放手机和平板，所以选 C。",
+    "contrast": "其他键盘的额外功能不等于设备支架；small devices 指 smartphones and tablets。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        4,
+        "It provides wrist support and lifts your forearms into a relaxed position so you don’t hurt yourself from typing for lengthy periods.",
+        "It provides wrist support and lifts your forearms into a relaxed position so you don’t hurt yourself from typing for lengthy periods."
+      ]
+    ],
+    "reason": "题干 prevent injury … a lot of time 对应 don’t hurt yourself … lengthy periods；D 通过手腕支撑和放松前臂实现，所以选 D。",
+    "contrast": "外形 strange-looking 不是缺点题，而是人体工学设计带来保护的背景。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        1,
+        "For the price, it’s a tempting choice.",
+        "For the price, it’s a tempting choice."
+      ]
+    ],
+    "reason": "题干 good value for money 对应 A 的 For the price … tempting choice（就价格而言很有吸引力），所以选 A。",
+    "contrast": "F 昂贵且性能强，不等于文章明确评价其性价比；A 的句子才是价格与价值的评价。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        6,
+        "All this is because it’s designed for gamers.",
+        "All this is because it’s designed for gamers."
+      ]
+    ],
+    "reason": "题干 computer for entertainment 对应 gamers（游戏玩家），primarily aimed at 对应 designed for，所以选 F。",
+    "contrast": "F 也适用于办公室，不改变它最初面向游戏玩家的主要用途。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        3,
+        "It’s quiet to type on, and the circular keys are easy to familiarise yourself with, well-spaced and large enough to hit accurately.",
+        "It’s quiet to type on, and the circular keys are easy to familiarise yourself with, well-spaced and large enough to hit accurately."
+      ]
+    ],
+    "reason": "题干 get used to the shape 对应 circular keys … easy to familiarise yourself with，因此选 C。",
+    "contrast": "E 的两段式空格键 takes some getting used to 表示需要适应，和容易熟悉不同。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        2,
+        "It won’t be long before you’re familiar with the staff and the departments that you need to deal with.",
+        "It won’t be long before you’re familiar with the staff and the departments that you need to deal with."
+      ]
+    ],
+    "reason": "题干 colleagues and other departments 对应 staff and the departments；become … with 所需形容词为 familiar，所以填 familiar。",
+    "contrast": "comfort 是熟悉后产生的感受，不能填入 become … with 的搭配。",
+    "terms": {
+      "abilities": "能力。",
+      "stimulating": "有趣且能激发兴趣的。",
+      "potential": "潜力。",
+      "promotion": "晋升。",
+      "flexible": "灵活的。"
+    },
+    "passageSummary": "小公司让员工更易熟悉同事、发现能力、从事多样工作并被上级注意，可能更快晋升。灵活性也有利于适应经济变化。"
+  },
+  "16": {
+    "anchors": [
+      [
+        3,
+        "In a small business you're likely to have considerable variety in your workload, including opportunities to work in different areas of the company, which will allow you to identify abilities that you didn’t know you had.",
+        "In a small business you're likely to have considerable variety in your workload, including opportunities to work in different areas of the company, which will allow you to identify abilities that you didn’t know you had."
+      ]
+    ],
+    "reason": "题干 were not aware of 对应 didn’t know you had，未意识到自己拥有的是 abilities（能力），所以填 abilities。",
+    "contrast": "activities 是接触的新活动，abilities 是因此发现的自身能力；用复数。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        3,
+        "This variety in your work will help to make it stimulating, so you have a good reason for getting out of bed in the morning.",
+        "This variety in your work will help to make it stimulating, so you have a good reason for getting out of bed in the morning."
+      ]
+    ],
+    "reason": "题干 enjoy doing it 对应让你有动力早起工作的 stimulating（有趣、能激发兴趣的），所以填 stimulating。",
+    "contrast": "variety 是产生这种感受的原因；空格 work is … 需要形容词。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        4,
+        "You'll have plenty of opportunity to show what you can do, and to have your potential noticed.",
+        "You'll have plenty of opportunity to show what you can do, and to have your potential noticed."
+      ]
+    ],
+    "reason": "题干 Other people … realise that you have 对应你的 potential 被注意到，所以填 potential（潜力）。",
+    "contrast": "initiative 是主动性、efforts 是努力，题目强调他人看见你未来发展的能力。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        4,
+        "The result is very likely to be that promotion comes to you faster.",
+        "The result is very likely to be that promotion comes to you faster."
+      ]
+    ],
+    "reason": "题干 opportunities … come sooner 对应 promotion … faster，所以填 promotion（晋升）。",
+    "contrast": "不是换职业 change of career；这里讲小团队中被上级看见，从而更快晋升。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        5,
+        "Small businesses are usually flexible, something that is rarely true of large organisations.",
+        "Small businesses are usually flexible, something that is rarely true of large organisations."
+      ]
+    ],
+    "reason": "题干 more … than a large one 对应小公司 flexible、大公司 rarely true 的对比，所以填 flexible。",
+    "contrast": "well managed 是能把灵活性变成好处的条件，不是公司本身被比较的特征。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        2,
+        "When you are a newcomer, feeling uncertain and perhaps a little confused, there can be a strong temptation to talk about your old job and organisation as a way of reminding yourself and telling others that you really know what you are doing, because you did it in your previous role.",
+        "When you are a newcomer, feeling uncertain and perhaps a little confused, there can be a strong temptation to talk about your old job and organisation as a way of reminding yourself and telling others that you really know what you are doing, because you did it in your previous role."
+      ]
+    ],
+    "reason": "题干 emotions … at first 对应初入新公司 uncertain 和 confused（不确定、困惑），所以选 C。",
+    "contrast": "A 说准备路线和着装，F 说先学习别急着做；直接描述情绪的是 C。",
+    "terms": {
+      "practice run": "提前试走或演练。",
+      "induction programme": "入职引导安排。",
+      "core activity": "核心业务。",
+      "have a high opinion of yourself": "自视甚高。"
+    },
+    "passageSummary": "新工作应提前熟悉路线、参加入职安排、避免总夸旧工作、了解核心业务并先学习职责，不要急着按自己的假设开始干。"
+  },
+  "22": {
+    "anchors": [
+      [
+        5,
+        "F Don't try to do the job too soon.",
+        "F Don't try to do the job too soon."
+      ]
+    ],
+    "reason": "题干 warning to be patient 对应不要过早动手、最初几周先弄清工作内容，因此选 F。",
+    "contrast": "patient 在这里是耐心，不是病人；这与 G 的认真对待转变不同。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "It has enormous power to annoy, so don't do it.",
+        "It has enormous power to annoy, so don't do it."
+      ]
+    ],
+    "reason": "C 段提醒反复夸旧工作会显得自负并惹恼同事，符合 colleagues might react to certain behaviour，所以选 C。",
+    "contrast": "题目问别人如何反应，不是新人自己的情绪；同一段可对应多题。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        0,
+        "If the route from home is unfamiliar to you, make a practice run first: the normal first activity in a new job is a meeting with your boss, and it would be embarrassing to be late.",
+        "If the route from home is unfamiliar to you, make a practice run first: the normal first activity in a new job is a meeting with your boss, and it would be embarrassing to be late."
+      ]
+    ],
+    "reason": "题干 travelling … before you start 对应先试走一次通勤路线 practice run，所以选 A。",
+    "contrast": "不是正式第一天准时到达而已，关键是提前试走。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        4,
+        "E When I worked for a television company, all of us, whatever our job, were strongly encouraged to visit a studio and see how programmes were made.",
+        "E When I worked for a television company, all of us, whatever our job, were strongly encouraged to visit a studio and see how programmes were made."
+      ]
+    ],
+    "reason": "E 段作者以在电视公司时参观演播室、观察制作节目为例，符合 observing an activity … within an organisation，所以选 E。",
+    "contrast": "D 是一般原则，E 才是具体亲身例子；example 是区分依据。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        1,
+        "B You should expect to have an induction programme planned for you: a security pass; visits to whatever parts of the organisation you need to understand to do your job properly; meetings with anyone who could affect your success in the role; and someone to show you where everything is and tell you all the real rules of the culture — the ones that are never written down but which everyone is meant to follow.",
+        "B You should expect to have an induction programme planned for you: a security pass; visits to whatever parts of the organisation you need to understand to do your job properly; meetings with anyone who could affect your success in the role; and someone to show you where everything is and tell you all the real rules of the culture — the ones that are never written down but which everyone is meant to follow."
+      ]
+    ],
+    "reason": "B 段列了通行证、参观、会面和文化规则介绍，属于单位应安排的入职事项，所以选 B。",
+    "contrast": "A 的试路线和着装主要由新人自己准备，不是组织安排。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        3,
+        "If you are not part of this core activity, remember that your role is to provide a service to the people who are part of it.",
+        "If you are not part of this core activity, remember that your role is to provide a service to the people who are part of it."
+      ]
+    ],
+    "reason": "D 段区分直接参与 core product/service 的岗位，和为核心岗位人员提供服务的岗位，符合 two categories，所以选 D。",
+    "contrast": "不是按部门大小或资历分组；分类依据是与核心业务的关系。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        "No one would dream of running a marathon without first making a serious effort to train for it.",
+        "No one would dream of running a marathon without first making a serious effort to train for it."
+      ],
+      [
+        1,
+        "Instead, says environmental physiologist Lewis Halsey, “They just basically sit on the water and eat a lot.’",
+        "Instead, says environmental physiologist Lewis Halsey, “They just basically sit on the water and eat a lot.’"
+      ]
+    ],
+    "reason": "人类马拉松需要训练，黑雁却坐着吃东西也能长途迁徙，提出体能成就并非总需要严格训练，对应 D。",
+    "contrast": "文章没有验证人类训练方法低效或低估饮食，也没说黑雁准备更久；比较是为引出训练并非普遍必要。",
+    "terms": {
+      "barnacle goose": "白颊黑雁。",
+      "hibernation": "冬眠。",
+      "cues": "触发变化的信号。",
+      "efficient": "高效的。",
+      "muscle mass": "肌肉量。",
+      "endurance": "耐力。",
+      "subjected to": "使经历、使接受某种条件。",
+      "whether": "是否；不确定是否不能改成已确认没有。"
+    },
+    "passageSummary": "文章比较人类与动物体能的形成。部分动物可响应温度、食物或日照变化保持或增强体能；人类受进化和能量成本影响，仍需训练来维持耐力。"
+  },
+  "29": {
+    "anchors": [
+      [
+        11,
+        "Each kilogram contributes about 10 to 15 kilocalories a day to our metabolism when resting — which doesn’t sound like much until you realise that muscles account for about 40 percent of the average person’s body mass.",
+        "Each kilogram contributes about 10 to 15 kilocalories a day to our metabolism when resting — which doesn’t sound like much until you realise that muscles account for about 40 percent of the average person’s body mass."
+      ]
+    ],
+    "reason": "题干 human muscles 对应每公斤肌肉即使 resting 也消耗能量，后文总计基础能量约 20%，所以选 A。",
+    "contrast": "未比较不同组织重量，也没说祖先使用肌肉更高效或现代人肌肉更弱。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        13,
+        "He argues that long ago on the African savannah, natural selection made us into ‘supremely adapted’ endurance athletes, capable of running prey into the ground and ranging over long distances with unusual efficiency.",
+        "He argues that long ago on the African savannah, natural selection made us into ‘supremely adapted’ endurance athletes, capable of running prey into the ground and ranging over long distances with unusual efficiency."
+      ]
+    ],
+    "reason": "题干早期人类为生存形成的能力，对应长距离追赶猎物和高效远行，所以选 B。",
+    "contrast": "这里强调 endurance（耐力、长距离），不是藏起来、预测动物路线或因情境调整速度。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        5,
+        "Biologically speaking, all it means is that the body has undergone changes that make it stronger and more efficient.",
+        "Biologically speaking, all it means is that the body has undergone changes that make it stronger and more efficient."
+      ]
+    ],
+    "reason": "题干 more powerful 对应 stronger，另一个并列特征沿用 efficient（更高效），所以填 efficient。",
+    "contrast": "fitness 不是只指力气大；这里明确有 stronger 和 more efficient 两方面。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        5,
+        "In animals such as bears these changes appear to be triggered by cues such as falling temperatures or insufficient food.",
+        "In animals such as bears these changes appear to be triggered by cues such as falling temperatures or insufficient food."
+      ]
+    ],
+    "reason": "题干 colder weather 对应 falling temperatures，a lack of 对应 insufficient，因此填 food。",
+    "contrast": "不是说熊依靠运动增加力量；这里的启动信号是环境温度和食物供应。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        5,
+        "In the months of hibernation, these factors seem to prompt the release of muscle-protecting compounds which are then carried to the bears’ muscles in their blood and prevent muscle loss.",
+        "In the months of hibernation, these factors seem to prompt the release of muscle-protecting compounds which are then carried to the bears’ muscles in their blood and prevent muscle loss."
+      ]
+    ],
+    "reason": "题干 during … 对应 In the months of hibernation；释放保护肌肉物质的时期是冬眠，填 hibernation。",
+    "contrast": "months 是时长单位，题目要的是状态或过程名称。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        5,
+        "In the months of hibernation, these factors seem to prompt the release of muscle-protecting compounds which are then carried to the bears’ muscles in their blood and prevent muscle loss.",
+        "In the months of hibernation, these factors seem to prompt the release of muscle-protecting compounds which are then carried to the bears’ muscles in their blood and prevent muscle loss."
+      ]
+    ],
+    "reason": "题干 travel around the body 对应 carried to … muscles，运输这些物质的介质是 blood（血液），所以填 blood。",
+    "contrast": "muscles 是物质到达的目标，不是运输介质。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        6,
+        "Barnacle geese, Halsey suggests, may be responding to an environmental change such as",
+        "Barnacle geese, Halsey suggests, may be responding to an environmental change such as"
+      ],
+      [
+        7,
+        "temperature, which helps their bodies somehow ‘know’ that a big physical challenge is looming.",
+        "temperature, which helps their bodies somehow ‘know’ that a big physical challenge is looming."
+      ]
+    ],
+    "reason": "题干 variation in 对应 environmental change；黑雁身体可能响应的环境因素是 temperature，所以填 temperature。",
+    "contrast": "daylight cycle 说的是后面研究的另一类鸣禽，不能把两种鸟的线索混用。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        3,
+        "Halsey points out that this may not necessarily be the case.",
+        "Halsey points out that this may not necessarily be the case."
+      ]
+    ],
+    "reason": "题干 One belief … possibly untrue 对应 Halsey 质疑前段动物靠觅食逃敌运动保持体能的假设，所以选 A（Lewis Halsey）。",
+    "contrast": "this 指上一段的假设；不是 Tucker 在结尾讨论训练是否提高速度的未知问题。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        14,
+        "‘I don’t know that all animals are the same, performance-wise... and we don’t know whether training would enhance their ability, he says.",
+        "‘I don’t know that all animals are the same, performance-wise... and we don’t know whether training would enhance their ability, he says."
+      ]
+    ],
+    "reason": "Tucker 说尚不知训练是否能提升动物表现，保留了训练未必有效的可能；对应题干 It may not be possible … improve their speed，所以选 D。",
+    "contrast": "原文是 don’t know whether，不是断言所有动物训练都无效；may not 同样保留不确定性。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        9,
+        "If they are subjected to the right daylight cycle, ‘we can take them out of the cage and put them in the wind tunnel, and they fly for 10 hours.’",
+        "If they are subjected to the right daylight cycle, ‘we can take them out of the cage and put them in the wind tunnel, and they fly for 10 hours.’"
+      ]
+    ],
+    "reason": "Guglielmo 的实验让黄腰林莺经历合适的 daylight cycle 后，可在风洞飞 10 小时，符合 stimulus in experimental conditions，所以选 B。",
+    "contrast": "Halsey 对温度的说法是推测；本题要求的是被实验展示出来的体能。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        12,
+        "“This makes us evolutionarily different from most other animals,’ says Lieberman.",
+        "“This makes us evolutionarily different from most other animals,’ says Lieberman."
+      ]
+    ],
+    "reason": "Lieberman 解释人类体重与体能随食物供应变化的进化特点，不同于多数动物，对应题干 energy use developed in a different way，所以选 C。",
+    "contrast": "developed 在这里联系 evolved（进化），不是个人训练后发展了能力。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        6,
+        "Barnacle geese, Halsey suggests, may be responding to an environmental change such as",
+        "Barnacle geese, Halsey suggests, may be responding to an environmental change such as"
+      ],
+      [
+        7,
+        "temperature, which helps their bodies somehow ‘know’ that a big physical challenge is looming.",
+        "temperature, which helps their bodies somehow ‘know’ that a big physical challenge is looming."
+      ]
+    ],
+    "reason": "Halsey 提出黑雁可能响应 temperature 的环境变化而增强体能，题干 warmer or cooler 是温度变化的改写，所以选 A。",
+    "contrast": "Guglielmo 实验控制的是 daylight（日照时长），不是温度；may 与 suggests 表示推测。",
+    "terms": {}
+  }
+}

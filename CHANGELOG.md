@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-11-25 — Cambridge 15 Reading review
+
+### Added
+
+- Add source evidence and Chinese explanations for all 160 Reading questions across Cambridge 15 GT Tests 1–4.
+- Explain key English wording and paraphrases between each question and its evidence. Completion explanations focus on the blank and word form; choice questions explain distractors; FALSE and NOT GIVEN are distinguished explicitly.
+- Include summaries and context-specific vocabulary for all 20 passages. Questions can share the vocabulary notes for their passage.
+- Enable the existing wrong/unanswered filters, **Locate evidence** and explanation dialogue for these tests after submission and in History.
+
+### Build and validation
+
+- Discover review files at `bank/reviews/<book-id>/test-N.json` instead of hard-coding a single supported test. Unannotated tests remain usable without review controls.
+- Validate full question coverage, non-empty explanations, evidence block bounds and unique exact evidence matches at build time.
+- Preserve Cambridge 14 Test 1 reviews and existing browser storage keys, drafts, answers, highlights and vocabulary.
+- Make the vocabulary shortcut return shared passage notes when a question has no separate term list.
+
+The explanation dialogue still uses bundled notes and rules. Real-time AI inference is not included in this update.
+
 ## 2026-11-25 — Sync live versions 18–19 to GitHub
 
 These changes were published on the live site on 19 November 2026 and synchronised to this repository on 25 November 2026.

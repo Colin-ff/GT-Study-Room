@@ -253,10 +253,10 @@ function reviewReply(message, number) {
   const entry = data.explanations[number];
   const question = passageQuestions.find(item => item.id === number);
   const group = data.groups.find(item => number >= item.first && number <= item.last);
-  const example = Object.keys(entry.terms)[0];
-  const unrecognized = `我暂时没找到这句话对应的解析。你可以贴出想问的英文，或点「原文怎么理解」。例如「${example} 啥意思」。`;
   const articleNotes = passageQuestions.map(item => data.explanations[item.id]);
   const knownTerms = Object.assign({}, ...articleNotes.map(item => item.terms), entry.terms);
+  const example = Object.keys(entry.terms)[0] || Object.keys(knownTerms)[0] || "原文中的词";
+  const unrecognized = `我暂时没找到这句话对应的解析。你可以贴出想问的英文，或点「原文怎么理解」。例如「${example} 啥意思」。`;
   const prompt = message.normalize("NFKC").toLowerCase().replace(references, "")
     .trim().replace(/^[：:,，\s]+|[？?。.!！\s]+$/g, "").replace(/\s+/g, " ");
   const sourceQuestion = prompt.replace(/^(?:这(?:一)?道题|这题|本题|当前题)\s*的?\s*(?=原文|这句|证据)/, "");
@@ -274,7 +274,13 @@ function reviewReply(message, number) {
   if (/^(?:(?:请|能不能|可以|能)?(?:帮我)?)?(?:为什么(?:选这个(?:答案)?|是这个答案|选它|这个答案对|这题(?:对|选这个))?|正确答案|解释(?:一下)?(?:这道题|这题|本题)?(?:吗)?|why|why is this correct|explain(?: this question)?)$/.test(prompt)) return answer;
   if (/^(?:为什么(?:我错了|我的答案不对|不选其他(?:选项)?)|易错点|选项对比|why not the others|compare|why is my answer wrong)$/.test(prompt)) return contrast;
   if (/^(?:原文在哪(?:里)?|原文证据|定位|答案在哪(?:里)?|where is the evidence|evidence)$/.test(prompt)) return evidence.join("\n\n");
-  if (/^(?:关键词|词汇|vocabulary)$/.test(prompt)) return Object.entries(entry.terms).map(([word, meaning]) => `${word} · ${meaning}`).join("\n");
+  if (/^(?:关键词|词汇|vocabulary)$/.test(prompt)) {
+    const context = reviewPhrase(evidence.join(" ") + " " + question.text);
+    const relevant = Object.entries(knownTerms).filter(([word]) =>
+      Object.hasOwn(entry.terms, word) || context.includes(reviewPhrase(word)));
+    return (relevant.length ? relevant : Object.entries(knownTerms).slice(0, 8))
+      .map(([word, meaning]) => `${word} · ${meaning}`).join("\n");
+  }
   if (/^(?:原文|题干|这题|这道题)?(?:哪里|哪部分|怎么)?(?:对应|同义替换)(?:的|是什么|在哪里)?$/.test(prompt)) return entry.reason;
 
   const candidate = prompt.match(/^(?:为什么(?:不(?:是|选|填)|(?:没|不能)(?:选|填)|是|选|填)?|why (?:not|is it))\s*(.+)$/)?.[1];

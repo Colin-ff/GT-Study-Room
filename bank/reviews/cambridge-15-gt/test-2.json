@@ -1,0 +1,530 @@
+{
+  "1": {
+    "anchors": [
+      [
+        1,
+        "Heavy-duty locks and keys are provided to all",
+        "Heavy-duty locks and keys are provided to all"
+      ],
+      [
+        2,
+        "of our customers and included in the prices listed.",
+        "of our customers and included in the prices listed."
+      ]
+    ],
+    "reason": "题干 extra charge（额外收费）与原文 included in the prices listed（已含在所列价格里）矛盾，所以选 FALSE。",
+    "contrast": "这里的锁和钥匙虽被换行拆开，但合起来明确包含在价格中，不能因为没看到价格数字就选 NOT GIVEN。",
+    "terms": {
+      "included in the prices": "已包含在价格中。",
+      "24-hour access": "全天可进出。",
+      "unrestricted": "不受限制。",
+      "responsible for organising transport": "负责自行安排运输。"
+    },
+    "passageSummary": "Harvey’s 提供安全且灵活的仓储服务，客户可全天取放物品。家庭、学生和企业都有不同使用场景，运输主要由客户自己安排。"
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "You can hire the unit with the storage capacity you need, for the period of time that the storage is required, in a sound and secure environment, monitored by CCTV.",
+        "You can hire the unit with the storage capacity you need, for the period of time that the storage is required, in a sound and secure environment, monitored by CCTV."
+      ]
+    ],
+    "reason": "原文说明可按需要租不同容量和期限的仓储单元，但没有说明能否与别人合租（share … with someone else），所以选 NOT GIVEN。",
+    "contrast": "可选容量不等于可合租；文章也没有明令禁止合租，不能选 FALSE。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        2,
+        "With 24-hour access, customers can deliver and collect items when it is convenient to do so, unrestricted by business or office hours.",
+        "With 24-hour access, customers can deliver and collect items when it is convenient to do so, unrestricted by business or office hours."
+      ]
+    ],
+    "reason": "题干 during the night-time 对应 24-hour access；pick up your property 对应 collect items，所以选 TRUE。",
+    "contrast": "unrestricted by business or office hours 进一步确认不受办公时间限制。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        2,
+        "Tarmac roadways allow customers to park cars and lorries immediately outside their units, minimising the effort required to collect or drop items off.",
+        "Tarmac roadways allow customers to park cars and lorries immediately outside their units, minimising the effort required to collect or drop items off."
+      ]
+    ],
+    "reason": "题干 drive … right next to 对应 park … immediately outside（紧挨单元外停车），所以选 TRUE。",
+    "contrast": "原文明确允许车辆到单元门外，并非只能停在远处停车场。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        4,
+        "We can provide you with short- or long-term affordable hire in a safe and secure environment.",
+        "We can provide you with short- or long-term affordable hire in a safe and secure environment."
+      ]
+    ],
+    "reason": "题干 only … during vacation periods 限定只能假期存放；原文学生仓储也用于找住处等情况，并可长短期租用，因此选 FALSE。",
+    "contrast": "vacation 是一个使用例子，不是唯一开放时段；不能忽略题干 only。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        4,
+        "You are responsible for organising transport but we can also recommend local van and driver hire companies.",
+        "You are responsible for organising transport but we can also recommend local van and driver hire companies."
+      ]
+    ],
+    "reason": "题干说公司负责取送学生物品，但原文明确客户自己组织运输，所以选 FALSE。",
+    "contrast": "公司可 recommend van and driver hire companies，只是推荐服务商，不是自己收送物品。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        2,
+        "The museum's exhibits illustrate traditional aspects of the life of local farmers as well as the railway boom of the 19th century.",
+        "The museum's exhibits illustrate traditional aspects of the life of local farmers as well as the railway boom of the 19th century."
+      ]
+    ],
+    "reason": "题干 history of agriculture 对应 local farmers 的传统生活展览；这是 C 的 Chatteris Museum，所以选 C。",
+    "contrast": "不要只看到 local history；题目特指与农业有关的历史。",
+    "terms": {
+      "house": "作动词时指容纳或存放。",
+      "railway boom": "铁路兴盛发展。",
+      "reproductions": "复制品。",
+      "manuscript": "手稿。",
+      "conservation issues": "自然或环境保护方面的问题。"
+    },
+    "passageSummary": "五家地方博物馆分别涉及消防车旧址、Octavia Hill 故居、农业与铁路、英雄奖章和 Dickens 手稿，匹配时抓各馆独有细节。"
+  },
+  "8": {
+    "anchors": [
+      [
+        0,
+        "A Whittlesey Museum The museum is located in the Old Town Hall, which was originally built to house horse-drawn fire engines.",
+        "A Whittlesey Museum The museum is located in the Old Town Hall, which was originally built to house horse-drawn fire engines."
+      ]
+    ],
+    "reason": "题干 equipment for putting out fires 对应 horse-drawn fire engines（马拉消防车），used to be kept 对应 originally … house，因此选 A。",
+    "contrast": "house 在这里作动词，指容纳、存放，不是住宅。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        2,
+        "The museum's exhibits illustrate traditional aspects of the life of local farmers as well as the railway boom of the 19th century.",
+        "The museum's exhibits illustrate traditional aspects of the life of local farmers as well as the railway boom of the 19th century."
+      ]
+    ],
+    "reason": "题干 rise of one type of transport 对应 railway boom（铁路的兴盛发展），所以选 C。",
+    "contrast": "A 的消防车也涉及交通工具，但没有讲它的发展或兴起。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        1,
+        "Visitors are taken on a guided tour and are then free to explore the gardens.",
+        "Visitors are taken on a guided tour and are then free to explore the gardens."
+      ]
+    ],
+    "reason": "题干 inside and outside 对应馆内 guided tour 和室外 explore the gardens，所以选 B。",
+    "contrast": "要找同时有室内参观和室外游览的地点；不是只要位于户外附近就符合。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        2,
+        "The museum has a touch-screen kiosk which contains over 9,000 historic photographs and texts, reproductions of which can be made on request.",
+        "The museum has a touch-screen kiosk which contains over 9,000 historic photographs and texts, reproductions of which can be made on request."
+      ]
+    ],
+    "reason": "题干 obtain copies 对应 reproductions … made on request；which 指前面的历史 photographs and texts，所以选 C。",
+    "contrast": "有历史图片不等于可获复制品；关键证据是 reproductions。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        4,
+        "Its library, which is open to the public on the first Saturday of each month, contains the manuscript of Great Expectations by the 19th-century novelist Charles Dickens, and the Research Room can be booked for researching local records.",
+        "Its library, which is open to the public on the first Saturday of each month, contains the manuscript of Great Expectations by the 19th-century novelist Charles Dickens, and the Research Room can be booked for researching local records."
+      ]
+    ],
+    "reason": "题干 On certain days 对应每月第一个周六；original work by a writer 指 Dickens 的 Great Expectations 手稿 manuscript，所以选 E。",
+    "contrast": "D 的历史相机和收音机不属于小说家原作；题目也不是指复制品。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        1,
+        "B Octavia Hill’s Birthplace House Built in 1740, this is the birthplace of pioneer social reformer Octavia Hill, who was active in the late 19th and early 20th centuries in social housing and the arts, as well as in conservation issues.",
+        "B Octavia Hill’s Birthplace House Built in 1740, this is the birthplace of pioneer social reformer Octavia Hill, who was active in the late 19th and early 20th centuries in social housing and the arts, as well as in conservation issues."
+      ]
+    ],
+    "reason": "题干 environmental matters 对应 conservation issues（自然保护议题）；她的出生故居为 B，所以选 B。",
+    "contrast": "museum 有环保主题与曾有关注环保的人住过是两回事，这里通过 Octavia Hill 的故居定位。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        3,
+        "There is also an interesting display of historic cameras and radios, and a medal which was awarded to train driver Ben Gimbert for his bravery in preventing loss of life when a train full of explosives caught fire in 1944.",
+        "There is also an interesting display of historic cameras and radios, and a medal which was awarded to train driver Ben Gimbert for his bravery in preventing loss of life when a train full of explosives caught fire in 1944."
+      ]
+    ],
+    "reason": "题干 heroic achievement 对应 bravery in preventing loss of life（英勇救人），相关展品为奖章 medal，所以选 D。",
+    "contrast": "A 的 local celebrities 只是名人，未必有英雄事迹；D 明确写了 bravery。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        2,
+        "According to Safe Work Australia, communicable diseases from work-related exposures to biological hazards such as sewage have been estimated to cause 320,000 deaths across the globe each year.",
+        "According to Safe Work Australia, communicable diseases from work-related exposures to biological hazards such as sewage have been estimated to cause 320,000 deaths across the globe each year."
+      ]
+    ],
+    "reason": "表格把 mould、bacteria、algae 与另一种生物危害并列，原文给出的例子是 sewage（污水），所以填 sewage。",
+    "contrast": "biohazard 是危害类别，不是所需的具体例子；只填一词。",
+    "terms": {
+      "sewage": "污水。",
+      "confined spaces": "密闭、狭小的空间。",
+      "poisoning": "中毒。",
+      "drowning": "溺水。",
+      "insulation": "绝缘。",
+      "disconnected": "已切断连接，这里指断电。"
+    },
+    "passageSummary": "这篇讲管道工面临的生物废物、密闭空间及电气风险，以及防护装备、检查标签和断电等应对措施。"
+  },
+  "16": {
+    "anchors": [
+      [
+        4,
+        "For example, one plumber was fined $220,000 after an employee suffered from carbon-monoxide poisoning.",
+        "For example, one plumber was fined $220,000 after an employee suffered from carbon-monoxide poisoning."
+      ]
+    ],
+    "reason": "表格已给 carbon monoxide，询问高浓度污染物带来的风险，对应 carbon-monoxide poisoning（一氧化碳中毒），所以填 poisoning。",
+    "contrast": "fire/explosion 是前一项风险；这一行问高浓度有害气体造成的中毒。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        4,
+        "Another potential hazard for plumbers in confined spaces is that of drowning, if water sources are not adequately cut off.",
+        "Another potential hazard for plumbers in confined spaces is that of drowning, if water sources are not adequately cut off."
+      ]
+    ],
+    "reason": "表格 water 的风险对应 drowning（溺水），防范措施是切断水源，所以填 drowning。",
+    "contrast": "cut off 是预防动作，不是风险名称；题干空格需要名词。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        8,
+        "pipes are often conductive and so gloves which provide insulation should form part of a plumber’s tool kit, as should a plumbing voltage monitor and a volt tester.",
+        "pipes are often conductive and so gloves which provide insulation should form part of a plumber’s tool kit, as should a plumbing voltage monitor and a volt tester."
+      ]
+    ],
+    "reason": "表格 insulated … 对应 gloves which provide insulation（能绝缘的手套），所以填 gloves。",
+    "contrast": "monitor 和 tester 是另外的检测设备；被 insulated 修饰的是 gloves。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        8,
+        "Electrical equipment like bridging conductors should be regularly checked, with appropriate tags on the equipment to verify its safety.",
+        "Electrical equipment like bridging conductors should be regularly checked, with appropriate tags on the equipment to verify its safety."
+      ]
+    ],
+    "reason": "题干 to show it is safe 对应 to verify its safety；装在设备上表示安全的东西是 tags（标签），所以填 tags。",
+    "contrast": "检查 checked 是动作，tags 是用于验证安全的物件；保留复数。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        8,
+        "The project should be stopped immediately if there is any sign of electricity, so that the power can be disconnected by a qualified electrician prior to continuing work.",
+        "The project should be stopped immediately if there is any sign of electricity, so that the power can be disconnected by a qualified electrician prior to continuing work."
+      ]
+    ],
+    "reason": "题干 make sure electricity has been … 对应 power … disconnected（切断电源），所以填 disconnected。",
+    "contrast": "停止工作 stopped 不等于已经断电；这里要填被动结构中的过去分词 disconnected。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        1,
+        "All flexible workers should be trusted and given well-defined objectives from the start and their contribution should be assessed according to their output, as opposed to the time they spend on the",
+        "All flexible workers should be trusted and given well-defined objectives from the start and their contribution should be assessed according to their output, as opposed to the time they spend on the"
+      ]
+    ],
+    "reason": "题干 clear 对应 well-defined，provide them with 对应 given；从一开始提供明确 objectives（目标），所以填 objectives。",
+    "contrast": "output 是用来评估表现的产出，objectives 才是事先设定的目标。",
+    "terms": {
+      "well-defined objectives": "明确的目标。",
+      "output": "工作产出。",
+      "review": "回顾、检查进展。",
+      "collaboration": "协作。",
+      "distraction": "干扰、分心因素。",
+      "staff retention": "留住员工。"
+    },
+    "passageSummary": "弹性工作依靠信任、明确目标、按产出评估、共享日历和协作工具。优点包括少受干扰、创造力及员工留存提升。"
+  },
+  "22": {
+    "anchors": [
+      [
+        2,
+        "It can be a big step to implement such a change in your business, so if you are slightly cautious then I recommend perhaps setting up an end-of-the-day review to see how much progress has been made.",
+        "It can be a big step to implement such a change in your business, so if you are slightly cautious then I recommend perhaps setting up an end-of-the-day review to see how much progress has been made."
+      ]
+    ],
+    "reason": "题干 initially 和 each day 对应刚实施时的 end-of-the-day review；检查进展的活动是 review，所以填 review。",
+    "contrast": "随着适应可减少联络，不能理解成永久必须每天开会；空格只需 review。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        3,
+        "In my eyes, it is also vital that there is shared calendar access for everyone so that people",
+        "In my eyes, it is also vital that there is shared calendar access for everyone so that people"
+      ]
+    ],
+    "reason": "题干 accessible … colleague locations 对应 shared calendar access，再结合下文 see where their colleagues are each day，填 calendar。",
+    "contrast": "iMeet 是后面用于协作的工具；本题需要提供同事行程的日历。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        4,
+        "Technology now exists to enable employees to stay in touch with other members of staff and external partners. iMeet, for example, is a tool which allows all forms of collaboration for remote working, from video conferencing, live chat and file sharing to screen sharing.",
+        "Technology now exists to enable employees to stay in touch with other members of staff and external partners. iMeet, for example, is a tool which allows all forms of collaboration for remote working, from video conferencing, live chat and file sharing to screen sharing."
+      ]
+    ],
+    "reason": "题干 different types of … between workers 对应 all forms of collaboration（各种协作形式），所以填 collaboration。",
+    "contrast": "video conferencing、file sharing 是协作例子，不是这类活动的总称。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        6,
+        "work the exact hours they want and do not have to cope with distraction caused by other employees.",
+        "work the exact hours they want and do not have to cope with distraction caused by other employees."
+      ]
+    ],
+    "reason": "题干 less … from colleagues 对应不必应付其他员工造成的 distraction（干扰），所以填 distraction。",
+    "contrast": "题干已经有 less，填 distraction 即可；不要把 employees 当成干扰本身。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        6,
+        "Being outside the confines of the office walls also appears to foster creativity.",
+        "Being outside the confines of the office walls also appears to foster creativity."
+      ]
+    ],
+    "reason": "题干 increase in 对应 foster（促进）；离开固定办公室可促进 creativity（创造力），所以填 creativity。",
+    "contrast": "productive 对应生产效率的另一项优点；空格问原文另列的创造力。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        6,
+        "In terms of the business, we find this helps with top talent recruitment and staff retention, and a happy workforce is a more successful one.",
+        "In terms of the business, we find this helps with top talent recruitment and staff retention, and a happy workforce is a more successful one."
+      ]
+    ],
+    "reason": "题干 staff recruitment and … 与原文 recruitment and staff retention 对应，所以填 retention（留住员工）。",
+    "contrast": "motivation 是员工积极性，retention 才是与招聘并列的人才留存。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        1,
+        "However, as human populations exploded and as sea turtles began to confront additional threats such as intensive fishing, beach development and climate change, sea turtle populations declined precipitously.",
+        "However, as human populations exploded and as sea turtles began to confront additional threats such as intensive fishing, beach development and climate change, sea turtle populations declined precipitously."
+      ]
+    ],
+    "reason": "A 段概括人类食用、捕鱼、海滩开发和气候变化等全球性威胁及海龟数量锐减，主旨对应 iv 的 global level，所以填 iv。",
+    "contrast": "不是只讲某一个地方的偷蛋，也还没有开始解释制作假蛋。",
+    "terms": {
+      "data deficient": "数据不足，不能据此认定安全。",
+      "poachers": "偷猎者。",
+      "middlemen": "中间商。",
+      "true to life": "逼真的。",
+      "flexible": "柔软、可弯曲。",
+      "get wise": "这里指识破假蛋追踪的办法。",
+      "onward routes": "后续运输或销售路线。"
+    },
+    "passageSummary": "文章介绍海龟蛋偷猎的严重性及销售链问题，提出用内置 GPS 的仿真蛋追踪流向，在被识破前集中收集数据，再进行定向保护和执法。"
+  },
+  "29": {
+    "anchors": [
+      [
+        2,
+        "The situation is particularly serious in Nicaragua, in Central America, which is home to four sea turtle species.",
+        "The situation is particularly serious in Nicaragua, in Central America, which is home to four sea turtle species."
+      ]
+    ],
+    "reason": "B 段聚焦尼加拉瓜偷蛋广泛、失控且在集体产卵时加剧，主旨对应 vi 的 Intensive and large-scale poaching in one location，所以填 vi。",
+    "contrast": "全球威胁是 A 段；本段核心是一个国家严重的偷猎规模。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        3,
+        "‘If one poacher decides to stop, another one will just step into his place... we need to know more about the middlemen and people higher up in the distribution chain,’ she said.",
+        "‘If one poacher decides to stop, another one will just step into his place... we need to know more about the middlemen and people higher up in the distribution chain,’ she said."
+      ]
+    ],
+    "reason": "C 段指出抓住底层偷猎者还会有人替补，必须了解中间商和上层销售链，正对应 vii 的 catching … may not solve the problem。",
+    "contrast": "段中虽提武装守卫和外来团伙，但论点是只抓底层偷猎者不足以解决问题。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        4,
+        "D Paso Pacifico’s solution is the creation of high-tech sea turtle eggs: fake eggs convincingly crafted to look like the real thing, but which contain GPS tracking devices.",
+        "D Paso Pacifico’s solution is the creation of high-tech sea turtle eggs: fake eggs convincingly crafted to look like the real thing, but which contain GPS tracking devices."
+      ],
+      [
+        5,
+        "So Paso Pacifico brought in Lauren Wilde, a special effects artist in the US, to create a convincing outer shell.",
+        "So Paso Pacifico brought in Lauren Wilde, a special effects artist in the US, to create a convincing outer shell."
+      ]
+    ],
+    "reason": "D 段介绍假蛋如何在外壳质感、内部装置和防水上仿真，对应 i 的 Developing an item that appears true to life，所以填 i。",
+    "contrast": "追踪销售路线是制作假蛋的目的，但本段主体篇幅讲如何造出逼真的假蛋。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        6,
+        "Once the poacher picks up the fake egg along with the real ones, conservationists and law enforcement agents will be able to track them.",
+        "Once the poacher picks up the fake egg along with the real ones, conservationists and law enforcement agents will be able to track them."
+      ]
+    ],
+    "reason": "E 段讲把假蛋放入巢里让偷猎者带走，以及可能流向的国家，对应 v 的 Collection of eggs and their possible onward routes。",
+    "contrast": "本段没有主讲推广给其他濒危物种；mentioned countries 是蛋的流向。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        7,
+        "So, Paso Pacifico plans to do a massive deployment of as many fakes as possible to gather a lot of data before poachers get wise.",
+        "So, Paso Pacifico plans to do a massive deployment of as many fakes as possible to gather a lot of data before poachers get wise."
+      ]
+    ],
+    "reason": "F 段先计划在被识破前集中投放、快速收集资料，之后再针对目的地执法并推广技术，对应 iii 的短期密集调查与长期跟进。",
+    "contrast": "ii 的推广到其他濒危物种并未出现；向其他地区分享技术不等于换物种。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        1,
+        "And the one that’s not — the flatback turtle — is listed as data deficient, which means scientists simply don’t know how it’s doing.",
+        "And the one that’s not — the flatback turtle — is listed as data deficient, which means scientists simply don’t know how it’s doing."
+      ]
+    ],
+    "reason": "flatback turtle 被列为 data deficient（数据不足），不是已确认安全；因此它可能同样严重受威胁，对应 A 的 could be as severely threatened。",
+    "contrast": "C 把未知当成更安全；B 无证据说科学家过去忽视它；D 也无移除名单的建议。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        3,
+        "‘Although many poachers are locals with limited resources, during these arribadas there are influxes of gangs of poachers from larger cities outside local communities.",
+        "‘Although many poachers are locals with limited resources, during these arribadas there are influxes of gangs of poachers from larger cities outside local communities."
+      ]
+    ],
+    "reason": "外来城市团伙、middlemen 和上层分销链表明偷蛋有时存在组织结构，对应 C 的 highly organised structure。",
+    "contrast": "A 说主要本地人过度概括；B 未说游客鼓励偷猎；D 的 armed guards 也压不住数量优势，不能选。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        6,
+        "‘It would be pretty easy to drop an egg in the dark into a nest they have been digging up,’ she said.",
+        "‘It would be pretty easy to drop an egg in the dark into a nest they have been digging up,’ she said."
+      ]
+    ],
+    "reason": "题干鼓励偷猎者带走假蛋的方式，对应把假蛋投到 they have been digging up 的巢里，所以选 D。",
+    "contrast": "原文是既有的真实巢，不是造假巢；也没有限定巢里只剩少量真蛋。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        7,
+        "So, Paso Pacifico plans to do a massive deployment of as many fakes as possible to gather a lot of data before poachers get wise.",
+        "So, Paso Pacifico plans to do a massive deployment of as many fakes as possible to gather a lot of data before poachers get wise."
+      ]
+    ],
+    "reason": "最初大量投放，是要在偷猎者 get wise（识破）前获得足够数据，意味着方法不能保证一直有效，对应 B 的不能无限期继续。",
+    "contrast": "A、C 关于漏拿或沙中掩埋未提；D 关于经费不足也没有依据。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        5,
+        "In particular, it’s proving quite problematic to create the right texture, since sea turtle eggs are not covered in a hard shell like those of birds, but are quite flexible.",
+        "In particular, it’s proving quite problematic to create the right texture, since sea turtle eggs are not covered in a hard shell like those of birds, but are quite flexible."
+      ]
+    ],
+    "reason": "题干 Unlike a bird’s egg 对应 not … like those of birds；海龟蛋壳的特点是 flexible（柔软、可弯曲），所以填 flexible。",
+    "contrast": "hard 是鸟蛋的对照特性，题干问的是海龟蛋壳，不能填 hard。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        5,
+        "Since it’s illegal to send sea turtle eggs over the border, Wilde is using land turtle eggs from California.",
+        "Since it’s illegal to send sea turtle eggs over the border, Wilde is using land turtle eggs from California."
+      ]
+    ],
+    "reason": "题干 turtles that live on … 对应 land turtle，故填 land。",
+    "contrast": "为避免跨境违法，她研究的是加利福尼亚的陆龟蛋；不是把海龟蛋寄过去。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        5,
+        "To get the GPS device inside the shell, Paso Pacifico is using 3D printers to make a plastic ball which will then have a GPS transmitter fitted inside.",
+        "To get the GPS device inside the shell, Paso Pacifico is using 3D printers to make a plastic ball which will then have a GPS transmitter fitted inside."
+      ]
+    ],
+    "reason": "题干 GPS device … placed inside 对应 GPS transmitter fitted inside；承载它的是 plastic ball，所以填 ball。",
+    "contrast": "shell 是外壳，embryo 是这颗球将替代的胚胎；题目问装 GPS 的内层部件。",
+    "terms": {}
+  }
+}

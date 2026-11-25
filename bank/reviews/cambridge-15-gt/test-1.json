@@ -1,0 +1,518 @@
+{
+  "1": {
+    "anchors": [
+      [
+        1,
+        "If your item wasn’t delivered to the location you agreed (e.g. if it was left with your neighbour without your consent), it’s the seller’s legal responsibility to sort out the issue.",
+        "If your item wasn’t delivered to the location you agreed (e.g. if it was left with your neighbour without your consent), it’s the seller’s legal responsibility to sort out the issue."
+      ]
+    ],
+    "reason": "题干问会不会收到通知卡（receive a card）。原文只说未经同意把包裹放在邻居处时，卖家要处理问题，没有交代通知卡，所以选 NOT GIVEN。",
+    "contrast": "提到 neighbour 不等于说明 card；原文既没说寄卡，也没说不寄卡，不能选 FALSE。",
+    "terms": {
+      "refund": "退款；money back 是同义表达。",
+      "replacement": "补发或更换的商品。",
+      "chargeback": "通过银行或支付机构申请撤回付款的机制。",
+      "consent": "同意。"
+    },
+    "passageSummary": "这篇说明网购货物未送达时，卖家承担的责任、退款或补发权利，以及借记卡、信用卡和 PayPal 的不同申诉方式与时限。"
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "If the item doesn’t turn up, you’re legally entitled to a replacement or refund.",
+        "If the item doesn’t turn up, you’re legally entitled to a replacement or refund."
+      ]
+    ],
+    "reason": "原文的 replacement or refund 对应题干的退款和补发，但没有比较两种处理方式谁更快（quicker），所以选 NOT GIVEN。",
+    "contrast": "有两种处理方式，并不能推导退款速度更快；也没有相反的速度比较，不能选 FALSE。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        2,
+        "You can ask for your money back if you don’t receive the item within 30 days of buying it.",
+        "You can ask for your money back if you don’t receive the item within 30 days of buying it."
+      ]
+    ],
+    "reason": "题干的 entitled to a refund 对应原文 ask for your money back；by a certain time 对应 within 30 days，所以选 TRUE。",
+    "contrast": "30 天是题干所说的特定时限，不要求题干也写出数字才能成立。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        4,
+        "You should do this within 120 days of when you paid.",
+        "You should do this within 120 days of when you paid."
+      ]
+    ],
+    "reason": "题干 time limit 对应 within 120 days；这一条讲的是 debit card 付款的 chargeback，所以选 TRUE。",
+    "contrast": "不要把下一条信用卡的 no time limit 套到借记卡上；支付方式不同。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        5,
+        "• If you paid by credit card and the item cost less than £100, you should contact your credit card company and say you want to use the ‘chargeback’ scheme.",
+        "• If you paid by credit card and the item cost less than £100, you should contact your credit card company and say you want to use the ‘chargeback’ scheme."
+      ]
+    ],
+    "reason": "题干说 more than £100 可使用 chargeback，原文将该方式用于 less than £100，超过 £100 的相应情形使用 section 75 claim，所以选 FALSE。",
+    "contrast": "不能只看到 credit card 就选 TRUE；金额条件与退款渠道需要一起看。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        6,
+        "• If you paid using PayPal, use PayPal’s online resolution centre to report your dispute.",
+        "• If you paid using PayPal, use PayPal’s online resolution centre to report your dispute."
+      ]
+    ],
+    "reason": "原文说明向 PayPal 在线处理中心报告纠纷，但没有评价其效率或口碑（good reputation for efficiency），所以选 NOT GIVEN。",
+    "contrast": "可以使用一个服务，不代表原文肯定它处理高效；180 天是申诉期限，不是处理速度。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        4,
+        "However, the keep-warm setting must be manually selected and the handles are tricky to grip.",
+        "However, the keep-warm setting must be manually selected and the handles are tricky to grip."
+      ]
+    ],
+    "reason": "题干 handles at the side are hard to use 对应 D 的 handles are tricky to grip（把手难握），所以选 D。",
+    "contrast": "C、E 是缺少把手，和有把手但不好用不同；D 的 each side 也确认了位置。",
+    "terms": {
+      "exterior": "外壳、外部。",
+      "lid": "盖子。",
+      "dishwasher safe": "可放入洗碗机清洗。",
+      "tricky to grip": "难以握住。",
+      "manually": "手动地，与 automatically 相对。"
+    },
+    "passageSummary": "这篇比较五款电饭锅，重点是糙米表现、把手、保温、锅盖及内锅清洁方式。匹配题要注意描述的是外壳、锅盖还是内锅。"
+  },
+  "8": {
+    "anchors": [
+      [
+        5,
+        "E S16 Rice cooker This is simple to use, not spitting or boiling over even when cooking brown rice.",
+        "E S16 Rice cooker This is simple to use, not spitting or boiling over even when cooking brown rice."
+      ]
+    ],
+    "reason": "题干 without making a mess 对应 E 的 not spitting or boiling over（不飞溅、不溢锅），并明确包括 brown rice，所以选 E。",
+    "contrast": "A 煮糙米会飞溅，C 会溢水；不要把能煮糙米与煮时不弄脏混淆。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        2,
+        "It's programmed to adjust the temperature once the rice is done so that it stops cooking but doesn’t get cold.",
+        "It's programmed to adjust the temperature once the rice is done so that it stops cooking but doesn’t get cold."
+      ]
+    ],
+    "reason": "题干 automatically switches setting 对应 programmed to adjust the temperature；stops cooking but doesn’t get cold 就是煮好后保温，所以选 B。",
+    "contrast": "D 的 keep-warm setting 要 manually selected（手动选择），不满足 automatically。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        1,
+        "There are slight dirt traps around the rim of the lid, and neither the pot nor the lid is dishwasher safe.",
+        "There are slight dirt traps around the rim of the lid, and neither the pot nor the lid is dishwasher safe."
+      ]
+    ],
+    "reason": "题干 removable top 指 A 的 separate glass lid（可取下的玻璃盖）；difficult to get … clean 对应盖边容易藏污，所以选 A。",
+    "contrast": "B 难清洁的是 interior pot（内锅），不是题目限定的可取下的盖子。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        4,
+        "It has a lift-off lid and comes with a booklet including a range of ideas for rice dishes.",
+        "It has a lift-off lid and comes with a booklet including a range of ideas for rice dishes."
+      ]
+    ],
+    "reason": "题干 a selection of recipes 对应 a range of ideas for rice dishes，provided 对应 comes with a booklet，所以选 D。",
+    "contrast": "E 说 a recipe book would have been useful，表示希望有，不能理解成已经附送。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        2,
+        "The lid locks when closed and becomes a secure handle to carry the cooker.",
+        "The lid locks when closed and becomes a secure handle to carry the cooker."
+      ]
+    ],
+    "reason": "题干 at the top 的携带把手对应 B 由锁好的锅盖形成的 secure handle，所以选 B。",
+    "contrast": "A 的盖子把手不烫手，但原文没说能用它安全提起整台电饭锅。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        5,
+        "The exterior stays cool when in use, so there’s no danger of burning your hand.",
+        "The exterior stays cool when in use, so there’s no danger of burning your hand."
+      ]
+    ],
+    "reason": "题干 outside doesn’t get too hot 对应 exterior stays cool（外壳保持凉爽），所以选 E。",
+    "contrast": "A 只说盖子上的 handle stays cool，不能扩大成整个外壳不烫。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        3,
+        "The interior pot is made of non-stick aluminium and is dishwasher safe.",
+        "The interior pot is made of non-stick aluminium and is dishwasher safe."
+      ]
+    ],
+    "reason": "题干 put the pot in the dishwasher 对应 C 的 interior pot … dishwasher safe（内锅可用洗碗机清洗），所以选 C。",
+    "contrast": "A、B 明确不能用洗碗机清洗；别把 non-stick 当成可用洗碗机的唯一依据，真正依据是 dishwasher safe。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        0,
+        "Investigations by WorkSafe into falls that occur while working at height show that more than 50 percent of falls are from under three metres, and most of these are from ladders and roofs.",
+        "Investigations by WorkSafe into falls that occur while working at height show that more than 50 percent of falls are from under three metres, and most of these are from ladders and roofs."
+      ]
+    ],
+    "reason": "题干 over half 对应 more than 50 percent，less than 对应 under；因此高度填 three metres（也接受 3 metres 等答案允许的写法）。",
+    "contrast": "metres 是单位，不能只填 three；按照题目字数限制保留完整高度。",
+    "terms": {
+      "eliminate": "消除。",
+      "edge protection": "边缘防护设施。",
+      "maintenance work": "维护工作。",
+      "selection": "选择。",
+      "inspection": "检查。"
+    },
+    "passageSummary": "这篇讲屋顶作业的坠落风险，以及依次消除危险、使用防坠设施、减轻跌落伤害和安全使用梯子的措施。"
+  },
+  "16": {
+    "anchors": [
+      [
+        0,
+        "More injuries happen on residential building sites than any other workplace in the construction sector.",
+        "More injuries happen on residential building sites than any other workplace in the construction sector."
+      ]
+    ],
+    "reason": "题干询问事故集中发生的工地，原文比较各工作场所并指出 residential building sites（住宅建筑工地）更多，因此填 residential building sites。",
+    "contrast": "construction sector 是整个建筑行业，不是题目要求的具体场所；答案为三词。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        3,
+        "The first thing to be considered is whether it is possible to eliminate this hazard completely, so that workers are not exposed to the danger of falling.",
+        "The first thing to be considered is whether it is possible to eliminate this hazard completely, so that workers are not exposed to the danger of falling."
+      ]
+    ],
+    "reason": "题干在规划阶段先处理危险，对应原文 eliminate this hazard completely（彻底消除危险），所以填动词 eliminate。",
+    "contrast": "后面的边缘保护和安全网是无法消除风险时的后续措施，不是这一步。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        4,
+        "If this is not practicable, then temporary work platforms should be used.",
+        "If this is not practicable, then temporary work platforms should be used."
+      ]
+    ],
+    "reason": "题干把另一种防坠措施与 scaffolding 并列，对应 temporary work platforms（临时作业平台），因此填 platforms，或保留允许的 temporary/work 修饰语。",
+    "contrast": "这里是防止跌落的设施，安全网 safety nets 在下一步用于降低受伤风险。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        4,
+        "This means considering the use of safety nets and other similar systems to make it less likely that injury will be caused if a fall does occur.",
+        "This means considering the use of safety nets and other similar systems to make it less likely that injury will be caused if a fall does occur."
+      ]
+    ],
+    "reason": "题干 reduce the likelihood of injury 对应 make it less likely that injury will be caused；所用设施是 safety nets（安全网），所以填 safety nets。",
+    "contrast": "注意是减少跌落后的伤害，不是保证绝不会跌落；nets 用复数。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        5,
+        "Ladders should only be employed for short-duration maintenance work such as touching up paint.",
+        "Ladders should only be employed for short-duration maintenance work such as touching up paint."
+      ]
+    ],
+    "reason": "题干 does not take a long time 对应 short-duration；梯子仅用于这类 maintenance work，因此填 work 或 maintenance work。",
+    "contrast": "such as 后的补漆是例子；题目要概括工作种类，不是抄例子。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        5,
+        "People using ladders should be trained and instructed in the selection and safe use of ladders.",
+        "People using ladders should be trained and instructed in the selection and safe use of ladders."
+      ]
+    ],
+    "reason": "题干 training … and use 对应 selection and safe use；与 use 并列的名词是 selection（选择），所以填 selection。",
+    "contrast": "selected 是动词形式；原文用名词 selection 与 use 并列。",
+    "terms": {}
+  },
+  "22": {
+    "anchors": [
+      [
+        5,
+        "There should be inspection of all ladders on a regular basis to ensure they are safe to use.",
+        "There should be inspection of all ladders on a regular basis to ensure they are safe to use."
+      ]
+    ],
+    "reason": "题干 regular … is required 对应 inspection … on a regular basis（定期检查），所以填 inspection。",
+    "contrast": "题干已提供 regular，无需再抄 on a regular basis；inspection 是所需名词。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "• £140.98 a week or 90% of your average weekly earnings (whichever is less) for 39 weeks",
+        "• £140.98 a week or 90% of your average weekly earnings (whichever is less) for 39 weeks"
+      ]
+    ],
+    "reason": "题干 maximum amount … each week 对应每周 £140.98 与平均周收入的 90% 取较小值，故每周最高金额填 140.98。",
+    "contrast": "39 weeks 是领取时长，不是每周金额；90% 也是受 £140.98 上限约束。",
+    "terms": {
+      "eligibility": "领取资格。",
+      "whichever is less": "两者取较小值。",
+      "payslip": "工资单。",
+      "due date": "这里指预产期。",
+      "circumstances": "个人情况。"
+    },
+    "passageSummary": "这篇介绍不同资格下的产妇津贴、领取金额与时长、申请证明文件及个人情况变化的申报。"
+  },
+  "24": {
+    "anchors": [
+      [
+        9,
+        "It doesn’t matter if you had different jobs, or periods when you were unemployed.",
+        "It doesn’t matter if you had different jobs, or periods when you were unemployed."
+      ]
+    ],
+    "reason": "题干 for a time 对应 periods when；原文明确一段时间 unemployed（失业）不妨碍资格，所以填 unemployed。",
+    "contrast": "stopped working 与 unemployed 有关，但题干 Being 后需要与原文一致的形容词 unemployed。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        16,
+        "You also need to provide a payslip or a Certificate of Small Earnings Exemption as proof of your income, and proof of the baby’s due date, such as a doctor's letter.",
+        "You also need to provide a payslip or a Certificate of Small Earnings Exemption as proof of your income, and proof of the baby’s due date, such as a doctor's letter."
+      ]
+    ],
+    "reason": "题干 evidence of her income 对应 proof of your income，证明材料的另一选项为 payslip（工资单），所以填 payslip。",
+    "contrast": "claim form 是申请表，并不是这里所问的收入证明；注意 payslip 写成一个词。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        16,
+        "You also need to provide a payslip or a Certificate of Small Earnings Exemption as proof of your income, and proof of the baby’s due date, such as a doctor's letter.",
+        "You also need to provide a payslip or a Certificate of Small Earnings Exemption as proof of your income, and proof of the baby’s due date, such as a doctor's letter."
+      ]
+    ],
+    "reason": "题干 evidence of the due date 对应 proof of the baby’s due date；原文例子是 doctor’s letter（医生证明信），所以填 doctor’s letter。",
+    "contrast": "payslip 证明收入，不证明预产期；due date 在这里是预产期。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        18,
+        "You should report any changes to your circumstances, for example, if you go back to work, to your local Jobcentre Plus as they can affect how much allowance you get.",
+        "You should report any changes to your circumstances, for example, if you go back to work, to your local Jobcentre Plus as they can affect how much allowance you get."
+      ]
+    ],
+    "reason": "题干 differences 对应 changes，影响补贴的是个人 circumstances（情况）的变化，包括重返工作，因此填 circumstances。",
+    "contrast": "go back to work 是例子；空格要填写被改变的总体情况，保留复数 circumstances。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        1,
+        "As it happens, just days after Marshall’s discovery, the Treaty of Guadalupe Hidalgo was signed, ending the Mexican-American War and transferring California, with its mineral deposits, into the ownership of the United States.",
+        "As it happens, just days after Marshall’s discovery, the Treaty of Guadalupe Hidalgo was signed, ending the Mexican-American War and transferring California, with its mineral deposits, into the ownership of the United States."
+      ]
+    ],
+    "reason": "发现黄金后不久签订条约，使加州及矿藏归美国所有；题干 good time 的原因对应 D 的 come under the control of the US，所以选 D。",
+    "contrast": "A 未提退伍者找工作；B 未说水力技术有利采金；C 的人口剧增是淘金潮之后的情况。",
+    "terms": {
+      "physical evidence": "实物证据。",
+      "shoulder responsibilities": "承担责任；shoulder 作动词。",
+      "gravel": "砂砾。",
+      "nuggets": "块状黄金。",
+      "sieve": "筛子。",
+      "mercury": "水银。",
+      "flour": "这里是极细金粒的俗称，不是面粉。"
+    },
+    "passageSummary": "这篇依次介绍加州淘金的发现、消息传播、人口与社会变化、淘金盘和 rocker 的原理，以及后期收益下降和工业化。"
+  },
+  "29": {
+    "anchors": [
+      [
+        2,
+        "Though the initial reaction in San Francisco was disbelief, storekeeper Sam Brannan set off a frenzy when he paraded through town displaying a small bottle containing gold from Sutter’s Creek.",
+        "Though the initial reaction in San Francisco was disbelief, storekeeper Sam Brannan set off a frenzy when he paraded through town displaying a small bottle containing gold from Sutter’s Creek."
+      ]
+    ],
+    "reason": "人们最初 disbelief（不信），看到 Brannan 展示一瓶黄金后才狂热；对应 C 的 see physical evidence before … seriously，所以选 C。",
+    "contrast": "A 把说服作用归给报纸；B 的 immediately 忽略了最初不信；D 的外地矿工并非这里描述的反应。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        3,
+        "In pursuit of the kind of wealth they had never dreamed of, they left their families and local areas; in turn, their wives had no option but to shoulder different responsibilities such as running farms or businesses, and many made a real success of them.",
+        "In pursuit of the kind of wealth they had never dreamed of, they left their families and local areas; in turn, their wives had no option but to shoulder different responsibilities such as running farms or businesses, and many made a real success of them."
+      ]
+    ],
+    "reason": "男人离乡淘金后，妻子不得不经营农场或生意；对应 C 的 stayed behind … take on unexpected roles，所以选 C。",
+    "contrast": "原文未说旧金山无法应付人口，也没证明矿工普遍赚更多；新城镇还出现 lawless（治安混乱），不能选 D。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        5,
+        "Some miners added small amounts of mercury to the bottom of the rocker.",
+        "Some miners added small amounts of mercury to the bottom of the rocker."
+      ]
+    ],
+    "reason": "rocker 难捕捉细小金粒，矿工加入 mercury（水银）弥补这一缺点；对应 D 的 find a way round a design fault，所以选 D。",
+    "contrast": "水银只是部分 rocker 使用，不能说两种方法都需要；也没说 rocker 必须多人操作或盘适合新手。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        3,
+        "To accommodate the needs of the ‘49ers, as the gold miners were known, towns had sprung up all over the region, complete with shops and other businesses seeking to make their own Gold Rush fortune.",
+        "To accommodate the needs of the ‘49ers, as the gold miners were known, towns had sprung up all over the region, complete with shops and other businesses seeking to make their own Gold Rush fortune."
+      ]
+    ],
+    "reason": "C 段提到开商店和做其他生意也可赚钱，正对应 other than mining for gold（采金以外的赚钱方式），所以选 C。",
+    "contrast": "D、E 主要讲采金技术；题目要找非采矿的获利方式。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        6,
+        "Moreover, the average daily pay for an independent miner had by then dropped sharply from what it had been in 1848.",
+        "Moreover, the average daily pay for an independent miner had by then dropped sharply from what it had been in 1848."
+      ]
+    ],
+    "reason": "F 段一方面说采矿艰苦危险，另一方面说独立矿工日收入剧降，体现收益未必补偿付出的辛劳，所以选 F。",
+    "contrast": "G 比较总产值与人口，并不重点比较个人劳动和回报。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        2,
+        "Though the initial reaction in San Francisco was disbelief, storekeeper Sam Brannan set off a frenzy when he paraded through town displaying a small bottle containing gold from Sutter’s Creek.",
+        "Though the initial reaction in San Francisco was disbelief, storekeeper Sam Brannan set off a frenzy when he paraded through town displaying a small bottle containing gold from Sutter’s Creek."
+      ]
+    ],
+    "reason": "B 段的 Sam Brannan 展示黄金，引起热潮，对应 an individual who convinced many，所以选 B。",
+    "contrast": "A 段 Marshall 是发现者；题目要找说服许多人相信黄金存在的人。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        1,
+        "At the time, the population of the territory consisted of 6,500 Californios (people of Spanish or Mexican descent); 700 foreigners (primarily Americans); and 150,000 Native Americans.",
+        "At the time, the population of the territory consisted of 6,500 Californios (people of Spanish or Mexican descent); 700 foreigners (primarily Americans); and 150,000 Native Americans."
+      ]
+    ],
+    "reason": "A 段列出发现黄金时的各类居民人数，属于 pre-Gold Rush population（淘金潮前的人口构成），所以选 A。",
+    "contrast": "C、G 也有人口数字，但描述淘金潮开始后的人口增长，时间不同。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        7,
+        "After that year, the total take declined gradually, leveling off to around $45 million per year by 1857.",
+        "After that year, the total take declined gradually, leveling off to around $45 million per year by 1857."
+      ]
+    ],
+    "reason": "G 段先说黄金总收益 declined，再说 Settlement … continued、人口达 380,000；对应 shrinking revenue 与 increasing population 的对比，所以选 G。",
+    "contrast": "F 是独立矿工日工资下降，未同时给出人口增加的对比。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        4,
+        "The basic procedure was to place some gold-bearing materials, such as river gravel, into a shallow pan, add some water, and then carefully swirl the mixture around so the water and light material spilled over the side.",
+        "The basic procedure was to place some gold-bearing materials, such as river gravel, into a shallow pan, add some water, and then carefully swirl the mixture around so the water and light material spilled over the side."
+      ]
+    ],
+    "reason": "题干 out of a river 对应 river；盘中放入的含金材料是 gravel（砂砾），所以填 gravel。",
+    "contrast": "water 是随后加入的，gold 是希望从砂砾中提取出的物质，不是最初挖出的材料。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        4,
+        "If all went well, the heavier gold nuggets or gold dust would settle to the bottom of the pan.",
+        "If all went well, the heavier gold nuggets or gold dust would settle to the bottom of the pan."
+      ]
+    ],
+    "reason": "题干金粉之外可能还留下更大的金块，对应 gold nuggets，所以填 nuggets。",
+    "contrast": "题干已说明黄金，空格需要具体形态；用原文复数 nuggets。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        5,
+        "The big rocks were caught in a sieve at the top, the waste exited the lower end with the water, and the heavy gold fell to the bottom of the box.",
+        "The big rocks were caught in a sieve at the top, the waste exited the lower end with the water, and the heavy gold fell to the bottom of the box."
+      ]
+    ],
+    "reason": "题干 Larger stones stuck 对应 big rocks were caught；拦住大石块的是 sieve（筛子），所以填 sieve。",
+    "contrast": "box 是整个装置，sieve 才是截留大石块的部件。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        5,
+        "Some miners added small amounts of mercury to the bottom of the rocker.",
+        "Some miners added small amounts of mercury to the bottom of the rocker."
+      ]
+    ],
+    "reason": "题干 process introduced 指添加某物来捕捉细金，原文指出 mercury 能 trap fine gold，所以填 mercury。",
+    "contrast": "flour 是细金粒的别称，不是加入装置的材料；答案是水银。",
+    "terms": {}
+  }
+}

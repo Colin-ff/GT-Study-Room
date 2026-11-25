@@ -77,15 +77,22 @@ for book in sorted((ROOT / "bank").iterdir()):
             for index, letter in passage.get("labels", {}).items():
                 assert passage["blocks"][int(index)].startswith(letter + " "), (source, letter)
 
-        if book.name == "cambridge-14-gt" and test_number == 1:
-            explanations = json.loads((ROOT / "bank" / "cambridge-14-test-1-review.json").read_text(encoding="utf-8"))
+        review_source = ROOT / "bank" / "reviews" / book.name / f"{source.stem}.json"
+        legacy_review = book.name == "cambridge-14-gt" and test_number == 1
+        if legacy_review:
+            review_source = ROOT / "bank" / "cambridge-14-test-1-review.json"
+        if review_source.exists():
+            explanations = json.loads(review_source.read_text(encoding="utf-8"))
             assert set(explanations) == {str(q["id"]) for q in questions}, source
             for group in test["groups"]:
                 blocks = test["passages"][group["passage"]]["blocks"]
                 for question in group["questions"]:
                     entry = explanations[str(question["id"])]
+                    assert entry.get("reason") and entry.get("contrast"), (review_source, question["id"])
+                    assert isinstance(entry.get("terms"), dict), (review_source, question["id"])
                     evidence = []
                     for block, first, *last in entry.pop("anchors"):
+                        assert 0 <= block < len(blocks), (review_source, question["id"], block)
                         text = blocks[block]
                         if first is None:
                             begin = 0
@@ -97,7 +104,9 @@ for book in sorted((ROOT / "bank").iterdir()):
                             assert end >= begin + len(first) and text.count(excerpt) == 1, (source, question["id"])
                         evidence.append((block, begin, excerpt))
                     entry["evidence"] = [[block, excerpt] for block, _, excerpt in sorted(evidence)]
+                    assert entry["evidence"], (review_source, question["id"])
             test["explanations"] = explanations
+        if legacy_review:
             # Move saved highlights from the old Papyrus blocks onto the corrected text.
             # Each entry maps an old block to its new key, removed prefix, and offset.
             test["highlightMoves"] = {
@@ -138,3 +147,4 @@ for book in sorted((ROOT / "bank").iterdir()):
                      '<span class="open-book">View tests →</span></a>')
 assert books, "No tests found in bank/"
 catalog(DEST / "index.html", "Test library", "Choose a practice collection to get started.", books)
+

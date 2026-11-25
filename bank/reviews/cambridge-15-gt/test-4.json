@@ -1,0 +1,518 @@
+{
+  "1": {
+    "anchors": [
+      [
+        4,
+        "E Although the path is now open, work is continuing to improve the signs along it, such as warnings when the path approaches a road.",
+        "E Although the path is now open, work is continuing to improve the signs along it, such as warnings when the path approaches a road."
+      ]
+    ],
+    "reason": "E 段说标志仍在改进，之后还会种树篱和树，符合 what still needs to be done（仍待完成的工作），所以选 E。",
+    "contrast": "B 的完成情况和 F 的网上地图不是正在做的后续工作。",
+    "terms": {
+      "ahead of schedule": "比计划提前。",
+      "under budget": "花费低于预算。",
+      "crowdfunding": "众筹。",
+      "extension": "延伸路段。"
+    },
+    "passageSummary": "新自行车兼步行路线连接车站与公园。各段分别介绍路线、经费与施工、倡议者和长度、无障碍使用、后续工程及地图。"
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "Cycle Atherton proposed the 12-kilometre-long cycle path initially, and has been active in promoting it.",
+        "Cycle Atherton proposed the 12-kilometre-long cycle path initially, and has been active in promoting it."
+      ]
+    ],
+    "reason": "题干 original suggestion 对应 proposed … initially，提出者是 Cycle Atherton，出现在 C 段，所以选 C。",
+    "contrast": "B 的出资方与 C 的倡议方不同；出钱不等于最初提出方案。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        1,
+        "The cycle path was completed ahead of schedule — partly thanks to perfect weather for construction — and under budget.",
+        "The cycle path was completed ahead of schedule — partly thanks to perfect weather for construction — and under budget."
+      ]
+    ],
+    "reason": "题干 opened early 对应 completed ahead of schedule；提前完成的部分原因是施工天气完美，所以选 B。",
+    "contrast": "under budget 说明省钱，不是提前开放的原因；原因由 thanks to 引出。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        3,
+        "At 2.5 metres wide, it is also suitable for users of wheelchairs, mobility scooters and buggies, who have not previously had access to the park without using motor vehicles.",
+        "At 2.5 metres wide, it is also suitable for users of wheelchairs, mobility scooters and buggies, who have not previously had access to the park without using motor vehicles."
+      ]
+    ],
+    "reason": "D 段说新路径让轮椅、代步车和婴儿车使用者也能到公园，此前只能借助机动车，符合 no longer need … by car，所以选 D。",
+    "contrast": "题目问受益人群，不是一般骑车者或路径走向；D 特别指出以前的进入限制。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        0,
+        "A A new dual-purpose cycle and pedestrian route has been built from Atherton bus station to the country park’s main entrance at Marshbrook.",
+        "A A new dual-purpose cycle and pedestrian route has been built from Atherton bus station to the country park’s main entrance at Marshbrook."
+      ]
+    ],
+    "reason": "A 段介绍起终点、避开主路以及经过乡间，属于 route（路线），所以选 A。",
+    "contrast": "C 的 12 kilometres 是长度，不能代替线路走向；F 是地图获取方法。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        2,
+        "Cycle Atherton proposed the 12-kilometre-long cycle path initially, and has been active in promoting it.",
+        "Cycle Atherton proposed the 12-kilometre-long cycle path initially, and has been active in promoting it."
+      ]
+    ],
+    "reason": "题干 length 对应 12-kilometre-long，出现在 C 段，所以选 C。",
+    "contrast": "F 的 5-kilometre extension 是计划延伸长度，不是现有路径长度。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        1,
+        "B Funding for the cycle path has come largely from the county and town councils, while almost a third of it was raised through crowdfunding.",
+        "B Funding for the cycle path has come largely from the county and town councils, while almost a third of it was raised through crowdfunding."
+      ]
+    ],
+    "reason": "B 段说明县镇议会出大部分资金，近三分之一由众筹筹得，符合 who paid for the path，所以选 B。",
+    "contrast": "C 的组织提出和推广路径，不代表它承担全部经费；maintenance 是后续维护。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        0,
+        "For fifty years we have been providing top-quality courses for actors, directors, producers, musicians and everyone else who wishes to work professionally in the theatre or related industries.",
+        "For fifty years we have been providing top-quality courses for actors, directors, producers, musicians and everyone else who wishes to work professionally in the theatre or related industries."
+      ]
+    ],
+    "reason": "原文说学院已有五十年教学历史并列举现在的课程，但没交代课程是否为开校后新增，所以选 NOT GIVEN。",
+    "contrast": "提供很多课程不能证明何时增设；也不能反过来说从未新增。",
+    "terms": {
+      "premises": "校舍或机构使用的房屋场所。",
+      "staff members": "教职员工。",
+      "complement": "相协调、相衬，不是同一人设计。",
+      "cost-free": "免费的。"
+    },
+    "passageSummary": "戏剧学院介绍课程、行业合作、录取与就业、周年演出、新校舍及社区使用。需区分学生参与演出和教职员工创作剧本。"
+  },
+  "9": {
+    "anchors": [
+      [
+        0,
+        "We also have expertise in preparing students for the specialised requirements of TV, film and radio.",
+        "We also have expertise in preparing students for the specialised requirements of TV, film and radio."
+      ]
+    ],
+    "reason": "题干 training for work in the film industry 对应 preparing students … film，所以选 TRUE。",
+    "contrast": "学院虽名为 Dramatic Arts，也不只培养剧院人才；film 被明确列出。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        1,
+        "Our college-based tutors all have extensive practical experience in the entertainment industry as well as academic qualifications, and we also collaborate with some of the country’s best directors, writers and actors to create challenging, inspiring and exciting projects with our students.",
+        "Our college-based tutors all have extensive practical experience in the entertainment industry as well as academic qualifications, and we also collaborate with some of the country’s best directors, writers and actors to create challenging, inspiring and exciting projects with our students."
+      ]
+    ],
+    "reason": "题干 work with relevant professionals 对应与行业导演、编剧、演员共同开展学生项目，所以选 TRUE。",
+    "contrast": "这里不只是老师有从业经历，还明确邀请行业人士参与学生项目。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        2,
+        "Every year, we receive two thousand applications for the one hundred places on our degree courses.",
+        "Every year, we receive two thousand applications for the one hundred places on our degree courses."
+      ]
+    ],
+    "reason": "题干 Many more … apply … than are accepted 对应 2,000 份申请争取 100 个名额，所以选 TRUE。",
+    "contrast": "比较的是申请人数与录取名额，不是毕业后的就业比例；后者 90% 与本题无关。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        3,
+        "Written by two staff members especially for this occasion, this multimedia show celebrates five hundred years of drama, and involves all our students in one way or another.",
+        "Written by two staff members especially for this occasion, this multimedia show celebrates five hundred years of drama, and involves all our students in one way or another."
+      ]
+    ],
+    "reason": "题干 created by students 与原文由 two staff members 创作矛盾，所以选 FALSE。",
+    "contrast": "all our students … involved 表示学生参与演出或制作活动，不等于学生创作了这部作品。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        4,
+        "For the last two years, we have been developing designs with Miller Furbank Architects for our new home, and one aim has been to ensure the buildings complement the council offices.",
+        "For the last two years, we have been developing designs with Miller Furbank Architects for our new home, and one aim has been to ensure the buildings complement the council offices."
+      ]
+    ],
+    "reason": "原文只说新校舍与 Miller Furbank Architects 合作设计，没有说明议会大楼是哪家事务所设计，所以选 NOT GIVEN。",
+    "contrast": "complement the council offices 是建筑风格协调，不是同一设计者；获奖也指议会楼，不是新校舍。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        5,
+        "We have also been talking to cultural organisations in the district, and considering how we can bring cost-free benefits to the local community, as well as to our students.",
+        "We have also been talking to cultural organisations in the district, and considering how we can bring cost-free benefits to the local community, as well as to our students."
+      ]
+    ],
+    "reason": "题干 local groups will be charged（收费）与 cost-free benefits（免费益处）及后续为本地群体提供空间的说明矛盾，所以选 FALSE。",
+    "contrast": "adaptable 指空间可灵活改动，不是收费不同；cost-free 是判断的关键。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        1,
+        "Get some green plants or a family photo for your desk.",
+        "Get some green plants or a family photo for your desk."
+      ]
+    ],
+    "reason": "题干 personal … 使地方更有家的感觉，对应 family photo（家庭照片），所以填 photo。",
+    "contrast": "plants 也是建议的装饰，但 personal 这一限定对应家庭照片，且题目只限一词。",
+    "terms": {
+      "productivity": "生产效率、工作效率。",
+      "mobile": "手机。",
+      "gossip": "闲言碎语、八卦。",
+      "snacks": "零食。",
+      "dehydrated": "缺水的。"
+    },
+    "passageSummary": "改善工作体验可从桌面装饰和屏幕高度、午间换环境、同事社交、远离手机与八卦、准备零食和饮水等方面入手。"
+  },
+  "16": {
+    "anchors": [
+      [
+        1,
+        "Make sure any screens you have are at a suitable height so you’re not straining your neck and shoulders.",
+        "Make sure any screens you have are at a suitable height so you’re not straining your neck and shoulders."
+      ]
+    ],
+    "reason": "题干 check the position … avoid pulling any muscles 对应屏幕高度合适以免拉伤颈肩，所以填 screens。",
+    "contrast": "desk 是摆放物品的桌子，具体需要调高度以免颈肩紧张的是 screens。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        2,
+        "Humans need a change of environment every now and then to improve productivity.",
+        "Humans need a change of environment every now and then to improve productivity."
+      ]
+    ],
+    "reason": "题干 Leaving the office in the middle of the day 指午间出去走走；raise 对应 improve，提升的是 productivity，所以填 productivity。",
+    "contrast": "networking skills 是参加会议的额外益处，题目问换环境的工作成效。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        3,
+        "There’s no point in getting away from staring at one thing though, only to replace it with another; so leave your mobile alone!",
+        "There’s no point in getting away from staring at one thing though, only to replace it with another; so leave your mobile alone!"
+      ]
+    ],
+    "reason": "题干 avoid checking … during breaks 对应喝咖啡休息时 leave your mobile alone（别看手机），所以填 mobile。",
+    "contrast": "staring at one thing … replace it with another 是说从屏幕转向手机不算真正放松，不是禁止和同事聊天。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        3,
+        "Another tip is to try and stay out of office gossip.",
+        "Another tip is to try and stay out of office gossip."
+      ]
+    ],
+    "reason": "题干 Getting involved … may have negative results 对应卷入 office gossip 可能让你惹麻烦，所以填 gossip。",
+    "contrast": "talking to colleagues 是作者鼓励的社交行为；gossip 才是要避免的闲言。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        4,
+        "If you can, keep some healthy snacks in your desk because if you have something you can nibble on, it will make you work more effectively and you'll enjoy it more.",
+        "If you can, keep some healthy snacks in your desk because if you have something you can nibble on, it will make you work more effectively and you'll enjoy it more."
+      ]
+    ],
+    "reason": "题干 Having a few … help … concentrate 对应饿时准备 healthy snacks 来提高工作效率，所以填 snacks。",
+    "contrast": "water 也有助专注，但 a few 需要可数复数名词，对应 snacks；healthy 无需抄入。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        1,
+        "Take an honest look at yourself — your achievements and also your skills, particularly those you could exploit to take on a different role.",
+        "Take an honest look at yourself — your achievements and also your skills, particularly those you could exploit to take on a different role."
+      ]
+    ],
+    "reason": "题干 past successes 对应 achievements，and any … 指另一项自我评估对象 skills（技能），所以填 skills。",
+    "contrast": "role 是想担任的职位，不是需要审视的自身能力。",
+    "terms": {
+      "commitment": "投入、对组织的承诺。",
+      "added value": "带来的额外价值。",
+      "panel": "评审小组。",
+      "potential": "潜力。",
+      "raise your profile": "提高自己的能见度和知名度。"
+    },
+    "passageSummary": "争取晋升要认识自己的技能和目标，与老板沟通贡献，让决策者了解潜力，并通过内部文章、客户活动及进修提高可见度与能力。"
+  },
+  "22": {
+    "anchors": [
+      [
+        2,
+        "If you think your boss is likely to be on your side, ask for a meeting to discuss your serious commitment to the organisation and how this could translate into a more defined career plan.",
+        "If you think your boss is likely to be on your side, ask for a meeting to discuss your serious commitment to the organisation and how this could translate into a more defined career plan."
+      ]
+    ],
+    "reason": "题干 high level of … 对应 serious commitment（认真投入、忠诚承诺），所以填 commitment。",
+    "contrast": "expertise 是专业技能，后面谈自我提升时出现；与老板讨论的首先是 commitment。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "If you are less sure about your boss’s view of your prospects and how they may react, start softly with a more deliberate focus on increasing your boss’s understanding of the work you do and the added value you deliver.",
+        "If you are less sure about your boss’s view of your prospects and how they may react, start softly with a more deliberate focus on increasing your boss’s understanding of the work you do and the added value you deliver."
+      ]
+    ],
+    "reason": "题干 how much extra … you already bring 对应 added value you deliver（带来的额外价值），所以填 value。",
+    "contrast": "work 是工作本身，value 强调这份工作给公司的贡献；extra 对应 added。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        3,
+        "Who would be on the interview panel and whose opinion and input would they seek?",
+        "Who would be on the interview panel and whose opinion and input would they seek?"
+      ]
+    ],
+    "reason": "题干 members … who decide 对应 interview panel（面试评审小组），所以填 panel。",
+    "contrast": "decision-makers 是后文泛指决策者；题干已表达 members of，需要具体小组名词。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        3,
+        "And I mean really know — what you do day to day at your desk, your contribution to the team, and perhaps most importantly, your potential.",
+        "And I mean really know — what you do day to day at your desk, your contribution to the team, and perhaps most importantly, your potential."
+      ]
+    ],
+    "reason": "题干 aware of … for the future 对应人们是否了解你的 potential（未来发展潜力），所以填 potential。",
+    "contrast": "contribution to the team 是目前贡献，potential 才对应 for the future。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        4,
+        "If they arrange regular client events, get involved in the organisation of them.",
+        "If they arrange regular client events, get involved in the organisation of them."
+      ]
+    ],
+    "reason": "题干 events for customers 对应 client events；participating in 对应 get involved in，所以填 organisation（也接受 organization）。",
+    "contrast": "write a feature 是另一种提高曝光度的方式；这里问参与活动的组织工作。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        5,
+        "If you are confident in your professional expertise but lack the latest management theory, enrol on some relevant courses that fit around your day job.",
+        "If you are confident in your professional expertise but lack the latest management theory, enrol on some relevant courses that fit around your day job."
+      ]
+    ],
+    "reason": "题干 fill in gaps in knowledge 对应补上缺乏的管理理论知识，方法是 enrol on courses（报读课程），所以填 courses。",
+    "contrast": "management theory 是缺失的知识内容，courses 是需要参加的学习安排；保留复数。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        3,
+        "Wolves live in tight-knit social groups that are regulated by strict rules.",
+        "Wolves live in tight-knit social groups that are regulated by strict rules."
+      ]
+    ],
+    "reason": "题干 a number of … concerning their behaviour 对应群体行为受 strict rules（严格规则）约束，所以填 rules。",
+    "contrast": "moral code 是概括的道德准则，但题目一词且 a number of 后需要可数复数 rules。",
+    "terms": {
+      "fairness": "公平、公平感。",
+      "submissive": "顺从的。",
+      "biting": "咬的动作。",
+      "forgiveness": "原谅。",
+      "from scratch": "从零开始。",
+      "moral compass": "道德指引或判断方向。",
+      "peer": "同类或同伴。",
+      "extraordinary": "不同寻常、令人惊讶的。"
+    },
+    "passageSummary": "文章讨论动物的道德感：Bekoff 提出哺乳动物有道德倾向，de Waal 强调人类道德源自更古老心理机制。狼、犬、大象、猴子和大鼠的行为展示公平、帮助及避免伤害同类等特征。"
+  },
+  "29": {
+    "anchors": [
+      [
+        3,
+        "Wolves also demonstrate fairness.",
+        "Wolves also demonstrate fairness."
+      ]
+    ],
+    "reason": "题干 exhibit a sense of … 对应 demonstrate fairness（表现出公平感），所以填 fairness。",
+    "contrast": "dominant 是等级地位，不是这里要填的道德感受。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        3,
+        "They pretend to be submissive and go so far as to allow biting by the lower-ranking wolves, provided it is not too hard.",
+        "They pretend to be submissive and go so far as to allow biting by the lower-ranking wolves, provided it is not too hard."
+      ]
+    ],
+    "reason": "题干 act as if 对应 pretend to be；强势狼在玩耍时假装顺从，因此填 submissive。",
+    "contrast": "这里是暂时扮演低位角色，不是强势狼真的永久降低地位。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        3,
+        "They pretend to be submissive and go so far as to allow biting by the lower-ranking wolves, provided it is not too hard.",
+        "They pretend to be submissive and go so far as to allow biting by the lower-ranking wolves, provided it is not too hard."
+      ]
+    ],
+    "reason": "题干 permit some gentle … 对应 allow biting … not too hard，所以填 biting。",
+    "contrast": "gentle 对应 not too hard；不是允许没有限制的攻击，必须保留游戏中的轻咬条件。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        3,
+        "Astonishingly, if an animal becomes aggressive, it will perform a ‘play bow’ to ask forgiveness before play resumes.",
+        "Astonishingly, if an animal becomes aggressive, it will perform a ‘play bow’ to ask forgiveness before play resumes."
+      ]
+    ],
+    "reason": "题干 begging for … 后才能继续玩，对应 ask forgiveness before play resumes（恢复游戏前请求原谅），所以填 forgiveness。",
+    "contrast": "play bow 是请求原谅的动作，forgiveness 才是请求得到的东西。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        4,
+        "Among coyotes, cubs which are too aggressive are ignored by the rest of the group and often end up having to leave entirely.",
+        "Among coyotes, cubs which are too aggressive are ignored by the rest of the group and often end up having to leave entirely."
+      ]
+    ],
+    "reason": "coyotes 中过于好斗的幼崽会被群体排斥，甚至被迫离开，对应 E 的 driven away … if … do not obey moral code，所以选 E。",
+    "contrast": "A 的直接攻击惩罚讲的是黑猩猩；这里是忽视、排斥直到离开。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        4,
+        "Experiments with domestic dogs, where one animal was given some ‘sweets’ and another wasn't, have shown that they possess a sense of fairness as they allowed their companion to eat some.",
+        "Experiments with domestic dogs, where one animal was given some ‘sweets’ and another wasn't, have shown that they possess a sense of fairness as they allowed their companion to eat some."
+      ]
+    ],
+    "reason": "家犬得到零食后会让同伴分食，对应 C 的 share treats with a peer，所以选 C。",
+    "contrast": "B 的跨物种玩耍原文未说；这里的 companion 是同类伙伴。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        5,
+        "The top female elephant unfastened all of the metal latches holding the gates closed and swung them open, allowing the antelopes to escape.",
+        "The top female elephant unfastened all of the metal latches holding the gates closed and swung them open, allowing the antelopes to escape."
+      ]
+    ],
+    "reason": "大象打开围栏门放出羚羊，属于 G 的帮助遇到困难的另一种动物，所以选 G。",
+    "contrast": "开头也讲帮助受伤同类，但本题选项 G 对应后面具体的跨物种救助。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        6,
+        "A male who had become skilled at the task was found to be helping the oldest female, who had not learned how to do it.",
+        "A male who had become skilled at the task was found to be helping the oldest female, who had not learned how to do it."
+      ]
+    ],
+    "reason": "雄性 Diana monkey 帮不会投币取食的老雌猴完成任务，对应 D 的 assist a peer … failing to complete a task，所以选 D。",
+    "contrast": "帮助发生在取食操作过程，不是为了得到自己的额外食物，也不是跨物种帮助。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        8,
+        "The rats with the food stopped eating rather than see this happen.",
+        "The rats with the food stopped eating rather than see this happen."
+      ]
+    ],
+    "reason": "大鼠发现自己取食会让其他大鼠遭电击后停止吃，符合 F 的 unwilling to benefit … hurts their peers，所以选 F。",
+    "contrast": "不是单纯没胃口；前文明确说明放弃收益是为避免同类痛苦。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        2,
+        "Human morality was not formed from scratch, but grew out of our primate psychology.",
+        "Human morality was not formed from scratch, but grew out of our primate psychology."
+      ]
+    ],
+    "reason": "de Waal 认为人类道德由灵长类心理倾向发展而来，对应 C 的 developed from our animal ancestors，所以选 C。",
+    "contrast": "A、B 把他的话说成动物已有与人类同等的成熟道德；D 的 purely human 与古老的共情合作倾向相反。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        6,
+        "As there was no benefit for the male monkey, Professor Bekoff argues that this is a clear example of an animal’s actions being driven by some internal moral compass.",
+        "As there was no benefit for the male monkey, Professor Bekoff argues that this is a clear example of an animal’s actions being driven by some internal moral compass."
+      ]
+    ],
+    "reason": "Bekoff 用雄猴无私帮助老雌猴的实验说明动物行为可能受内在道德指引，支持自己的整体观点，对应 D。",
+    "contrast": "文章未比较男女猴普遍智力，也非为了评估训练难度或说明研究本身的价值。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        7,
+        "What is extraordinary is that scientists have observed other chimpanzees interacting with him differently and he is rarely subjected to intimidating displays of aggression from older males.",
+        "What is extraordinary is that scientists have observed other chimpanzees interacting with him differently and he is rarely subjected to intimidating displays of aggression from older males."
+      ]
+    ],
+    "reason": "作者用 What is extraordinary 引出同伴对患脑瘫的 Knuckles 较少威吓攻击，体现对残障同类体谅，对应 B。",
+    "contrast": "患类似人类疾病只是背景；作者认为有社会规则并不奇怪，惊讶的是同伴如何对待他。",
+    "terms": {}
+  }
+}
