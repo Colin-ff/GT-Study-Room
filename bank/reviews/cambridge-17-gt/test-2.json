@@ -1,0 +1,521 @@
+{
+  "1": {
+    "anchors": [
+      [
+        2,
+        "Everything we do is based on good practice — you supply written references and pay the rent on time, and in return we'll visit the property every four months to ensure it is maintained and that any necessary repairs are done.",
+        "Everything we do is based on good practice — you supply written references and pay the rent on time, and in return we'll visit the property every four months to ensure it is maintained and that any necessary repairs are done."
+      ]
+    ],
+    "reason": "选 B。you supply written references 对应 customers provide letters of recommendation，要求客户提供书面推荐证明。",
+    "contrast": "C 的感谢信是过去客户的评价，不是新客户必须提交的材料。",
+    "terms": {
+      "reference": "这里指推荐信、资信证明。",
+      "letting": "房屋出租。",
+      "liaison officer": "联络专员。",
+      "tenant": "租客。"
+    },
+    "passageSummary": "五家租房中介比较推荐信、竞争房源价格信息、公司地址历史、岗位分工和房东筛选。"
+  },
+  "2": {
+    "anchors": [
+      [
+        5,
+        "We use modern marketing techniques that include price comparisons for similar properties with other agencies in the area so that you can make a fully informed decision.",
+        "We use modern marketing techniques that include price comparisons for similar properties with other agencies in the area so that you can make a fully informed decision."
+      ]
+    ],
+    "reason": "选 E。提供与 other agencies in the area 的 similar properties 的 price comparisons，正对应竞争对手房源的信息。",
+    "contrast": "不是保证自己的每套房都最便宜，而是用市场比较帮助客户决定。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        1,
+        "Our firm has been based in Shipton Street since its foundation and so we have a thorough knowledge of the surrounding neighbourhood.",
+        "Our firm has been based in Shipton Street since its foundation and so we have a thorough knowledge of the surrounding neighbourhood."
+      ]
+    ],
+    "reason": "选 A。been based in Shipton Street since its foundation，说明从创办起就在现址。",
+    "contrast": "over 50 years 只是年资；真正对应 began ... present location 的是 since its foundation。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        4,
+        null
+      ]
+    ],
+    "reason": "选 D。分别列出 liaison officer 回答问题、administration officer 管合同租金，体现 employees have specific roles。",
+    "contrast": "其他机构也有员工，但只有 D 明确说明岗位分工。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        3,
+        "The landlords on our books have been selected with great care so that you can be sure they will look after your interests.",
+        "The landlords on our books have been selected with great care so that you can be sure they will look after your interests."
+      ]
+    ],
+    "reason": "选 C。landlords ... selected with great care 对应 carefully chooses property owners。",
+    "contrast": "这里选择的是合作房东，不是仅按客户需求筛选房屋。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        1,
+        "You must have approved front and rear lights that are lit, clean and working properly when cycling between sunset and sunrise.",
+        "You must have approved front and rear lights that are lit, clean and working properly when cycling between sunset and sunrise."
+      ]
+    ],
+    "reason": "选 TRUE。must have ... lights ... when cycling between sunset and sunrise，对应日落后骑车不用灯违法。",
+    "contrast": "不能用 past sunset but not yet dark 作理由；自行车规定按日落日出，不按机动车的 hours of darkness。",
+    "terms": {
+      "rear": "后部的。",
+      "obscured": "被遮挡的。",
+      "reflector": "反光片。",
+      "visibility": "能见度。",
+      "legal requirement": "法定要求，与建议有区别。"
+    },
+    "passageSummary": "本文说明自行车灯与反光片规定：日落至日出开车载前后灯，头灯只能补充，闪灯有频率限制；区分法定义务与安全建议。"
+  },
+  "7": {
+    "anchors": [
+      [
+        3,
+        "Cycling UK’s guide to cycling regulations explains the Road Vehicles Lighting Regulations in detail, but in summary you need a white light at the front and a red light at the rear, visible from the front and rear respectively and fixed to your bike.",
+        "Cycling UK’s guide to cycling regulations explains the Road Vehicles Lighting Regulations in detail, but in summary you need a white light at the front and a red light at the rear, visible from the front and rear respectively and fixed to your bike."
+      ]
+    ],
+    "reason": "选 FALSE。规定前后灯须 fixed to your bike，而不是 attached to the rider。",
+    "contrast": "额外 head-torch 可以戴身上，但不能替代车上法定前后灯。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        3,
+        "A light obscured by a saddlebag isn’t legal and neither is a torch on your head, though there’s nothing to stop you using a head-torch as an additional light.",
+        "A light obscured by a saddlebag isn’t legal and neither is a torch on your head, though there’s nothing to stop you using a head-torch as an additional light."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。白色规定用于车前灯；原文允许额外头灯，却未规定头灯必须白色。",
+    "contrast": "不能把 front light 的颜色要求自动迁移到 head-torch；也没说它可任意颜色。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        4,
+        "The regulations also now allow flashing lights, provided they flash between 60 and 240 times per minute.",
+        "The regulations also now allow flashing lights, provided they flash between 60 and 240 times per minute."
+      ]
+    ],
+    "reason": "选 TRUE。flashing lights 必须每分钟闪 between 60 and 240 times，这就是 legal restrictions。",
+    "contrast": "允许闪灯并不意味着完全没有限制；provided 引出条件。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        4,
+        "The legal requirements for reflectors include a red rear reflector and four amber pedal reflectors, one at the front and rear of each pedal.",
+        "The legal requirements for reflectors include a red rear reflector and four amber pedal reflectors, one at the front and rear of each pedal."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文规定装 four amber pedal reflectors，没说商品销售包装通常每包四个（packs of four）。",
+    "contrast": "使用数量和销售包装不同；不能用法规数量推断包装。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        4,
+        "Common sense might suggest that a reflective heel strip or ankle band could replace an amber pedal reflector, but unfortunately these do not meet the legal requirements.",
+        "Common sense might suggest that a reflective heel strip or ankle band could replace an amber pedal reflector, but unfortunately these do not meet the legal requirements."
+      ]
+    ],
+    "reason": "选 FALSE。reflective heel strip / ankle band do not meet the legal requirements，不能替代踏板反光片。",
+    "contrast": "Common sense might suggest 是让步的设想，unfortunately 后才是实际规定。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        4,
+        "These pedals are not designed with enough space to accommodate reflectors and make this an area of legislation in need of change.",
+        "These pedals are not designed with enough space to accommodate reflectors and make this an area of legislation in need of change."
+      ]
+    ],
+    "reason": "选 TRUE。某类踏板没有足够位置装反光片，使此法律成为 in need of change 的领域，对应 unsatisfactory。",
+    "contrast": "这是作者对现有规定的评价，不是说法律已经改变。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        5,
+        null
+      ],
+      [
+        6,
+        null
+      ]
+    ],
+    "reason": "选 NOT GIVEN。文章说日间低能见度下的灯光规定及建议，没比较白天与夜间骑车总体哪种更安全。",
+    "contrast": "雾天建议开灯不等于任何白天都比夜晚安全，不能凭常识补充。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        5,
+        null
+      ],
+      [
+        6,
+        null
+      ]
+    ],
+    "reason": "选 FALSE。白天严重低能见度时，lights are not a legal requirement；题干 against the law 与之相反。",
+    "contrast": "wouldn’t recommend 是安全建议，不是法律禁止。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        3,
+        "It should be stable and positioned so that it’s comfortable when an employee uses a document holder, but also big enough to let the user work comfortably and to alter their position.",
+        "It should be stable and positioned so that it’s comfortable when an employee uses a document holder, but also big enough to let the user work comfortably and to alter their position."
+      ]
+    ],
+    "reason": "填 position。change in the user’s ... 对应 let the user ... alter their position：桌面空间应让使用者改变姿势。",
+    "contrast": "不是固定桌子本身的位置；这里 user 的工作姿势。",
+    "terms": {
+      "partition": "隔板。",
+      "glare": "刺眼的反光、眩光。",
+      "humidity": "湿度。",
+      "workload": "工作量。"
+    },
+    "passageSummary": "电脑工作环境须有足够桌面空间、噪声隔离、可控照明和温湿度；工作任务要适度多样，休息宜短而频繁。"
+  },
+  "16": {
+    "anchors": [
+      [
+        5,
+        "You could use partitions between noisy equipment and the rest of the workstation as an alternative.",
+        "You could use partitions between noisy equipment and the rest of the workstation as an alternative."
+      ]
+    ],
+    "reason": "填 partitions。separate noisy equipment using ... 对应 use partitions between noisy equipment and ... workstation。",
+    "contrast": "soundproofing 和 moving 已在笔记列出，第三种方法是隔板。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        6,
+        "Surrounding windows must have curtains or blinds which users can adjust to prevent reflected glare.",
+        "Surrounding windows must have curtains or blinds which users can adjust to prevent reflected glare."
+      ]
+    ],
+    "reason": "填 windows。nearby ... adjustable blinds 对应 surrounding windows ... curtains or blinds ... adjust to prevent reflected glare。",
+    "contrast": "lighting 是另一个要点；本空是需装百叶帘的窗户，注意复数。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        7,
+        "Temperature-wise, the equipment should not give out so much heat that the user becomes uncomfortable, so monitor this.",
+        "Temperature-wise, the equipment should not give out so much heat that the user becomes uncomfortable, so monitor this."
+      ]
+    ],
+    "reason": "填 heat。check ... from equipment 对应监测设备 give out 的热量，使温度舒适。",
+    "contrast": "humidity 和 ventilation 关系空气舒适度，但不是设备释放出的这一项。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        9,
+        "You should match staffing levels to workload so that individuals are neither overworked nor underworked and give employees some say in the way work is carried out and the planning that goes into it.",
+        "You should match staffing levels to workload so that individuals are neither overworked nor underworked and give employees some say in the way work is carried out and the planning that goes into it."
+      ]
+    ],
+    "reason": "填 planning。input into task achievement and ... 对应 give employees some say in ... work ... and the planning。",
+    "contrast": "workload 是前一条工作量公平的内容；此处说员工可参与工作安排。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        10,
+        "The employee should, at times, have a choice over when to take breaks and they should be encouraged to do non-work activities during their break, ideally away from the workstation.",
+        "The employee should, at times, have a choice over when to take breaks and they should be encouraged to do non-work activities during their break, ideally away from the workstation."
+      ]
+    ],
+    "reason": "填 choice。at times of their own ... 对应 have a choice over when to take breaks，由员工部分自主选择休息时机。",
+    "contrast": "不是休息完全没有规则；原文 at times 保留一定程度的自主权。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        1,
+        "Detailed visual inspections should be carried out on a regular basis, and they should have an up-to-date record of these.",
+        "Detailed visual inspections should be carried out on a regular basis, and they should have an up-to-date record of these."
+      ]
+    ],
+    "reason": "填 record。keep ... of inspections 对应 have an up-to-date record of these，these 指定期目视检查。",
+    "contrast": "training 是使用者检查技能的培训，不是雇主要保存的检查记录。",
+    "terms": {
+      "portable ladder": "便携式梯子。",
+      "joint": "接合处。",
+      "cone": "交通锥。",
+      "tie": "这里指绑带或系牢。",
+      "wedge": "楔住、塞紧。"
+    },
+    "passageSummary": "便携梯安全涵盖雇主定期检查记录、梯长和使用者每日检查，稳固地面、防止车辆和公众接近，并用绑带固定。"
+  },
+  "22": {
+    "anchors": [
+      [
+        1,
+        "Before starting a job, employers are also responsible for ensuring any ladder is the right length to meet the needs of the task; reaching out from the very top of a ladder is highly dangerous.",
+        "Before starting a job, employers are also responsible for ensuring any ladder is the right length to meet the needs of the task; reaching out from the very top of a ladder is highly dangerous."
+      ]
+    ],
+    "reason": "填 length。suitable for the job 对应 right length to meet the needs of the task，确保梯长合适。",
+    "contrast": "不是梯子越高越好；文中警告在最顶端向外探身危险。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        1,
+        "When doing a check, it is important to focus on the steps and make sure they are not loose as this could cause an accident.",
+        "When doing a check, it is important to focus on the steps and make sure they are not loose as this could cause an accident."
+      ]
+    ],
+    "reason": "填 steps。need particularly close inspection 对应 focus on ... make sure ... not loose；后面并列 cracked joint。",
+    "contrast": "steps 是梯级，不是检查的步骤；与 joints 并列为需检查的部件。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        2,
+        "Second, check the ground surface is dirt-free and solid, so the feet can grip and the ladder doesn’t sink.",
+        "Second, check the ground surface is dirt-free and solid, so the feet can grip and the ladder doesn’t sink."
+      ]
+    ],
+    "reason": "填 feet。clean, hard surface 对应 dirt-free and solid ground，确保梯脚抓稳且不会下陷。",
+    "contrast": "不是使用者的脚；题干 feet of the ladder 指梯脚。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        3,
+        "If necessary, safeguard the area by placing red and white cones around it.",
+        "If necessary, safeguard the area by placing red and white cones around it."
+      ]
+    ],
+    "reason": "填 cones。Protect ... from vehicles 对应用 red and white cones 围住梯子，防止车辆撞到。",
+    "contrast": "doors / windows 要固定避免推倒梯子，是另一风险；空格问隔离车辆的设施。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        3,
+        "A ‘danger’ sign at the base is often the best way of doing this.",
+        "A ‘danger’ sign at the base is often the best way of doing this."
+      ]
+    ],
+    "reason": "填 sign。keep people away 对应提示公众不可从梯下通过或靠太近，底部放 danger sign。",
+    "contrast": "cones 对应上一题车辆隔离；本题要面向公众的警示标志。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        4,
+        "Where this is not practical, secure it to the wall near the base of the ladder with ties; avoid using blocks to wedge the ladder in place as they can easily move.",
+        "Where this is not practical, secure it to the wall near the base of the ladder with ties; avoid using blocks to wedge the ladder in place as they can easily move."
+      ]
+    ],
+    "reason": "填 blocks。using ties rather than ... 对应 tie 固定梯子，并 avoid using blocks ... can easily move。",
+    "contrast": "不是禁止使用所有工具，具体避用易移动的楔垫块，注意复数。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        2,
+        "He said, “| used that style until I went into high school, where my coach explained that I was never going to get anywhere with that technique.",
+        "He said, “| used that style until I went into high school, where my coach explained that I was never going to get anywhere with that technique."
+      ]
+    ],
+    "reason": "选 C。教练说 scissors technique 不会让他进步，改让他练 belly roll；对应建议 change his way of jumping。",
+    "contrast": "B 讨论起源的玩笑，没有提出改动作的教练建议。",
+    "terms": {
+      "unorthodox": "非传统的。",
+      "trial and error": "反复尝试、试错。",
+      "scissors": "这里指剪式跳高。",
+      "retain": "保留。",
+      "cushion": "减缓冲击。",
+      "caption": "图片说明。"
+    },
+    "passageSummary": "Fosbury 背越式跳高由反复试验自然演化。文章说明技术调整、其他人独立发现、软垫落地区作用，以及名称取自鱼上岸扑腾的报纸图片说明。"
+  },
+  "29": {
+    "anchors": [
+      [
+        6,
+        "“I’m very proud that I received the naming rights.",
+        "“I’m very proud that I received the naming rights."
+      ]
+    ],
+    "reason": "选 G。I’m very proud ... naming rights，说明获得给动作命名的机会令他自豪、荣幸。",
+    "contrast": "A 的奥运金牌是成就，题目特指 offered opportunity 和 honoured，G 的命名权更直接。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        0,
+        "A On October 20, 1968, a 21-year-old university student from the USA called Dick Fosbury completely transformed the sport of high jumping with a gold-medal and Olympic-record jump of 2.24 meters at the Mexico City games.",
+        "A On October 20, 1968, a 21-year-old university student from the USA called Dick Fosbury completely transformed the sport of high jumping with a gold-medal and Olympic-record jump of 2.24 meters at the Mexico City games."
+      ]
+    ],
+    "reason": "选 A。completely transformed the sport of high jumping 对应 very influential high jumper，影响整个项目。",
+    "contrast": "C、D 侧重个人技术过程；A 明确评价其对跳高运动的改变。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        1,
+        "At first, when asked about how this unorthodox manoeuvre originated, Fosbury would joke with sportswriters, informing some that, because of his university background in physics and engineering, he had initially designed the Flop on paper, and telling others that he had accidentally discovered this technique when he once tripped and fell backward on his take-off. However, in later interviews, Fosbury revealed that the technique actually unfolded over many years and involved countless trials and errors.",
+        "At first, when asked about how this unorthodox manoeuvre originated, Fosbury would joke with sportswriters, informing some that, because of his university background in physics and engineering, he had initially designed the Flop on paper, and telling others that he had accidentally discovered this technique when he once tripped and fell backward on his take-off. However, in later interviews, Fosbury revealed that the technique actually unfolded over many years and involved countless trials and errors."
+      ]
+    ],
+    "reason": "选 B。先开玩笑说画图设计或意外后跌，后来说明多年 trials and errors，是 conflicting explanations of its origin。",
+    "contrast": "不是多个研究者意见冲突，而是 Fosbury 自己先后给的不同解释。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        2,
+        "I expressed my frustration to coach and he said that if I really wanted, I could still use the ‘scissors.’” So, in his next competition, Fosbury went back to the “scissors” style.",
+        "I expressed my frustration to coach and he said that if I really wanted, I could still use the ‘scissors.’” So, in his next competition, Fosbury went back to the “scissors” style."
+      ]
+    ],
+    "reason": "选 C。belly roll 表现 really lousy，expressed my frustration，正对应 dissatisfied with his athletic performance。",
+    "contrast": "不是对媒体命名或教练本人不满；此处针对自己跳法表现。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        1,
+        "However, in later interviews, Fosbury revealed that the technique actually unfolded over many years and involved countless trials and errors. “It was simply a natural technique that evolved,” he said. “| never thought about how to change it, and I’m sure my coach was going crazy because it kept evolving.",
+        "However, in later interviews, Fosbury revealed that the technique actually unfolded over many years and involved countless trials and errors. “It was simply a natural technique that evolved,” he said. “| never thought about how to change it, and I’m sure my coach was going crazy because it kept evolving."
+      ]
+    ],
+    "reason": "选 D。多年不断 trials and errors，自然 evolved、never thought about how to change it，说明逐渐形成、没有总体设计。",
+    "contrast": "A 是早期玩笑，非真正解释；B 不知别人能否用不等于想独占；C 没说受伤启发。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        2,
+        "So, in his next competition, Fosbury went back to the “scissors” style. He explained: “As the bar was raised each time, I began to lift my hips up and my shoulders went back in reaction to that. At the end of the competition, I had improved my best by 15 cm to 1 m 78 and even placed third!",
+        "So, in his next competition, Fosbury went back to the “scissors” style. He explained: “As the bar was raised each time, I began to lift my hips up and my shoulders went back in reaction to that. At the end of the competition, I had improved my best by 15 cm to 1 m 78 and even placed third!"
+      ]
+    ],
+    "reason": "选 A。他恢复 scissors 并逐渐抬臀后仰，当次 improved ... by 15 cm，是改造 scissors 时突然提高。",
+    "contrast": "C 说放弃 scissors，正好相反；D 不是改良 belly roll；B 没说决心变强造成提升。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        3,
+        "Sports Illustrated writer Richard Hoffer wrote: “It was on-site engineering, his body and mind working together, making reflexive adjustments with only one goal, getting over the bar.” Hoffer explained that although Fosbury’s arms and legs seemed to be all over the place, those movements that served to get him a centimeter higher were retained, while the others were gradually eliminated as the technique evolved.",
+        "Sports Illustrated writer Richard Hoffer wrote: “It was on-site engineering, his body and mind working together, making reflexive adjustments with only one goal, getting over the bar.” Hoffer explained that although Fosbury’s arms and legs seemed to be all over the place, those movements that served to get him a centimeter higher were retained, while the others were gradually eliminated as the technique evolved."
+      ]
+    ],
+    "reason": "选 B。看似四肢乱动（all over the place），但有用动作 retained、其他 eliminated，表明过程比外表更有选择和调控。",
+    "contrast": "A 没说身高拖慢进步；C 不是本文重点；D 的 engineering 是比喻身体和头脑配合，没有专家工程师介入。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        4,
+        "I can say that because the Canadian jumper Debbie Brill was a few years younger than I was and also developed the same technique, only a few years after me and without ever having seen me.” A striking coincidence?",
+        "I can say that because the Canadian jumper Debbie Brill was a few years younger than I was and also developed the same technique, only a few years after me and without ever having seen me.” A striking coincidence?"
+      ]
+    ],
+    "reason": "选 D。Debbie Brill 未看过他却也 developed the same technique，属于 independently discovered，用来支持 natural 的说法。",
+    "contrast": "B copied 与没有看过他相反；A 年轻只是背景；C 没说无需训练。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        6,
+        "To tell the truth, the first time that I was interviewed and asked ‘What do you call this?’ I used my engineering analytical side and I referred to it as a ‘back layout.’ It was not interesting, and the journalist didn’t even write it down.",
+        "To tell the truth, the first time that I was interviewed and asked ‘What do you call this?’ I used my engineering analytical side and I referred to it as a ‘back layout.’ It was not interesting, and the journalist didn’t even write it down."
+      ]
+    ],
+    "reason": "填 back layout。首次给记者的名称是 back layout，后来改用 Fosbury Flop。",
+    "contrast": "不要提前填最终流行的名称；题干 first interviewed 锁定最初术语。已修正原文此处的 OCR 字母误识。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        6,
+        "To tell the truth, the first time that I was interviewed and asked ‘What do you call this?’ I used my engineering analytical side and I referred to it as a ‘back layout.’ It was not interesting, and the journalist didn’t even write it down.",
+        "To tell the truth, the first time that I was interviewed and asked ‘What do you call this?’ I used my engineering analytical side and I referred to it as a ‘back layout.’ It was not interesting, and the journalist didn’t even write it down."
+      ]
+    ],
+    "reason": "填 journalist。had not made an impression 对应记者 didn’t even write it down（甚至没记下），说明原名称没引起记者兴趣。",
+    "contrast": "Fosbury 是被采访者；没留下印象的是采访的记者。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        6,
+        "I was the first one to call it that, but it came from a caption on a newspaper photo that said: ‘Fosbury flops over bar.’ The context was that our town was on a river, very popular for fishing, an hour from the Pacific Ocean.",
+        "I was the first one to call it that, but it came from a caption on a newspaper photo that said: ‘Fosbury flops over bar.’ The context was that our town was on a river, very popular for fishing, an hour from the Pacific Ocean."
+      ]
+    ],
+    "reason": "填 river。town is near a ... 对应 town was on a river，并提钓鱼盛行，为名称中的 flop 提供意象。",
+    "contrast": "Pacific Ocean 也被提到，但最多两词且此句用 a；直接对应城镇在河边的是 river。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        6,
+        "And when you land a fish on the bank, it's flopping.",
+        "And when you land a fish on the bank, it's flopping."
+      ]
+    ],
+    "reason": "填 fish。a ... does a similar flopping movement 对应把 fish 拉上岸会 flopping（扑腾）。",
+    "contrast": "这里是给跳法取名的比喻，不是说运动员模仿鱼游泳。",
+    "terms": {}
+  }
+}

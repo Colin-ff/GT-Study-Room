@@ -1,0 +1,536 @@
+{
+  "1": {
+    "anchors": [
+      [
+        4,
+        "It passes the entrance to the famous Butter Caves visitor attraction, so you can combine a visit there with the walk, or just take shelter if it starts raining!",
+        "It passes the entrance to the famous Butter Caves visitor attraction, so you can combine a visit there with the walk, or just take shelter if it starts raining!"
+      ]
+    ],
+    "reason": "选 E。路线经过 Butter Caves 入口，可 combine a visit there with the walk，对应有机会 go into caves。",
+    "contrast": "B 仅从山顶看到洞穴入口，不等于可以顺路进入参观。",
+    "terms": {
+      "uneven": "不平坦的。",
+      "shore": "湖、海等的岸边。",
+      "architecture": "建筑、建筑风格。",
+      "take shelter": "避雨或寻找庇护。"
+    },
+    "passageSummary": "五条徒步路线介绍自然保护区、山顶、村庄、湖畔和洞穴，匹配时区分看得见与能进入、远望湖泊与在湖边停留。"
+  },
+  "2": {
+    "anchors": [
+      [
+        3,
+        "D This walk is ideal in fine weather, as it takes you to the shore of a lake, at a spot convenient for swimming.",
+        "D This walk is ideal in fine weather, as it takes you to the shore of a lake, at a spot convenient for swimming."
+      ]
+    ],
+    "reason": "选 D。takes you to the shore of a lake，并可游泳，对应 spend time beside a lake。",
+    "contrast": "B 远眺湖泊不是在湖边；C 的人工湖已被填平。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        2,
+        "C This route leads you through the village of Cottesloe, which was created in the 1930s and is famous for its strange-looking houses and ceramics factory, which is still the largest employer in the area.",
+        "C This route leads you through the village of Cottesloe, which was created in the 1930s and is famous for its strange-looking houses and ceramics factory, which is still the largest employer in the area."
+      ]
+    ],
+    "reason": "选 C。strange-looking houses 对应 unusual architecture（不寻常的建筑）。",
+    "contrast": "E 提到建筑师住过的村庄，却没说那里的建筑奇特。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        0,
+        "Please note that the ground is very uneven, and under- sixes should not be taken on this walk.",
+        "Please note that the ground is very uneven, and under- sixes should not be taken on this walk."
+      ]
+    ],
+    "reason": "选 A。地面 very uneven，所以 under-sixes 不宜参加，对应 unsuitability for young children。",
+    "contrast": "D 有儿童游乐场，B 还明确适合 all ages，均不符。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        2,
+        "After you leave Cottesloe, you have a choice of routes to return to the starting point, so either continue via Thurley Park, or if it's raining, take the shorter direct route.",
+        "After you leave Cottesloe, you have a choice of routes to return to the starting point, so either continue via Thurley Park, or if it's raining, take the shorter direct route."
+      ]
+    ],
+    "reason": "选 C。离开村庄可经公园返程；下雨则走 shorter direct route，对应 length ... depending on the weather。",
+    "contrast": "E 雨天可进洞避雨，但没有说步行长度因天气改变。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        0,
+        "A traditional scarecrow was a model – usually life-size - of a man or woman dressed in old clothes, and their purpose was to frighten the birds away; though how successful they were is a matter of opinion!",
+        "A traditional scarecrow was a model – usually life-size - of a man or woman dressed in old clothes, and their purpose was to frighten the birds away; though how successful they were is a matter of opinion!"
+      ]
+    ],
+    "reason": "选 TRUE。usually life-size 指通常与真人等大，对应 most ... same size as a human being。",
+    "contrast": "life-size 是尺寸，不是说稻草人活着；usually 对应 most，并非全部。",
+    "terms": {
+      "scarecrow": "稻草人。",
+      "straw": "稻草。",
+      "venue": "举办地点、场地。",
+      "spectator": "观众。"
+    },
+    "passageSummary": "稻草人比赛报道：农民供材料、选手带衣服，高温使场地移到室内；儿童成人分组评奖，大家自带野餐，Alice 买作品只为欣赏。"
+  },
+  "7": {
+    "anchors": [
+      [
+        1,
+        "Maplehamptons scarecrow competition took place on September 12th.",
+        "Maplehamptons scarecrow competition took place on September 12th."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文给出比赛日期 September 12th，没有说这是当地第一次比赛（first one）。",
+    "contrast": "没提以前办过不能推出首次，也不能推出不是首次。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        1,
+        "Local farmers supplied everything needed to make a scarecrow - like pieces of wood to form a frame, and straw to stuff the scarecrow.",
+        "Local farmers supplied everything needed to make a scarecrow - like pieces of wood to form a frame, and straw to stuff the scarecrow."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。农民 supplied 材料，并未说明供材料的农民是否具备参赛资格。",
+    "contrast": "提供物资与参加比赛是两件事；原文没有禁止，也没有允许的表述。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        1,
+        "The scarecrows were dressed in old clothes which the competitors brought with them.",
+        "The scarecrows were dressed in old clothes which the competitors brought with them."
+      ]
+    ],
+    "reason": "选 FALSE。旧衣服由 competitors brought with them（参赛者自带），并非 supplied to the people。",
+    "contrast": "前句 everything needed 指木料、稻草等，后句明确补充衣服自带，不能忽略。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "The festival was held in the village hall, instead of outdoors as planned, due to the unusually high temperature.",
+        "The festival was held in the village hall, instead of outdoors as planned, due to the unusually high temperature."
+      ]
+    ],
+    "reason": "选 TRUE。场地从室外改到 village hall，due to unusually high temperature；高温属于 weather。",
+    "contrast": "不必只有下雨才算天气原因；instead of outdoors 表示场地确实更改。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        2,
+        "They were encouraged by an audience of around 50, and had ideas and guidance from local artist Tracey Sanzo.",
+        "They were encouraged by an audience of around 50, and had ideas and guidance from local artist Tracey Sanzo."
+      ]
+    ],
+    "reason": "选 TRUE。当地艺术家提供 ideas and guidance，对应 competitors could get advice。",
+    "contrast": "audience 是鼓励者；专业指导来自艺术家，但不影响题干成立。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        3,
+        null
+      ]
+    ],
+    "reason": "选 NOT GIVEN。巨鸟和外星人分别是儿童组与成人组的冠军，没有说评委认为外星人比巨鸟更好。",
+    "contrast": "不同组别各获胜不等于两者比较后的总排名；不能据先后顺序推断。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        4,
+        "After the judging, many of the participants and the spectators had a picnic which they had brought.",
+        "After the judging, many of the participants and the spectators had a picnic which they had brought."
+      ]
+    ],
+    "reason": "选 FALSE。participants and spectators 吃的是 they had brought 的野餐，说明自己带来，不是主办方 supplied。",
+    "contrast": "有一起野餐不代表主办方提供食物；供给来源与题干相反。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        4,
+        "She just wanted to be able to see it!",
+        "She just wanted to be able to see it!"
+      ]
+    ],
+    "reason": "选 FALSE。Alice 把稻草人放阳台是想欣赏；她还说只有会发声的驱鸟器有效，因此不是为了赶走庄稼地里的鸟。",
+    "contrast": "传统稻草人的一般用途不能替代此人的明确购买动机。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        1,
+        "As a barista, you must make a concerted effort to listen to your clientele and make sure the drinks you produce are correct in all respects.",
+        "As a barista, you must make a concerted effort to listen to your clientele and make sure the drinks you produce are correct in all respects."
+      ]
+    ],
+    "reason": "填 correct。be sure ... for the customer 对应 listen to your clientele、make sure ... correct in all respects（各方面都正确）。",
+    "contrast": "quality 是整体目标；本空要求确保每位顾客的饮品符合点单。",
+    "terms": {
+      "barista": "咖啡师。",
+      "clientele": "顾客群体。",
+      "filter": "滤器。",
+      "extraction": "咖啡萃取。",
+      "bitter": "苦的。"
+    },
+    "passageSummary": "优秀咖啡师需要认真听单、清洁滤器、使用新鲜咖啡粉、控制萃取时机，并通过聊天和了解当地议题提供好服务。"
+  },
+  "16": {
+    "anchors": [
+      [
+        1,
+        "If you become distracted by the conversation that is going on nearby, you may ultimately miss the mark from a service perspective.",
+        "If you become distracted by the conversation that is going on nearby, you may ultimately miss the mark from a service perspective."
+      ]
+    ],
+    "reason": "填 conversation。Ignore any ... around you 对应避免被 conversation ... nearby 分散注意。",
+    "contrast": "不是不理顾客的点单；这里是周围的聊天，空格用原文名词。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        2,
+        "You will often catch a great barista rinsing out the filter in their machines, for example, as this erodes the build-up of burnt coffee oil that can begin to impact on the quality and taste of each espresso shot.",
+        "You will often catch a great barista rinsing out the filter in their machines, for example, as this erodes the build-up of burnt coffee oil that can begin to impact on the quality and taste of each espresso shot."
+      ]
+    ],
+    "reason": "填 filter。Clean ... regularly 对应 rinsing out，清洗滤器可去掉积存的咖啡油。",
+    "contrast": "machine 已在题干中，空格要机器里被清洗的具体部件。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "This highlights the keen attention to detail that distinguishes skilled baristas, as they have the desire and the awareness to make every drink with completely fresh ground coffee.",
+        "This highlights the keen attention to detail that distinguishes skilled baristas, as they have the desire and the awareness to make every drink with completely fresh ground coffee."
+      ]
+    ],
+    "reason": "填 fresh。always use ground coffee that is ... 对应 make every drink with completely fresh ground coffee。",
+    "contrast": "空气会使香气流失，说明为何用新鲜现磨粉；不要填 grinder 这一设备名。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        3,
+        "They also understand how important this is; those who act too soon are left with a drink without flavour while those who delay the finish risk burning the beverage and tainting it with a bitter after-taste.",
+        "They also understand how important this is; those who act too soon are left with a drink without flavour while those who delay the finish risk burning the beverage and tainting it with a bitter after-taste."
+      ]
+    ],
+    "reason": "填 flavour。too early reduces the ... 对应 act too soon ... without flavour：过早结束萃取会缺少风味。",
+    "contrast": "bitter 是过晚停止的后果，不要把早与晚的后果对调；flavor 也可接受。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        3,
+        "They also understand how important this is; those who act too soon are left with a drink without flavour while those who delay the finish risk burning the beverage and tainting it with a bitter after-taste.",
+        "They also understand how important this is; those who act too soon are left with a drink without flavour while those who delay the finish risk burning the beverage and tainting it with a bitter after-taste."
+      ]
+    ],
+    "reason": "填 bitter。too late makes the coffee ... 对应 delay the finish ... bitter after-taste（苦涩余味）。",
+    "contrast": "空格要 makes coffee 后的形容词；不是名词 after-taste。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        4,
+        "Great baristas ask their customers how their day is going or what theyYe going to do later; they read local newspapers and keep up with issues that really matter, all of which make a real difference in a competitive marketplace.",
+        "Great baristas ask their customers how their day is going or what theyYe going to do later; they read local newspapers and keep up with issues that really matter, all of which make a real difference in a competitive marketplace."
+      ]
+    ],
+    "reason": "填 day。ask about the customers’ ... 对应 ask ... how their day is going（今天过得怎样）。",
+    "contrast": "不是要求询问私密身份信息；原文例子是当天生活与计划。",
+    "terms": {}
+  },
+  "22": {
+    "anchors": [
+      [
+        4,
+        "Great baristas ask their customers how their day is going or what theyYe going to do later; they read local newspapers and keep up with issues that really matter, all of which make a real difference in a competitive marketplace.",
+        "Great baristas ask their customers how their day is going or what theyYe going to do later; they read local newspapers and keep up with issues that really matter, all of which make a real difference in a competitive marketplace."
+      ]
+    ],
+    "reason": "填 issues。important ... in the area 对应 local newspapers、issues that really matter（当地重要议题）。",
+    "contrast": "newspapers 是了解议题的渠道；空格要所了解的内容，保留复数。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "If the meeting is small, start by requesting everyone to introduce themselves and to give a bit of relevant information in addition to their name.",
+        "If the meeting is small, start by requesting everyone to introduce themselves and to give a bit of relevant information in addition to their name."
+      ]
+    ],
+    "reason": "填 information 或 relevant information。introduce themselves 之外，give a bit of ... information，对应自我介绍时补充相关信息。",
+    "contrast": "name 已包含在自我介绍中，本空强调姓名以外的内容；最多两词。",
+    "terms": {
+      "agenda": "议程。",
+      "conflict": "冲突。",
+      "volunteer": "自愿承担。",
+      "tension": "紧张关系。"
+    },
+    "passageSummary": "主持会议的流程包括安排座位、互相介绍、展示议程、解决冲突、分配并记录任务，以及会后感谢和社交。"
+  },
+  "24": {
+    "anchors": [
+      [
+        3,
+        "Next, make sure everyone can see the agenda or has a copy of it.",
+        "Next, make sure everyone can see the agenda or has a copy of it."
+      ]
+    ],
+    "reason": "填 agenda。available to everyone 对应 everyone can see ... or has a copy of it，指让与会者能看到议程。",
+    "contrast": "会议记录尚未产生；此时用于按项讨论的是议程。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        3,
+        "Try to keep discussions positive, but don't ignore conflicts – find a solution for them and make sure they are resolved before they grow.",
+        "Try to keep discussions positive, but don't ignore conflicts – find a solution for them and make sure they are resolved before they grow."
+      ]
+    ],
+    "reason": "填 conflicts。solve ... quickly if they arise 对应 find a solution ... resolved before they grow，及时解决冲突。",
+    "contrast": "不能填 participation（参与），这是要鼓励而不是解决的问题；注意复数。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        4,
+        "It can help if the more experienced members of the group offer to share skills and knowledge, but don't let the same people take on all the work as this can lead to tension within the group.",
+        "It can help if the more experienced members of the group offer to share skills and knowledge, but don't let the same people take on all the work as this can lead to tension within the group."
+      ]
+    ],
+    "reason": "填 tension。involving a range of people 对应 don’t let the same people take on all the work，以避免 tension within the group。",
+    "contrast": "不是避免工作本身，而是避免因任务分配失衡造成紧张关系。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        5,
+        "It can be nice to follow the meeting with a social activity like sharing a meal or going to a cafe.",
+        "It can be nice to follow the meeting with a social activity like sharing a meal or going to a cafe."
+      ]
+    ],
+    "reason": "填 social activity。afterwards 对应 follow the meeting with；一起吃饭或去咖啡馆是社交活动的例子。",
+    "contrast": "meal / cafe 只是例子，题干 some kind of 要概括两者的类别。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        "The Royalists in the English Civil War adorned their headgear with ostrich feathers. 'Historically, feathers were an incredibly expressive accessory for men/ observes Cambridge historian, Professor Ulinka Rublack. *Nobody has really looked at why this was the case.",
+        "The Royalists in the English Civil War adorned their headgear with ostrich feathers. 'Historically, feathers were an incredibly expressive accessory for men/ observes Cambridge historian, Professor Ulinka Rublack. *Nobody has really looked at why this was the case."
+      ],
+      [
+        1,
+        "Rublack is beginning to study the use of featherwork in early modern fashion as part of a joint project between the Universities of Cambridge, Basel and Bern.",
+        "Rublack is beginning to study the use of featherwork in early modern fashion as part of a joint project between the Universities of Cambridge, Basel and Bern."
+      ]
+    ],
+    "reason": "选 vii。A 节用军装羽毛引出研究：羽毛曾是男性（for men）的表达性配饰，建立羽毛佩戴与 gender 的关系。",
+    "contrast": "列出军队例子不等于认为羽毛不适合军用（ii）；作者觉得值得研究，而非否定。",
+    "terms": {
+      "feather": "羽毛。",
+      "accessory": "配饰。",
+      "indispensable": "不可或缺的。",
+      "exotic": "异域的。",
+      "aestheticise": "使具有审美吸引力、美化。",
+      "methodology": "研究方法。"
+    },
+    "passageSummary": "文章研究欧洲历史上的羽毛装饰：男性时尚兴起、跨文化联系、防护和身份象征，以及在军装中保留的原因；最后引出物质文化研究方法。"
+  },
+  "29": {
+    "anchors": [
+      [
+        2,
+        "In 1500, they were barely worn at all in Europe; 100 years later they had become an indispensable accessory for the fashionable European man.",
+        "In 1500, they were barely worn at all in Europe; 100 years later they had become an indispensable accessory for the fashionable European man."
+      ],
+      [
+        3,
+        "Featherworking became big business.",
+        "Featherworking became big business."
+      ]
+    ],
+    "reason": "选 iii。B 节对比 1500 年 barely worn 与百年后 indispensable，并说加工成为大生意，正是 popularity 显著上升。",
+    "contrast": "featherless 是不戴者的名称，不是整个社会反对捕鸟（iv）。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        4,
+        "One crucial driver, however, was exploration – the discovery of new lands, especially in South America.",
+        "One crucial driver, however, was exploration – the discovery of new lands, especially in South America."
+      ],
+      [
+        5,
+        "This was not just a symbol of power, but of cultural connectedness, Rublack suggests: The message seems to be that he was embracing the global in a duchy that was quite insular and territorial/",
+        "This was not just a symbol of power, but of cultural connectedness, Rublack suggests: The message seems to be that he was embracing the global in a duchy that was quite insular and territorial/"
+      ]
+    ],
+    "reason": "选 i。C 节把新大陆探索、异域鸟进入欧洲与贵族表达 cultural connectedness 联系起来，对应 wider international awareness。",
+    "contrast": "这里不仅炫耀权力，还强调 embracing the global，不能只当军装或防护作用。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        6,
+        null
+      ]
+    ],
+    "reason": "选 vi。D 节既说羽毛保护佩戴者免受 bad air、雨水等影响，又象征 healthy and civilised、subtlety and style，对应 protection 和 sophistication。",
+    "contrast": "限制平民佩戴只是一段背景，禁令没有持续，故不能说只限贵族男性（D 类概括）。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        7,
+        null
+      ],
+      [
+        8,
+        "Rublack thinks that there may have been several reasons for this strange contradiction. 'It's associated with the notion of graceful warfaring,5 she says.",
+        "Rublack thinks that there may have been several reasons for this strange contradiction. 'It's associated with the notion of graceful warfaring,5 she says."
+      ],
+      [
+        9,
+        "Rublack believes that just as some of these cultures considered the feathers of certain birds to be highly significant, and sometimes sacred, European soldiers saw the feathers as imparting noble passions, bravery and courage.",
+        "Rublack believes that just as some of these cultures considered the feathers of certain birds to be highly significant, and sometimes sacred, European soldiers saw the feathers as imparting noble passions, bravery and courage."
+      ]
+    ],
+    "reason": "选 viii。E 节解释羽毛退出一般时尚后为何仍留在军服：美化战争形象，并赋予勇敢、高贵等含义。",
+    "contrast": "文章说的是 continued use 的原因，没有说它不适合军事用途（ii）。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        10,
+        null
+      ]
+    ],
+    "reason": "选 v。F 节点出 sea-change in methodologies：从 material objects 与身份的联系研究历史，对应 a new approach to researching the past。",
+    "contrast": "不是继续谈某种羽毛流行的年代，而是总结研究方法的变化。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        3,
+        "Impressive efforts went into dyeing them.",
+        "Impressive efforts went into dyeing them."
+      ]
+    ],
+    "reason": "选 B。Impressive efforts went into dyeing，随后给黑色染料配方，说明羽毛会被人工染色（coloured artificially）。",
+    "contrast": "A 人造假羽毛、C 专门繁殖鸟、D 反对装饰用途，均没有在 B 节说明。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        5,
+        "This was not just a symbol of power, but of cultural connectedness, Rublack suggests: The message seems to be that he was embracing the global in a duchy that was quite insular and territorial/",
+        "This was not just a symbol of power, but of cultural connectedness, Rublack suggests: The message seems to be that he was embracing the global in a duchy that was quite insular and territorial/"
+      ]
+    ],
+    "reason": "选 C。Duke 的羽毛服表示 cultural connectedness、embracing the global，即对美洲文化持开放积极态度。",
+    "contrast": "A 文化不敏感、B 拒绝周围人信仰均无依据；D 只追流行忽略作者明确的跨文化解释。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        8,
+        "One solution was to aestheticise the military, to make it seem graceful and powerful/ Feathers became associated with the idea of an art of warfare.",
+        "One solution was to aestheticise the military, to make it seem graceful and powerful/ Feathers became associated with the idea of an art of warfare."
+      ]
+    ],
+    "reason": "选 B。aestheticise the military，使其 graceful and powerful，并与 art of warfare 联系，说明羽毛暗示军事活动的某些理想品质。",
+    "contrast": "A 的 sacred 主要说其他文化的观念；C 没说别人害怕羽毛；D 把某种鸟与战斗品质绑定，超出原文。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        0,
+        "The Bersaglieri of the Italian Army, for example, still wear a bunch of long black feathers in their hats hanging down to one side, while British fusiliers have a clipped feather plume whose colour varies according to their regiment.",
+        "The Bersaglieri of the Italian Army, for example, still wear a bunch of long black feathers in their hats hanging down to one side, while British fusiliers have a clipped feather plume whose colour varies according to their regiment."
+      ]
+    ],
+    "reason": "选 C（are worn today by some soldiers）。Italian Army 的 Bersaglieri still wear 长黑羽毛帽，still 对应 today。",
+    "contrast": "不是古代战功奖章（F），也没有说此款帽子只限贵族（D）。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        2,
+        "In prosperous trading centres, the citizens started wearing hats bedecked with feathers from cranes and swallows.",
+        "In prosperous trading centres, the citizens started wearing hats bedecked with feathers from cranes and swallows."
+      ]
+    ],
+    "reason": "选 G。16 世纪 prosperous trading centres 的 citizens 戴鹤和燕子的羽毛帽，对应 urban dwellers 的流行装饰。",
+    "contrast": "A 说 16 世纪失去流行，与当时流行上升相反。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        5,
+        "In 1599, for example, Duke Frederick of Wiirttemberg held a display at his court at which he personally appeared wearing a costume covered in exotic feathers and representing the Americas.",
+        "In 1599, for example, Duke Frederick of Wiirttemberg held a display at his court at which he personally appeared wearing a costume covered in exotic feathers and representing the Americas."
+      ]
+    ],
+    "reason": "选 E。Duke Frederick 身着 exotic feathers 做的服装，Duke 属于 person of high status。",
+    "contrast": "不是只准贵族男子使用（D）；本句描述具体穿着者，不是普遍禁令。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        6,
+        "During the 1550s, Eleanor of Toledo had hats made from peacock feathers to keep her dry in the rain.",
+        "During the 1550s, Eleanor of Toledo had hats made from peacock feathers to keep her dry in the rain."
+      ]
+    ],
+    "reason": "选 B。Eleanor 的孔雀羽毛帽用于 keep her dry in the rain，对应 protection from bad weather。",
+    "contrast": "不要把其他鸟类羽毛的军装或城市流行用途移到孔雀羽毛上。",
+    "terms": {}
+  }
+}

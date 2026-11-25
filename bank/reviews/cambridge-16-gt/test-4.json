@@ -1,0 +1,551 @@
+{
+  "1": {
+    "anchors": [
+      [
+        4,
+        "These are boots for the style conscious, but still suitable for demanding walks.",
+        "These are boots for the style conscious, but still suitable for demanding walks."
+      ]
+    ],
+    "reason": "选 D。boots for the style conscious（在意外观时尚的人）对应 want to look smart，指穿着好看而非聪明。",
+    "contrast": "B 的 comfortable 是舒适；D 才明确强调外观风格。",
+    "terms": {
+      "ankle support": "对脚踝的支撑。",
+      "waterproof": "防水的。",
+      "quick-drying": "快干的；不等于防水。",
+      "style conscious": "注重穿着外观的。",
+      "wear off": "逐渐减弱或消失。"
+    },
+    "passageSummary": "七款徒步靴比较外观、舒适、耐用、重量、防水、鞋带和价格；关键是区分立即舒适与需磨合、防水与快干。"
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "They are warm and comfortable to wear straight out of the box and continue to be so even after many kilometres.",
+        "They are warm and comfortable to wear straight out of the box and continue to be so even after many kilometres."
+      ]
+    ],
+    "reason": "选 B。comfortable ... straight out of the box（刚开箱就舒适）对应不用花时间让脚适应。",
+    "contrast": "D 明确要一两周 get used to，与题干相反。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        1,
+        "A Hanwag Tatra Boots These boots are expensive but will give you a lifetime of wear.",
+        "A Hanwag Tatra Boots These boots are expensive but will give you a lifetime of wear."
+      ]
+    ],
+    "reason": "选 A。give you a lifetime of wear 对应 last for many years，突出耐穿寿命长。",
+    "contrast": "expensive 不妨碍耐用；题干没有要求便宜。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        3,
+        "They will never weigh you down.",
+        "They will never weigh you down."
+      ]
+    ],
+    "reason": "选 C。putting in your backpack for treks ... never weigh you down，说明适合旅行携带且轻便，对应 not heavy。",
+    "contrast": "A、D 反而提到重；不要因为都有 trek / walk 就选。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        6,
+        "They're waterproof, but we found this wore off after about 20 wet walks.",
+        "They're waterproof, but we found this wore off after about 20 wet walks."
+      ]
+    ],
+    "reason": "选 F。防水效果在约 20 次湿地步行后 wore off（逐渐消失），对应 one feature ... not ... effective for very long。",
+    "contrast": "不是靴子整个报废；后文用 protective spray 可改善这一特性。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        3,
+        "Their soles grip well and despite not being waterproof, they are quick-drying when they get wet.",
+        "Their soles grip well and despite not being waterproof, they are quick-drying when they get wet."
+      ]
+    ],
+    "reason": "选 C。not being waterproof 直接对应 do not keep the rain out。",
+    "contrast": "quick-drying 是湿后干得快，不等于防水；两者并不矛盾。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        5,
+        "Remember to pull the laces firmly when you put these boots on as they are rather wide around the ankles.",
+        "Remember to pull the laces firmly when you put these boots on as they are rather wide around the ankles."
+      ]
+    ],
+    "reason": "选 E。pull the laces firmly 对应 done up tightly：因脚踝处宽，穿前要把鞋带系紧。",
+    "contrast": "本题问系紧要求，不是宽楦本身；A 的 wide fit 没提系带。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        7,
+        "G Regatta Clydebank Mid Boots These boots are reasonably priced and they performed well in heavy rain.",
+        "G Regatta Clydebank Mid Boots These boots are reasonably priced and they performed well in heavy rain."
+      ]
+    ],
+    "reason": "选 G。reasonably priced（价格合理）对应 don’t want to spend a lot。",
+    "contrast": "A 明说 expensive；舒适和防水表现不直接回答价格条件。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        1,
+        "Whether you Ye keen to learn everything you need to know to get you started, or simply extremely interested in the idea of keeping bees, this one-day interactive workshop will teach you the fascinating secrets of the honeybee and how to care for and keep bees.",
+        "Whether you Ye keen to learn everything you need to know to get you started, or simply extremely interested in the idea of keeping bees, this one-day interactive workshop will teach you the fascinating secrets of the honeybee and how to care for and keep bees."
+      ]
+    ],
+    "reason": "选 FALSE。课程帮助 get you started，也欢迎 simply ... interested 的人；题干 only ... already keep their own bees 错把范围限于已有经验者。",
+    "contrast": "是否想开始养蜂与已经在养蜂不同；原文明示欢迎新手。",
+    "terms": {
+      "hive": "蜂箱。",
+      "queen": "这里指蜂后。",
+      "harvest honey": "采收蜂蜜。",
+      "non-refundable": "不予退款的。"
+    },
+    "passageSummary": "养蜂一日课面向初学者和感兴趣者，讲蜂群管理与采蜜，含午餐和蜂衣；须自带厚靴，提前取消不退款，结课效果不满意另有退款条件。"
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "Youll learn about the life cycle of a colony, disease prevention and caring for bees and of course how to harvest honey for your personal use or for sale.",
+        "Youll learn about the life cycle of a colony, disease prevention and caring for bees and of course how to harvest honey for your personal use or for sale."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文说学习采蜜可供自用或销售，但没说会见到向公众卖蜂蜜的人。",
+    "contrast": "学到销售用途不等于实际见销售者；无否定信息也不能选 FALSE。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        5,
+        "Well provide everything you need, including unlimited organic tea or coffee, lunch cooked in our outdoor, wood-fired oven and beekeeping suits for the day.",
+        "Well provide everything you need, including unlimited organic tea or coffee, lunch cooked in our outdoor, wood-fired oven and beekeeping suits for the day."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。写明提供午餐、茶和咖啡，却没有说可提前预约 vegetarian refreshments。",
+    "contrast": "提供午餐不说明是否有素食或其预订条件。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        5,
+        "Well provide everything you need, including unlimited organic tea or coffee, lunch cooked in our outdoor, wood-fired oven and beekeeping suits for the day.",
+        "Well provide everything you need, including unlimited organic tea or coffee, lunch cooked in our outdoor, wood-fired oven and beekeeping suits for the day."
+      ]
+    ],
+    "reason": "选 FALSE。What’s included in the price 下写提供 beekeeping suits，说明当天防护服已含在费用中，并非 pay extra。",
+    "contrast": "BJ Sherriff 的购物折扣是额外购物优惠，不代表上课衣服要付租金。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        5,
+        "Just bring a pair of thick boots with you.",
+        "Just bring a pair of thick boots with you."
+      ]
+    ],
+    "reason": "选 TRUE。Just bring a pair of thick boots with you，对应 required protective footwear。",
+    "contrast": "提供蜂衣不包括鞋靴；原文单独要求自带厚靴。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        6,
+        "Your booking secures a very limited place, so is non-refundable – if you can't make it, you can send a friend or colleague instead though.",
+        "Your booking secures a very limited place, so is non-refundable – if you can't make it, you can send a friend or colleague instead though."
+      ]
+    ],
+    "reason": "选 FALSE。订位 non-refundable，不能到场可换朋友参加；题干说提前取消会退费，与之相反。",
+    "contrast": "结课后认为未达到课程目标可 full refund 是另一条件，不能移用到提前取消。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        0,
+        "Although many people can write their own CVs, and do it well, others struggle with a variety of problems initially, such as not knowing how to structure a CV or how to highlight their most relevant strengths.",
+        "Although many people can write their own CVs, and do it well, others struggle with a variety of problems initially, such as not knowing how to structure a CV or how to highlight their most relevant strengths."
+      ]
+    ],
+    "reason": "填 highlight。which qualities they should ... 对应 how to highlight ... strengths：不知道应突出哪些优势。",
+    "contrast": "空前 should 后需动词原形，不是名词 strengths；qualities 与 strengths 为近义对应。",
+    "terms": {
+      "CV": "简历。",
+      "highlight": "突出、强调。",
+      "insight": "深入见解。",
+      "questionnaire": "问卷。",
+      "authentic": "真实可信的。"
+    },
+    "passageSummary": "专业简历写作者可客观筛选优势和删去无关细节。选择时查行业经验、样本，并参与问卷和沟通，使简历真实可信。"
+  },
+  "16": {
+    "anchors": [
+      [
+        1,
+        "Through in-depth consultation, a professional CV writer can help identify exactly what is necessary for a particular role, cut out unnecessary or irrelevant details, and pinpoint what makes the individual stand out.",
+        "Through in-depth consultation, a professional CV writer can help identify exactly what is necessary for a particular role, cut out unnecessary or irrelevant details, and pinpoint what makes the individual stand out."
+      ]
+    ],
+    "reason": "填 details。best left out 对应 cut out unnecessary or irrelevant，指删去不必要或无关的细节。",
+    "contrast": "objectivity 是专业写作者的优势，不是要删去的内容。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        3,
+        "HR professionals and recruiters with relevant experience can also have valuable insights into what companies are looking for.",
+        "HR professionals and recruiters with relevant experience can also have valuable insights into what companies are looking for."
+      ]
+    ],
+    "reason": "填 insights。useful ... about ... firms expect 对应 valuable insights into what companies are looking for。",
+    "contrast": "experience 是提供见解的基础，空格要实际提供的有价值看法，保留复数。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        4,
+        "Ask to see samples of their work or use personal recommendations before you choose a CV writing service.",
+        "Ask to see samples of their work or use personal recommendations before you choose a CV writing service."
+      ]
+    ],
+    "reason": "填 samples。what ... previously produced 对应 their work；request 对应 ask to see，要求看此前作品样本。",
+    "contrast": "recommendations 是另一选人途径；题目要已产出的作品。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        5,
+        "Youll probably need to answer an in-depth email questionnaire or be interviewed before any writing actually starts.",
+        "Youll probably need to answer an in-depth email questionnaire or be interviewed before any writing actually starts."
+      ]
+    ],
+    "reason": "填 questionnaire。work through ... as a first step 对应 before any writing ... answer ... questionnaire，先完成问卷。",
+    "contrast": "interviewed 是另一种方式，但空前 a ... 要对应书面问卷，不是动词形式。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        5,
+        "Being involved in the writing process means your CV sounds authentic.",
+        "Being involved in the writing process means your CV sounds authentic."
+      ]
+    ],
+    "reason": "填 authentic。jobseeker assists 对应 Being involved in the writing process；CV sounds authentic 对应 tone ... will be authentic（真实可信）。",
+    "contrast": "不是 quick，速度快不保证质量；空格描述语气。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        1,
+        "Having a routine you like and sticking to it definitely impacts on your overall happiness.",
+        "Having a routine you like and sticking to it definitely impacts on your overall happiness."
+      ]
+    ],
+    "reason": "填 routine。different morning ... 对应不再漏早餐或尝试锻炼的新日常；sense of well-being 对应 overall happiness。",
+    "contrast": "breakfast / workout 是可选例子，不是统括整个早晨安排的词。",
+    "terms": {
+      "routine": "日常惯例。",
+      "dress code": "着装规范。",
+      "conversation starter": "打开话题的内容。",
+      "open mind": "开放、愿意接纳的心态。"
+    },
+    "passageSummary": "新工作初期应建立好习惯、遵守着装规范、适度提前到、借午餐认识同事、确定目标，并先学习再提改进意见。"
+  },
+  "22": {
+    "anchors": [
+      [
+        2,
+        "You've probably already been into the office for an interview, so youll have some idea of what the dress code is.",
+        "You've probably already been into the office for an interview, so youll have some idea of what the dress code is."
+      ]
+    ],
+    "reason": "填 dress code。outfit conforms to 对应了解办公室的 dress code（着装规范）并稍正式。",
+    "contrast": "smarter / polished 是建议的外观，空格要公司的规则名称。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        4,
+        "It will also help you get a handle on personalities and work styles.",
+        "It will also help you get a handle on personalities and work styles."
+      ]
+    ],
+    "reason": "填 personalities。午餐中了解 their ... and the way they operate，对应 personalities and work styles，前半填性格。",
+    "contrast": "work styles 已被 the way they operate 改写，不能重复填。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        4,
+        "To ensure the lunch goes well, have a few conversation starters in mind.",
+        "To ensure the lunch goes well, have a few conversation starters in mind."
+      ]
+    ],
+    "reason": "填 conversation starters。prepare ... help interaction flow 对应 have a few ... in mind，以便冷场时重新打开话题。",
+    "contrast": "lunch 只是场景；需要准备的是开场话题，注意复数和两词限制。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        5,
+        "With this new-found understanding, take some time over the initial period to think about what goals you have for your new role.",
+        "With this new-found understanding, take some time over the initial period to think about what goals you have for your new role."
+      ]
+    ],
+    "reason": "填 goals。work out ... how to fulfil them 对应 think about what goals ...、positioning yourself for success（确定并实现目标）。",
+    "contrast": "skills 是求职过程中了解的自身条件，不是未来要 fulfil 的目标。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        6,
+        "Ifs important that you approach your new job with an open mind, and that youYe ready to soak it all in.",
+        "Ifs important that you approach your new job with an open mind, and that youYe ready to soak it all in."
+      ]
+    ],
+    "reason": "填 open mind。keep a completely ... 对应 approach ... with an open mind，表示愿意接纳和学习。",
+    "contrast": "patient 是另一建议，但 keep a ... 后要名词短语，不能填形容词。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        6,
+        "Be patient with yourself as you figure out how you fit in, and make sure you understand the way things are done before rushing into giving suggestions on improvements.",
+        "Be patient with yourself as you figure out how you fit in, and make sure you understand the way things are done before rushing into giving suggestions on improvements."
+      ]
+    ],
+    "reason": "填 improvements。avoid making proposals ... too soon 对应 before rushing into giving suggestions on improvements；先了解流程再提改进。",
+    "contrast": "不是永远不准提意见；too soon 对应 rushing，限制的是时机。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        "In one town in 18th- century Scotland, single women played an annual match against their married counterparts, though the motives behind the contest were",
+        "In one town in 18th- century Scotland, single women played an annual match against their married counterparts, though the motives behind the contest were"
+      ],
+      [
+        1,
+        "Some accounts say that the games were watched by a crowd of single men, who hoped to pick out a potential bride based on her footballing ability.",
+        "Some accounts say that the games were watched by a crowd of single men, who hoped to pick out a potential bride based on her footballing ability."
+      ]
+    ],
+    "reason": "选 D。单身男子观看比赛，希望根据 footballing ability 挑选 potential bride，说明选妻时可能考虑球技。",
+    "contrast": "A 忽略已婚妇女也参赛；B 没有男女比赛普及度对比；C 没说禁止女性观赛。",
+    "terms": {
+      "alias": "化名。",
+      "aptitude": "天赋、能力。",
+      "morale": "士气。",
+      "gate receipts": "门票收入。",
+      "prejudice": "偏见。",
+      "referee": "裁判。"
+    },
+    "passageSummary": "英国女足从早期俱乐部到一战工厂球队兴起，Dick, Kerr’s Ladies 吸引大量观众。FA 因担忧影响男足而禁赛，直到 1971 年在 UEFA 压力下解除。"
+  },
+  "29": {
+    "anchors": [
+      [
+        3,
+        "Honeyball was an alias: like many of the middle- and upper-class women who played in the late 19th century, she was not keen to publicise her involvement with a contact sport played on muddy fields.",
+        "Honeyball was an alias: like many of the middle- and upper-class women who played in the late 19th century, she was not keen to publicise her involvement with a contact sport played on muddy fields."
+      ]
+    ],
+    "reason": "选 C。Honeyball 用 alias（化名），not keen to publicise her involvement，正对应不愿公众知道她踢球。",
+    "contrast": "她成立俱乐部，不能说不愿参与或领导（A、D）；B 没有她拒与较低阶层来往的证据。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        4,
+        "These initially attracted healthy numbers of supporters although early newspaper reports were not particularly generous, with one reporter suggesting ‘when the novelty has worn off, I",
+        "These initially attracted healthy numbers of supporters although early newspaper reports were not particularly generous, with one reporter suggesting ‘when the novelty has worn off, I"
+      ],
+      [
+        5,
+        "And crowds did drop off as the growing popularity of the men’s game came to dominate public interest.",
+        "And crowds did drop off as the growing popularity of the men’s game came to dominate public interest."
+      ],
+      [
+        6,
+        "were not yet allowed to vote, it would take extraordinary circumstances for their efforts on the football pitch to attract widespread attention.",
+        "were not yet allowed to vote, it would take extraordinary circumstances for their efforts on the football pitch to attract widespread attention."
+      ]
+    ],
+    "reason": "选 A。媒体不热情、男足占据关注、女性尚无投票权；作者用这些背景说明当时社会还未准备好接纳女足。",
+    "contrast": "B 原文承认观众减少，没说是假报道；C 报道质疑热度不等于呼吁禁赛；D 是一位记者的预言，不能概括整个时期观众动机。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        7,
+        "After some initial uncertainty, their superiors came to see these games as a means to boost morale and thus increase productivity.",
+        "After some initial uncertainty, their superiors came to see these games as a means to boost morale and thus increase productivity."
+      ]
+    ],
+    "reason": "选 D。管理层把踢球视为 boost morale ... increase productivity（提振士气、提高生产率）的途径，即可能带来积极影响。",
+    "contrast": "A 的 initial uncertainty 是对比赛，不是拒雇女性；B、C 没说经理下场或增加午休时间。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        15,
+        "Women’s football was tolerated during the war, but in the years that followed, driven by the fear that the women’s game could affect Football League attendances, the FA sought to assert itself.",
+        "Women’s football was tolerated during the war, but in the years that followed, driven by the fear that the women’s game could affect Football League attendances, the FA sought to assert itself."
+      ]
+    ],
+    "reason": "选 C（FA）。FA 担心女足 affect Football League attendances，体现 felt threatened by the rise。",
+    "contrast": "球队吸引观众是威胁来源；受到威胁的是管理机构，不是 Dick, Kerr’s 球队自身。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        8,
+        "Watching from a window above the yard where they played, office worker Alfred Frankland spotted their talent and he",
+        "Watching from a window above the yard where they played, office worker Alfred Frankland spotted their talent and he"
+      ],
+      [
+        9,
+        "set about forming a team.",
+        "set about forming a team."
+      ]
+    ],
+    "reason": "选 B。office worker Alfred Frankland 发现工人球技后 forming a team，建立 Dick, Kerr’s Ladies。",
+    "contrast": "BLFC 是 Honeyball 创办；不要把两个早期俱乐部混为一谈。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        4,
+        "The BLFC arranged games between teams representing the north and the south of England, where money would be raised for those in need.",
+        "The BLFC arranged games between teams representing the north and the south of England, where money would be raised for those in need."
+      ]
+    ],
+    "reason": "选 A（BLFC）。俱乐部举办南北球队比赛筹款给 those in need，正对应 donated ... to good causes。",
+    "contrast": "后文 FA 对女足慈善比例的指控，不是这句描述的捐款活动主体。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        22,
+        "It took pressure from the Union of European Football Associations (UEFA),",
+        "It took pressure from the Union of European Football Associations (UEFA),"
+      ],
+      [
+        23,
+        "to finally force the FA to end restrictions on women’s football in 1971.",
+        "to finally force the FA to end restrictions on women’s football in 1971."
+      ]
+    ],
+    "reason": "选 D（UEFA）。pressure from UEFA ... force the FA to end restrictions，说明推动解除禁令的是 UEFA。",
+    "contrast": "FA 是受压力才解除限制的一方；题目问呼吁结束禁令的机构。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        21,
+        "There was outrage from players, with the captain of Plymouth Ladies remarking that the FA was ‘a hundred years behind the times’ and calling its decision ‘purely sex prejudice’.",
+        "There was outrage from players, with the captain of Plymouth Ladies remarking that the FA was ‘a hundred years behind the times’ and calling its decision ‘purely sex prejudice’."
+      ]
+    ],
+    "reason": "选 C（FA）。Plymouth 队长批评 FA a hundred years behind the times，对应 accused of being old-fashioned。",
+    "contrast": "这句话说的是 FA 的决定，不是批评女足球队的打法落伍。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        3,
+        "We know more about Lady Florence Dixie, who was appointed president of the BLFC in 1895 and who was an ardent believer in equality between the sexes.",
+        "We know more about Lady Florence Dixie, who was appointed president of the BLFC in 1895 and who was an ardent believer in equality between the sexes."
+      ]
+    ],
+    "reason": "选 A。BLFC 主席 Lady Florence Dixie 是 ardent believer in equality between the sexes，对应支持 women’s rights。",
+    "contrast": "Frankland 是另一队的管理者；此处信奉性别平等的领导者明确属于 BLFC。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        17,
+        "5 December 1921, the FA banned its members from allowing women’s football to be played at its grounds, saying that football was ‘quite unsuitable for females’.",
+        "5 December 1921, the FA banned its members from allowing women’s football to be played at its grounds, saying that football was ‘quite unsuitable for females’."
+      ]
+    ],
+    "reason": "填 grounds。forbidden to use ... 对应 banned ... allowing women’s football ... at its grounds，限制使用球场。",
+    "contrast": "members 是受令的协会成员，空格问不能使用的场所，注意复数。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        17,
+        "The FA also forbade",
+        "The FA also forbade"
+      ],
+      [
+        18,
+        "its members from acting as referees at women’s",
+        "its members from acting as referees at women’s"
+      ],
+      [
+        19,
+        "games.",
+        "games."
+      ]
+    ],
+    "reason": "填 referees。not allowed to have ... members as ... 对应 forbade its members from acting as referees at women’s games，即不能担任裁判。",
+    "contrast": "不是 players，原文此项限制的是裁判角色；一句被拆成多块，因此定位连着显示。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        21,
+        "There was outrage from players, with the captain of Plymouth Ladies remarking that the FA was ‘a hundred years behind the times’ and calling its decision ‘purely sex prejudice’.",
+        "There was outrage from players, with the captain of Plymouth Ladies remarking that the FA was ‘a hundred years behind the times’ and calling its decision ‘purely sex prejudice’."
+      ]
+    ],
+    "reason": "填 prejudice。accused ... against women 对应 purely sex prejudice（纯粹性别偏见）。",
+    "contrast": "behind the times 是另一评价；空后 against women 要与 prejudice 搭配。",
+    "terms": {}
+  }
+}

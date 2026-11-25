@@ -27,7 +27,7 @@ Listening and Speaking are shared across the two IELTS formats, while Reading an
 - Save words and phrases from passages or questions to a passage vocabulary notebook, or use **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
 - Practise with separate Reading and Writing timers.
 - Score Reading automatically on submission and review your answers against the answer key.
-- Review Cambridge 14 Test 1 and Cambridge 15 Tests 1–4 with question-specific source highlighting, Chinese explanations, English paraphrase comparisons and distractor notes. Related questions and vocabulary use bundled review notes; this is not a live AI chat service.
+- Review Cambridge 14 Test 1 and Cambridge 15–17 Tests 1–4 with question-specific source highlighting, Chinese explanations, English paraphrase comparisons and distractor notes. Related questions and vocabulary use bundled review notes; this is not a live AI chat service.
 - Practise Writing Task 1 and Task 2 with live word counts and automatic draft saving. Writing reference answers appear when included in a question pack.
 - Track completion and review attempt history in the same browser. Progress is saved locally and is specific to the browser and site address.
 

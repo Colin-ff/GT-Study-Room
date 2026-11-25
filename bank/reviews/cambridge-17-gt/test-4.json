@@ -1,0 +1,552 @@
+{
+  "1": {
+    "anchors": [
+      [
+        5,
+        "E Shelford Family Wild Outing Go birdwatching or catch insects as daylight fades, then have a gentle jog along the River Wale by moonlight, and end by toasting marshmallows on a campfire.",
+        "E Shelford Family Wild Outing Go birdwatching or catch insects as daylight fades, then have a gentle jog along the River Wale by moonlight, and end by toasting marshmallows on a campfire."
+      ]
+    ],
+    "reason": "选 E。gentle jog ... by moonlight 对应 running in the evening，月光下慢跑。",
+    "contrast": "F 也在日落后，但主要观星，没有跑步；同是夜间不能混选。",
+    "terms": {
+      "petting zoo": "可触摸、喂食动物的小型动物园。",
+      "animal tracks": "动物足迹。",
+      "young": "这里作名词指幼崽。",
+      "astronomy": "天文学。"
+    },
+    "passageSummary": "六个全家户外项目涵盖徒步、观海豹、动物栖地管理、亲子分开活动、夜跑及观星；区分全年开放与秋季产仔事件。"
+  },
+  "2": {
+    "anchors": [
+      [
+        1,
+        "B Pugsley Beach Nature Reserve The reserve has plenty of wildlife, whatever the time of year, with its numerous species of birds, and plants that grow hardly anywhere else, but the autumn is when hundreds of grey seals arrive on the beach to have their young.",
+        "B Pugsley Beach Nature Reserve The reserve has plenty of wildlife, whatever the time of year, with its numerous species of birds, and plants that grow hardly anywhere else, but the autumn is when hundreds of grey seals arrive on the beach to have their young."
+      ]
+    ],
+    "reason": "选 B。秋季灰海豹来到海滩 have their young（产仔），可近距离观看，对应 newborn animals。",
+    "contrast": "D 可接触宠物动物，却没说明是新生幼崽。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        4,
+        "Meanwhile, the adults can take part in one of our woodland activities, such as learning basic woodworking skills.",
+        "Meanwhile, the adults can take part in one of our woodland activities, such as learning basic woodworking skills."
+      ]
+    ],
+    "reason": "选 D。youngsters 先逛 petting zoo 再树林散步，Meanwhile adults 做 woodland activities，正对应同时做不同活动。",
+    "contrast": "其他项目说适合全家不等于分开安排不同活动。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        0,
+        "So whether you want a short stroll on level ground, or a more challenging walk to the top of Shepherds Hill, we have something for you.",
+        "So whether you want a short stroll on level ground, or a more challenging walk to the top of Shepherds Hill, we have something for you."
+      ]
+    ],
+    "reason": "选 A。既可 short stroll on level ground，也可 more challenging walk to ... hill，提供 alternative routes。",
+    "contrast": "不是只存在一条固定路线；whether ... or ... 明确给出选择。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        3,
+        "C Marston Hall, where our rangers will show you how they manage wildlife habitats, from providing feeding boxes for squirrels to creating ponds for frogs and many other creatures.",
+        "C Marston Hall, where our rangers will show you how they manage wildlife habitats, from providing feeding boxes for squirrels to creating ponds for frogs and many other creatures."
+      ]
+    ],
+    "reason": "选 C。rangers 展示如何提供喂食箱、建池塘、manage wildlife habitats，对应了解他人如何帮助动物。",
+    "contrast": "不是自己喂宠物的 D；题干问观察动物保护工作。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        1,
+        "B Pugsley Beach Nature Reserve The reserve has plenty of wildlife, whatever the time of year, with its numerous species of birds, and plants that grow hardly anywhere else, but the autumn is when hundreds of grey seals arrive on the beach to have their young.",
+        "B Pugsley Beach Nature Reserve The reserve has plenty of wildlife, whatever the time of year, with its numerous species of birds, and plants that grow hardly anywhere else, but the autumn is when hundreds of grey seals arrive on the beach to have their young."
+      ]
+    ],
+    "reason": "选 B。秋季才有灰海豹集中到沙滩产仔，对应 only at a certain time of the year。",
+    "contrast": "reserve 的一般 wildlife 全年都有，但题目所指特定季节事件是海豹产仔。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        3,
+        "They'll also take you on a short walk through the ancient pine forest in search of animal tracks and signs.",
+        "They'll also take you on a short walk through the ancient pine forest in search of animal tracks and signs."
+      ]
+    ],
+    "reason": "选 C。寻找 animal tracks and signs（足迹和活动痕迹），对应 identifying where animals have been。",
+    "contrast": "不必当场看到动物；痕迹说明它们曾经过哪里。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        0,
+        "In the sixth form we provide a strong programme of guidance for students, whether they are planning on going to university, into training or straight into the workplace.",
+        "In the sixth form we provide a strong programme of guidance for students, whether they are planning on going to university, into training or straight into the workplace."
+      ]
+    ],
+    "reason": "选 TRUE。guidance 面向打算上大学、培训或 straight into the workplace 的学生，包含离校即工作的打算。",
+    "contrast": "不是所有人都直接就业；题干 some，与文中多种去向相符。",
+    "terms": {
+      "sixth form": "英国中学后期、通常 16–18 岁的阶段。",
+      "external applicant": "外校申请者。",
+      "fortnight": "两周。",
+      "tutor": "导师。"
+    },
+    "passageSummary": "学校 sixth form 介绍升学就业指导、内外校申请方式、开放晚会，以及每两周固定导师见面和目标跟踪。"
+  },
+  "9": {
+    "anchors": [
+      [
+        0,
+        "We have a high rate of success with applications to universities, including growing success in recent years for medical school applicants.",
+        "We have a high rate of success with applications to universities, including growing success in recent years for medical school applicants."
+      ]
+    ],
+    "reason": "选 TRUE。medical school applicants 的 growing success 对应越来越多学生被医学院录取。",
+    "contrast": "不要把 high rate 与所有学生都成功混淆；题干只说趋势增加。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        1,
+        "While the majority of sixth-form students enter from the lower school, recent significant expansion of the sixth form is largely the result of an increase in applicants from other schools in the area.",
+        "While the majority of sixth-form students enter from the lower school, recent significant expansion of the sixth form is largely the result of an increase in applicants from other schools in the area."
+      ]
+    ],
+    "reason": "选 FALSE。majority ... enter from the lower school，说明多数来自本校低年级，不是其他学校。",
+    "contrast": "external applicants 增长解释扩招，不等于已经占总人数多数。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        1,
+        "We welcome your interest in joining our sixth form and look forward to offering you a place if you satisfy our minimum entry requirements.",
+        "We welcome your interest in joining our sixth form and look forward to offering you a place if you satisfy our minimum entry requirements."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文说满足 minimum entry requirements 可获录取，却未说明外校申请者必须 interview。",
+    "contrast": "入学要求未列出具体面试条件，不能自行添加，也不能说一定没有面试。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        2,
+        "If you are an external student whose current school does not use MyChoice16 for online applications, please see our website for an application form to the school.",
+        "If you are an external student whose current school does not use MyChoice16 for online applications, please see our website for an application form to the school."
+      ]
+    ],
+    "reason": "选 FALSE。外校若不使用 MyChoice16，可从学校网站获得 application form，因此不是 only 这一网站途径。",
+    "contrast": "看课程信息也用 MyChoice16 不意味着申请本身只能在那里提交。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        2,
+        "We hold an annual Open Evening in the autumn term when you can come and view our facilities and ask any questions you may have.",
+        "We hold an annual Open Evening in the autumn term when you can come and view our facilities and ask any questions you may have."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。开放晚会可 view facilities、ask questions，没有说明能和 current students 交谈。",
+    "contrast": "能提问不说明回答者身份；不能自动等同于在校学生。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        4,
+        "You will meet with your tutor at a fixed time every fortnight to discuss progress and any concerns you or your subject teachers may have about your effort and achievement.",
+        "You will meet with your tutor at a fixed time every fortnight to discuss progress and any concerns you or your subject teachers may have about your effort and achievement."
+      ]
+    ],
+    "reason": "选 FALSE。会面安排是每两周 fixed time，并非任意一方 whenever requests 即开会。",
+    "contrast": "按文中常规安排判断；不能把讨论 concerns 理解为完全随时约见。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        3,
+        "Next, we load up the equipment — things like petrol-driven chainsaws of varying sizes, helmets and waterproofs, spades, rakes and other tools, etc. must all go on the truck before the three of us set off.",
+        "Next, we load up the equipment — things like petrol-driven chainsaws of varying sizes, helmets and waterproofs, spades, rakes and other tools, etc. must all go on the truck before the three of us set off."
+      ]
+    ],
+    "reason": "填 tools。chainsaws、clothing 已被题干归类列出，all ... loaded onto the lorry 对应其他工具一起装 truck。",
+    "contrast": "helmets / waterproofs 是装备例子，本空要涵盖 spades、rakes 的复数统称。",
+    "terms": {
+      "anchor point": "锚点、固定支撑点。",
+      "pulley": "滑轮。",
+      "rope": "绳索。",
+      "pedestrian": "行人。",
+      "wood chippings": "碎木屑。"
+    },
+    "passageSummary": "伐树团队先核风险与天气、装工具，现场讨论并选牢固锚点；上部枝条用绳与滑轮处理，并在人行道设牌、监控行人，最后碎木。"
+  },
+  "16": {
+    "anchors": [
+      [
+        3,
+        "On arrival at the site, we have a quick discussion on the procedure for the day.",
+        "On arrival at the site, we have a quick discussion on the procedure for the day."
+      ]
+    ],
+    "reason": "填 procedure。talk briefly ... overall ... before work 对应 quick discussion on the procedure for the day，即先商量当天操作流程。",
+    "contrast": "weather 已在之前检查，不是到现场讨论的这个空。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        3,
+        "It must be high enough to enable access throughout the tree’s branches, but also have sufficient strength to support the climber.",
+        "It must be high enough to enable access throughout the tree’s branches, but also have sufficient strength to support the climber."
+      ]
+    ],
+    "reason": "填 strength。necessary height and ... 对应 high enough ... but also have sufficient strength，锚点既要高又要足够牢固承重。",
+    "contrast": "不是人爬树的力量，而是树上锚点的支撑强度。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        4,
+        "This involves placing a pulley in the tree and using thick rope to drag the branches down.",
+        "This involves placing a pulley in the tree and using thick rope to drag the branches down."
+      ]
+    ],
+    "reason": "填 rope。a pulley and some ... 对应 placing a pulley ... using thick rope，滑轮配粗绳把上部枝条拖下。",
+    "contrast": "branches 是被处理的物体，不是与 pulley 并列的工具。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        5,
+        "a wide grass verge and then a footpath, where I set up a number of signs to alert the public to our activities.",
+        "a wide grass verge and then a footpath, where I set up a number of signs to alert the public to our activities."
+      ]
+    ],
+    "reason": "填 footpath。signs are placed on ... 对应 footpath, where ... signs，警示牌设在人行道边提醒公众。",
+    "contrast": "yard 是树所在区域；后文上层树枝会落到围栏外，所以需在外侧步道警戒。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        5,
+        "Working alongside a road requires vigilance, so I monitor the movements of pedestrians, and as Gary starts work, I watch what he’s doing, so I can ensure safety.",
+        "Working alongside a road requires vigilance, so I monitor the movements of pedestrians, and as Gary starts work, I watch what he’s doing, so I can ensure safety."
+      ]
+    ],
+    "reason": "填 pedestrians。actions of both tree cutter and ... 对应 monitor ... pedestrians，且 watch ... Gary，兼顾行人与切树者。",
+    "contrast": "Mikael 负责碎木，但文中这里重点监控的是人行道上的公众。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        5,
+        "Once the branches are on the ground, I throw them back over the fence to Mikael, who cuts them up and feeds the machine that dices them into very small pieces called wood chippings.",
+        "Once the branches are on the ground, I throw them back over the fence to Mikael, who cuts them up and feeds the machine that dices them into very small pieces called wood chippings."
+      ]
+    ],
+    "reason": "填 chippings。machine creates ... out of ... wood 对应 dices ... into very small pieces called wood chippings。",
+    "contrast": "空限一词，wood 已在笔记表达材料，不再填整个 wood chippings 两词组合。",
+    "terms": {}
+  },
+  "22": {
+    "anchors": [
+      [
+        1,
+        "They may need to take place in a narrow space that is often only about 35 centimetres deep.",
+        "They may need to take place in a narrow space that is often only about 35 centimetres deep."
+      ]
+    ],
+    "reason": "填 narrow。underfloor in a ... area 对应 narrow space ... about 35 centimetres deep，指狭小空间。",
+    "contrast": "35 centimetres 是深度信息，本空在 area 前要形容词。",
+    "terms": {
+      "plumber": "水管工。",
+      "tradespeople": "各工种技术工人。",
+      "reinforcing steel": "钢筋。",
+      "cost-effective": "有成本效益的。",
+      "inconvenience": "不便。"
+    },
+    "passageSummary": "住宅、商用和维修水管工面临不同任务：狭小空间和切割限制、复杂系统与钢筋探测、排查漏水堵塞并兼顾成本和客户沟通。"
+  },
+  "23": {
+    "anchors": [
+      [
+        1,
+        "He must first think about what he is doing, read and understand the cutting chart that accompanies each of his tools and visualise how his work will impact on other tradespeople, before proceeding.",
+        "He must first think about what he is doing, read and understand the cutting chart that accompanies each of his tools and visualise how his work will impact on other tradespeople, before proceeding."
+      ]
+    ],
+    "reason": "填 cutting chart。always use ... for each tool 对应 read and understand the cutting chart that accompanies each of his tools。",
+    "contrast": "不是笼统 equipment；具体要读取每件工具的切割图表。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        1,
+        "He must first think about what he is doing, read and understand the cutting chart that accompanies each of his tools and visualise how his work will impact on other tradespeople, before proceeding.",
+        "He must first think about what he is doing, read and understand the cutting chart that accompanies each of his tools and visualise how his work will impact on other tradespeople, before proceeding."
+      ]
+    ],
+    "reason": "填 tradespeople。consider how different ... affected 对应 visualise ... impact on other tradespeople，顾及其他工种人员。",
+    "contrast": "不是仅考虑顾客感受；住宅地板施工牵涉其他工种的配合。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        3,
+        "In addition, often the structures are complex, and the floors and walls must be X-rayed prior to drilling in order to avoid hitting key elements such as reinforcing steel.",
+        "In addition, often the structures are complex, and the floors and walls must be X-rayed prior to drilling in order to avoid hitting key elements such as reinforcing steel."
+      ]
+    ],
+    "reason": "填 steel 或 reinforcing steel。take images ... locate important materials 对应 X-rayed ... avoid hitting key elements such as reinforcing steel。",
+    "contrast": "X-rays 是探测手段，不是要定位避开的材料；最多两词。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        4,
+        "They must have the ability to translate the symptoms they can see, such as leaks and blockages, into the actual problem and then take the appropriate action to rectify the issue in a fast and cost-effective way.",
+        "They must have the ability to translate the symptoms they can see, such as leaks and blockages, into the actual problem and then take the appropriate action to rectify the issue in a fast and cost-effective way."
+      ]
+    ],
+    "reason": "填 cost-effective。quick ... solutions 对应 fast and cost-effective way，既快又有成本效益地解决。",
+    "contrast": "不是 cheapest（绝对最便宜），原文强调效果与费用的合理结合；连字符词算一词。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        4,
+        "Often service plumbers encounter residential or commercial customers who are either facing great inconvenience or have had their operations severely disrupted because of a plumbing issue.",
+        "Often service plumbers encounter residential or commercial customers who are either facing great inconvenience or have had their operations severely disrupted because of a plumbing issue."
+      ]
+    ],
+    "reason": "填 inconvenience。people who have a lot of ... or disruption 对应 customers ... facing great inconvenience or ... operations severely disrupted。",
+    "contrast": "不是机械故障本身；这里说明客户遭受的不便，要求服务人员沟通支持。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        5,
+        "After examination by vets, the dormice were placed in their ‘soft release’ accommodation in pairs.",
+        "After examination by vets, the dormice were placed in their ‘soft release’ accommodation in pairs."
+      ]
+    ],
+    "reason": "填 vets。gave them a thorough check 对应 examination by vets（兽医检查），检疫后的动物再进入释放设施。",
+    "contrast": "PTES 是项目组织者，具体体检由兽医完成；注意复数。",
+    "terms": {
+      "dormouse": "睡鼠。",
+      "hibernation": "冬眠。",
+      "coppicing": "定期砍至近地面以促再生的林业管理方式。",
+      "biodiversity": "生物多样性。",
+      "livestock": "家畜。",
+      "compensation": "赔偿、补偿。"
+    },
+    "passageSummary": "睡鼠放归项目先体检配对、临时笼养供食，再开笼探索；保护林地和连接种群还利于其他物种。文章继而讨论猞猁、河狸、狼、海鹰和野猪的重引利弊。"
+  },
+  "29": {
+    "anchors": [
+      [
+        5,
+        "After examination by vets, the dormice were placed in their ‘soft release’ accommodation in pairs.",
+        "After examination by vets, the dormice were placed in their ‘soft release’ accommodation in pairs."
+      ]
+    ],
+    "reason": "填 pairs。divided the animals into ... 对应 placed ... accommodation in pairs，分成两只一组。",
+    "contrast": "twenty 是配对总数，不是题目 into 后要的分组方式。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        5,
+        "For 10 days, the dormice were checked and given food daily, then a small opening was made, allowing them",
+        "For 10 days, the dormice were checked and given food daily, then a small opening was made, allowing them"
+      ]
+    ],
+    "reason": "填 food。team brought ... on a regular basis 对应 given food daily，每天检查并供食。",
+    "contrast": "water 没在此句列出，不能凭动物需要推断答案。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        7,
+        "Everything was removed in October, when the animals started preparing to go into hibernation",
+        "Everything was removed in October, when the animals started preparing to go into hibernation"
+      ],
+      [
+        8,
+        null
+      ]
+    ],
+    "reason": "填 hibernation。annual ... in the autumn 对应 October ... preparing to go into hibernation for the winter（冬眠）。",
+    "contrast": "不是迁徙；原文明确是进入冬季休眠，定位包含被拆到下一块的 for the winter。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        10,
+        "However, a distinctive factor of this release, White explained, is the intention of linking up with another released dormouse population three miles away by managing the land between.",
+        "However, a distinctive factor of this release, White explained, is the intention of linking up with another released dormouse population three miles away by managing the land between."
+      ]
+    ],
+    "reason": "选 D。计划管理两群之间的土地，linking up with another ... population three miles away，正对应让附近睡鼠群混合连接。",
+    "contrast": "A、B 不是文中所说特色目标；C 是新放归地的连接管理，不是试验新的人工照料法。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        11,
+        null
+      ],
+      [
+        12,
+        null
+      ],
+      [
+        13,
+        null
+      ],
+      [
+        14,
+        null
+      ],
+      [
+        15,
+        null
+      ],
+      [
+        16,
+        null
+      ]
+    ],
+    "reason": "选 A。coppicing 曾附带提供食物和光照，后来停止且栖地被切碎，All this ... adverse effect on dormouse populations；用来说明栖地变化影响数量。",
+    "contrast": "B 错把古人砍树的原始目的说成帮助睡鼠，原文明说 added bonus；C 不比较林地与篱笆重要性；D 未评树种气候适应。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        19,
+        "They promote good woodland management and what's good for dormice is good for a large range of species...”",
+        "They promote good woodland management and what's good for dormice is good for a large range of species...”"
+      ]
+    ],
+    "reason": "选 B。what’s good for dormice is good for a large range of species，对应帮助睡鼠的措施也造福其他动物。",
+    "contrast": "A 未用繁殖容易作理由；C 没要求公众多散步；D 未特指儿童。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        20,
+        "Helen Meech, the director of Rewilding Britain, an organisation campaigning to restore lost species and habitats to the British countryside, said that such reintroductions would increase people’s familiarity with living with more wild animals once again.",
+        "Helen Meech, the director of Rewilding Britain, an organisation campaigning to restore lost species and habitats to the British countryside, said that such reintroductions would increase people’s familiarity with living with more wild animals once again."
+      ]
+    ],
+    "reason": "选 B。increase people’s familiarity with living with more wild animals，对应用共享环境的方式重新习惯野生动物。",
+    "contrast": "A 不是只增加常见物种；C larger animals 是 30–40 年后可能考虑，不是 soon；D 没把参与整治景观作为此处目标。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        27,
+        "But they are critical to the restoration of ecosystems that have been overgrazed by deer.",
+        "But they are critical to the restoration of ecosystems that have been overgrazed by deer."
+      ]
+    ],
+    "reason": "选 D。wolves critical to restoration of ecosystems ... overgrazed by deer，对应使被破坏环境恢复（revive damaged environments）。",
+    "contrast": "A 没说圈养公园最佳；B 说对人 low risk，非必须远离；C Highlands 是明显可选地，非只有这一处接受。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        30,
+        "Then there is the wild boar which disappeared in the 13th century because",
+        "Then there is the wild boar which disappeared in the 13th century because"
+      ],
+      [
+        31,
+        "The species has been quietly re-establishing itself in the woodlands of Britain for several decades.",
+        "The species has been quietly re-establishing itself in the woodlands of Britain for several decades."
+      ]
+    ],
+    "reason": "选 E（wild boar）。quietly re-establishing itself ... for several decades，对应已经自行在英国重新定居。",
+    "contrast": "beaver 段介绍人工重引及未获许可的种群，题目自发回归直接对应野猪句。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        22,
+        "‘The preference of the lynx, a shy animal, to stay in its woodland habitat would make a threat to livestock or humans unlikely.",
+        "‘The preference of the lynx, a shy animal, to stay in its woodland habitat would make a threat to livestock or humans unlikely."
+      ]
+    ],
+    "reason": "选 A（lynx）。shy、stay in its woodland habitat，因此 threat to ... humans unlikely，对应不太会主动接近人。",
+    "contrast": "狼对人风险低也被提到，但本题特指因偏爱林地、害羞而少接触人，定位在猞猁段。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        26,
+        null
+      ],
+      [
+        27,
+        "Because of the space a wolf population would need, the Scottish Highlands would be an obvious place for their reintroduction and could generate millions of pounds in tourism.",
+        "Because of the space a wolf population would need, the Scottish Highlands would be an obvious place for their reintroduction and could generate millions of pounds in tourism."
+      ]
+    ],
+    "reason": "选 C（wolf）。Scottish Highlands ... generate millions of pounds in tourism，对应 considerable financial benefits to one area。",
+    "contrast": "不是给受损农户的赔偿；本题问旅游收入潜力。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        28,
+        "The sea eagle, also known as the white- tailed eagle, was driven to extinction in Britain earlier this century.",
+        "The sea eagle, also known as the white- tailed eagle, was driven to extinction in Britain earlier this century."
+      ],
+      [
+        29,
+        null
+      ]
+    ],
+    "reason": "选 D（sea eagle）。因土地所有者担忧 livestock 受威胁，欧洲成功项目 offered compensation；对应若牲畜被杀可补偿农民。",
+    "contrast": "狼也会影响家畜，但赔偿制度的具体说明在海鹰段，不能仅凭 livestock 匹配。",
+    "terms": {}
+  }
+}

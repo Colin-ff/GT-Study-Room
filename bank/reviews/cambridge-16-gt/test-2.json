@@ -1,0 +1,512 @@
+{
+  "1": {
+    "anchors": [
+      [
+        0,
+        "Once you have a design in mind, it is time to start narrowing down your builder shortlist, and this starts with assessing how qualified each builder is.",
+        "Once you have a design in mind, it is time to start narrowing down your builder shortlist, and this starts with assessing how qualified each builder is."
+      ]
+    ],
+    "reason": "选 FALSE。Once you have a design in mind ... start narrowing down your builder shortlist，说明先确定设计，再筛选建筑商；题干 after selecting a builder 才决定设计，把顺序颠倒。",
+    "contrast": "不是说设计和建筑商无关，而是明确的先后关系与题干相反。",
+    "terms": {
+      "licence": "执照、许可。",
+      "display home": "供顾客参观的样板房。",
+      "comply with": "遵守、符合。",
+      "withdraw": "这里指退出、撤回合同。"
+    },
+    "passageSummary": "介绍选择建筑商的步骤：先预算和设计，再查执照、协会与奖项、参观样板房，并阅读标准合同和撤回期限。"
+  },
+  "2": {
+    "anchors": [
+      [
+        0,
+        "Most states have their own building authority who you can contact to check a builder's licence.",
+        "Most states have their own building authority who you can contact to check a builder's licence."
+      ]
+    ],
+    "reason": "选 TRUE。可联系各州 building authority 来 check a builder’s licence，对应 make sure ... appropriate licence。",
+    "contrast": "不是要求自己判断技术水平，文中给出了核实资质的具体渠道。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        1,
+        "You can also check if the builder is a member of an industry association such as the Housing Industry Association (HIA), and whether they have won any industry awards.",
+        "You can also check if the builder is a member of an industry association such as the Housing Industry Association (HIA), and whether they have won any industry awards."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文建议查询是否属于 HIA 等行业协会，但没有说 best builders usually 是 HIA 成员。",
+    "contrast": "协会成员身份和优秀建筑商之间的比例、优劣排序未被说明，不能凭常识判断。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        1,
+        "For instance, the HIA runs a state and national awards programme, with a category that recognises the level of customer service that a builder delivers.",
+        "For instance, the HIA runs a state and national awards programme, with a category that recognises the level of customer service that a builder delivers."
+      ]
+    ],
+    "reason": "选 TRUE。HIA 的奖项 category ... recognises the level of customer service，对应为高标准客户服务颁奖。",
+    "contrast": "不是所有会员都得奖，而是奖项有专门表彰服务水平的类别。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        2,
+        "Display homes are usually offered by major project builders who work on a large scale and can deliver good quality and value.",
+        "Display homes are usually offered by major project builders who work on a large scale and can deliver good quality and value."
+      ]
+    ],
+    "reason": "选 FALSE。display homes 通常由 major project builders 提供，且 work on a large scale；题干 smaller projects 与之相反。",
+    "contrast": "不能把展示房屋本身体积与建筑商的项目规模混淆。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        3,
+        "Ask your builder to use a standard building contract that has been designed to comply with the Domestic Building Contracts Act, and to be fair to both client and builder.",
+        "Ask your builder to use a standard building contract that has been designed to comply with the Domestic Building Contracts Act, and to be fair to both client and builder."
+      ]
+    ],
+    "reason": "选 TRUE。建议采用 designed to comply with ... Act 的标准合同，comply with 对应 in accordance with（符合）。",
+    "contrast": "原文是建议合同遵循该法案，不需要题干复述每项具体条款。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        3,
+        "You have five business days within which you may withdraw from the contract after signing it.",
+        "You have five business days within which you may withdraw from the contract after signing it."
+      ]
+    ],
+    "reason": "选 FALSE。签署后 five business days 内仍可 withdraw from the contract，与题干一签字就不可撤销地受约束的说法不符。",
+    "contrast": "按本文撤回期限判断即可；不要把签署与撤回权混为一谈，也不要据此推演其他法律规则。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        5,
+        "Supported by a rope and harness, you can stand on branches no bigger than your wrist, and swing out between the boughs, or simply take the opportunity to lie in a tree-top hammock and absorb the stunning bird's eye views.",
+        "Supported by a rope and harness, you can stand on branches no bigger than your wrist, and swing out between the boughs, or simply take the opportunity to lie in a tree-top hammock and absorb the stunning bird's eye views."
+      ]
+    ],
+    "reason": "选 F（Tree climbing）。rope and harness 是绳索与安全吊带，正对应 provided with safety equipment。",
+    "contrast": "活动看起来危险不等于一定写明提供装备；F 明确列出设备。",
+    "terms": {
+      "choppy waters": "波涛起伏的水域。",
+      "harness": "安全吊带。",
+      "bruise": "瘀伤。",
+      "bird’s eye view": "从高处俯瞰的景色。"
+    },
+    "passageSummary": "八类海岛冒险活动的特点，包括所需装备、难度、景点与可能受伤情况。匹配要抓独特组合，而非只凭活动名称。"
+  },
+  "9": {
+    "anchors": [
+      [
+        7,
+        "After a bit of practice and a few bruises, you'll learn to control the ride and can join the few people who can call themselves mountain boarders.",
+        "After a bit of practice and a few bruises, you'll learn to control the ride and can join the few people who can call themselves mountain boarders."
+      ]
+    ],
+    "reason": "选 H（Mountain boarding）。a few bruises（几处瘀伤）对应 minor injuries（轻伤）。",
+    "contrast": "harder landing 是造成碰伤的背景；不是题干问最危险的活动。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "C Kayaking Test your kayak nerves paddling around a deserted military fort built on a rocky outcrop out at sea, then explore the island's busy harbours before gliding back to dry land where a hot shower and a cup of tea await.",
+        "C Kayaking Test your kayak nerves paddling around a deserted military fort built on a rocky outcrop out at sea, then explore the island's busy harbours before gliding back to dry land where a hot shower and a cup of tea await."
+      ]
+    ],
+    "reason": "选 C（Kayaking）。deserted military fort 是废弃军事堡垒，位于海上 rocky outcrop，对应 disused, isolated building。",
+    "contrast": "G 的走私者海滩不是建筑；C 才有明确的废弃堡垒。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        5,
+        "Supported by a rope and harness, you can stand on branches no bigger than your wrist, and swing out between the boughs, or simply take the opportunity to lie in a tree-top hammock and absorb the stunning bird's eye views.",
+        "Supported by a rope and harness, you can stand on branches no bigger than your wrist, and swing out between the boughs, or simply take the opportunity to lie in a tree-top hammock and absorb the stunning bird's eye views."
+      ]
+    ],
+    "reason": "选 F。在 tree-top hammock（树顶吊床）躺着，享受 bird’s eye views（俯瞰景色），对应 relax and look down from above。",
+    "contrast": "骑行或乘船也能看景，但没有 unusual location 高处放松这一组合。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        0,
+        "You'll need to hold on tight as the boat bounces across the wake of awesome cruise liners in one of the world's busiest shipping lanes.",
+        "You'll need to hold on tight as the boat bounces across the wake of awesome cruise liners in one of the world's busiest shipping lanes."
+      ]
+    ],
+    "reason": "选 A（Rib riding）。choppy waters 对应 rough water；cruise liners 对应 big ships，船从巨轮尾浪中弹跳穿过。",
+    "contrast": "C 也在海上，却没描述贴近大型轮船的颠簸高速体验。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        3,
+        "Grit your teeth and tackle the brutal hills in the south of the island, or for something less challenging, discover our car-free cycle tracks on former railway lines.",
+        "Grit your teeth and tackle the brutal hills in the south of the island, or for something less challenging, discover our car-free cycle tracks on former railway lines."
+      ]
+    ],
+    "reason": "选 D（Cycling）。brutal hills 与 less challenging ... car-free cycle tracks 对照，对应可选 easy 或 more difficult 路线。",
+    "contrast": "B 适合新手不等于列出难易两种路线；D 有明确选择。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        4,
+        "In theory, these quirky electric machines are simple to control, with users leaning forwards to go faster and back to slow down.",
+        "In theory, these quirky electric machines are simple to control, with users leaning forwards to go faster and back to slow down."
+      ]
+    ],
+    "reason": "选 E（Segway riding）。In theory ... simple，但 In reality ... need some practice，对应实际比想象更难。",
+    "contrast": "H 也需练习，但 E 用理论与现实的对照直接表达预期落差。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        0,
+        "The Service also arranges a number of music-related events, including festivals bringing together choirs and soloists from schools in both Barrington and other areas.",
+        "The Service also arranges a number of music-related events, including festivals bringing together choirs and soloists from schools in both Barrington and other areas."
+      ]
+    ],
+    "reason": "填 festivals。events such as 对应 events, including；local and visiting schools 对应 schools in both Barrington and other areas。",
+    "contrast": "choirs / soloists 是参加者，题目空格要活动种类。",
+    "terms": {
+      "budget": "预算。",
+      "partnership": "合作关系。",
+      "diversity": "多样性。",
+      "accounting": "会计。"
+    },
+    "passageSummary": "音乐服务机构招聘业务与发展经理，涉及预算、筹资、合作、多元音乐课程、数据库和基础会计能力。"
+  },
+  "16": {
+    "anchors": [
+      [
+        2,
+        "As the Business and Development Manager, you will be responsible for managing the administrative and financial systems of the Music Service, ensuring it does not exceed its budget, which is currently around £1m a year.",
+        "As the Business and Development Manager, you will be responsible for managing the administrative and financial systems of the Music Service, ensuring it does not exceed its budget, which is currently around £1m a year."
+      ]
+    ],
+    "reason": "填 budget。keeping to 对应 does not exceed（不超出），指经理需控制在年度预算之内。",
+    "contrast": "£1m 是预算金额，题目要管理约束的名称，不是数字。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        2,
+        "The Music Service is involved in several partnerships with schools and with music and community organisations in the district, and you will be expected to increase the number and scope of these, as well as take the lead in fundraising.",
+        "The Music Service is involved in several partnerships with schools and with music and community organisations in the district, and you will be expected to increase the number and scope of these, as well as take the lead in fundraising."
+      ]
+    ],
+    "reason": "填 partnerships。build ... with other organisations 对应 increase the number and scope of ... partnerships，建立并拓展合作关系。",
+    "contrast": "fundraising 是另一项职责；此处 with other organisations 指合作。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "The Service recently embarked on a programme to broaden what is taught in school music lessons, to include instruments and musical styles from around the world, and you will be required to further develop this emphasis on diversity.",
+        "The Service recently embarked on a programme to broaden what is taught in school music lessons, to include instruments and musical styles from around the world, and you will be required to further develop this emphasis on diversity."
+      ]
+    ],
+    "reason": "填 diversity。increase the focus 对应 further develop this emphasis；instruments and musical styles from around the world 说明多样性。",
+    "contrast": "international styles 是例子，不是应填的概括词；限一词。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        3,
+        "You will need to improve systems for ensuring that the records of the Service's activities are accurate, and maintain a database of all music teachers, students, and instruments belonging to the Service.",
+        "You will need to improve systems for ensuring that the records of the Service's activities are accurate, and maintain a database of all music teachers, students, and instruments belonging to the Service."
+      ]
+    ],
+    "reason": "填 database。kept up-to-date 对应 maintain，数据库记录教师、学生与乐器信息。",
+    "contrast": "records 已在空前出现，不应重复；与 records 并列的是数据库。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        4,
+        "You will have an understanding of accounting, at a non-specialist level, and of standard financial procedures.",
+        "You will have an understanding of accounting, at a non-specialist level, and of standard financial procedures."
+      ]
+    ],
+    "reason": "填 accounting。basic knowledge 对应 understanding ... at a non-specialist level，要求非专业程度的会计知识。",
+    "contrast": "不是必须音乐教育经验；文中明确音乐教育 experience ... not crucial。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        0,
+        "One possible reason is that many managers of small businesses have an inadequate knowledge of health and safety issues.",
+        "One possible reason is that many managers of small businesses have an inadequate knowledge of health and safety issues."
+      ]
+    ],
+    "reason": "填 knowledge。do not have enough relevant 对应 inadequate，健康安全问题的一个原因是管理者知识不足。",
+    "contrast": "accidents 是结果；空格问管理者缺少什么。",
+    "terms": {
+      "inadequate": "不足的。",
+      "responsibility": "职责、责任。",
+      "leaflet": "传单、小册页。",
+      "contractor": "承包商。"
+    },
+    "passageSummary": "小企业安全管理困难来自知识不足、规章多和不清楚责任；文章介绍书面政策、安全培训、承包商及压力管理。"
+  },
+  "22": {
+    "anchors": [
+      [
+        1,
+        "Many managers of small businesses claim their situation is made worse by bureaucracy, arguing that the huge number of regulations – not just on health and safety but also on tax, the minimum wage, and much, much more - makes their work difficult.",
+        "Many managers of small businesses claim their situation is made worse by bureaucracy, arguing that the huge number of regulations – not just on health and safety but also on tax, the minimum wage, and much, much more - makes their work difficult."
+      ]
+    ],
+    "reason": "填 regulations。too many ... to deal with 对应 huge number of regulations ... makes their work difficult。",
+    "contrast": "bureaucracy 是他们抱怨的总体问题，本空具体问数量太多的规章。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "Many managers are simply not aware of their responsibilities.",
+        "Many managers are simply not aware of their responsibilities."
+      ]
+    ],
+    "reason": "填 responsibilities。may not fully understand 对应 not aware of，指不清楚自身职责。",
+    "contrast": "manuals / seminars 是学习途径，不是管理者需要明确的责任。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        3,
+        "For instance, inspectors could make employers aware of what they really need to know, rather than swamping them with mountains of leaflets which may not be relevant.",
+        "For instance, inspectors could make employers aware of what they really need to know, rather than swamping them with mountains of leaflets which may not be relevant."
+      ]
+    ],
+    "reason": "填 leaflets。far too many 对应 swamping them with mountains of，指检查员给了过量宣传单。",
+    "contrast": "前面的 regulations 是规章本身，这里问发放的信息材料。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        4,
+        "All employers must have their own health and safety policy statement and, for businesses with more than five employees, this must be in writing.",
+        "All employers must have their own health and safety policy statement and, for businesses with more than five employees, this must be in writing."
+      ]
+    ],
+    "reason": "填 statement。produce a written ... 对应 policy statement ... must be in writing；一定规模以上须有书面政策声明。",
+    "contrast": "policy 已在空后出现；限一词，不填 policy statement。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        6,
+        "But to comply with the law, businesses must train their employees about health and safety, and provide information to others who need to know, such as the contractors working for them.",
+        "But to comply with the law, businesses must train their employees about health and safety, and provide information to others who need to know, such as the contractors working for them."
+      ]
+    ],
+    "reason": "填 contractors。both its employees and ... 对应先培训员工，再向 others ... such as contractors 提供信息。",
+    "contrast": "inspectors 是监管人员；承包商才是为企业开展工作、也需知悉安全信息的人。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        7,
+        "Other advice from the Health and Safety Executive for small businesses tackles specific issues, such as helping small companies to deal with work-related stress.",
+        "Other advice from the Health and Safety Executive for small businesses tackles specific issues, such as helping small companies to deal with work-related stress."
+      ]
+    ],
+    "reason": "填 stress。advise ... on problems of 对应 advice ... deal with work-related stress（工作压力）。",
+    "contrast": "原文没有把最后这一建议写成事故统计；空格问员工面临的压力问题。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        "Scribes noted the everyday activities in ancient Egypt and wrote about everything from grain stocks to tax records.",
+        "Scribes noted the everyday activities in ancient Egypt and wrote about everything from grain stocks to tax records."
+      ]
+    ],
+    "reason": "选 B。书记员记载 everything from grain stocks to tax records（从粮食存量到税收），对应 topics ... very varied。",
+    "contrast": "A 没说明每天工时；C 说多数出身优越，手工业者子女很少入读；D 没说他们不知职业价值。",
+    "terms": {
+      "scribe": "书记员、抄写员。",
+      "apprenticeship": "学徒培训期。",
+      "quarry": "采石；采石场。",
+      "overseer": "监工、监督人员。",
+      "appreciative": "表示感激、认可的。"
+    },
+    "passageSummary": "古埃及职业从书记员到农民与工匠各有分工。文章反驳奴隶建金字塔的观点，说明公共工程流程和共同贡献的社会价值。"
+  },
+  "29": {
+    "anchors": [
+      [
+        1,
+        null
+      ]
+    ],
+    "reason": "选 A。第二段先说 no shortage of jobs，再列出用品制作、洗衣、服装和纸草加工都需手工，解释为何工作机会丰富。",
+    "contrast": "B 未讨论诚实；C 不是比较手工与专业职业；D 列的是社会上多种工种，不是同一工人承担的职责。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        4,
+        "Although it is commonly believed that the great monuments and temples of Egypt were achieved through slave labor, there is absolutely no evidence to support this.",
+        "Although it is commonly believed that the great monuments and temples of Egypt were achieved through slave labor, there is absolutely no evidence to support this."
+      ]
+    ],
+    "reason": "选 C（rejecting a popular view）。commonly believed ... slave labor 后紧接 absolutely no evidence，明确反驳奴隶建造宏伟建筑的流行观点。",
+    "contrast": "不是讲历史做法从奴隶变为雇员（B），也不是道德批评建造活动（D）；作者在纠正认识。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        7,
+        "One was expected to care for others as much as oneself and contributing to the common good was an expression of this.",
+        "One was expected to care for others as much as oneself and contributing to the common good was an expression of this."
+      ]
+    ],
+    "reason": "选 B。maat 表示 harmony and balance，要求关心他人、contributing to the common good，解释古埃及人怎样看自己对社会的责任。",
+    "contrast": "A 只局限艺术家，过窄；C、D 关于谁的意见受重视或表达意见，没有相应依据。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        7,
+        "There is no doubt there were many people who did not love their job every day, but the Egyptian government was aware of how hard the people worked and so staged a number of festivals throughout the year to show gratitude and give them days off to relax.",
+        "There is no doubt there were many people who did not love their job every day, but the Egyptian government was aware of how hard the people worked and so staged a number of festivals throughout the year to show gratitude and give them days off to relax."
+      ]
+    ],
+    "reason": "选 D（appreciative，感激的）。政府知道人们辛劳，因此办节日 show gratitude 并给休息日。",
+    "contrast": "strict 严厉、patient 耐心、negligent 疏忽均不是该句对政府态度的描述。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        6,
+        "These people were mostly farmers who could do nothing with their land during the months when the Nile River overflowed its banks.",
+        "These people were mostly farmers who could do nothing with their land during the months when the Nile River overflowed its banks."
+      ]
+    ],
+    "reason": "选 C（farmer）。尼罗河泛滥的月份农民 could do nothing with their land，对应 unable to work at certain times。",
+    "contrast": "这里是农活受季节性河水影响，不是石匠工具变钝而暂停工作。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        6,
+        "Overseers organized the men into teams to transport the stones on the sleds/ Once the pyramid was complete, the inner chambers needed to be decorated by scribes who painted elaborate images on the walls.",
+        "Overseers organized the men into teams to transport the stones on the sleds/ Once the pyramid was complete, the inner chambers needed to be decorated by scribes who painted elaborate images on the walls."
+      ]
+    ],
+    "reason": "选 F（overseer）。organized ... into teams 对应 divided workers into groups，都是把工人编组。",
+    "contrast": "unskilled laborers 负责搬石头；负责组织他们的是 overseers。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        1,
+        "The reed cutter, for example, who harvested papyrus plants along the Nile, had to bear in mind that he worked in an area that was also home to wildlife that, at times, could prove fatal.",
+        "The reed cutter, for example, who harvested papyrus plants along the Nile, had to bear in mind that he worked in an area that was also home to wildlife that, at times, could prove fatal."
+      ]
+    ],
+    "reason": "选 B（reed cutter）。割纸草者工作区有可能致命的野生动物，对应 faced daily hazards（日常工作中的危险）。",
+    "contrast": "不应凭常识选石匠等辛苦职业；文中明确危险动物属于割苇工的工作环境。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        0,
+        "The apprenticeship for this job lasted many years and was tough and challenging.",
+        "The apprenticeship for this job lasted many years and was tough and challenging."
+      ]
+    ],
+    "reason": "选 A（scribe）。apprenticeship ... lasted many years 对应 long period of training。",
+    "contrast": "石匠虽 skilled，但此处只有书记员明确写出多年学徒培训。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        4,
+        "The pyramids and other monuments were built by Egyptian laborers who either donated their time as community service or were paid for their labor, and Egyptians from every occupation could be called on to do this.",
+        "The pyramids and other monuments were built by Egyptian laborers who either donated their time as community service or were paid for their labor, and Egyptians from every occupation could be called on to do this."
+      ]
+    ],
+    "reason": "填 community service。chose to participate 对应 donated their time；与 paid ... labor 对照，是自愿贡献时间参与公共服务。",
+    "contrast": "slave labor 是作者反驳的观点，不能填入正向描述。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        5,
+        "The often huge blocks were then pushed onto sleds, devices better suited than wheeled vehicles to moving weighty objects over shifting sand.",
+        "The often huge blocks were then pushed onto sleds, devices better suited than wheeled vehicles to moving weighty objects over shifting sand."
+      ]
+    ],
+    "reason": "填 shifting sand。sleds ... better suited ... moving ... over shifting sand 对应雪橇容易通过的地面。",
+    "contrast": "rock cliffs 是石块来源，不是雪橇运输所经过的地面；按两词要求保留 shifting。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        5,
+        "This job was done by skilled stonemasons working with copper chisels and wooden mallets.",
+        "This job was done by skilled stonemasons working with copper chisels and wooden mallets."
+      ]
+    ],
+    "reason": "填 copper。tools made of ... and wood 对应 copper chisels and wooden mallets；改写把两类工具转成材料并列。",
+    "contrast": "chisels 是凿子名称，空格要与 wood 并列的材质。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        6,
+        "These people were mostly farmers who could do nothing with their land during the months when the Nile River overflowed its banks.",
+        "These people were mostly farmers who could do nothing with their land during the months when the Nile River overflowed its banks."
+      ]
+    ],
+    "reason": "填 farmers。These people were mostly farmers 说明搬石块的非熟练工多数是农民，正对应 often done by ... or other unskilled workers。",
+    "contrast": "overseers 负责组织，stonemasons 负责切割成形；搬运人群对应 farmers，注意复数。",
+    "terms": {}
+  }
+}

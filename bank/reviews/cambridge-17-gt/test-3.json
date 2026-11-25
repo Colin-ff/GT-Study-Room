@@ -1,0 +1,517 @@
+{
+  "1": {
+    "anchors": [
+      [
+        5,
+        "The path itself is open and unprotected, so be sure to wear a hat or you could get sunburnt.",
+        "The path itself is open and unprotected, so be sure to wear a hat or you could get sunburnt."
+      ]
+    ],
+    "reason": "选 E。路径 open and unprotected，需戴帽防晒，对应 very little shade（几乎无遮阴）。",
+    "contrast": "A 有树木帮你保持凉爽；E 才明确曝晒。",
+    "terms": {
+      "shade": "阴凉、遮阴处。",
+      "lead": "宠物牵引绳。",
+      "viewing platform": "观景平台。",
+      "undergrowth": "林下灌木、杂草。"
+    },
+    "passageSummary": "五条乡间步道比较遮阴、坡度、可选路线、观鹿平台、牵狗要求和休息长椅，抓每条路径独有设施。"
+  },
+  "2": {
+    "anchors": [
+      [
+        4,
+        "Be prepared to go up and down a bit on this route. The first section is uphill, then the path flattens out — but not for long, so you need to be fairly fit.",
+        "Be prepared to go up and down a bit on this route. The first section is uphill, then the path flattens out — but not for long, so you need to be fairly fit."
+      ]
+    ],
+    "reason": "选 D。first section uphill、平坦部分不长且需 fairly fit，说明有陡坡或起伏路段。",
+    "contrast": "C fairly flat 和 A 两条同难度都不如 D 的坡度描述直接。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        1,
+        "A Grove Mill Take either the yellow path or the blue path — both eventually come out at the Old Water Mill and are at about the same level of difficulty.",
+        "A Grove Mill Take either the yellow path or the blue path — both eventually come out at the Old Water Mill and are at about the same level of difficulty."
+      ]
+    ],
+    "reason": "选 A。either yellow ... or blue path，两条均到 Old Water Mill，对应 choice of route。",
+    "contrast": "B wrong turn 是迷路，不是规划好的可选路线。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        4,
+        "There is a viewing platform, from which you may be lucky enough to see one of the herds of deer that roam the area.",
+        "There is a viewing platform, from which you may be lucky enough to see one of the herds of deer that roam the area."
+      ]
+    ],
+    "reason": "选 D。viewing platform 可看 herds of deer，对应 special site for watching wildlife。",
+    "contrast": "一般有动植物不等于专设观景点；D 明确有平台。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        5,
+        "If you bring your dog, keep it on a lead as the smaller shrubs can be easily destroyed.",
+        "If you bring your dog, keep it on a lead as the smaller shrubs can be easily destroyed."
+      ]
+    ],
+    "reason": "选 E。keep it on a lead（拴牵引绳）直接对应 not allowed to run freely。",
+    "contrast": "B 不建议带小狗不等于对所有狗写明须牵引；E 是明确要求。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        3,
+        "There are benches along the way, where you can rest and admire the beauty of the area.",
+        "There are benches along the way, where you can rest and admire the beauty of the area."
+      ]
+    ],
+    "reason": "选 C。benches along the way ... rest，对应可在沿途多处坐下。",
+    "contrast": "D 的 viewing platform 未说明有座位，不能自动推断。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        1,
+        "I have had a terrible experience with Poppi Properties and as an ex-tenant, I advise you to go elsewhere if you want to rent or buy a property — as I have now done.",
+        "I have had a terrible experience with Poppi Properties and as an ex-tenant, I advise you to go elsewhere if you want to rent or buy a property — as I have now done."
+      ]
+    ],
+    "reason": "选 FALSE。Sally 自称 ex-tenant，且已转向其他中介（as I have now done），不再通过 Poppi 租房。",
+    "contrast": "过去租过不等于 still renting；前缀 ex- 表示以前的。",
+    "terms": {
+      "ex-tenant": "前租客。",
+      "deposit": "押金。",
+      "approachable": "容易接近、愿意沟通的。",
+      "hoover": "用吸尘器清洁。"
+    },
+    "passageSummary": "Sally 对租房中介的差评：因地段方便迅速决定，入住后联系人态度转差，房屋清洁问题无人解决；区分租金高与涨租等细微含义。"
+  },
+  "8": {
+    "anchors": [
+      [
+        1,
+        "When I initially viewed my Poppi Properties flat, I was accompanied by Lillee Eggerton, one of the two staff who run the company.",
+        "When I initially viewed my Poppi Properties flat, I was accompanied by Lillee Eggerton, one of the two staff who run the company."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。initially viewed 指她首次看这套房，不说明她是所有看房者中的第一个。",
+    "contrast": "个人第一次看房与 first person to view 的全体排名不同。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        1,
+        "I knew immediately that it was the right property for me because",
+        "I knew immediately that it was the right property for me because"
+      ],
+      [
+        2,
+        "of the convenient location, and a few days later I paid the deposit and the first two months’ rent.",
+        "of the convenient location, and a few days later I paid the deposit and the first two months’ rent."
+      ]
+    ],
+    "reason": "选 TRUE。I knew immediately ... right property 说明她因地点方便很快作决定，对应 quick decision。",
+    "contrast": "几天后付款不否定最初已立即看中；决定时间与支付时间不同。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "The flat was on the 12th floor, which I admit was a surprise to me as I thought it was lower when I first read about it, but Lillee was very encouraging, and I felt confident that I was making the right choice.",
+        "The flat was on the 12th floor, which I admit was a surprise to me as I thought it was lower when I first read about it, but Lillee was very encouraging, and I felt confident that I was making the right choice."
+      ]
+    ],
+    "reason": "选 FALSE。房子在 12 楼，她原以为楼层更低，说明实际比预期更高；题干说实际 lower than expected，方向反了。",
+    "contrast": "thought it was lower 的 lower 属于预期，不是实际楼层。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        2,
+        "At this point, she was professional and kind, but once I had moved into the property, I discovered that she was far less approachable than she had been during the viewing period and whenever I tried to contact her, she was unavailable.",
+        "At this point, she was professional and kind, but once I had moved into the property, I discovered that she was far less approachable than she had been during the viewing period and whenever I tried to contact her, she was unavailable."
+      ]
+    ],
+    "reason": "选 TRUE。起初 professional and kind，入住后 far less approachable、难联系，对应 behaviour changed over time。",
+    "contrast": "不要求态度在每次联系都不同，只要前后发生变化即可。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        3,
+        "In fact, carpets should be professionally cleaned, but mine had not even been hoovered.",
+        "In fact, carpets should be professionally cleaned, but mine had not even been hoovered."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文谈地毯和烤箱脏，但没说公寓是否带家具（unfurnished）。",
+    "contrast": "有烤箱或地毯不能替代家具配备情况，也不能推出 furnished。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        3,
+        "I had hoped that this problem would be addressed quickly, but nothing happened and so I did the job myself.",
+        "I had hoped that this problem would be addressed quickly, but nothing happened and so I did the job myself."
+      ]
+    ],
+    "reason": "选 FALSE。Sally 最终 I did the job myself（自己清洗），与 employed someone to clean 相反。",
+    "contrast": "should be professionally cleaned 是应有标准，不是实际请过专业清洁。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        3,
+        "No one should have to put up with these problems, particularly when Poppi Properties charge such high rents!",
+        "No one should have to put up with these problems, particularly when Poppi Properties charge such high rents!"
+      ]
+    ],
+    "reason": "选 NOT GIVEN。high rents 说租金高，没说入住期间 raised（上涨）过。",
+    "contrast": "价格水平与随时间上调不同；不能看到 high 就推出加租。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        1,
+        "Often the best way to sort out a problem is to request an informal meeting with your immediate manager to explain your concerns.",
+        "Often the best way to sort out a problem is to request an informal meeting with your immediate manager to explain your concerns."
+      ]
+    ],
+    "reason": "填 informal。on an ... basis 对应先 request an informal meeting，非正式地向直属经理反映。",
+    "contrast": "formal grievance 是非正式沟通不成功后的下一步，不应提前填入。",
+    "terms": {
+      "grievance": "工作中的申诉、不满。",
+      "appeal": "上诉、申诉复核。",
+      "senior": "这里指职级更高的。",
+      "mediation": "调解。"
+    },
+    "passageSummary": "工作申诉先非正式沟通，再查程序并写信、开会、上诉；仍不满意可考虑调解或按文中期限申请劳动仲裁。这里只按阅读材料理解。"
+  },
+  "16": {
+    "anchors": [
+      [
+        1,
+        "You should be able to find details of this in your Company Handbook, HR or Personnel manual, or on your company’s HR intranet site.",
+        "You should be able to find details of this in your Company Handbook, HR or Personnel manual, or on your company’s HR intranet site."
+      ]
+    ],
+    "reason": "填 manual。handbook / ... / intranet 列出了解申诉程序的三个渠道，空格对应 HR or Personnel manual。",
+    "contrast": "procedure 是要查的内容，manual 才是与 handbook 并列的载体。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        2,
+        "Explain your problem, and if you can think of a possible solution for resolving it, give details of this.",
+        "Explain your problem, and if you can think of a possible solution for resolving it, give details of this."
+      ]
+    ],
+    "reason": "填 solution。suggest ... 对应 if you can think of a possible solution ... give details，提出解决办法。",
+    "contrast": "problem 已在信中说明，本空是另外可以建议的处理方法。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "You are entitled to ask either a colleague from work or a trade union representative to go to the meeting with you.",
+        "You are entitled to ask either a colleague from work or a trade union representative to go to the meeting with you."
+      ]
+    ],
+    "reason": "填 colleague。right to be accompanied 对应 entitled to ask ... go to the meeting with you，可由同事或工会代表陪同。",
+    "contrast": "manager 是会议中的管理方；不能把与会经理当成陪同人。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        3,
+        "A further meeting should then be called, which should be led by a more senior manager if possible.",
+        "A further meeting should then be called, which should be led by a more senior manager if possible."
+      ]
+    ],
+    "reason": "填 senior。manager who is ... to the previous one 对应 a more senior manager：上诉会议尽量由更高级的经理主持。",
+    "contrast": "不是要求新经理年龄更大；senior 指职级更高。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        3,
+        "If you are still not satisfied with the decision made at this meeting, you may consider whether one way to solve the problem might be through mediation.",
+        "If you are still not satisfied with the decision made at this meeting, you may consider whether one way to solve the problem might be through mediation."
+      ]
+    ],
+    "reason": "填 mediation。possibility of ... 对应 consider whether ... through mediation，考虑调解途径。",
+    "contrast": "tribunal claim 是另一并列途径，不是该空；mediation 可内部或外部进行。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        3,
+        "You must do this no more than three months after the time when the event you are complaining about happened.",
+        "You must do this no more than three months after the time when the event you are complaining about happened."
+      ]
+    ],
+    "reason": "填 three 或 3。within ... months 对应 no more than three months after ... event happened，起算点是事件发生。",
+    "contrast": "不是上诉会议后再给三个月；不要把期限起点读错。",
+    "terms": {}
+  },
+  "22": {
+    "anchors": [
+      [
+        1,
+        "As a private hire driver, you can only collect passengers who have pre-booked through your operator.",
+        "As a private hire driver, you can only collect passengers who have pre-booked through your operator."
+      ]
+    ],
+    "reason": "填 operator。by arrangement with an ... 对应 pre-booked through your operator，私人出租车须由调度方预订。",
+    "contrast": "出租车可街头招手，private hire 不可以；本空不是 passenger。",
+    "terms": {
+      "operator": "这里指派单、预约的运营调度方。",
+      "roadworthy": "适合安全上路的。",
+      "self-employed": "自雇的。",
+      "numeracy": "基本计算能力。"
+    },
+    "passageSummary": "出租车与私人出租车预订方式不同，司机需帮助乘客和行李、保持车辆状态；文章介绍时段需求、自雇比例和驾照、当地地理与机械知识。"
+  },
+  "23": {
+    "anchors": [
+      [
+        3,
+        "* assist passengers with any physical conditions that make it difficult for them to get in and out of the vehicle",
+        "* assist passengers with any physical conditions that make it difficult for them to get in and out of the vehicle"
+      ]
+    ],
+    "reason": "填 physical。... problems 对应 physical conditions that make ... get in and out difficult，指身体状况造成上落车困难。",
+    "contrast": "行李装卸是上一项职责；本空专指身体行动问题。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        6,
+        "The job allows you to choose your hours, but you will find more work in the evenings.",
+        "The job allows you to choose your hours, but you will find more work in the evenings."
+      ]
+    ],
+    "reason": "填 evenings。greatest demand 对应 more work，指晚间客运需求较多。",
+    "contrast": "40–60 hours 是每周工时，不是需求最大时段；注意用复数原词。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        6,
+        "In the UK, 17% of taxi drivers are employed full time, 17% are employed part time and 66% are self-employed.",
+        "In the UK, 17% of taxi drivers are employed full time, 17% are employed part time and 66% are self-employed."
+      ]
+    ],
+    "reason": "填 self-employed。66% 超过半数，对应 majority of drivers。",
+    "contrast": "17% full time 和 17% part time 都不是大多数；连字符复合词按一词处理。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        8,
+        "You may also need to pass a test of knowledge about the local geography.",
+        "You may also need to pass a test of knowledge about the local geography."
+      ]
+    ],
+    "reason": "填 geography。familiar with ... of the area 对应 pass a test of knowledge about the local geography，熟悉当地地理路线。",
+    "contrast": "driving licence 是资格证，不是需要熟悉的地域知识。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        10,
+        "Evidence of basic mechanical skills, such as RQF level 4, would also be welcome.",
+        "Evidence of basic mechanical skills, such as RQF level 4, would also be welcome."
+      ]
+    ],
+    "reason": "填 mechanical。evidence ... ability 对应 Evidence of basic mechanical skills ... welcome，机械常识证明可加分。",
+    "contrast": "additional driver training 是另一项，空格在 ability 前要形容词；不是必须高级机械资质。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        1,
+        null
+      ]
+    ],
+    "reason": "选 vi。A 段从 Westwood 经营 62 年、11 岁开始，到儿子是第六代，突出 long-standing family business。",
+    "contrast": "寒冬只是开头背景；主旨不是某年收成或空气质量。",
+    "terms": {
+      "forced rhubarb": "通过避光促成长出的粉红嫩茎大黄。",
+      "crown": "这里指大黄根冠、根株。",
+      "dormancy": "休眠。",
+      "cream of the crop": "同类中最优秀的。",
+      "labour-intensive": "劳动密集的、费人工的。"
+    },
+    "passageSummary": "约克郡促成大黄的生产依赖先冷、后暗暖的过程。文章解释当地优势、品质复兴、与荷兰品种的差异、烛光下人工采摘及偶然起源。"
+  },
+  "29": {
+    "anchors": [
+      [
+        2,
+        null
+      ]
+    ],
+    "reason": "选 vii。B 段介绍 Rhubarb Triangle，解释土壤、煤矿燃料和旧工业环境为何有利，支持 best region for forced rhubarb。",
+    "contrast": "iii 只抓污染的细节，遗漏作者用这些因素说明该地区适宜种植的主旨。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        3,
+        null
+      ]
+    ],
+    "reason": "选 ii。C 段称其 cream of the crop，比较嫩滑风味与粗苦室外品种，并写厨师重新青睐，概括消费者偏爱的品种。",
+    "contrast": "不是列全国可种植地点；重点是品质优势和需求复兴。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        4,
+        null
+      ]
+    ],
+    "reason": "选 i。D 段对比荷兰用酸提前上市和约克郡自然受寒后较晚上市，但后者风味更好，说明 extra time is worth it。",
+    "contrast": "较早上市不是唯一优势；Westwood 明说荷兰品种 flavour nowhere near，解释等待的价值。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        5,
+        null
+      ]
+    ],
+    "reason": "选 iv。E 段现场观察 pullers 用蜡烛照明、按手臂长度挑选并熟练采摘，对应 observing the selection process。",
+    "contrast": "本段不是讲大黄如何最初被发现；那在 F 段。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        6,
+        null
+      ]
+    ],
+    "reason": "选 v。F 段用旧根茎偶然丢到温热马粪堆的故事解释工艺可能的起源，对应 suggesting a possible beginning。",
+    "contrast": "是讲发现过程，不是建议今天都照此生产；故事语气与科研定论不同。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        3,
+        "It’s this that is the ‘cream of the crop’, the upper class of the rhubarb family.",
+        "It’s this that is the ‘cream of the crop’, the upper class of the rhubarb family."
+      ]
+    ],
+    "reason": "选 C。cream of the crop、upper class 及与 coarse, bitter stuff 的对比，赞扬其胜过其他大黄品种。",
+    "contrast": "A 传统学校馅饼是负面回忆；B 嫩茎只是优势细节，C 概括本段整体比较；D 无种植地点数量评价。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        3,
+        "The slender magenta spears, with a sherbet-tangy flavour and delicate texture, are a far cry from that coarse, bitter stuff.",
+        "The slender magenta spears, with a sherbet-tangy flavour and delicate texture, are a far cry from that coarse, bitter stuff."
+      ],
+      [
+        3,
+        "It’s also a rare local fruit (although technically a vegetable) at a time when imports dominate, and a welcome splash of colour in the drab winter months.",
+        "It’s also a rare local fruit (although technically a vegetable) at a time when imports dominate, and a welcome splash of colour in the drab winter months."
+      ]
+    ],
+    "reason": "选 B。鲜艳颜色、sherbet-tangy flavour 和 delicate texture，说明 attractive and pleasant to eat，吸引厨师与美食作者。",
+    "contrast": "A 文中说种植复杂且价格高；C 没把产量增加当原因；D 反而说 imports dominate。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        6,
+        "A gardener threw an old crown onto the horse stable muck pile.",
+        "A gardener threw an old crown onto the horse stable muck pile."
+      ]
+    ],
+    "reason": "选 A（by accident）。园丁把旧根丢到热粪堆，意外长出粉红嫩茎，随后被发现并采下。",
+    "contrast": "B 马厩环境不等于动物饲料；C 没有反复实验；D 未说有意培育别的作物。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        4,
+        "In the warm and dark, the shoots appear so quickly that the buds can be heard gently popping.",
+        "In the warm and dark, the shoots appear so quickly that the buds can be heard gently popping."
+      ]
+    ],
+    "reason": "填 popping。make a ... sound 对应 buds ... heard gently popping：快速生长的芽发出轻微爆裂声。",
+    "contrast": "quickly 是速度，空格要声音的描述；popping 与 sound 搭配。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        5,
+        "It’s a relief when a team of ‘pullers’ arrive, all local men, some of whom have been working for Westwood for 40 years.",
+        "It’s a relief when a team of ‘pullers’ arrive, all local men, some of whom have been working for Westwood for 40 years."
+      ]
+    ],
+    "reason": "填 pullers。group of people known as ... 对应 team of pullers，是采摘工的称呼。",
+    "contrast": "pulling 是采摘动作名称，本空要从事动作的人，保留复数。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        5,
+        "Each carries a sturdy candle, and their pale, flickering light reveals a sea of yellow leaves stretching 40 metres to the far wall.",
+        "Each carries a sturdy candle, and their pale, flickering light reveals a sea of yellow leaves stretching 40 metres to the far wall."
+      ]
+    ],
+    "reason": "填 candle。use a ... to inspect 对应每位采摘工拿蜡烛，用微弱光检查茎。",
+    "contrast": "不是 electric light；原文明确说电光会影响颜色。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        5,
+        "The men walk the beds plucking the satiny stems expertly, choosing only the ones that have reached the length of an arm.",
+        "The men walk the beds plucking the satiny stems expertly, choosing only the ones that have reached the length of an arm."
+      ]
+    ],
+    "reason": "填 arm。as long as a human ... 对应 reached the length of an arm，以手臂长度作采摘标准。",
+    "contrast": "不是按人的身高或脚长；不要被 cradling ... in their arms 的搬运描写分散。",
+    "terms": {}
+  }
+}

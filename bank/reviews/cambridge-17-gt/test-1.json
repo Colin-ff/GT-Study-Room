@@ -1,0 +1,525 @@
+{
+  "1": {
+    "anchors": [
+      [
+        1,
+        "You can proceed to the Lost and Found Counter for advice if you cannot find your baggage or would like to report damaged baggage.",
+        "You can proceed to the Lost and Found Counter for advice if you cannot find your baggage or would like to report damaged baggage."
+      ]
+    ],
+    "reason": "选 C（Lost and Found Counter）。suitcase has split（箱子裂开）属于 damaged baggage，原文让旅客去失物招领柜台报告。",
+    "contrast": "Information Desk 负责请求搬运行李帮助，不是本文指定的损坏报告处。",
+    "terms": {
+      "baggage claim belt": "行李提取转盘。",
+      "porter": "搬运行李的服务人员。",
+      "in doubt": "拿不准、有疑问。",
+      "transit hotel": "转机酒店。"
+    },
+    "passageSummary": "机场抵达指南说明行李信息屏、人工协助、损坏报告、海关通道和酒店预订地点，特别注意转机酒店的例外。"
+  },
+  "2": {
+    "anchors": [
+      [
+        5,
+        "These counters do not handle the transit hotels. For these, go to the Reception Desk on Level Three.",
+        "These counters do not handle the transit hotels. For these, go to the Reception Desk on Level Three."
+      ]
+    ],
+    "reason": "选 G（Reception Desk）。普通 Hotel Reservation Counter 不处理 transit hotels；For these 要去三楼接待处。",
+    "contrast": "B 虽名为订房柜台，但文本有明确例外，不能只凭 reserve a room 选。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        3,
+        "Please use the Red Channel if you have items to declare or are in doubt.",
+        "Please use the Red Channel if you have items to declare or are in doubt."
+      ]
+    ],
+    "reason": "选 D（Red Channel）。对免税购买是否超额拿不准，属于 in doubt，原文要求走红色通道。",
+    "contrast": "E 绿色通道用于没有需申报物品、未超过免税限额的明确情况；不确定时走 D。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        1,
+        "You can refer to the flight information television screens on Level Two for the allocation of your baggage claim belt.",
+        "You can refer to the flight information television screens on Level Two for the allocation of your baggage claim belt."
+      ]
+    ],
+    "reason": "选 F（Level Two）。先看二楼航班信息屏，查询 baggage claim belt allocation，确定在哪里取行李。",
+    "contrast": "H 是实际行李转盘；题目还不知道哪个转盘，要先去信息屏所在楼层查询。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        1,
+        "Should you require their assistance with carrying luggage, please ask at the Information Desk.",
+        "Should you require their assistance with carrying luggage, please ask at the Information Desk."
+      ]
+    ],
+    "reason": "选 A。需要搬运行李的 porters 协助时，原文要求 ask at the Information Desk。",
+    "contrast": "不要选 H，行李转盘附近有免费手推车，但题干要 someone 的人工帮助。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        1,
+        "If you are a visitor, returning citizen or permanent resident of Singapore, you may be granted GST relief under certain conditions.",
+        "If you are a visitor, returning citizen or permanent resident of Singapore, you may be granted GST relief under certain conditions."
+      ]
+    ],
+    "reason": "选 FALSE。原文说某些旅客可获得 GST relief（税收减免），所以不是 Everyone 都必须支付。",
+    "contrast": "all goods 描述征税范围，后句又给人群和条件例外；不能只看第一句。本文数据仅作阅读题依据。",
+    "terms": {
+      "relief": "税收语境中指减免。",
+      "refund": "退款、退税。",
+      "deduct": "扣除。",
+      "handling fee": "手续费。"
+    },
+    "passageSummary": "本文介绍历史题材中的 GST 减免和游客退税条件：指定商店、消费门槛、凭证、退款方式及手续费。数字只按本文作答，不作为现行出行政策。"
+  },
+  "7": {
+    "anchors": [
+      [
+        3,
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase.",
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase."
+      ]
+    ],
+    "reason": "选 TRUE。退税条件是 shop at stores with the Tax Free Shopping logo，正对应只能在 certain shops 购买。",
+    "contrast": "不是任意商店都可；购物总额达标也不能代替指定商店条件。",
+    "terms": {}
+  },
+  "8": {
+    "anchors": [
+      [
+        3,
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase.",
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase."
+      ]
+    ],
+    "reason": "选 FALSE。退税要求总额至少 S$300，而 S$150 不足；题干说可退税与门槛冲突。",
+    "contrast": "单店 minimum S$100 与总额 S$300 需同时满足，不是只看单店条件。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        2,
+        "Tax-free shopping As a tourist or visitor, you can apply for a refund at Customs of the 3% GST on goods purchased during your stay in Singapore, provided you:",
+        "Tax-free shopping As a tourist or visitor, you can apply for a refund at Customs of the 3% GST on goods purchased during your stay in Singapore, provided you:"
+      ],
+      [
+        3,
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase.",
+        "e shop at stores with the ‘Tax Free Shopping’ logo e spend a minimum amount of S$100 at any one shop, and at least S$$300 in total e obtain a Global Refund Cheque from the place of purchase."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文列了退税购物条件和所需凭据，没有给 reclaim tax 的时限。",
+    "contrast": "during your stay 说购买商品的时间，不是申请退税期限；不能据此补一个期限。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        5,
+        "Please note that a handling fee will be deducted from the GST amount for the refund service.",
+        "Please note that a handling fee will be deducted from the GST amount for the refund service."
+      ]
+    ],
+    "reason": "选 TRUE。handling fee will be deducted from ... refund 对应 charged ... for administration：退税会扣手续费。",
+    "contrast": "可选择额外面值购物券不代表免手续费，两项政策描述不同。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        0,
+        "This eye-catching landmark has a distinctive Chinese-styled green roof and red pillars.",
+        "This eye-catching landmark has a distinctive Chinese-styled green roof and red pillars."
+      ]
+    ],
+    "reason": "填 eye-catching landmark。The ... Hotel is described as an ... 对应 This eye-catching landmark，指外观醒目的地标。",
+    "contrast": "green roof / red pillars 是外观细节，不适合 as an 后概括酒店身份；连字符词算一词。",
+    "terms": {
+      "landmark": "地标。",
+      "cemetery": "墓地。",
+      "retain": "保留。",
+      "terminal": "这里指电脑终端。"
+    },
+    "passageSummary": "乌节路步行指南从万豪酒店到 Tangs、Lucky Plaza 和 Paragon，涉及地标外观、唐氏商店历史及购物中心自助订票设施。"
+  },
+  "12": {
+    "anchors": [
+      [
+        2,
+        "The plot faced a cemetery, which could be considered a bad omen.",
+        "The plot faced a cemetery, which could be considered a bad omen."
+      ]
+    ],
+    "reason": "填 cemetery。located opposite 对应 faced（面朝、对面是），地块对面是墓地。",
+    "contrast": "Swatow 是屋瓦来源，不是地块对面的地点。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        2,
+        "Even when the original building was torn down in 1982 to give way to the present superstore and skyscraper hotel, it retained its unique Chinese architecture.",
+        "Even when the original building was torn down in 1982 to give way to the present superstore and skyscraper hotel, it retained its unique Chinese architecture."
+      ]
+    ],
+    "reason": "填 architecture，可带 unique Chinese。very similar to ... original 对应重建仍 retained its unique Chinese architecture（保留独特中式建筑风格）。",
+    "contrast": "不是说保留原有整栋建筑；原建筑已拆，保留的是风格特征。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        5,
+        "Also available are a number of computer terminals for self-booking.",
+        "Also available are a number of computer terminals for self-booking."
+      ]
+    ],
+    "reason": "填 computer terminals（也接受 terminals for self-booking）。无需等待帮助，对应可自行预订的电脑终端。",
+    "contrast": "sculptures 是室外艺术品，不用于订票；答案最多三词。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        0,
+        "It’s almost as if the majority of job seekers are afraid to let their own personality shine through.",
+        "It’s almost as if the majority of job seekers are afraid to let their own personality shine through."
+      ]
+    ],
+    "reason": "填 personality。do not dare to reveal 对应 afraid to let ... shine through（不敢展现），指真正的个性。",
+    "contrast": "career history 是已有经历，作者说很多简历只写这些却不表现个性。",
+    "terms": {
+      "personality": "个性。",
+      "dull": "乏味的。",
+      "viewpoint": "视角、观点。",
+      "cliché": "陈词滥调、套话。"
+    },
+    "passageSummary": "有吸引力的简历应呈现真实个性和独特优势，可以借专业写作者或同事视角，但避免招聘套话。"
+  },
+  "16": {
+    "anchors": [
+      [
+        1,
+        "Your CV will be dull, and likely to be swiftly passed over by an employer.",
+        "Your CV will be dull, and likely to be swiftly passed over by an employer."
+      ]
+    ],
+    "reason": "填 dull。若不表现独特之处，CV will be dull（乏味），对应 appear ... to the reader。",
+    "contrast": "passed over 是被忽略的后果，空格要描述读起来的特点。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        1,
+        "This isn’t about making unsupportable statements: it’s about choosing words that describe the qualities that drive your success.",
+        "This isn’t about making unsupportable statements: it’s about choosing words that describe the qualities that drive your success."
+      ]
+    ],
+    "reason": "填 qualities。让自己工作出色的因素，对应 qualities that drive your success / what makes you good at your job。",
+    "contrast": "不是凭空作 unsupported statements，而是选择词语准确描述真实品质；保留复数。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "It involves the ability to see yourself from different people’s viewpoints.",
+        "It involves the ability to see yourself from different people’s viewpoints."
+      ]
+    ],
+    "reason": "填 viewpoints。consideration ... on ... of others 对应 see yourself from different people’s viewpoints（从他人视角看自己）。",
+    "contrast": "professional writer 是帮助获得视角的人，并非本空答案。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        2,
+        "Asking a colleague that you trust is also a good way to find out how others see your strengths.",
+        "Asking a colleague that you trust is also a good way to find out how others see your strengths."
+      ]
+    ],
+    "reason": "填 colleague。dependable 对应 that you trust；find ... good points 对应 how others see your strengths。",
+    "contrast": "不一定只能找专业写作者；此处明确另一个办法是可信赖同事的意见。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        3,
+        "Try not to use classic recruitment clichés.",
+        "Try not to use classic recruitment clichés."
+      ]
+    ],
+    "reason": "填 clichés（cliches 也可）。used by many applicants 对应 everyone says ... communication / organisational skills，指千篇一律的套话。",
+    "contrast": "不是要求避免写任何技能，而是避免没有个性、缺乏具体内容的陈词滥调。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        3,
+        "• Cut down documents and stationery to the bare essentials.",
+        "• Cut down documents and stationery to the bare essentials."
+      ]
+    ],
+    "reason": "填 stationery。paperwork 对应 documents，minimum ... necessary 对应 bare essentials，另一个并列对象是文具。",
+    "contrast": "注意 stationery 是文具；stationary 是静止的，拼写不同。",
+    "terms": {
+      "stationery": "文具。",
+      "retrieval": "取回、查找。",
+      "label": "标签。",
+      "prioritise": "按优先顺序安排。"
+    },
+    "passageSummary": "有条理的工作环境要精简文具、照片和文件，合理存放、贴标签；规划明天并定期做长期思考可提升专注。"
+  },
+  "22": {
+    "anchors": [
+      [
+        3,
+        "One or two carefully selected photos to make your desk feel like home are fine, but avoid too many.",
+        "One or two carefully selected photos to make your desk feel like home are fine, but avoid too many."
+      ]
+    ],
+    "reason": "填 photos。restricting the number 对应 one or two ... but avoid too many，指限制桌面个人照片数量。",
+    "contrast": "不是完全不能有私人装饰，而是少量 carefully selected photos。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        4,
+        null
+      ]
+    ],
+    "reason": "填 locations。deciding on sensible ... 对应 create locations ... logically，按物品使用位置和频率安排存放处。",
+    "contrast": "materials 是被存的东西，空格要决定放置的地点，保留复数。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        5,
+        "Eliminate desktop chaos by using trays, magazine files, or whatever you fancy and add clear labels such as ‘In’, ‘Out’, ‘For Action’, ‘Current Projects’ or other relevant categories.",
+        "Eliminate desktop chaos by using trays, magazine files, or whatever you fancy and add clear labels such as ‘In’, ‘Out’, ‘For Action’, ‘Current Projects’ or other relevant categories."
+      ]
+    ],
+    "reason": "填 labels。containers ... identified by 对应 trays / magazine files ... add clear labels，用标签区分正在处理的文件。",
+    "contrast": "In / Out / For Action 是标签内容例子，不是本空要的类别名。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        6,
+        "Ask: do I know of a tax or legal requirement for retaining it?",
+        "Ask: do I know of a tax or legal requirement for retaining it?"
+      ]
+    ],
+    "reason": "填 requirement。official ... to do so 对应 tax or legal requirement for retaining it，指依法或税务要求保存文件。",
+    "contrast": "不应看到 future 就所有文件都留；题目问官方保存要求。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        8,
+        "Implementing regular planning strategies will sharpen your focus, thereby keeping you on track with your work.",
+        "Implementing regular planning strategies will sharpen your focus, thereby keeping you on track with your work."
+      ]
+    ],
+    "reason": "填 focus。improve ... of work 对应 sharpen your focus（使注意力更集中），这是规划的总体好处。",
+    "contrast": "execution 是执行阶段；题目问规划提升员工哪方面的工作状态。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        9,
+        "Near the close of each work day, implement a 10- to 15-minute routine to wrap up loose ends and prioritise key tasks.",
+        "Near the close of each work day, implement a 10- to 15-minute routine to wrap up loose ends and prioritise key tasks."
+      ]
+    ],
+    "reason": "填 tasks。important ... given due attention 对应 prioritise key tasks，提前安排明天的重要任务。",
+    "contrast": "routine 是每天规划的习惯，不是被排序优先处理的事项。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        null
+      ]
+    ],
+    "reason": "选 iv。A 节从浅矿转向深矿、需要人工照明，引出 firedamp 遇火爆炸的新危险；对应 new danger caused by developments in mining。",
+    "contrast": "ii 说为优质煤而深挖，但原文没有把煤质当原因；重点是更深开采带来的风险。",
+    "terms": {
+      "firedamp": "矿井瓦斯，主要成分甲烷。",
+      "shaft": "矿井竖井。",
+      "ventilation": "通风。",
+      "mesh screen": "金属网罩。",
+      "manpower": "人力。",
+      "recognition": "认可、应有的承认。"
+    },
+    "passageSummary": "煤矿越深，瓦斯遇火爆炸风险越大。文章回顾无焰照明尝试、社会关注、Davy 与 Stephenson 的争议，以及未获充分认可的 Clanny。"
+  },
+  "29": {
+    "anchors": [
+      [
+        1,
+        null
+      ]
+    ],
+    "reason": "选 vi。B 节详述鱼皮发光和燧石火花两类不用 naked flame 的早期照明尝试及问题。",
+    "contrast": "v 关注空气质量损害健康，不是本段核心；通风只是引出安全照明需求。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        2,
+        "The general response, however, was to keep going and reluctantly accept the inevitable deaths from ignition of firedamp as a regrettable, but not especially remarkable, consequence of coal mining.",
+        "The general response, however, was to keep going and reluctantly accept the inevitable deaths from ignition of firedamp as a regrettable, but not especially remarkable, consequence of coal mining."
+      ],
+      [
+        3,
+        "However, the clerical, medical and legal professions were beginning to take notice.",
+        "However, the clerical, medical and legal professions were beginning to take notice."
+      ]
+    ],
+    "reason": "选 iii。C 节从对矿工死亡的默许，转向专业人士关注并成立协会筹款，体现改善矿工条件的意识增强。",
+    "contrast": "vii 错把推动者说成矿工；原文明说矿工无力行动，是专业人士采取措施。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        4,
+        null
+      ]
+    ],
+    "reason": "选 i。D 节比较 Davy 和 Stephenson 的安全灯及对发明贡献的争论，discussion and argument 对应 controversy over two versions。",
+    "contrast": "不是说谁的灯不安全，而是双方类似设计和贡献认可的争议。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        5,
+        null
+      ]
+    ],
+    "reason": "选 viii。E 节指出 Clanny 才是真正先驱，帮助后来的两人，却 remains a forgotten hero，对应从未充分获认可的人。",
+    "contrast": "虽然获过银章，仍可说整体贡献未获应有认可；不是完全没获任何奖。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        0,
+        "This was a natural gas, principally consisting of methane, that exploded on contact with a naked flame. The first known major firedamp explosion, which killed 99 people, took place in Belgium in 1514",
+        "This was a natural gas, principally consisting of methane, that exploded on contact with a naked flame. The first known major firedamp explosion, which killed 99 people, took place in Belgium in 1514"
+      ]
+    ],
+    "reason": "填 explosion。serious risk of ... due to firedamp 对应气体遇明火 exploded，随后举 major firedamp explosion。",
+    "contrast": "firedamp 已在空后，空格要危险事件；不是照明工具。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        1,
+        "Many mines had only one shaft leading from the surface down to the working area below.",
+        "Many mines had only one shaft leading from the surface down to the working area below."
+      ]
+    ],
+    "reason": "填 shaft。separating ... into two parts 对应 dividing this into a downcast and an upcast；this 指矿井的单一竖井 shaft。",
+    "contrast": "working area 在下方，不是分成进风和回风两条通路的主体。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        1,
+        "An alternative was a device invented in about 1750, consisting of a flint which struck against a piece of iron when a handle was turned, creating a shower of sparks which lit up the surrounding area. These were believed to be too cool to ignite firedamp.",
+        "An alternative was a device invented in about 1750, consisting of a flint which struck against a piece of iron when a handle was turned, creating a shower of sparks which lit up the surrounding area. These were believed to be too cool to ignite firedamp."
+      ]
+    ],
+    "reason": "填 sparks。device ... created ... 对应燧石与铁撞击产生 a shower of sparks；these 被认为温度低而不引燃气体。",
+    "contrast": "phosphorus 是前一种鱼皮方案的物质，不是这台装置产生的东西。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        1,
+        "This device had major drawbacks — extra manpower had to be used to operate it continuously, and it also required regular maintenance and replacement.",
+        "This device had major drawbacks — extra manpower had to be used to operate it continuously, and it also required regular maintenance and replacement."
+      ]
+    ],
+    "reason": "填 manpower。additional ... as well as maintenance 对应 extra manpower ... operate it continuously，需额外人力持续操作。",
+    "contrast": "maintenance / replacement 已在题干；不要把它们再填进人力这一空。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        2,
+        "The general response, however, was to keep going and reluctantly accept the inevitable deaths from ignition of firedamp as a regrettable, but not especially remarkable, consequence of coal mining.",
+        "The general response, however, was to keep going and reluctantly accept the inevitable deaths from ignition of firedamp as a regrettable, but not especially remarkable, consequence of coal mining."
+      ]
+    ],
+    "reason": "选 A。矿主通常 keep going，把死亡视作 regrettable but not especially remarkable，说明大多没有充分重视安全。",
+    "contrast": "B 没说受批评；C 没说强迫手段；D 他们知道死亡风险，只是接受，并非 unaware。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        3,
+        "After 92 men and boys were killed in 1812 by an explosion at Felling Colliery in northern England, several professional people took action and a society was set up to raise funds for the discovery of new methods of lighting and ventilating mines.",
+        "After 92 men and boys were killed in 1812 by an explosion at Felling Colliery in northern England, several professional people took action and a society was set up to raise funds for the discovery of new methods of lighting and ventilating mines."
+      ]
+    ],
+    "reason": "选 B。1812 爆炸后专业人士采取行动、成立协会筹钱找安全照明通风方法，体现社会态度开始转变。",
+    "contrast": "A 没写新法律；C 与他们开始关切相反；D 没发起矿工安全程序培训。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        4,
+        "Air could enter the lamp through the holes, but they were too small to allow the flame of the lamp to pass through them and ignite any firedamp present in the mine tunnels.",
+        "Air could enter the lamp through the holes, but they were too small to allow the flame of the lamp to pass through them and ignite any firedamp present in the mine tunnels."
+      ]
+    ],
+    "reason": "选 D。mesh screen 的小孔让空气进入，却不让火焰穿出，对应 could not pass beyond the mesh screen。",
+    "contrast": "C 与 air could enter 相反；A 没说燃烧时间短；B 关键不是火焰整体大小，而是无法穿过网孔。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        4,
+        "However, a few weeks prior to Davy’s presentation, an engineer called George Stephenson had independently designed and demonstrated a lamp based on the same scientific principles.",
+        "However, a few weeks prior to Davy’s presentation, an engineer called George Stephenson had independently designed and demonstrated a lamp based on the same scientific principles."
+      ]
+    ],
+    "reason": "选 D。Stephenson 在 Davy 发表前 a few weeks prior 已 designed and demonstrated 灯，说明先做出可工作的样机。",
+    "contrast": "A 没写 Davy 因试验不充分拒认；B 命名源于认可延迟，不是 Davy 坚持；C 两者基于 same scientific principles。",
+    "terms": {}
+  }
+}

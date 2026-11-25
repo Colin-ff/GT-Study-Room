@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-25 — Cambridge 16–17 Reading review
+
+### Added
+
+- Add source evidence and Chinese explanations for all 320 Reading questions in Cambridge 16 and 17 GT, Tests 1–4 in each book.
+- Highlight exact source sentences, including evidence spanning multiple stored text blocks. NOT GIVEN questions label the excerpt as related text rather than confirmation of the claim.
+- Explain English paraphrases, blank-adjacent wording and required word forms; discuss distractors and distinguish FALSE from NOT GIVEN.
+- Add summaries and shared vocabulary notes for all 41 passages. Use the existing wrong/unanswered filters, evidence location and explanation dialogue after submission and in History.
+
+### Fixed and checked
+
+- Correct the OCR text “pack layout” to “back layout” in Cambridge 17 Test 2, matching the term required by Q37.
+- Verify complete question coverage, valid block references, unique exact evidence matches and generated JavaScript syntax across all eight tests.
+- Preserve existing test IDs and browser-local answers, history, highlights, vocabulary and writing drafts. No storage migration is required.
+
+Explanations and follow-up replies remain bundled notes and rules, not real-time AI.
+
 ## 2026-11-25 — Cambridge 15 Reading review
 
 ### Added

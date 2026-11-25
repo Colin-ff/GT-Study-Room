@@ -1,0 +1,516 @@
+{
+  "1": {
+    "anchors": [
+      [
+        4,
+        "I find it fascinating. I'm studying it at school, and the teacher is very knowledgeable, though I think we spend too much time listening to her； rd like to meet more people working in the sector, and learn from their experience.",
+        "I find it fascinating. I'm studying it at school, and the teacher is very knowledgeable, though I think we spend too much time listening to her； rd like to meet more people working in the sector, and learn from their experience."
+      ]
+    ],
+    "reason": "选 D。Violeta 说旅游业 fascinating（很吸引人），但认为课堂 too much time listening，并希望接触从业者；对应 interested despite the way it is taught（虽不满意教法仍感兴趣）。",
+    "contrast": "E 担心过无聊，但实际上喜欢老师的教法，并非对现有教法不满。",
+    "terms": {
+      "optional subject": "选修课。",
+      "diplomatic service": "外交部门、外交工作。",
+      "high spot": "最精彩或最令人期待的部分。",
+      "push someone": "这里指严格要求、督促某人。"
+    },
+    "passageSummary": "五位学生讲述选修课：西班牙语、历史、计算机、旅游和艺术。匹配时区分对学科、教师教法、实际难度及未来工作的态度。"
+  },
+  "2": {
+    "anchors": [
+      [
+        2,
+        "My plan is to study history at university, and maybe go into the diplomatic service, so I can apply a knowledge of history.",
+        "My plan is to study history at university, and maybe go into the diplomatic service, so I can apply a knowledge of history."
+      ]
+    ],
+    "reason": "选 B。Lucy 想进入 diplomatic service（外交部门），以便 apply a knowledge of history；对应 career that makes use of the subject（运用该学科知识的职业）。",
+    "contrast": "C 虽喜欢编程，却明确说将进入家族零售业，不能把兴趣当职业计划。",
+    "terms": {}
+  },
+  "3": {
+    "anchors": [
+      [
+        3,
+        "I began when I was about eight, so when I started doing it at school, I didn't think I'd have any problem with it, but I was quite wrong!",
+        "I began when I was about eight, so when I started doing it at school, I didn't think I'd have any problem with it, but I was quite wrong!"
+      ]
+    ],
+    "reason": "选 C。Mark 原以为学过编程便不会有困难（didn’t think ... any problem），后来承认 quite wrong；对应 harder than expected。",
+    "contrast": "E 的担心被证明多余，实际更有趣；C 才是低估了难度。",
+    "terms": {}
+  },
+  "4": {
+    "anchors": [
+      [
+        5,
+        "I needn't have worried, though - our teacher gets us to do lots of fun things, so there's no risk of getting bored.",
+        "I needn't have worried, though - our teacher gets us to do lots of fun things, so there's no risk of getting bored."
+      ]
+    ],
+    "reason": "选 E。Walid 说课堂有 lots of fun things，且 no risk of getting bored；对应 lessons very entertaining（课堂有趣）。",
+    "contrast": "C 的 high spot 是喜欢这门课；E 更直接描述课堂活动令人开心。",
+    "terms": {}
+  },
+  "5": {
+    "anchors": [
+      [
+        1,
+        "Mr Peckham really pushes us, and offers us extra assignments, to help us improve. That's good for me, because otherwise I'd be quite lazy.",
+        "Mr Peckham really pushes us, and offers us extra assignments, to help us improve. That's good for me, because otherwise I'd be quite lazy."
+      ]
+    ],
+    "reason": "选 A。老师 really pushes us 并布置 extra assignments，帮助 improve；Krishnan 说 That’s good for me，正对应 appreciates the benefit of challenging work。",
+    "contrast": "重点是认可严格要求和额外作业的好处，不是仅仅喜欢科目。",
+    "terms": {}
+  },
+  "6": {
+    "anchors": [
+      [
+        2,
+        "B Lucy History is my favourite subject, and it's fascinating to see how what we learn about the past is relevant to what's going on in the world now.",
+        "B Lucy History is my favourite subject, and it's fascinating to see how what we learn about the past is relevant to what's going on in the world now."
+      ]
+    ],
+    "reason": "选 B。Lucy 发现学到的 past 与 world now 有关联（relevant to），对应 connection between two things：历史与当下。",
+    "contrast": "不是问两门课程的联系，也不是父母职业与选课的联系。",
+    "terms": {}
+  },
+  "7": {
+    "anchors": [
+      [
+        0,
+        "As usual, the festival will be held in the last weekend of June, this year on Saturday to Monday, 27-29 June.",
+        "As usual, the festival will be held in the last weekend of June, this year on Saturday to Monday, 27-29 June."
+      ]
+    ],
+    "reason": "选 TRUE。As usual（照常）和 last years festival（去年的节日）一起说明这是每年举行的活动，对应 every year。",
+    "contrast": "不要因只列出今年日期而忽略 As usual 和去年的活动。",
+    "terms": {
+      "craft fair": "手工艺品展销会。",
+      "barbecue": "烧烤活动。",
+      "amateur": "业余的，与 professional 相对。",
+      "bench": "长椅；可对应 seating。"
+    },
+    "passageSummary": "Ripton 节日介绍历史主题、手工艺展、烧烤与赛船。判断题重点看是否每年举办、下雨预案、票价时间和业余乐队的演出时段。"
+  },
+  "8": {
+    "anchors": [
+      [
+        0,
+        "The theme is Ripton through the ages.",
+        "The theme is Ripton through the ages."
+      ]
+    ],
+    "reason": "选 TRUE。主题 Ripton through the ages，演出展示城镇从建立以来如何发展（developed since it was first established），对应 town’s history。",
+    "contrast": "后文有现代音乐，并不否定历史是本届主题；focuses on 不等于只有历史内容。",
+    "terms": {}
+  },
+  "9": {
+    "anchors": [
+      [
+        1,
+        "Come and meet professional artists, designers and craftsmen and women, who will display their jewellery, paintings, ceramics, and much more.",
+        "Come and meet professional artists, designers and craftsmen and women, who will display their jewellery, paintings, ceramics, and much more."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。原文列出珠宝、绘画、陶艺并可接定制订单，但没有比较这些展品与商店商品是否不同（unlike ones found in shops）。",
+    "contrast": "可定制不等于展出的所有商品都与商店不同；原文没有作这一比较。",
+    "terms": {}
+  },
+  "10": {
+    "anchors": [
+      [
+        2,
+        "The barbecue will be held in Palmers Field, or in the town hall if theres rain.",
+        "The barbecue will be held in Palmers Field, or in the town hall if theres rain."
+      ]
+    ],
+    "reason": "选 FALSE。下雨会改在 town hall 举行，和 cancelled if it rains（下雨就取消）直接矛盾。",
+    "contrast": "改变场地不是取消活动，因此不是 NOT GIVEN。",
+    "terms": {}
+  },
+  "11": {
+    "anchors": [
+      [
+        2,
+        "Entry for under 16s is free all day; adults can come for free until 6 pm and pay £5 after that.",
+        "Entry for under 16s is free all day; adults can come for free until 6 pm and pay £5 after that."
+      ]
+    ],
+    "reason": "选 FALSE。成人仅在 6 pm 前免费，之后 pay £5；题干 at any time without charge 把有时段限制扩大为全天免费。",
+    "contrast": "under 16s 的 free all day 是儿童票政策，不能套给 adults。",
+    "terms": {}
+  },
+  "12": {
+    "anchors": [
+      [
+        2,
+        "There'll be live music throughout, with local amateur bands in the afternoon and professional musicians in the evening.",
+        "There'll be live music throughout, with local amateur bands in the afternoon and professional musicians in the evening."
+      ]
+    ],
+    "reason": "选 FALSE。amateur bands 只在 afternoon，evening 是 professional musicians；题干说业余乐手贯穿 whole of the barbecue，范围扩大。",
+    "contrast": "live music throughout 说的是音乐不断，不是全程都由业余乐手表演。",
+    "terms": {}
+  },
+  "13": {
+    "anchors": [
+      [
+        3,
+        "The spectator area by the bridge has plenty of room to stand and cheer the boats home, in addition to a number of benches.",
+        "The spectator area by the bridge has plenty of room to stand and cheer the boats home, in addition to a number of benches."
+      ]
+    ],
+    "reason": "选 TRUE。观赛区有 a number of benches（一些长椅），对应 seating is available。",
+    "contrast": "有站立空间和座位可以同时成立，不要求每人都有座位。",
+    "terms": {}
+  },
+  "14": {
+    "anchors": [
+      [
+        4,
+        "All money raised by the festival will go to support the sports clubs in Ripton.",
+        "All money raised by the festival will go to support the sports clubs in Ripton."
+      ]
+    ],
+    "reason": "选 NOT GIVEN。只说所筹资金支持 sports clubs，没有说会向到场者提出 donate money（捐款）的请求。",
+    "contrast": "活动有收入或收费不能推出现场要求捐款；也没有说绝不募捐，不能选 FALSE。",
+    "terms": {}
+  },
+  "15": {
+    "anchors": [
+      [
+        1,
+        "Examples of tasks that involve this risk are moving 50-kilogramme fertiliser bags from one site to another or carrying heavy buckets of animal feed around fields.",
+        "Examples of tasks that involve this risk are moving 50-kilogramme fertiliser bags from one site to another or carrying heavy buckets of animal feed around fields."
+      ]
+    ],
+    "reason": "填 fertiliser。题目 lifting sacks of 对应 moving ... fertiliser bags，sacks 与 bags 都是袋子，空填袋内的物品。",
+    "contrast": "只需一个词，不能抄 50-kilogramme 或 bags；fertilizer 为可接受美式拼写。",
+    "terms": {
+      "load": "负载、搬运物。",
+      "awkward posture": "不自然、费力的姿势。",
+      "handling aids": "搬运辅助工具。",
+      "repetitive bending": "反复弯腰。"
+    },
+    "passageSummary": "农场搬运的主要风险是负重过大、姿势别扭和反复弯腰。对应改善方法包括分装、车辆运输、搬运辅助工具和工作台。"
+  },
+  "16": {
+    "anchors": [
+      [
+        2,
+        "If a load is bulky or hard to grasp, such as a lively or agitated animal, it will be more difficult to hold while lifting and carrying.",
+        "If a load is bulky or hard to grasp, such as a lively or agitated animal, it will be more difficult to hold while lifting and carrying."
+      ]
+    ],
+    "reason": "填 animal。题目 restless（躁动不安）对应原文 lively or agitated，lifting 对应 hold while lifting and carrying，填被搬动的动物。",
+    "contrast": "agitated 是状态描述，空格要名词，故不是 agitated。",
+    "terms": {}
+  },
+  "17": {
+    "anchors": [
+      [
+        2,
+        "Sometimes a load has to be held away from the body because there is a large obstacle in the area and the person lifting needs to be able to see where their feet are going.",
+        "Sometimes a load has to be held away from the body because there is a large obstacle in the area and the person lifting needs to be able to see where their feet are going."
+      ]
+    ],
+    "reason": "填 obstacle。题目 moving something around a big 对应原文因 large obstacle 必须把重物拿离身体；big 与 large 同义。",
+    "contrast": "不是 moving 大型动物的题；这里解释障碍物迫使人采用不良姿势。",
+    "terms": {}
+  },
+  "18": {
+    "anchors": [
+      [
+        2,
+        "In such cases, handling aids should be purchased that can take the weight off the load and minimise the potential for injury.",
+        "In such cases, handling aids should be purchased that can take the weight off the load and minimise the potential for injury."
+      ]
+    ],
+    "reason": "填 aids。题目 buy ... to help with support 对应 handling aids should be purchased ... take the weight off；buy = purchase，support = 减轻承重。",
+    "contrast": "空格要工具的复数名词；只限一词，不能填 handling aids。",
+    "terms": {}
+  },
+  "19": {
+    "anchors": [
+      [
+        3,
+        "Another risk that relates to awkward posture is repetitive bending when carrying out a task.",
+        "Another risk that relates to awkward posture is repetitive bending when carrying out a task."
+      ]
+    ],
+    "reason": "填 bending。A lot of ... while working 对应 repetitive bending when carrying out a task：反复弯腰。",
+    "contrast": "awkward posture 是风险总类；本行具体问频繁进行的动作。",
+    "terms": {}
+  },
+  "20": {
+    "anchors": [
+      [
+        3,
+        "An example might be repairing a gate that has collapsed onto the ground.",
+        "An example might be repairing a gate that has collapsed onto the ground."
+      ]
+    ],
+    "reason": "填 gate。Fixing a fallen ... 对应 repairing a gate that has collapsed；fixing = repairing，fallen = collapsed。",
+    "contrast": "workbench 是改善姿势的设施，不是正在修理的物体。",
+    "terms": {}
+  },
+  "21": {
+    "anchors": [
+      [
+        1,
+        "Try to be sensitive to how much help a customer wants; be proactive in offering help without being annoying.",
+        "Try to be sensitive to how much help a customer wants; be proactive in offering help without being annoying."
+      ]
+    ],
+    "reason": "填 proactive。空前 A、空后 approach，需要形容词；原文 be proactive ... without being annoying 对应不惹恼顾客的主动销售。",
+    "contrast": "sensitive 是对顾客需求敏感；与主动提供帮助直接对应的是 proactive。",
+    "terms": {
+      "proactive": "主动采取行动的。",
+      "pros and cons": "优点与缺点。",
+      "discreet": "谨慎、不使人难堪的。",
+      "rudeness": "无礼、粗鲁。"
+    },
+    "passageSummary": "零售服务建议包括主动但不强迫、熟悉商品、积极回应、整齐陈列、谨慎处理付款问题，以及始终礼貌。"
+  },
+  "22": {
+    "anchors": [
+      [
+        1,
+        "Suggest a product that naturally accompanies what the customer is considering or point out products for which there are special offers, but dont pressure a customer into buying an item they don't want.",
+        "Suggest a product that naturally accompanies what the customer is considering or point out products for which there are special offers, but dont pressure a customer into buying an item they don't want."
+      ]
+    ],
+    "reason": "填 special offers。recommend 对应 suggest / point out；additional products 对应 naturally accompanies，第二个并列对象是 special offers（特价优惠）。",
+    "contrast": "不要把 products 再填一次；答案需保留两词。",
+    "terms": {}
+  },
+  "23": {
+    "anchors": [
+      [
+        2,
+        "Build up a comprehensive knowledge of all the products in your shop, including the pros and cons of products that are alike but that have been produced under a range of brand names.",
+        "Build up a comprehensive knowledge of all the products in your shop, including the pros and cons of products that are alike but that have been produced under a range of brand names."
+      ]
+    ],
+    "reason": "填 brand names。similar products 对应 products that are alike；different 对应 a range of，比较的是不同品牌下的相似商品。",
+    "contrast": "不是产品优缺点本身，空格与 different 相连，指不同的品牌名称。",
+    "terms": {}
+  },
+  "24": {
+    "anchors": [
+      [
+        2,
+        "Negativity can put customers off instantly.",
+        "Negativity can put customers off instantly."
+      ]
+    ],
+    "reason": "填 negativity。题干 always saying more than no 对应 do not just leave it at that ... follow it with a positive，从而避免 negativity（消极态度）。",
+    "contrast": "no 是不应孤立使用的回答，不是要避免的抽象名词答案。",
+    "terms": {}
+  },
+  "25": {
+    "anchors": [
+      [
+        3,
+        "This attention to presentation keeps the shop tidy, giving the right impression to your customers.",
+        "This attention to presentation keeps the shop tidy, giving the right impression to your customers."
+      ]
+    ],
+    "reason": "填 presentation。Keep an eye on 对应 attention to；把错位货物放回去，保持 tidy，说的是商品陈列 presentation。",
+    "contrast": "fault 指商品瑕疵；本空概括货架上商品的摆放和展示。",
+    "terms": {}
+  },
+  "26": {
+    "anchors": [
+      [
+        4,
+        "For example, if the customers credit card is declined at the till, keep your voice down and enquire about an alternative payment method quietly so that the customer doesnt feel humiliated.",
+        "For example, if the customers credit card is declined at the till, keep your voice down and enquire about an alternative payment method quietly so that the customer doesnt feel humiliated."
+      ]
+    ],
+    "reason": "填 credit card。problems paying 对应 is declined（刷卡被拒）；handle ... with care 对应 be discreet、keep your voice down。",
+    "contrast": "alternative payment method 是之后询问的解决办法；出问题的是信用卡。",
+    "terms": {}
+  },
+  "27": {
+    "anchors": [
+      [
+        5,
+        "Treat each person with respect at all times, even when you are faced with rudeness.",
+        "Treat each person with respect at all times, even when you are faced with rudeness."
+      ]
+    ],
+    "reason": "填 rudeness。题干 should not affect how you treat them 对应 Treat each person with respect ... even ... rudeness：即使顾客无礼仍尊重对待。",
+    "contrast": "discourteous 描述员工不该有的行为，是形容词；本空要顾客表现的名词。",
+    "terms": {}
+  },
+  "28": {
+    "anchors": [
+      [
+        0,
+        null
+      ]
+    ],
+    "reason": "选 vi（A disturbing experience）。A 段讲 Ferrando 在博物馆看到海洋塑料垃圾作品后深受触动、愤怒，profoundly affected / angry 对应 disturbing experience。",
+    "contrast": "艺术作品是触发经历；本段还没有详述他的产品、融资或代际态度。",
+    "terms": {
+      "conspicuous consumption": "炫耀性消费。",
+      "refillable": "可重新装满、可补充使用的。",
+      "seed money": "项目启动资金。",
+      "stake": "这里指股权、股份权益。",
+      "debt": "债务。"
+    },
+    "passageSummary": "文章从塑料污染作品引出可重复使用水瓶，讨论消费地位观念的改变与众筹融资；重点对比过去与现在的消费、融资方式。"
+  },
+  "29": {
+    "anchors": [
+      [
+        1,
+        null
+      ]
+    ],
+    "reason": "选 iv（Two inventions and some physical details）。B 段介绍 foldable bicycle helmet 与 glass water bottle，并描述 strap、closure mechanism 和连接方式。",
+    "contrast": "主旨是两项发明及外形结构，不是论证环保产品为何必要（ii）。",
+    "terms": {}
+  },
+  "30": {
+    "anchors": [
+      [
+        2,
+        null
+      ]
+    ],
+    "reason": "选 ii（The reasons why ... product is needed）。C 段解释减少塑料瓶消费、节省费用和海洋塑料污染，构成产品存在的理由。",
+    "contrast": "status symbol 也是推广目的的一部分；没有介绍融资方案，不能选 iii。",
+    "terms": {}
+  },
+  "31": {
+    "anchors": [
+      [
+        3,
+        null
+      ]
+    ],
+    "reason": "选 viii（Looking back at why water was bottled）。D 段回顾奢侈消费提升地位的时代，进而说明水为何从免费自来水变成瓶装消费品。",
+    "contrast": "此段的过去与消费观念解释的是瓶装水兴起，不是资金获取机会有限（i）。",
+    "terms": {}
+  },
+  "32": {
+    "anchors": [
+      [
+        4,
+        null
+      ]
+    ],
+    "reason": "选 v（The contrasting views of different generations）。E 段对照如今青少年眼中 ultra cool 的保温瓶、40 岁以上人的过时感及 1970s 青少年的回避。",
+    "contrast": "塑料瓶只是背景；段落突出同一类物件在不同代际中的不同评价。",
+    "terms": {}
+  },
+  "33": {
+    "anchors": [
+      [
+        5,
+        null
+      ]
+    ],
+    "reason": "选 i（A time when opportunities were limited）。F 段重点说明过去发明者融资只能靠银行、家人或信用卡，与如今更多途径相对照。",
+    "contrast": "开头提全球市场难进入，但没有讨论替代某消费品的具体困难，不能因 hard 就选 vii。",
+    "terms": {}
+  },
+  "34": {
+    "anchors": [
+      [
+        6,
+        null
+      ]
+    ],
+    "reason": "选 iii（A no-risk solution）。G 段详述众筹：捐款人不持股（no stake）、创办者不负债（no debt），且预先 tests demand，概括融资方案优势。",
+    "contrast": "标题的 no-risk 是概括其降低债务和需求不确定性的做法，不代表任何创业都绝对零风险。",
+    "terms": {}
+  },
+  "35": {
+    "anchors": [
+      [
+        2,
+        "Indeed, environmentalists estimate that by 2050 there will be more plastic in our oceans than fish and thafs mainly down to such bottles. 'We are trying to create a sense that being environmentally sophisticated is a status symbol/ he adds. 'We want people to clip their bottles onto what they are wearing, to show that they are recycling – and to look cool.'",
+        "Indeed, environmentalists estimate that by 2050 there will be more plastic in our oceans than fish and thafs mainly down to such bottles. 'We are trying to create a sense that being environmentally sophisticated is a status symbol/ he adds. 'We want people to clip their bottles onto what they are wearing, to show that they are recycling – and to look cool.'"
+      ]
+    ],
+    "reason": "选 D。Ferrando 希望人们把水瓶挂在身上，show that they are recycling、look cool，对应 proud to show it（自豪地展示）。",
+    "contrast": "A 没说与头盔配套；B 省钱指减少反复购买瓶装水，没比较单个瓶子的价格；C 没说针对所有年龄设计。",
+    "terms": {}
+  },
+  "36": {
+    "anchors": [
+      [
+        3,
+        "D Ferrando's story is fascinating because it seems like an indicator of something unexpected.",
+        "D Ferrando's story is fascinating because it seems like an indicator of something unexpected."
+      ],
+      [
+        4,
+        "E Today, though, conspicuous extravagance no longer seems desirable among consumers.",
+        "E Today, though, conspicuous extravagance no longer seems desirable among consumers."
+      ]
+    ],
+    "reason": "选 D。故事反映从 conspicuous consumption 提升地位到 recycling fashionable 的变化，正是 change in people’s attitudes。",
+    "contrast": "A 不是说创意年龄年轻；B 的旧式外观只是例子；C 消费选择增加不是作者觉得 fascinating 的核心。",
+    "terms": {}
+  },
+  "37": {
+    "anchors": [
+      [
+        1,
+        "B Ferrando runs a Spanish-based design company, Closca, that produces an ingenious foldable bicycle helmet.",
+        "B Ferrando runs a Spanish-based design company, Closca, that produces an ingenious foldable bicycle helmet."
+      ],
+      [
+        5,
+        "Although its foldable bike helmet is available in some outlets in New York, including the Museum of Modern Art, it can be very hard for any design entrepreneur to really take off in the global mass market, though not as hard as it might have been in the past.",
+        "Although its foldable bike helmet is available in some outlets in New York, including the Museum of Modern Art, it can be very hard for any design entrepreneur to really take off in the global mass market, though not as hard as it might have been in the past."
+      ]
+    ],
+    "reason": "选 A。头盔是实用的折叠骑行用品，又在 Museum of Modern Art 等处出售；结合设计语境，作者暗示它兼有 functional 和 artistic value。",
+    "contrast": "B 没说主打老年人；C 恰好说进入全球大众市场很难，不能推出全球巨大成功；D 没有与水瓶比较精彩程度。",
+    "terms": {}
+  },
+  "38": {
+    "anchors": [
+      [
+        5,
+        "If an entrepreneur had wanted to fund a smart invention a few decades ago, he or she would have had to either raise a bank loan, borrow money from a family member or use a credit card.",
+        "If an entrepreneur had wanted to fund a smart invention a few decades ago, he or she would have had to either raise a bank loan, borrow money from a family member or use a credit card."
+      ]
+    ],
+    "reason": "填 family。题干 someone in the ... 对应 borrow money from a family member，重组为来自家庭中的某个人。",
+    "contrast": "银行已在空前列出；credit card 也不符合 someone in the 的人际关系。",
+    "terms": {}
+  },
+  "39": {
+    "anchors": [
+      [
+        6,
+        "Ferrando posted details about his water-bottle venture on a large, recognised platform for funding creative projects.",
+        "Ferrando posted details about his water-bottle venture on a large, recognised platform for funding creative projects."
+      ]
+    ],
+    "reason": "填 platform。well-known 对应 recognised；advertise ... request financial support 对应 posted details / appealed for ... seed money。",
+    "contrast": "venture 是项目本身，平台才是用来展示项目和筹钱的渠道。",
+    "terms": {}
+  },
+  "40": {
+    "anchors": [
+      [
+        6,
+        "He appealed for people to donate $30,000 of seed money - the money he needed to get his project going – and promised to give a bottle to anyone who *. provided more than $39 in 'donations If he received the funds, he stated that the company would produce bottles in grey and white; if $60,000 was raised, a multicoloured one would be made.",
+        "He appealed for people to donate $30,000 of seed money - the money he needed to get his project going – and promised to give a bottle to anyone who *. provided more than $39 in 'donations If he received the funds, he stated that the company would produce bottles in grey and white; if $60,000 was raised, a multicoloured one would be made."
+      ]
+    ],
+    "reason": "填 multicoloured。two colours 对应 grey and white；more significant amount 对应 $60,000，届时推出 a multicoloured one。",
+    "contrast": "不是先后两种单色名称；空前 a、空后 bottle 要描述瓶子的形容词，限一词。",
+    "terms": {}
+  }
+}
