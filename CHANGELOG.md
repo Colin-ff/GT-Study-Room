@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-26 — Compact Reading toolbar
+
+- Combine the separate **Clear selection** and **Clear all** toolbar buttons into one **Clear** menu, with **Clear selected highlight** and **Clear all highlights** actions.
+- Keep the text selection intact while opening the menu, and enable each action only when applicable. Support arrow-key navigation, Escape and outside-click dismissal.
+- Remove the toolbar’s **Add word** shortcut. Manual word/phrase entry and notes remain available inside **Passage vocabulary**.
+- Verify selected-only clearing, clearing all passage/question highlights, submitted review mode, and manual notebook entry in the browser. Existing annotation and vocabulary storage keys are unchanged.
+
 ## 2026-11-25 — Cambridge 16–17 Reading review
 
 ### Added

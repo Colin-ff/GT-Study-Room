@@ -23,8 +23,8 @@ Listening and Speaking are shared across the two IELTS formats, while Reading an
 
 - Browse practice collections and select a test and module.
 - Read passages and answer questions side by side, highlight text and flag questions to revisit.
-- Use yellow or green highlights in passage titles, body text and questions, including after submission and when reviewing History. Clear a selected highlight or all highlights for the passage.
-- Save words and phrases from passages or questions to a passage vocabulary notebook, or use **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
+- Use yellow or green highlights in passage titles, body text and questions, including after submission and when reviewing History. Open the **Clear** menu to remove a selected highlight or all highlights for the passage.
+- Save words and phrases from passages or questions to a passage vocabulary notebook, or open **Passage vocabulary** and choose **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
 - Practise with separate Reading and Writing timers.
 - Score Reading automatically on submission and review your answers against the answer key.
 - Review Cambridge 14 Test 1 and Cambridge 15–17 Tests 1–4 with question-specific source highlighting, Chinese explanations, English paraphrase comparisons and distractor notes. Related questions and vocabulary use bundled review notes; this is not a live AI chat service.

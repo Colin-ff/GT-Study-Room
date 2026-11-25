@@ -43,6 +43,12 @@ dialog{border:1px solid var(--line);border-radius:14px;width:min(580px,calc(100%
 .timer-controls .timer-icon+.timer-icon{border-left:1px solid #49617d}
 .highlight-split{background:linear-gradient(to right,#ffdf7a 50%,#a9e2a4 50%);border-color:#b4bd94;color:#253224}
 .highlight-split:hover{background:linear-gradient(to right,#f5d269 50%,#97d791 50%)}
+.clear-tools{position:relative}
+.clear-toggle{display:inline-flex;align-items:center;gap:8px}
+.clear-toggle svg{width:12px;height:12px;pointer-events:none}
+.clear-menu{position:absolute;z-index:20;top:calc(100% + 6px);right:0;min-width:190px;padding:5px;background:#fff;border:1px solid #bccbdd;border-radius:8px;box-shadow:0 6px 20px #14264026}
+.clear-menu[hidden]{display:none}
+.clear-menu button{display:block;width:100%;text-align:left;white-space:nowrap;border:0;border-radius:4px;padding:9px 10px}
 mark.highlight-green{background:#a9e2a4}mark.highlight-yellow{background:#ffdf7a}
 .passage-detail{display:block;margin-top:.35em}.passage-detail strong{font-weight:700}
 
@@ -492,9 +498,15 @@ function renderReading() {
   $("#workspace").innerHTML = `
     <section class="panel"><div class="panel-bar"><span class="eyebrow">Reading passage</span>
       <div class="panel-tools">
-        <button id="highlight" class="highlight-split" title="Left half yellow · Right half green · Arrow keys choose a colour" aria-label="Highlight selection" disabled>Highlight selection</button><button id="clear-selection" disabled>Clear selection</button><button id="clear-all" title="Clear all highlights in this passage and its questions" disabled>Clear all</button>
+        <button id="highlight" class="highlight-split" title="Left half yellow · Right half green · Arrow keys choose a colour" aria-label="Highlight selection" disabled>Highlight selection</button>
+        <div class="clear-tools">
+          <button id="clear-highlights" class="clear-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="clear-menu" disabled>Clear<svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div id="clear-menu" class="clear-menu" role="menu" aria-label="Clear highlights" hidden>
+            <button id="clear-selection" role="menuitem" disabled>Clear selected highlight</button>
+            <button id="clear-all" role="menuitem" title="Clear all highlights in this passage and its questions" disabled>Clear all highlights</button>
+          </div>
+        </div>
         <button id="save-vocabulary" title="Select a word or phrase of up to 180 characters" disabled>Add to vocabulary</button>
-        <button id="add-word">Add word</button>
         <button id="open-vocabulary">Passage vocabulary</button>
       </div><span id="vocab-selection-status" role="status"></span>
     </div><article class="scroll passage" id="passage"></article></section>
@@ -706,6 +718,24 @@ function updateSelectionTools() {
   $("#clear-selection").disabled = !selection.some(([key, start, end]) =>
     (highlights[key] || []).some(([left, right]) => start < right && end > left));
   $("#clear-all").disabled = !currentHighlightKeys().length;
+  $("#clear-highlights").disabled = $("#clear-all").disabled;
+  if ($("#clear-highlights").disabled) closeClearMenu();
+}
+
+function closeClearMenu(restoreFocus = false) {
+  const toggle = $("#clear-highlights");
+  if (!toggle) return;
+  $("#clear-menu").hidden = true;
+  toggle.setAttribute("aria-expanded", "false");
+  if (restoreFocus) toggle.focus();
+}
+
+function openClearMenu(focusItem = false) {
+  const toggle = $("#clear-highlights");
+  if (!toggle || toggle.disabled) return;
+  $("#clear-menu").hidden = false;
+  toggle.setAttribute("aria-expanded", "true");
+  if (focusItem) $("#clear-menu button:not(:disabled)")?.focus();
 }
 
 function refreshHighlights() {
@@ -1019,10 +1049,16 @@ $("#workspace").onclick = event => {
     const rect = button.getBoundingClientRect();
     highlight(event.detail && event.clientX >= rect.left + rect.width / 2 ? "green" : "yellow");
   }
-  if (button.id === "clear-selection") clearSelectedHighlights();
-  if (button.id === "clear-all") clearAllHighlights();
+  if (button.id === "clear-highlights") {
+    if (button.getAttribute("aria-expanded") === "true") closeClearMenu();
+    else openClearMenu(event.detail === 0);
+  }
+  if (button.id === "clear-selection" || button.id === "clear-all") {
+    if (button.id === "clear-selection") clearSelectedHighlights();
+    else clearAllHighlights();
+    closeClearMenu(true);
+  }
   if (button.id === "save-vocabulary") saveSelectedVocabulary();
-  if (button.id === "add-word") openPassageVocabulary(undefined, true, true);
   if (button.id === "open-vocabulary") openPassageVocabulary();
   if (button.id === "open-writing-notes") vocabulary.openWritingNotes();
   if (button.dataset.flag) {
@@ -1073,14 +1109,33 @@ $("#history-list").onclick = event => {
   render();
 };
 document.addEventListener("selectionchange", captureSelection);
+document.addEventListener("click", event => {
+  if (!event.target.closest(".clear-tools")) closeClearMenu();
+});
 $("#workspace").addEventListener("keydown", event => {
+  if (event.target.closest(".clear-tools")) {
+    const menu = $("#clear-menu");
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeClearMenu(true);
+    } else if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+      event.preventDefault();
+      const items = [...menu.querySelectorAll("button:not(:disabled)")];
+      const index = items.indexOf(event.target);
+      openClearMenu();
+      const next = event.key === "Home" ? 0 : event.key === "End" ? items.length - 1
+        : index < 0 ? (event.key === "ArrowUp" ? items.length - 1 : 0)
+        : (index + (event.key === "ArrowUp" ? -1 : 1) + items.length) % items.length;
+      items[next]?.focus();
+    } else if (event.key === "Tab") closeClearMenu();
+  }
   if (event.target.id === "highlight" && ["ArrowLeft", "ArrowRight"].includes(event.key)) {
     event.preventDefault();
     highlight(event.key === "ArrowRight" ? "green" : "yellow");
   }
 });
 $("#workspace").addEventListener("pointerdown", event => {
-  if (event.target.closest("#highlight, #clear-selection, #save-vocabulary")) event.preventDefault();
+  if (event.target.closest("#highlight, .clear-tools, #save-vocabulary")) event.preventDefault();
 });
 const parameters = new URLSearchParams(location.search);
 if (parameters.has("passage")) {
