@@ -3,6 +3,7 @@ from html import escape
 import json
 from pathlib import Path
 import re
+import shutil
 
 ROOT = Path(__file__).resolve().parent
 DEST = ROOT / "dist"
@@ -140,11 +141,15 @@ for book in sorted((ROOT / "bank").iterdir()):
                      f'<div class="modules">{links}</div></article>')
     if cards:
         catalog(DEST / book_url, title, "Choose a test and a module.", cards,
-                '<a class="back" href="../">‹ All books</a>',
+                '<a class="back" href="../#library">‹ All books</a>',
                 '<button type="button" class="vocab-button vocab-catalog-button" id="book-vocabulary">Book vocabulary</button>')
         books.append(f'<a class="test book-link" href="{escape(book_url)}"><h2>{title}</h2>'
                      f'<p class="description">{len(cards)} tests · Reading &amp; Writing</p>'
                      '<span class="open-book">View tests →</span></a>')
 assert books, "No tests found in bank/"
-catalog(DEST / "index.html", "Test library", "Choose a practice collection to get started.", books)
+home = (ROOT / "frontend" / "home.html").read_text(encoding="utf-8")
+(DEST / "index.html").write_text(home.replace("__VOCAB_JS__", VOCAB_JS).replace("__VOCAB_CSS__", VOCAB_CSS), encoding="utf-8")
+shutil.copytree(ROOT / "assets", DEST / "assets", dirs_exist_ok=True)
+for name in ("room.css", "room.js"):
+    shutil.copyfile(ROOT / "frontend" / name, DEST / "assets" / name)
 

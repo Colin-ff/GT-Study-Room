@@ -21,7 +21,8 @@ Listening and Speaking are shared across the two IELTS formats, while Reading an
 
 ## Features
 
-- Browse practice collections and select a test and module.
+- Browse five pictured study tools in a sliding homepage carousel. Past paper practice opens the Cambridge 14–20 bookshelf, with saved progress and resume links.
+- Forum, AI Speaking, AI Writing, Dictation and Video Listening are planned features and labelled **Coming soon**.
 - Read passages and answer questions side by side, highlight text and flag questions to revisit.
 - Use yellow or green highlights in passage titles, body text and questions, including after submission and when reviewing History. Open the **Clear** menu to remove a selected highlight or all highlights for the passage.
 - Save words and phrases from passages or questions to a passage vocabulary notebook, or open **Passage vocabulary** and choose **Add word** to type an entry and notes manually. View saved entries together in the book vocabulary notebook.
@@ -46,7 +47,7 @@ Open [localhost:8000](http://localhost:8000/). On Windows, use `py -3` in place 
 
 ## How to practise
 
-1. Open a Cambridge IELTS book or **Original demo**.
+1. Choose **Past paper practice**, select a Cambridge IELTS book on the bookshelf, then choose **View tests**.
 2. Select a test, then choose **Reading** or **Writing**.
 3. Start the timer when ready. Use the question or task navigation to move through the module.
 4. Select **Submit** to finish the attempt. Open **History** to review past submissions.

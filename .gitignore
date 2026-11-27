@@ -1,6 +1,6 @@
-/dist/
-/sources/
-*.pdf
-/.openai/
+dist/
+sources/
 __pycache__/
-.venv/
+*.pyc
+node_modules/
+.sites-runtime/
