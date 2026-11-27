@@ -5,3 +5,9 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 .vocab-dialog{color-scheme:light}.vocab-dialog button,.vocab-dialog input,.vocab-dialog textarea{color:var(--ink)}
+
+.feature-card:not(.is-active) small{visibility:hidden}.feature-card:not(.is-active) h3{max-width:110px;font-size:19px}.feature-card:not(.is-active){justify-content:flex-start}.feature-card:not(.is-active) .card-badge{font-size:12px}.book-card:disabled,.circle-button:disabled{opacity:.4}
+
+@media(min-width:801px){.home-layout{min-height:0;align-items:start}.introduction{padding-top:125px}.feature-panel{min-height:744px}.feature-stage{height:385px}}
+
+.feature-card:not(.is-active) h3,.feature-card:not(.is-active) .card-badge{transform:translateX(var(--label-offset,0px))}
