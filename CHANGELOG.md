@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-28 — Study room redesign (draft)
+
+- Add a forest/glass homepage with five pictured feature cards, click/swipe/keyboard selection and graduated card sizes.
+- Add Forum navigation and clearly label AI Speaking, AI Writing, Dictation and Video Listening as planned tools.
+- Add a seven-book shelf linked to existing tests, real browser progress and book vocabulary. Keep existing question-bank IDs and storage keys.
+- Preserve the Python-only build; npm is optional for development checks.
+- Draft only: DOM integration and build checks pass, but browser visual QA is blocked by local preview routing (Site Unavailable). Production remains unchanged.
+
 ## 2026-11-26 — Compact Reading toolbar
 
 - Combine the separate **Clear selection** and **Clear all** toolbar buttons into one **Clear** menu, with **Clear selected highlight** and **Clear all highlights** actions.

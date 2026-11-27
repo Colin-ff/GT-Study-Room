@@ -2,6 +2,8 @@
 
 A browser-based simulator for computer-delivered IELTS General Training Reading and Writing.
 
+> **Design preview branch:** The emerald homepage, pictured feature carousel and bookshelf are a draft. Browser visual verification is blocked by local preview routing; these changes have not been released to the live website. AI Speaking, AI Writing, Dictation, Video Listening and Forum are placeholders.
+
 Recent changes are documented in the [changelog](CHANGELOG.md).
 
 ## Use G Study Room
