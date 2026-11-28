@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-28 — Forest-green practice theme
+
+- Carry the homepage palette into Reading, Writing, test lists, vocabulary sidebars and history/review dialogs. Use dark forest navigation, emerald controls, sage borders and warm paper reading surfaces.
+- Preserve yellow/green highlights, red incorrect-answer feedback, question content, saved records and all existing practice behavior.
+
+## 2026-11-28 — Dimensional bookshelf books
+
+- Replace flat cover tiles with textured 3D book objects: front cover, visible labelled spine, back cover, paper fore-edge and top page edge.
+- Animate the selected book forward with a slightly more frontal angle while retaining visible thickness. Keep volume numbers and existing practice/vocabulary destinations.
+- Calculate shelf edge spacing from actual cover width so volumes 14 and 20 remain fully visible. Check desktop, a 390px mobile viewport, physical dragging and keyboard selection.
+- Version homepage CSS and JavaScript URLs by their content so returning visitors load the matching 3D markup and styles.
+
 ## 2026-11-28 — Study room homepage and bookshelf
 
 - Add a forest/glass homepage with five pictured feature cards, click/swipe/keyboard selection and graduated card sizes.

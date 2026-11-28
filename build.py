@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+import hashlib
 
 ROOT = Path(__file__).resolve().parent
 DEST = ROOT / "dist"
@@ -148,6 +149,8 @@ for book in sorted((ROOT / "bank").iterdir()):
                      '<span class="open-book">View tests →</span></a>')
 assert books, "No tests found in bank/"
 home = (ROOT / "frontend" / "home.html").read_text(encoding="utf-8")
+asset_version = hashlib.sha256((ROOT / "frontend" / "room.css").read_bytes() + (ROOT / "frontend" / "room.js").read_bytes()).hexdigest()[:12]
+home = home.replace("assets/room.css", "assets/room.css?v=" + asset_version).replace("assets/room.js", "assets/room.js?v=" + asset_version)
 (DEST / "index.html").write_text(home.replace("__VOCAB_JS__", VOCAB_JS).replace("__VOCAB_CSS__", VOCAB_CSS), encoding="utf-8")
 shutil.copytree(ROOT / "assets", DEST / "assets", dirs_exist_ok=True)
 for name in ("room.css", "room.js"):

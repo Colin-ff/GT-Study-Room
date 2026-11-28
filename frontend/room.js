@@ -21,8 +21,56 @@ function readRecord(book,test){try{return JSON.parse(localStorage.getItem(`cambr
 const wordCount=text=>(String(text??'').trim().match(/\S+/g)||[]).length;
 function moduleProgress(record,mode){const attempt=record?.attempts?.[mode];if(attempt?.submittedAt)return 100;if(!(attempt?.deadline||attempt?.timerPaused)&&Array.isArray(record?.history)&&record.history.some(e=>e.module===mode))return 100;if(mode==='reading'){const count=Object.values(attempt?.answers||{}).filter(v=>String(v??'').trim()).length;return count||attempt?.deadline||attempt?.timerPaused?Math.min(100,count*2.5):null}const words=(attempt?.drafts||[]).map(wordCount);return words.some(Boolean)||attempt?.deadline||attempt?.timerPaused?50*(Math.min(1,(words[0]||0)/150)+Math.min(1,(words[1]||0)/250)):null}
 function bookProgress(book){let found=false,total=0;for(let t=1;t<=4;t++){const r=readRecord(book,t);for(const mode of ['reading','writing']){const p=moduleProgress(r,mode);if(p!==null)found=true;total+=p||0}}return found?Math.round(total/8):null}
-function renderBooks(){const w=$('#book-stage').clientWidth,spread=Math.min(171,w*.225);[...$('#book-cards').children].forEach((card,i)=>{const d=i-bookIndex,a=Math.abs(d),visibleCenter=w<600?bookIndex:Math.max(2,Math.min(4,bookIndex));card.style.transform=`translateX(${(i-visibleCenter)*spread}px) scale(${d===0?1.08:.96}) rotateY(${d===0?0:-8}deg)`;card.style.zIndex=String(10-a);card.style.opacity=Math.abs(i-visibleCenter)>3?'0':'1';card.style.visibility=Math.abs(i-visibleCenter)>3?'hidden':'visible';card.classList.toggle('is-active',d===0);card.setAttribute('aria-pressed',String(d===0))});[...$('#book-numbers').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===bookIndex)));const n=books[bookIndex];$('#selected-title').textContent='Cambridge IELTS '+n;$('#book-open').href=`books/cambridge-${n}-gt.html`;const p=bookProgress(n);$('#book-progress').value=p||0;$('#book-progress-label').textContent=p===null?'Not practised':`${p}% practised`;$('#book-prev').disabled=bookIndex===0;$('#book-next').disabled=bookIndex===6;}
-books.forEach((n,i)=>{const card=document.createElement('button');card.type='button';card.className='book-card';card.setAttribute('aria-label','Select Cambridge IELTS '+n);card.innerHTML=`<img class="cover-art" src="assets/cover-art.webp" alt="" style="filter:hue-rotate(${[30,-10,305,0,45,140,330][i]}deg)"><span class="cover-label"><small>Cambridge</small><strong>IELTS</strong><em>General Training</em><b>${n}</b><span class="cover-foot">Reading & Writing</span></span>`;card.onclick=()=>{bookIndex=i;renderBooks()};$('#book-cards').append(card);const number=document.createElement('button');number.type='button';number.textContent=n;number.setAttribute('aria-label','Cambridge IELTS '+n);number.onclick=()=>{bookIndex=i;renderBooks()};$('#book-numbers').append(number)});
+function renderBooks() {
+  const width = $('#book-stage').clientWidth;
+  const spread = Math.min(184, width * .225);
+  const cardWidth = $('#book-cards').firstElementChild?.offsetWidth || 155;
+  const edgeCenter = Math.min(2, Math.max(0, (width / 2 - cardWidth * .65 - 22) / spread));
+  const visibleCenter = width < 600 ? bookIndex : Math.max(edgeCenter, Math.min(books.length - 1 - edgeCenter, bookIndex));
+  [...$('#book-cards').children].forEach((card, index) => {
+    const distance = index - bookIndex;
+    const active = distance === 0;
+    card.style.transform = `translateX(${(index - visibleCenter) * spread}px) scale(${active ? 1.10 : .95})`;
+    card.style.setProperty('--book-yaw', active ? '18deg' : '27deg');
+    card.style.zIndex = String(10 - Math.abs(distance));
+    const visible = Math.abs(index - visibleCenter) <= 3;
+    card.style.opacity = visible ? '1' : '0';
+    card.style.visibility = visible ? 'visible' : 'hidden';
+    card.classList.toggle('is-active', active);
+    card.setAttribute('aria-pressed', String(active));
+  });
+  [...$('#book-numbers').children].forEach((button, index) => button.setAttribute('aria-pressed', String(index === bookIndex)));
+  const number = books[bookIndex];
+  $('#selected-title').textContent = 'Cambridge IELTS ' + number;
+  $('#book-open').href = `books/cambridge-${number}-gt.html`;
+  const progress = bookProgress(number);
+  $('#book-progress').value = progress || 0;
+  $('#book-progress-label').textContent = progress === null ? 'Not practised' : `${progress}% practised`;
+  $('#book-prev').disabled = bookIndex === 0;
+  $('#book-next').disabled = bookIndex === books.length - 1;
+}
+books.forEach((number, index) => {
+  const card = document.createElement('button');
+  card.type = 'button';
+  card.className = 'book-card';
+  card.setAttribute('aria-label', 'Select Cambridge IELTS ' + number);
+  card.style.setProperty('--cover-hue', [30, -10, 305, 0, 45, 140, 330][index] + 'deg');
+  card.innerHTML = `<span class="book-volume">
+    <span class="book-face book-front"><img class="cover-art" src="assets/cover-art.webp" alt="" draggable="false"><span class="cover-label"><small>Cambridge</small><strong>IELTS</strong><em>General Training</em><b>${number}</b><span class="cover-foot">Reading & Writing</span></span></span>
+    <span class="book-face book-spine" aria-hidden="true"><img class="binding-art" src="assets/cover-art.webp" alt="" draggable="false"><span class="spine-label">CAMBRIDGE IELTS</span><b>${number}</b></span>
+    <span class="book-face book-back" aria-hidden="true"><img class="binding-art" src="assets/cover-art.webp" alt="" draggable="false"></span>
+    <span class="book-face book-page-edge" aria-hidden="true"><img src="assets/book-pages.webp" alt="" draggable="false"></span>
+    <span class="book-face book-top-edge" aria-hidden="true"><img src="assets/book-pages.webp" alt="" draggable="false"></span>
+  </span>`;
+  card.onclick = () => { bookIndex = index; renderBooks(); };
+  $('#book-cards').append(card);
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = number;
+  button.setAttribute('aria-label', 'Cambridge IELTS ' + number);
+  button.onclick = () => { bookIndex = index; renderBooks(); };
+  $('#book-numbers').append(button);
+});
 $('#book-prev').onclick=()=>{bookIndex=Math.max(0,bookIndex-1);renderBooks()};$('#book-next').onclick=()=>{bookIndex=Math.min(6,bookIndex+1);renderBooks()};
 function bindSwipe(el,prev,next){let start=null,moved=false;el.addEventListener('pointerdown',e=>{if(e.button!==0)return;start={x:e.clientX,y:e.clientY,id:e.pointerId};moved=false});el.addEventListener('pointermove',e=>{if(start&&Math.abs(e.clientX-start.x)>12){moved=true;if(!el.hasPointerCapture(e.pointerId))el.setPointerCapture(e.pointerId)}});el.addEventListener('pointerup',e=>{if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;if(Math.abs(dx)>35&&Math.abs(dx)>Math.abs(dy))dx<0?next():prev();start=null});el.addEventListener('pointerleave',()=>{start=null});el.addEventListener('pointercancel',()=>{start=null});el.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopImmediatePropagation();moved=false}},true);el.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();e.key==='ArrowLeft'?prev():next()}})}
 bindSwipe($('#feature-stage'),()=>$('#feature-prev').click(),()=>$('#feature-next').click());bindSwipe($('#book-stage'),()=>$('#book-prev').click(),()=>$('#book-next').click());

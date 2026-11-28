@@ -1,12 +1,12 @@
 .vocab-dialog{box-sizing:border-box;width:min(650px,calc(100% - 28px));max-height:85dvh;overflow:auto;padding:20px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font:15px/1.5 system-ui,sans-serif}
-.vocab-dialog::backdrop{background:#10233c80}
+.vocab-dialog::backdrop{background:#0c2f2480}
 .vocab-dialog-bar,.vocab-group-bar,.vocab-entry-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .vocab-dialog h2,.vocab-dialog h3{margin:0;line-height:1.3}
 .vocab-dialog h3{font-size:15px}
-.vocab-button{background:#fff;border:1px solid #bccbdd;border-radius:7px;color:var(--ink);font:inherit;padding:5px 10px;cursor:pointer}
-.vocab-button:hover{background:#e7eff9}
+.vocab-button{background:#fff;border:1px solid #acc5b7;border-radius:7px;color:var(--ink);font:inherit;padding:5px 10px;cursor:pointer}
+.vocab-button:hover{background:#e3f1e8}
 .vocab-dialog :focus-visible,.vocab-button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.vocab-search,.vocab-note textarea{display:block;width:100%;box-sizing:border-box;padding:7px 9px;border:1px solid #bccbdd;border-radius:6px;font:inherit;color:inherit}
+.vocab-search,.vocab-note textarea{display:block;width:100%;box-sizing:border-box;padding:7px 9px;border:1px solid #acc5b7;border-radius:6px;font:inherit;color:inherit}
 .vocab-search{margin-top:14px}
 .vocab-notice,.vocab-feedback{color:var(--muted);font-size:13px}
 .vocab-notice{margin:12px 0}
@@ -37,10 +37,10 @@
 .vocab-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr) 22px;gap:8px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
 .vocab-word{font-size:13px;padding-top:6px}
 .vocab-cell{min-width:0}
-.vocab-cell textarea{width:100%;display:block;box-sizing:border-box;border:1px solid #bccbdd;border-radius:5px;font:13px/1.45 system-ui,sans-serif;color:inherit;padding:6px 7px;min-height:34px;resize:vertical;max-height:220px}
+.vocab-cell textarea{width:100%;display:block;box-sizing:border-box;border:1px solid #acc5b7;border-radius:5px;font:13px/1.45 system-ui,sans-serif;color:inherit;padding:6px 7px;min-height:34px;resize:vertical;max-height:220px}
 .vocab-cell .vocab-feedback{display:block;font-size:11px;line-height:1.35}
 .vocab-delete{font-size:20px;line-height:1;padding:4px 2px;border-color:transparent;color:var(--muted)}
-body>.vocab-sidebar{position:fixed;right:20px;top:82px;bottom:20px;width:350px;height:auto;min-height:0;box-shadow:0 6px 24px #14264015}
+body>.vocab-sidebar{position:fixed;right:20px;top:82px;bottom:20px;width:350px;height:auto;min-height:0;box-shadow:0 6px 24px #123d3015}
 body:has(>.vocab-sidebar)>main{margin-right:382px}
 @media(max-width:1100px){.study-layout:has(>.vocab-sidebar){grid-template-columns:minmax(0,1fr) 285px}.study-layout:has(>.vocab-sidebar) .scroll{padding:16px}.study-layout:has(>.vocab-sidebar) .passage{font-size:17px}}
 @media(max-width:760px){.study-layout:has(>.vocab-sidebar){grid-template-columns:minmax(0,1fr)}.study-layout>.vocab-sidebar{height:45dvh;min-height:240px}body>.vocab-sidebar{width:min(350px,calc(100% - 24px));right:12px;top:70px;max-height:65dvh}body:has(>.vocab-sidebar)>main{margin-right:auto}}
@@ -49,5 +49,4 @@ body:has(>.vocab-sidebar)>main{margin-right:382px}
 .writing-notes-sidebar>.writing-notes-list{padding:0 12px 14px;flex:1;min-height:0;overflow:auto}
 .writing-notes-columns,.writing-notes-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 22px;gap:8px}
 .writing-notes-columns{padding:0 12px 8px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700}
-.writing-notes-row textarea{width:100%;min-width:0;min-height:64px;padding:6px;border:1px solid #bccbdd;border-radius:5px;font:13px/1.45 system-ui,sans-serif;resize:vertical;color:inherit}
-
+.writing-notes-row textarea{width:100%;min-width:0;min-height:64px;padding:6px;border:1px solid #acc5b7;border-radius:5px;font:13px/1.45 system-ui,sans-serif;resize:vertical;color:inherit}

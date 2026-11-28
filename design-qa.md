@@ -46,3 +46,13 @@ The earlier preview issue was a host-routing mismatch. The Sites preview CLI's r
 - Physical phone touch gestures were not tested on hardware; pointer/touch handling is shared and desktop physical dragging is verified.
 
 No actionable P0/P1/P2 findings remain. Publish this verified revision to the existing site without changing its audience or domain. V22 remains the rollback target.
+
+## 2026-11-28 incremental bookshelf check
+
+User reference: `upload/image(20261128-003548).png`, requesting visible book sides. Browser inspection at 1363 × 936 and in a 390 × 844 mobile iframe confirmed separate textured spines, foreshortened covers, thin top page edges and book shadows. Volume 17 is enlarged and rotates more frontally on selection. Initial volume 14 clipping at the left shelf edge was corrected by deriving the display center from actual book width. Rechecked volumes 14, 17 and 20: active books and spines remain visible. Physical drag changed 17 to 18; ArrowLeft returned to 17. The volume 20 destination remains `books/cambridge-20-gt.html`. Mobile content width and scroll width both 375px (native scrollbar included in the 390px frame). All seven spines are present. No application console errors. Existing build and saved-record tests pass.
+
+## Forest-green practice theme — 2026-11-28
+
+- Reading, Writing, test catalog, vocabulary sidebar and history/review surfaces share forest-green navigation and controls, sage borders and warm paper surfaces. Yellow/green annotations and red incorrect-answer feedback retain their meaning.
+- Browser verified bookshelf → Cambridge 14 catalog → Reading review → vocabulary/history dialog → Writing; separate 3D spine and top page edge remain visible. Existing saved progress and vocabulary still appear.
+- Theme changes are confined to styles: script blocks in exam/catalog are byte-identical to the previous source; bank records and storage keys unchanged. Existing build and homepage integration tests pass.
